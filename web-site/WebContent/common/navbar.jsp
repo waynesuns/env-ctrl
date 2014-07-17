@@ -65,18 +65,18 @@
 							    <ul id="drop1" class="dropdown-menu row" style="width: 280px;">
 									<li class="row">
 										<div class="col-sm-4" style="float: left;min-height: 20px;"><a tabindex="-1" href="${path}solution/overview.html" style="padding-left: 35px;">概览</a></div>
-										<div class="col-sm-8" style="float: left;min-height: 20px;"><a tabindex="-1" href="${path}solution/army.html" style="padding-left: 15px;">军队</a></div>
+										<div class="col-sm-8" style="float: left;min-height: 20px;"><a tabindex="-1" href="${path}solution/military.html" style="padding-left: 15px;">军队</a></div>
 									</li>
 									<li  class="row">
-										<div class="col-sm-4" style="float: left;min-height: 20px;"><a tabindex="-1" href="${path}solution/chemica.html" style="padding-left: 35px;">化工</a></div>
+										<div class="col-sm-4" style="float: left;min-height: 20px;"><a tabindex="-1" href="${path}solution/chemica_industry.html" style="padding-left: 35px;">化工</a></div>
 										<div class="col-sm-8" style="float: left;min-height: 20px;"><a tabindex="-1" href="${path}solution/residence.html" style="padding-left: 15px;">住宅</a></div>
 									</li>
 									<li  class="row">
-										<div class="col-sm-4" style="float: left;min-height: 20px;"><a tabindex="-1" href="${path}solution/healthcare.html" style="padding-left: 35px;">医疗</a></div>
-										<div class="col-sm-8" style="float: left;min-height: 20px;"><a tabindex="-1" href="${path}solution/venues.html" style="padding-left: 15px;">场馆及院校</a></div>
+										<div class="col-sm-4" style="float: left;min-height: 20px;"><a tabindex="-1" href="${path}solution/medical_treatment.html" style="padding-left: 35px;">医疗</a></div>
+										<div class="col-sm-8" style="float: left;min-height: 20px;"><a tabindex="-1" href="${path}solution/stadium.html" style="padding-left: 15px;">场馆及院校</a></div>
 									</li>
 									<li  class="row">
-										<div class="col-sm-4" style="float: left;min-height: 20px;"><a tabindex="-1" href="${path}solution/government.html" style="padding-left: 35px;">市政</a></div>
+										<div class="col-sm-4" style="float: left;min-height: 20px;"><a tabindex="-1" href="${path}solution/municipal_administration.html" style="padding-left: 35px;">市政</a></div>
 										<div class="col-sm-8" style="float: left;min-height: 20px;"><a tabindex="-1" href="${path}solution/hotel.html" style="padding-left: 15px;">酒店及办公楼宇</a></div>
 									</li>
 								</ul>
