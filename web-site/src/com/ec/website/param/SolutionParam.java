@@ -6,6 +6,7 @@ import java.util.List;
 public class SolutionParam {
 	private String headerPicName;
 	private String activeSubItem;
+	private String title;
 	private String subItemTitle;
 	private List<Menu> subItems = new ArrayList<Menu>();
 	private String subItemHeaderImgInfo;
@@ -72,6 +73,12 @@ public class SolutionParam {
 
 	public void setSamples(List<SolutionSampleParam> samples) {
 		this.samples = samples;
+	}
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
 	}
 	
 	

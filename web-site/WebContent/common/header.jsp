@@ -22,6 +22,6 @@
 	<!--[if lt IE 9]>
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 	<![endif]-->
-	<script type="text/javascript" src="${path}js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="${path}js/bootstrap.js"></script>
 	<script type="text/javascript" src="${path}js/jquery.htmlClean.js"></script>
 </head>

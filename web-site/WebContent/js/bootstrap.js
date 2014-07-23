@@ -1759,11 +1759,11 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap's JavaScript req
 
   Collapse.prototype.show = function () {
     if (this.transitioning || this.$element.hasClass('in')) return
-
     var startEvent = $.Event('show.bs.collapse')
-    this.$element.trigger(startEvent)
+    this.$element.trigger(startEvent,this.$element)
     if (startEvent.isDefaultPrevented()) return
 
+	this.$element.parent().find('> .panel-heading').addClass("active");
     var actives = this.$parent && this.$parent.find('> .panel > .in')
 
     if (actives && actives.length) {
@@ -1806,6 +1806,7 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap's JavaScript req
     this.$element.trigger(startEvent)
     if (startEvent.isDefaultPrevented()) return
 
+	this.$element.parent().find('> .panel-heading').removeClass("active");
     var dimension = this.dimension()
 
     this.$element[dimension](this.$element[dimension]())[0].offsetHeight

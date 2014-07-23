@@ -4,9 +4,8 @@
 <c:import url="/common/header.jsp"/>
 <c:import url="/common/navbar.jsp"/>
 <!-- content start -->
-
 <!-- content start -->
-<div class="jumbotron">
+<div class="jumbotron" style="">
   <div class="container">
 	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style="">
 	  <!-- Indicators -->
@@ -19,7 +18,7 @@
 	  <!-- Wrapper for slides -->
 	  <div class="carousel-inner main-title" role="listbox">
 	    <div class="item active">
-	        <img src="img/kv_1170.png" class="kv">
+	        <img src="img/kv_1170.png" class="kv kv1" >
 	      	<div class="carousel-caption-kv col-sm-6 col-xs-9"><div class="title">APG-40M</div>
 				<div class="content">
 					<p>滤料重达约<font class="red">5000</font>克</p>
@@ -30,23 +29,21 @@
 	      	</div>
 	    </div>
 	    <div class="item">
-	        <img src="img/kv_1170.png" class="kv">
-	      	<div class="carousel-caption-kv col-sm-6 col-xs-9"><div class="title">APG-40M</div>
+	        <img src="img/kv_1170.png" class="kv kv2">
+	      	<div class="carousel-caption-kv col-sm-6 col-xs-9"><div class="title">99.99%</div>
 				<div class="content">
-					<p>滤料重达约<font class="red">5000</font>克</p>
-					<p>总表面积约为<font class="red">5100000</font>平方米</p>
-					<p>相当于<font class="red">70</font>个足球场的面积</p>
+					<p>高校过滤端能够使颗粒物的去除率达到<font class="red">99.99%</font></p>
+					<p>全面满足医院空气污染治理需求</p>
 				</div>
 				<button class="btn btn-danger">了解详情</button>
 	      	</div>
 	    </div>
 	    <div class="item">
-	        <img src="img/kv_1170.png" class="kv">
-	      	<div class="carousel-caption-kv col-sm-6 col-xs-9"><div class="title">APG-40M</div>
+	        <img src="img/kv_1170.png" class="kv kv3">
+	      	<div class="carousel-caption-kv col-sm-6 col-xs-9"><div class="title">0.05秒彻底净化</div>
 				<div class="content">
-					<p>滤料重达约<font class="red">5000</font>克</p>
-					<p>总表面积约为<font class="red">5100000</font>平方米</p>
-					<p>相当于<font class="red">70</font>个足球场的面积</p>
+					<p><font class="red">Multi-Mix</font><font class="red" style="padding-left: 3px;">Media</font>气相分子筛</p>
+					<p><font class="red">0.05</font>秒彻底去除有毒有害气体</p>
 				</div>
 				<button class="btn btn-danger">了解详情</button>
 	      	</div>
@@ -55,11 +52,11 @@
 
 		  <!-- Controls -->
 		  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-		    <span><</span>
+		    <span><img src="./img/icon/left.png"></span>
 		    <span class="sr-only">Previous</span>
 		  </a>
 		  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-		    <span>></span>
+		    <span><img src="./img/icon/right.png"></span>
 		    <span class="sr-only">Next</span>
 		  </a>
 	</div>

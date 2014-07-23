@@ -33,6 +33,8 @@ public class HtmlGenerator {
 					File file = new File("/Users/weisun/git/ec/web-site/WebContent/"+url);
 					if(file.exists()){
 						file.delete();
+						file = new File("/Users/weisun/git/ec/web-site/WebContent/"+url);
+						file.createNewFile();
 					}
 					outstream = new FileOutputStream(file);
 					instream = entity.getContent();
@@ -52,6 +54,7 @@ public class HtmlGenerator {
 	public static void main(String[] args) throws ClientProtocolException, IOException {
 		List<String> urls = new ArrayList<String>();
 		urls.add("index.html");
+		
 		urls.add("solution/military.html");
 		urls.add("solution/chemica_industry.html");
 		urls.add("solution/municipal_administration.html");
@@ -60,6 +63,17 @@ public class HtmlGenerator {
 		urls.add("solution/hotel.html");
 		urls.add("solution/stadium.html");
 		urls.add("solution/overview.html");
+		
+		urls.add("about_us/summary.html");
+		urls.add("about_us/news.html");
+		urls.add("about_us/download.html");
+		urls.add("about_us/certification.html");
+		urls.add("about_us/global_map.html");
+		urls.add("about_us/case_list.html");
+		
+		urls.add("product/multi_mix.html");
+		urls.add("product/aps.html");
+		urls.add("product/usah.html");
 		HtmlGenerator.generateHtml(urls);
 	}
 }

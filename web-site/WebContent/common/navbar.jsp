@@ -61,7 +61,7 @@
 					    <div class="collapse navbar-collapse" id="navbar-main" style="width: 100%;padding-right: 0;">
 					      <ul class="nav navbar-nav" style="width: 100%;">
 					        <li class="dropdown">
-								<a id="drop0" role="button" data-toggle="dropdown" href="#">领域应用及解决方案</a>
+								<a id="drop0" role="button" data-toggle="dropdown" href="#" onmouseover="$(this).click()">领域应用及解决方案</a>
 							    <ul id="drop1" class="dropdown-menu row" style="width: 280px;">
 									<li class="row">
 										<div class="col-sm-4" style="float: left;min-height: 20px;"><a tabindex="-1" href="${path}solution/overview.html" style="padding-left: 35px;">概览</a></div>
@@ -83,7 +83,7 @@
 							</li>
 							<li class="nav-delim"><col-md->|</col-md-></li>
 							<li class="dropdown">
-							  	<a role="button" data-toggle="dropdown" href="#">核心技术</a>
+							  	<a role="button" data-toggle="dropdown" href="#" onmouseover="$(this).click()">核心技术</a>
 								<ul class="dropdown-menu" style="width: 280px;">
 									<li>
 									<div style="min-height: 20px;"><a tabindex="-1" href="${path}technology/overview.html" style="padding-left: 35px;padding-right: 35px;">气相过滤和气相混合净化媒体简介</a></div>
@@ -98,7 +98,7 @@
 							</li>
 							<li class="nav-delim"><col-md->|</col-md-></li>
 							<li class="dropdown">
-							  	<a id="drop3" role="button" data-toggle="dropdown" href="#">产品系列</a>
+							  	<a id="drop3" role="button" data-toggle="dropdown" href="#" onmouseover="$(this).click()">产品系列</a>
 								<ul class="dropdown-menu" style="width: 300px;">
 									<li>
 									<div style="min-height: 20px;"><a tabindex="-1" href="${path}product/multi_mix.html" style="padding-left: 35px;padding-right: 35px;">MULTI-MIX® Media</a></div>
@@ -131,25 +131,25 @@
 							</li>
 							<li class="nav-delim"><col-md->|</col-md-></li>
 							<li class="dropdown">
-							  	<a id="drop4" role="button" data-toggle="dropdown" href="#">关于EC</a>
+							  	<a id="drop4" role="button" data-toggle="dropdown" href="#" onmouseover="$(this).click()">关于EC</a>
 								<ul class="dropdown-menu" style="width: 150px;">
 									<li>
 									<div style="min-height: 20px;"><a tabindex="-1" href="${path}about_us/summary.html" style="padding-left: 35px;padding-right: 35px;">公司简介</a></div>
 									</li>
 									<li>
-										<div style="min-height: 20px;"><a tabindex="-1" href="${path}about_us/mews.html" style="padding-left: 35px;padding-right: 35px;">新闻及公告</a></div>
+										<div style="min-height: 20px;"><a tabindex="-1" href="${path}about_us/news.html" style="padding-left: 35px;padding-right: 35px;">新闻及公告</a></div>
 									</li>
 									<li>
-										<div style="min-height: 20px;"><a tabindex="-1" href="${path}about_us/data.html" style="padding-left: 35px;padding-right: 35px;">资料下载</a></div>
+										<div style="min-height: 20px;"><a tabindex="-1" href="${path}about_us/download.html" style="padding-left: 35px;padding-right: 35px;">资料下载</a></div>
 									</li>
 									<li>
-										<div style="min-height: 20px;"><a tabindex="-1" href="${path}about_us/qualification.html" style="padding-left: 35px;padding-right: 35px;">认证及资质</a></div>
+										<div style="min-height: 20px;"><a tabindex="-1" href="${path}about_us/certification.html" style="padding-left: 35px;padding-right: 35px;">认证及资质</a></div>
 									</li>
 									<li>
-										<div style="min-height: 20px;"><a tabindex="-1" href="${path}about_us/partner.html" style="padding-left: 35px;padding-right: 35px;">国际合作</a></div>
+										<div style="min-height: 20px;"><a tabindex="-1" href="${path}about_us/global_map.html" style="padding-left: 35px;padding-right: 35px;">国际合作</a></div>
 									</li>
 									<li>
-										<div style="min-height: 20px;"><a tabindex="-1" href="${path}about_us/customer.html" style="padding-left: 35px;padding-right: 35px;">我们的客户</a></div>
+										<div style="min-height: 20px;"><a tabindex="-1" href="${path}about_us/case_list.html" style="padding-left: 35px;padding-right: 35px;">我们的客户</a></div>
 									</li>
 								</ul>
 							</li>
@@ -168,7 +168,7 @@
 					  </div><!-- /.container-fluid -->
 					</nav>
 				</div>
-				<div class="col-md-3 col-sm-1 col-xs-0 hidden-sm" style="margin-top: 7px;">
+				<div class="col-md-3 col-sm-1 col-xs-0 hidden-sm search" style="margin-top: 7px;">
 					<div class=" visible-lg-block visible-md-block" style="position: relative;">
 						<input class="col-md-12 search" id="inputIcon" type="text" />
 						<img src="${path}img/search.jpg" style="position:absolute;right: 8px;top:7px;"></span>

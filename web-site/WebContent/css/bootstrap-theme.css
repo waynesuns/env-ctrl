@@ -343,6 +343,8 @@
 }
 .list-group {
   border-radius: 0;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 5px 5px rgba(0, 0, 0, 0.075);
+  background-color: #ffffff;
 }
 .list-group-item.active,
 .list-group-item.active:hover,
@@ -354,13 +356,6 @@
 .panel {
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-}
-.panel-default > .panel-heading {
-  background-image: -webkit-linear-gradient(top, #f5f5f5 0%, #e8e8e8 100%);
-  background-image: -o-linear-gradient(top, #f5f5f5 0%, #e8e8e8 100%);
-  background-image: linear-gradient(to bottom, #f5f5f5 0%, #e8e8e8 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff5f5f5', endColorstr='#ffe8e8e8', GradientType=0);
 }
 .panel-primary > .panel-heading {
   background-image: -webkit-linear-gradient(top, #428bca 0%, #357ebd 100%);
@@ -520,9 +515,17 @@
   text-align: center; 
 }
 .kv{
-	background-image: url("../img/kv_1170.jpg");
 	width: 1170px;
 	height: 400px;
+}
+.kv1{
+	background-image: url("../img/kv/1170/kv_1.jpg");
+}
+.kv2{
+	background-image: url("../img/kv/1170/kv_2.jpg");
+}
+.kv3{
+	background-image: url("../img/kv/1170/kv_3.jpg");
 }
 .panel-default > .panel-heading  > .collapse.in{
 	color: #ffffff;
@@ -545,7 +548,7 @@
 }
 .header_img .content{
 	position: absolute;
-	top: 65px;
+	top: 25%;
 	left: 200px;
 	color: #e83e0b;
 }
@@ -590,6 +593,24 @@
 }
 .list-group-item {
 	font-size: 14px;
+	margin-right: 10px;
+	border-bottom: 1px solid #f0f0f0;
+	margin-left: 10px;
+	padding: 5px 10px;
+}
+.list-group >div:hover{
+	background-color: #f0f0f0;
+}
+.icon_download{
+	background-image: url("../img/icon/download.png");
+	border: 0;
+	width: 13px;
+	height: 17px;
+	float: right;
+	margin-right: 30px;
+}
+.table > tbody > tr:hover > td >.icon_download{
+	background-image: url("../img/icon/download_active.png");
 }
 @media screen and (max-width: 400px){
 	.row{
@@ -611,9 +632,17 @@
 	  left: 10px;
 	}
 	.kv{
-		background-image: url("../img/kv_320.jpg");
-		height: 212px;
+		height: 176px;
 		max-width:none;
+	}
+	.kv1{
+		background-image: url("../img/kv/320/kv_1.jpg");
+	}
+	.kv2{
+		background-image: url("../img/kv/320/kv_2.jpg");
+	}
+	.kv3{
+		background-image: url("../img/kv/320/kv_3.jpg");
 	}
 	.main-title .title{
 		font-size: 18px;
@@ -656,7 +685,8 @@
 		margin-left: 0;
 	}
 	.header_img .content{
-		left: 30;
+		top:0;
+		left: 30px;
 	}
 	
 	.header_img .title{
@@ -685,9 +715,17 @@
 	  left: -5px;
 	}
 	.kv{
-		background-image: url("../img/kv_724.jpg");
 		height: 320px;
 		max-width:none;
+	}
+	.kv1{
+		background-image: url("../img/kv/724/kv_1.jpg");
+	}
+	.kv2{
+		background-image: url("../img/kv/724/kv_2.jpg");
+	}
+	.kv3{
+		background-image: url("../img/kv/724/kv_3.jpg");
 	}
 	.main-title .title{
 		font-size: 30px;
@@ -723,11 +761,25 @@
 	}
 }
 @media (min-width: 992px) and (max-width: 1199px) {
+	.hot-line{
+		padding-left: 0;
+	}
+	.search{
+		padding-left: 0;
+	}
 	.kv{
-		background-image: url("../img/kv_970.jpg");
 		height: 400px;
 		max-width:none;
 		background-position:-30px,0;
+	}
+	.kv1{
+		background-image: url("../img/kv/970/kv_1.jpg");
+	}
+	.kv2{
+		background-image: url("../img/kv/970/kv_2.jpg");
+	}
+	.kv3{
+		background-image: url("../img/kv/970/kv_3.jpg");
 	}
 }
 @media (min-width: 401px) and (max-width: 767px) {
@@ -737,12 +789,20 @@
 	  left: 2%;
 	}
 	.kv{
-		background-image: url("../img/kv_640.jpg");
 		height: 320px;
 		max-width:none;
 		background-position: top center;
 		background-attachment: fixed;
 		background-repeat: no-repeat;
+	}
+	.kv1{
+		background-image: url("../img/kv/640/kv_1.jpg");
+	}
+	.kv2{
+		background-image: url("../img/kv/640/kv_2.jpg");
+	}
+	.kv3{
+		background-image: url("../img/kv/640/kv_3.jpg");
 	}
 	.main-title .title{
 		font-size: 34px;
@@ -825,14 +885,15 @@
 		margin-left: 0;
 	}
 	.header_img .content{
-		left: 30;
+		top:15%;
+		left: 30px;
 	}
 	
 	.header_img .title{
-		font-size: 34px;
+		font-size: 22px;
 	}
 	.header_img .info{
-		font-size: 18px;
+		font-size: 14px;
 	}
 	list-group-item {
 		font-size: 30px;
