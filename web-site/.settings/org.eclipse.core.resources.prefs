@@ -1,3 +1,10 @@
 eclipse.preferences.version=1
+encoding//WebContent/template/aboutUs.jsp=UTF-8
+encoding//WebContent/template/about_us/certification.jsp=UTF-8
+encoding//WebContent/template/about_us/download.jsp=UTF-8
+encoding//WebContent/template/about_us/globalMap.jsp=UTF-8
+encoding//src/com/ec/website/controller/AboutUsController.java=UTF-8
+encoding//src/com/ec/website/controller/ProductController.java=UTF-8
 encoding//src/com/ec/website/controller/SolutionController.java=UTF-8
 encoding//src/com/ec/website/util/HtmlGenerator.java=UTF-8
+encoding/<project>=UTF-8

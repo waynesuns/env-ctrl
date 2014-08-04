@@ -2237,8 +2237,6 @@ table th[class*="col-"] {
   line-height: 120px;
   overflow: hidden;
   text-align: center;
-  padding-top: 40px;
-  padding-bottom: 40px;
 }
 .navbar-nav > li.gray{
   background-color: #e4e4e4;
@@ -3996,7 +3994,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-nav > li > a {
   padding-top: 10px;
   padding-bottom: 10px;
-  line-height: 20px;
 }
 @media (max-width: 767px) {
   .navbar-nav .open .dropdown-menu {

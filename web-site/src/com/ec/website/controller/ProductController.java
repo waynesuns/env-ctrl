@@ -11,7 +11,7 @@ import com.ec.website.param.SolutionSampleParam;
 
 @Controller
 @RequestMapping(value = "/product")
-public class ProductController {
+public class ProductController extends AbstractController {
 
 	@RequestMapping(value = "/multi_mix")
 	public String index(HttpServletRequest request, HttpServletResponse response){
@@ -70,7 +70,7 @@ public class ProductController {
 	}
 	public SolutionParam generateParam(int subItemIndex){
 		SolutionParam param = new SolutionParam();
-		param.setHeaderPicName("product.jpg");
+		param.setHeaderPicName("product");
 		param.setSubItemTitle("产品系列");
 		param.setSubItemHeaderImgInfo("优势之选不仅仅体现在产品本身的卓越效果，更体现在每个部件的精工细作以及每个合作伙伴的深厚底蕴。");
 		param.addSubItem("MULTI-MIX® Media", "product/multi_mix.html");

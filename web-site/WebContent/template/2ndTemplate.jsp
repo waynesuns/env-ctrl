@@ -6,7 +6,7 @@
 <!-- content start -->
 <div class="jumbotron header_img">
 	<div class="container" style="position: relative;">
-		<img src="${path}img/header/${solutionParam.headerPicName}" class="img-responsive">
+		<img src="${path}img/kv_1170.png" class="img-responsive ${solutionParam.headerPicName}">
 		<div class="content">
 			<div class="title">${solutionParam.subItemTitle}</div>
 			<div class="info">${solutionParam.subItemHeaderImgInfo}</div>
@@ -14,7 +14,7 @@
 	</div>
 </div>
 <div class="container">
-	<div class="col-lg-10 col-sm-11 col-xxs-12 subitem" style="position: relative;">
+	<div class="col-lg-10 col-sm-12 col-xxs-12 subitem" style="position: relative;">
 		<div class="list-group menu hidden-xxs hidden-xs">
 			<c:forEach var="subItem" items="${solutionParam.subItems}">
 				<div>

@@ -8,12 +8,12 @@
 		<div class="col-md-11 col-sm-10 col-xs-12" style="margin-top: 7px">
 			<div class="row hidden-xs hidden-xxs" >
 				<div class="hot-line col-md-offset-9 col-md-3 col-sm-offset-7 col-sm-5">
-					<div style="float: left;text-align: left;"><img src="${path}img/phone.jpg" style="height: 14px;width: 10px;margin-top: -4px;"/>4008-725-000</div>
+					<div style="float: left;text-align: left;"><img src="${path}img/icon/phone.png" style="height: 14px;width: 14px;margin-top: -2px;margin-right: 5px;"/>4008-725-000</div>
 					<div style="float: right;">EN｜中文</div>
 				</div>
 			</div>
 			<div class="row" style="margin-top: 8px;" >
-				<div class="col-md-9 col-sm-12 col-xs-12">
+				<div class="col-md-9 col-sm-12 col-xs-12" style="padding-right: 0;">
 					<nav class="navbar navbar-default" role="navigation">
 					  <div class="container-fluid">
 					    <!-- Brand and toggle get grouped for better mobile display -->
@@ -36,22 +36,22 @@
 								</form -->
 						      
 						</div>
-						<div class="collapse navbar-collapse" id="navbar-xs-main" style="margin-top: 4px;">
-					      <ul class="nav navbar-nav visible-xs-block">
-					        <li class="gray dropdown">
-								<a id="drop0" role="button" data-toggle="dropdown" href="${path}solution/index.html">领域应用及解决方案</a>
+						<div class="collapse navbar-collapse" id="navbar-xs-main" style="margin-top: 4px;margin-left: 15px;">
+					      <ul class="nav navbar-nav visible-xs-block visible-xxs-block">
+					        <li class="gray">
+								<a id="drop0" role="button" href="${path}solution/index.html">领域应用及解决方案</a>
 							</li>
-							<li class="dropdown">
-							  <a id="drop2" role="button" data-toggle="dropdown" href="${path}technology/index.html">核心技术</a>
+							<li class="">
+							  <a id="drop2" role="button" href="${path}technology/index.html">核心技术</a>
 							</li>
-							<li class="gray dropdown">
-							  <a id="drop3" role="button" data-toggle="dropdown" href="${path}product/index.html">产品系列</a>
+							<li class="gray">
+							  <a id="drop3" role="button" href="${path}product/index.html">产品系列</a>
 							</li>
-							<li class="dropdown">
-							  <a id="drop4" role="button" data-toggle="dropdown" href="${path}about_us/index.html">关于EC</a>
+							<li class="">
+							  <a id="drop4" role="button" href="${path}about_us/index.html">关于EC</a>
 							</li>
-							<li class="gray dropdown">
-							  <a id="drop5" role="button" data-toggle="dropdown" href="${path}contact_us/index.html">联系我们</a>
+							<li class="gray">
+							  <a id="drop5" role="button" href="${path}contact_us/index.html">联系我们</a>
 							</li>
 					      </ul>
 					     
@@ -65,7 +65,7 @@
 							    <ul id="drop1" class="dropdown-menu row" style="width: 280px;">
 									<li class="row">
 										<div class="col-sm-4" style="float: left;min-height: 20px;"><a tabindex="-1" href="${path}solution/overview.html" style="padding-left: 35px;">概览</a></div>
-										<div class="col-sm-8" style="float: left;min-height: 20px;"><a tabindex="-1" href="${path}solution/military.html" style="padding-left: 15px;">军队</a></div>
+										<div class="col-sm-8" style="float: left;min-height: 20px;"><a tabindex="-1" href="${path}solution/military.html" style="padding-left: 15px;">军事</a></div>
 									</li>
 									<li  class="row">
 										<div class="col-sm-4" style="float: left;min-height: 20px;"><a tabindex="-1" href="${path}solution/chemica_industry.html" style="padding-left: 35px;">化工</a></div>
@@ -89,10 +89,7 @@
 									<div style="min-height: 20px;"><a tabindex="-1" href="${path}technology/overview.html" style="padding-left: 35px;padding-right: 35px;">气相过滤和气相混合净化媒体简介</a></div>
 									</li>
 									<li>
-										<div style="min-height: 20px;"><a tabindex="-1" href="${path}technology/principle.html" style="padding-left: 35px;padding-right: 35px;">气相净化原理</a></div>
-									</li>
-									<li>
-										<div style="min-height: 20px;"><a tabindex="-1" href="${path}technology/scope.html" style="padding-left: 35px;padding-right: 35px;">可去除的污染物及其介绍</a></div>
+										<div style="min-height: 20px;"><a tabindex="-1" href="${path}technology/scope.html" style="padding-left: 35px;padding-right: 35px;">可去除的气态污染物及其介绍</a></div>
 									</li>
 								</ul>
 							</li>
@@ -155,9 +152,19 @@
 							</li>
 							<li class="nav-delim"><col-md->|</col-md-></li>
 							<li class="dropdown">
-							  <a id="drop5" role="button"  href="${path}contact_us/index.html">联系我们</a>
+							  	<a id="drop5" role="button" data-toggle="dropdown" href="#" onmouseover="$(this).click()">联系我们</a>
+								<ul class="dropdown-menu" style="width: 150px;">
+									<li>
+									<div style="min-height: 20px;"><a tabindex="-1" href="${path}contact_us/contact_info.html" style="padding-left: 35px;padding-right: 35px;">联系方式</a></div>
+									</li>
+									<li>
+										<div style="min-height: 20px;"><a tabindex="-1" href="${path}contact_us/tmall.html" style="padding-left: 35px;padding-right: 35px;">天猫旗舰店</a></div>
+									</li>
+									<li>
+										<div style="min-height: 20px;"><a tabindex="-1" href="${path}contact_us/dealer_list.html" style="padding-left: 35px;padding-right: 35px;">授权经销商</a></div>
+									</li>
+								</ul>
 							</li>
-							
 							
 							<li class="" style="float: right;padding-top: 10px;">
 								<img src="${path}img/search.jpg"  class="visible-sm-block text-right" style=""></div>

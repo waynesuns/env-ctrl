@@ -16,13 +16,12 @@
 					<div class="table-responsive">
 						<table class="table table-hover table-bordered">
 							<thead class="">
-								<th class="col-xs-5 active" colspan="2">客户</th>
-								<th class="col-xs-4 active">设备</th>
-								<th class="col-xs-3 active">应用</th>
+								<th class="col-xs-5 active" style="text-align: center;">客户</th>
+								<th class="col-xs-4 active" style="text-align: center;">设备</th>
+								<th class="col-xs-3 active" style="text-align: center;">应用</th>
 							</thead>
 							<c:forEach var="item" items="${groupParam.items}" varStatus="j">
 								<tr class="${j.index%2==1?'active':''}">
-									<td><c:out value="${item.firstName}"/></td>
 									<td><c:out value="${item.lastName}"/></td>
 									<td><c:out value="${item.productName}"/></td>
 									<td><c:out value="${item.itemName}"/></td>

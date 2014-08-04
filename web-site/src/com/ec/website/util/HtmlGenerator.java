@@ -63,6 +63,7 @@ public class HtmlGenerator {
 		urls.add("solution/hotel.html");
 		urls.add("solution/stadium.html");
 		urls.add("solution/overview.html");
+		urls.add("solution/index.html");
 		
 		urls.add("about_us/summary.html");
 		urls.add("about_us/news.html");
@@ -70,10 +71,22 @@ public class HtmlGenerator {
 		urls.add("about_us/certification.html");
 		urls.add("about_us/global_map.html");
 		urls.add("about_us/case_list.html");
+		urls.add("about_us/index.html");
 		
 		urls.add("product/multi_mix.html");
 		urls.add("product/aps.html");
 		urls.add("product/usah.html");
+		urls.add("product/index.html");
+		
+
+		urls.add("technology/overview.html");
+		urls.add("technology/scope.html");
+		urls.add("technology/index.html");
+		
+		urls.add("contact_us/contact_info.html");
+		urls.add("contact_us/tmall.html");
+		urls.add("contact_us/dealer_list.html");
+		urls.add("contact_us/index.html");
 		HtmlGenerator.generateHtml(urls);
 	}
 }
