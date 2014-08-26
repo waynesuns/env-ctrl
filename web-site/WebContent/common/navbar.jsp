@@ -2,10 +2,10 @@
 <%@include file="/common/taglib.jsp"%>
 <body> <div class="container">
 	<div class="row" style="margin-top: 10px;margin-bottom: 8px;">
-		<div class="col-md-1 col-sm-2 col-xs-0 hidden-xs hidden-xxs">
+		<div class="col-md-2 col-sm-2 col-xs-0 hidden-xs hidden-xxs">
 			<a href="${path}index.html"><img src="${path}img/logo.jpg" /></a>
 		</div>
-		<div class="col-md-11 col-sm-10 col-xs-12" style="margin-top: 7px">
+		<div class="col-md-10 col-sm-10 col-xs-12" style="margin-top: 7px">
 			<div class="row hidden-xs hidden-xxs" >
 				<div class="hot-line col-md-offset-9 col-md-3 col-sm-offset-7 col-sm-5">
 					<div style="float: left;text-align: left;"><img src="${path}img/icon/phone.png" style="height: 14px;width: 14px;margin-top: -2px;margin-right: 5px;"/>4008-725-000</div>
@@ -27,7 +27,7 @@
 					      	<img src="${path}img/search.png" >
 					      </button>
 					      <div class="visible-xs-block visible-xxs-block logo" >
-								<a href="${path}index.html"><img src="${path}img/logo.jpg" /></a>
+								<a href="${path}index.html"><img src="${path}img/logo.png" /></a>
 							</div>
 						<div class="collapse navbar-collapse" id="navbar-xs-search">
 								<!-- form class="navbar-left visible-xs-block" role="search" style="position: relative;">
@@ -97,33 +97,11 @@
 							<li class="dropdown">
 							  	<a id="drop3" role="button" data-toggle="dropdown" href="#" onmouseover="$(this).click()">产品系列</a>
 								<ul class="dropdown-menu" style="width: 300px;">
-									<li>
-									<div style="min-height: 20px;"><a tabindex="-1" href="${path}product/multi_mix.html" style="padding-left: 35px;padding-right: 35px;">MULTI-MIX® Media</a></div>
-									</li>
-									<li>
-										<div style="min-height: 20px;"><a tabindex="-1" href="${path}product/aps.html" style="padding-left: 35px;padding-right: 35px;">APS系列 空气净化系统</a></div>
-									</li>
-									<li>
-										<div style="min-height: 20px;"><a tabindex="-1" href="${path}product/usah.html" style="padding-left: 35px;padding-right: 35px;">USAH系列 通用侧开门系列</a></div>
-									</li>
-									<li>
-										<div style="min-height: 20px;"><a tabindex="-1" href="${path}product/hds.html" style="padding-left: 35px;padding-right: 35px;">HDS系列 高浓度气体洗涤器净化机组</a></div>
-									</li>
-									<li>
-										<div style="min-height: 20px;"><a tabindex="-1" href="${path}product/das.html" style="padding-left: 35px;padding-right: 35px;">DAS系列 深床式气相净化机组</a></div>
-									</li>
-									<li>
-										<div style="min-height: 20px;"><a tabindex="-1" href="${path}product/tfs.html" style="padding-left: 35px;padding-right: 35px;">TFS 整体空气净化过滤系统</a></div>
-									</li>
-									<li>
-										<div style="min-height: 20px;"><a tabindex="-1" href="${path}product/ag.html" style="padding-left: 35px;padding-right: 35px;">AG系列 内循环净化系统</a></div>
-									</li>
-									<li>
-										<div style="min-height: 20px;"><a tabindex="-1" href="${path}product/apg_e.html" style="padding-left: 35px;padding-right: 35px;">APG-E系列 新风净化系统</a></div>
-									</li>
-									<li>
-										<div style="min-height: 20px;"><a tabindex="-1" href="${path}product/apg.html" style="padding-left: 35px;padding-right: 35px;">APG系列 内循环净化系统</a></div>
-									</li>
+									<c:forEach var="productMenu" items="${productMenus.subItems}">
+										<li>
+											<div style="min-height: 20px;"><a tabindex="-1" href="${path}${productMenu.url}" style="padding-left: 35px;padding-right: 35px;">${productMenu.name}</a></div>
+										</li>
+									</c:forEach>
 								</ul>
 							</li>
 							<li class="nav-delim"><col-md->|</col-md-></li>

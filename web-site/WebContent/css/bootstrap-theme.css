@@ -432,13 +432,15 @@
 
 .contact-us .title,
 .product .title{
-	color: #e83e0b;
+	color: #009BDF;
 	font-size: 13px;
 }
 
 .contact-us .item >li,
 .product .item >li,
-.product > div > div > ul > li{
+.product .item >li > a,
+.product > div > div > ul > li,
+.product > div > div > ul > li > a{
 	color:#666666;
 	font-size: 13px;
 	padding-bottom: 12px;
@@ -481,7 +483,7 @@
 	margin-top: 25px;
 }
 .red{
-	color: #e83e0b;
+	color: #009BDF;
 }
 .logo{
 	padding-left: 45%;
@@ -496,7 +498,7 @@
 	color: #d3d3d3;
 }
 .hot-line{
-	font-size: 17px;
+	font-size: 15px;
 	color: #666666;
 }
 .nav-delim{
@@ -533,8 +535,8 @@
 }
 .panel-default > .panel-heading  > .collapse.in{
 	color: #ffffff;
-	background-color: #e83e0b;
-	border-color: #e83e0b;
+	background-color: #009BDF;
+	border-color: #009BDF;
 }
 .nav-tabs.nav-justified > li > a{
 	color: #333333;
@@ -556,24 +558,29 @@
 }
 .header_img >div > img.about_us{
 	background-image: url("../img/header/1170/about_us.jpg");
+	height: 240px;
 }
 .header_img >div > img.product{
 	background-image: url("../img/header/1170/product.jpg");
+	height: 240px;
 }
 .header_img >div > img.solution{
 	background-image: url("../img/header/1170/solution.jpg");
+	height: 240px;
 }
 .header_img >div > img.technology{
 	background-image: url("../img/header/1170/technology.jpg");
+	height: 240px;
 }
 .header_img >div > img.contact_us{
 	background-image: url("../img/header/1170/contact_us.jpg");
+	height: 240px;
 }
 .header_img .content{
 	position: absolute;
 	top: 25%;
 	left: 200px;
-	color: #e83e0b;
+	color: #009BDF;
 }
 .header_img .title{
 	font-size: 25px;
@@ -605,7 +612,7 @@
 }
 .subitem .sample-title{
 	font-size: 20px;
-	color: #e83e0b;
+	color: #009BDF;
 	margin-bottom: 12px;
 }
 .subitem .img{
@@ -1008,7 +1015,7 @@
 	}
 	.contact-us .title,
 	.product .title{
-		color: #e83e0b;
+		color: #009BDF;
 		font-size: 22px;
 	}
 	

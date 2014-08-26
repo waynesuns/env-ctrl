@@ -73,11 +73,13 @@ public class HtmlGenerator {
 		urls.add("about_us/case_list.html");
 		urls.add("about_us/index.html");
 		
-		urls.add("product/multi_mix.html");
 		urls.add("product/aps.html");
+		urls.add("product/ag.html");
+		urls.add("product/hds.html");
+		urls.add("product/das.html");
 		urls.add("product/usah.html");
+		urls.add("product/multi_mix.html");
 		urls.add("product/index.html");
-		
 
 		urls.add("technology/overview.html");
 		urls.add("technology/scope.html");

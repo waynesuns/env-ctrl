@@ -1,3 +1,4 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <%@ page language="java" pageEncoding="UTF-8" contentType="text/html;charset=utf-8" %>
 <%@include file="/common/taglib.jsp"%>
 <html lang="zh-CN">
@@ -5,7 +6,7 @@
 <link rel="shortcut icon" href="${path}img/favicon.png" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=edge; chrome=1">
 <title>EC - 环境控制的标准制定者+解决方案提供商</title>
 <!-- Le styles -->
 <link href="${path}css/bootstrap.css" rel="stylesheet">
@@ -18,11 +19,17 @@
 
 	<!-- Fav and touch icons -->
 	<link rel="shortcut glyphicon" href="${path}img/logo_32x32.jpg">
+	<script type="text/javascript" src="${path}js/jquery-1.10.2.js"></script>
 	
-	<script type="text/javascript" src="${path}js/jquery-2.1.1.min.js"></script>
 	<!--[if lt IE 9]>
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="${path}js/html5shiv.js"></script>
+	<script src="${path}js/respond.min.js"></script>
+	<script src="${path}js/respond.matchmedia.addListener.min.js"></script>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<![endif]-->
+
+
+
 	<script type="text/javascript" src="${path}js/bootstrap.js"></script>
 	<script type="text/javascript" src="${path}js/jquery.htmlClean.js"></script>
 </head>

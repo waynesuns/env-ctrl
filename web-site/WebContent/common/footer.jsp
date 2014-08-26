@@ -8,32 +8,23 @@
 			<span class="title">产品系列</span>
 			<hr />
 			<ul class="list-unstyled visible-xs-block item">
-				<li>MULTI-MIX®媒介</li>
-				<li>APS系列空气净化系统</li>
-				<li>USAH系列通用侧开门系列</li>
-				<li>HDS系列高浓度气体洗涤器净化机组</li>
-				<li>DAS系列深床式气相净化机组</li>
-				<li>TFS整体空气净化过滤系统</li>
-				<li>AG系列内循环净化系统</li>
-				<li>APE系列新风净化系统</li>
-				<li>APG系列内循环净化系统</li>
+				<c:forEach var="productMenu" items="${productMenus.subItems}">
+					<li><a tabindex="-1" href="${path}${productMenu.url}" style="padding-left: 35px;padding-right: 35px;">${productMenu.name}</a></li>
+				</c:forEach>
 			</ul>
 			<div class="row hidden-xs " style="color: #666666;">
 				<div class="col-sm-6 ">
 					<ul class="list-unstyled item">
-						<li>MULTI-MIX®媒介</li>
-						<li>APS系列空气净化系统</li>
-						<li>USAH系列通用侧开门系列</li>
-						<li>HDS系列高浓度气体洗涤器净化机组</li>
-						<li>DAS系列深床式气相净化机组</li>
+						<c:forEach var="productMenu" items="${productMenus.subItems}" end="2">
+							<li><a tabindex="-1" href="${path}${productMenu.url}">${productMenu.name}</a></li>
+						</c:forEach>
 					</ul>
 				</div>
 				<div class="col-sm-6">
 					<ul class="list-unstyled item">
-						<li>TFS整体空气净化过滤系统</li>
-						<li>AG系列内循环净化系统</li>
-						<li>APE系列新风净化系统</li>
-						<li>APG系列内循环净化系统</li>
+						<c:forEach var="productMenu" items="${productMenus.subItems}" begin="3">
+							<li><a tabindex="-1" href="${path}${productMenu.url}">${productMenu.name}</a></li>
+						</c:forEach>
 					</ul>
 				</div>
 			</div>
@@ -44,7 +35,7 @@
 			<ul class="list-unstyled item">
 				<li>400服务热线</li>
 				<li>公司地址及业务联系电话</li>
-				<li>天猫旗舰店</li>
+				<!-- <li>天猫旗舰店</li> -->
 				<li>授权经销商</li>
 			</ul>
 		</div>
@@ -56,7 +47,6 @@
 				<a class="footer-link" href="${path}area/china.html">中国大陆</a>
 				<a class="footer-link" href="${path}policy/privacy_policy.html">隐私政策</a>
 				<a class="footer-link" href="${path}policy/use_policy.html">使用条款</a>
-				<a class="footer-link" href="${path}product/new.html">新品预览</a>
 				<img class="footer-icon" src="${path}img/sns_1.jpg"/>
 				<img class="footer-icon" src="${path}img/sns_2.jpg"/>
 				<div class="copyright" style="float: right;"><span class="">沪ICP备1409339号</span><span class="hidden-xs hidden-sm" style="padding-left: 15px;">©2014 EC INC, ALL RIGHTS RESERVED</span></div>
@@ -78,7 +68,6 @@
 			</div>
 			<div>
 				<a class="footer-link" href="${path}policy/use_policy.html">使用条款</a>
-				<a class="footer-link" href="${path}product/new.html">新品预览</a>
 				<span class="copyright" >©2014 EC INC, ALL RIGHTS RESERVED</span>
 			</div>
 		</div>
@@ -90,7 +79,6 @@
 				<a class="footer-link col-xs-3"  href="${path}area/china.html">中国大陆</a>
 				<a class="footer-link col-xs-3"  href="${path}policy/privacy_policy.html">隐私政策</a>
 				<a class="footer-link col-xs-3"  href="${path}policy/use_policy.html">使用条款</a>
-				<a class="footer-link col-xs-3"  href="${path}product/new.html">新品预览</a>
 			</div>
 			<div>
 				<img class="footer-icon" src="${path}img/sns_1.jpg"></img>

@@ -18,6 +18,5 @@ public abstract class AbstractController {
 		request.setAttribute("solutionParam", param);
 		return "/template/2ndIndex.jsp";
 	}
-	
 	public abstract SolutionParam generateParam(int subItemIndex);
 }

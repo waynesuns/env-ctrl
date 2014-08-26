@@ -912,7 +912,7 @@ a {
 }
 a:hover,
 a:focus {
-  color: #e83e0b;
+  color: #009BDF;
   text-decoration: underline;
 }
 a:focus {
@@ -3002,8 +3002,8 @@ fieldset[disabled] .btn-warning.active {
 }
 .btn-danger {
   color: #ffffff;
-  background-color: #e83e0b;
-  border-color: #e83e0b;
+  background-color: #009BDF;
+  border-color: #009BDF;
 }
 .btn-danger:hover,
 .btn-danger:focus,
@@ -4214,7 +4214,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
   background-color: #f7f7f7;
-  color: #e83e0b;
+  color: #009BDF;
 }
 @media (max-width: 767px) {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
@@ -4411,7 +4411,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .pagination > li > a:focus,
 .pagination > li > span:focus {
   color: #2a6496;
-  color: #e83e0b;
+  color: #009BDF;
   text-decoration: underline;
 }
 .pagination > .active > a,
@@ -4421,7 +4421,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .pagination > .active > a:focus,
 .pagination > .active > span:focus {
   z-index: 2;
-  color: #e83e0b;
+  color: #009BDF;
   cursor: default;
   text-decoration: underline;
 }
@@ -5240,7 +5240,7 @@ a.list-group-item-danger.active:focus {
 }
 
 .panel-default >  .active{
-  background-color: #e83e0b;
+  background-color: #009BDF;
 }
 .panel-button{
 	float: right;
@@ -5901,7 +5901,7 @@ button.close {
   background-color: rgba(255, 255, 255, 255);
 }
 .carousel-indicators .active {
-  background-color: #e83e0b;
+  background-color: #009BDF;
 }
 .carousel-caption {
   position: absolute;

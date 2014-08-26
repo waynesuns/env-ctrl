@@ -31,7 +31,7 @@
 			<ol class="breadcrumb">
 			  <li><a href="../index.html">首页</a></li>
 			  <li><a href="#">${solutionParam.subItemTitle}</a></li>
-			  <li class="active">${solutionParam.activeSubItem}</li>
+			  <li style="padding-left: 1px;" class="active">${solutionParam.activeSubItem}</li>
 			</ol>
 			<c:import url="${detailPage}.jsp"></c:import>
 			<div style="margin-bottom: 120px;"></div>
