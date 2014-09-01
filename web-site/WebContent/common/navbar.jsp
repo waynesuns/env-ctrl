@@ -3,7 +3,7 @@
 <body> <div class="container">
 	<div class="row" style="margin-top: 10px;margin-bottom: 8px;">
 		<div class="col-md-2 col-sm-2 col-xs-0 hidden-xs hidden-xxs">
-			<a href="${path}index.html"><img src="${path}img/logo.jpg" /></a>
+			<a href="${path}index.html"><img src="${path}img/logo.png" style="margin-top: 25px;"/></a>
 		</div>
 		<div class="col-md-10 col-sm-10 col-xs-12" style="margin-top: 7px">
 			<div class="row hidden-xs hidden-xxs" >
@@ -63,34 +63,22 @@
 					        <li class="dropdown">
 								<a id="drop0" role="button" data-toggle="dropdown" href="#" onmouseover="$(this).click()">领域应用及解决方案</a>
 							    <ul id="drop1" class="dropdown-menu row" style="width: 280px;">
-									<li class="row">
-										<div class="col-sm-4" style="float: left;min-height: 20px;"><a tabindex="-1" href="${path}solution/overview.html" style="padding-left: 35px;">概览</a></div>
-										<div class="col-sm-8" style="float: left;min-height: 20px;"><a tabindex="-1" href="${path}solution/military.html" style="padding-left: 15px;">军事</a></div>
-									</li>
-									<li  class="row">
-										<div class="col-sm-4" style="float: left;min-height: 20px;"><a tabindex="-1" href="${path}solution/chemica_industry.html" style="padding-left: 35px;">化工</a></div>
-										<div class="col-sm-8" style="float: left;min-height: 20px;"><a tabindex="-1" href="${path}solution/residence.html" style="padding-left: 15px;">住宅</a></div>
-									</li>
-									<li  class="row">
-										<div class="col-sm-4" style="float: left;min-height: 20px;"><a tabindex="-1" href="${path}solution/medical_treatment.html" style="padding-left: 35px;">医疗</a></div>
-										<div class="col-sm-8" style="float: left;min-height: 20px;"><a tabindex="-1" href="${path}solution/stadium.html" style="padding-left: 15px;">场馆及院校</a></div>
-									</li>
-									<li  class="row">
-										<div class="col-sm-4" style="float: left;min-height: 20px;"><a tabindex="-1" href="${path}solution/municipal_administration.html" style="padding-left: 35px;">市政</a></div>
-										<div class="col-sm-8" style="float: left;min-height: 20px;"><a tabindex="-1" href="${path}solution/hotel.html" style="padding-left: 15px;">酒店及办公楼宇</a></div>
-									</li>
+									<c:forEach var="menu" items="${solutionMenus.subItems}">
+										<li>
+											<div style="min-height: 20px;"><a tabindex="-1" href="${path}${menu.url}" style="padding-left: 35px;padding-right: 35px;">${menu.name}</a></div>
+										</li>
+									</c:forEach>
 								</ul>
 							</li>
 							<li class="nav-delim"><col-md->|</col-md-></li>
 							<li class="dropdown">
-							  	<a role="button" data-toggle="dropdown" href="#" onmouseover="$(this).click()">核心技术</a>
+							  	<a role="button" data-toggle="dropdown" href="#" onmouseover="$(this).click()">${technologyMenus.subItemTitle}</a>
 								<ul class="dropdown-menu" style="width: 280px;">
-									<li>
-									<div style="min-height: 20px;"><a tabindex="-1" href="${path}technology/overview.html" style="padding-left: 35px;padding-right: 35px;">气相过滤和气相混合净化媒体简介</a></div>
-									</li>
-									<li>
-										<div style="min-height: 20px;"><a tabindex="-1" href="${path}technology/scope.html" style="padding-left: 35px;padding-right: 35px;">可去除的气态污染物及其介绍</a></div>
-									</li>
+									<c:forEach var="menu" items="${technologyMenus.subItems}">
+										<li>
+											<div style="min-height: 20px;"><a tabindex="-1" href="${path}${menu.url}" style="padding-left: 35px;padding-right: 35px;">${menu.name}</a></div>
+										</li>
+									</c:forEach>
 								</ul>
 							</li>
 							<li class="nav-delim"><col-md->|</col-md-></li>

@@ -8,7 +8,6 @@ import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.commons.io.FileUtils;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.ClientProtocolException;
@@ -55,14 +54,10 @@ public class HtmlGenerator {
 		List<String> urls = new ArrayList<String>();
 		urls.add("index.html");
 		
-		urls.add("solution/military.html");
-		urls.add("solution/chemica_industry.html");
+		urls.add("solution/industry.html");
 		urls.add("solution/municipal_administration.html");
-		urls.add("solution/medical_treatment.html");
-		urls.add("solution/residence.html");
-		urls.add("solution/hotel.html");
-		urls.add("solution/stadium.html");
-		urls.add("solution/overview.html");
+		urls.add("solution/business.html");
+		urls.add("solution/other.html");
 		urls.add("solution/index.html");
 		
 		urls.add("about_us/summary.html");
@@ -81,8 +76,11 @@ public class HtmlGenerator {
 		urls.add("product/multi_mix.html");
 		urls.add("product/index.html");
 
-		urls.add("technology/overview.html");
-		urls.add("technology/scope.html");
+		urls.add("technology/energy_conservation.html");
+		urls.add("technology/particles_filter.html");
+		urls.add("technology/power_refund.html");
+		urls.add("technology/gas_filter.html");
+		urls.add("technology/degerming.html");
 		urls.add("technology/index.html");
 		
 		urls.add("contact_us/contact_info.html");

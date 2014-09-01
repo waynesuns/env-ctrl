@@ -9,8 +9,13 @@
 <c:forEach var="value" items="${detailValue.values}">
 <c:set var="paramGroup" value="${value}" scope="request"/>
 <c:import url="/template/element/${value.templatePath}"></c:import>
-<div style="padding-bottom: 12px;"></div>
-<c:if test="${value.doDelim}">
-	<hr style="margin-bottom: 40px;margin-top: 10px;"/>
-</c:if>
+
+<c:choose>
+	<c:when test="${value.doDelim}">
+		<hr style="margin-bottom: 40px;margin-top: 10px;"/>
+	</c:when>
+	<c:otherwise>
+		<div style="padding-bottom: 12px;"></div>
+	</c:otherwise>
+</c:choose>
 </c:forEach>

@@ -11,13 +11,16 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.ec.website.param.ImageParam;
 import com.ec.website.param.PartnerGroupParam;
 import com.ec.website.param.PartnerParam;
 import com.ec.website.param.SolutionParam;
 import com.ec.website.param.SolutionSampleParam;
 import com.ec.website.param.TableHeaderParam;
 import com.ec.website.param.group.DivGroupParam;
+import com.ec.website.param.group.ImageGroupParam;
 import com.ec.website.param.group.MainGroupParam;
+import com.ec.website.param.group.RowGroupParam;
 import com.ec.website.param.group.TableGroupParam;
 import com.ec.website.param.group.UlGroupParam;
 
@@ -118,13 +121,109 @@ public class ProductController extends AbstractController {
 	@RequestMapping(value = "/aps")
 	public String aps(HttpServletRequest request, HttpServletResponse response) {
 		SolutionParam param = this.generateParam(0);
-		param.addSample(new SolutionSampleParam("简介", "AG_670x383.png", ""));
+		param.setTitle("APS系列空气净化系统");
+
+		List<MainGroupParam> details = new 	ArrayList<MainGroupParam>();
+		this.initAPS1(details);
+		this.initAPS2(details);
+		this.initAPS3(details);
+		
+		Map<Integer,String> keys = new HashMap<Integer, String>();
+		keys.put(0, "立式系列");
+		keys.put(1, "暗藏式系列");
+		keys.put(2, "移动式系列");
 		request.setAttribute("solutionParam", param);
-		request.setAttribute("detailPage", "productDetail2");
-		request.setAttribute("productDetailPage", "productDetailPage4");
+		request.setAttribute("detailPage", "productDetail3");
+		request.setAttribute("productDetailPage", "productDetailPage5");
+		request.setAttribute("details", details);
+		request.setAttribute("keys", keys);
 		return "/template/2ndTemplate.jsp";
 	}
 
+	public void initAPS1(List<MainGroupParam> details){
+		details.add((new MainGroupParam(null,null))
+				.addValue(new RowGroupParam(null, null)
+					.addValue(new DivGroupParam(null, "APS小型气相净化机组，被设计成为能在较小空间内有效去除微尘和污染的空气净化装置，并能同时减少新风的风量，降低建筑能耗。"+"</br></br>"+"APS系统严格符合最新建筑通风设备标准和室内空气质量要求。其特色是多级过滤系统，包括高效率的气相净化媒体，能提供极高能效的净化过滤。").setCssClassName("col-xxs-12 col-md-6"))
+					.addValue(new ImageGroupParam(null).addValue(new ImageParam("/product/aps_h.png")).setCssClassName("col-xxs-12 col-md-6"))
+						)
+				.addValue(new UlGroupParam("APS过滤部分符合所有的ASHRAE标准，包括：")
+					.addValue("30%初效过滤；")
+					.addValue("多段混合化学媒体箱，加入MM-1000 Multi-Mix®媒体（可选用其他媒体配方）；")
+					.addValue("空气过滤器对0.3微米尘埃最高可达到99.99%的过滤率。"))
+				.addValue(new DivGroupParam(null, "APS具有极高的性价比，可用于教室、医院、实验室、监狱、研究所、宾馆、吸烟室、会议室等，能轻松解决目前的室内空气质量问题。").setDoDelim(true))
+				.addValue(new DivGroupParam("特点",null))
+				.addValue(new UlGroupParam("MM-1000 Multi-Mix®媒体在装运前经过了以下质量控制测试：")
+					.addValue("低噪音")
+					.addValue("紧凑设计")
+					.addValue("卧式或立式结构")
+					.addValue("多级空气过滤")
+					.addValue("提高室内空气质量")
+					.addValue("减少新风能量负荷")
+					.addValue("双层绝缘PU面板结构")
+					.addValue("30%初效过滤器")
+					.addValue("一至三级气相分子筛")
+					.addValue("过滤臭味和有毒气体")
+					.addValue("快速门锁扣")
+					.addValue("检修门")
+					.addValue("启动开关").setDoDelim(true))
+				
+				.addValue(new DivGroupParam("可选项",null))
+				.addValue(new UlGroupParam(null)
+					.addValue("90%中效过滤器")
+					.addValue("带式传动内置风机")
+					.addValue("压差表")
+					.addValue("手动风阀")
+					.addValue("机组装有变速控制器，可装在机组上或遥控*")
+					.addValue("压差表可监控系统压力")
+					.addValue("水加热盘管")
+					.addValue("直膨式或冷冻水制冷盘管")
+
+					
+						));
+	}
+	public void initAPS2(List<MainGroupParam> details){
+		details.add((new MainGroupParam(null,null))
+				.addValue(new RowGroupParam(null, null)
+					.addValue(new DivGroupParam(null, "APS系列净化新风系统，能在提供舒适新风的同时，将热量与湿气在排风与新风间转移以节省空调用于处理新风的能耗。新一代高效率净化全热交换器，可净化补进新风，有效去除外界异味、汽车尾气以及PM2.5等空气污染，以极高的能量回收效率，彻底解决人们对工作生活环境高品质的渴求。它被广泛应用于有空气品质问题的宾馆、公寓、住宅、商务楼、医院、展览建筑、公寓和公共建筑等。").setCssClassName("col-xxs-12 col-md-6"))
+					.addValue(new ImageGroupParam(null).addValue(new ImageParam("/product/aps_v.png")).setCssClassName("col-xxs-12 col-md-6"))
+						)
+				.addValue(new DivGroupParam("特点",null))
+				.addValue(new UlGroupParam("MM-1000 Multi-Mix®媒体在装运前经过了以下质量控制测试：")
+					.addValue("在空调与采暖季节，可节省空调采暖能耗15%以上；")
+					.addValue("高效纸质换热芯体具有极强的湿气吸附与传递功能；")
+					.addValue("高效低噪音直流马达系统（部分机型除外）；")
+					.addValue("机组采用上海宝钢耐指纹板材，人性化设计，外表美观；")
+					.addValue("机组配置我司特有的过滤净化段，能有效去除有毒有害气体；")
+					.addValue("灵巧简洁的设计使保养极为简便，拆卸几颗螺钉即可维修机组内的任一部件；")
+					.addValue("采用特殊吸音材料和优质电机，低噪音，低能耗。")
+					.addValue("启动开关").setDoDelim(true))
+				
+				.addValue(new DivGroupParam("可选项",null))
+				.addValue(new UlGroupParam(null)
+					.addValue("智能控制系统")
+					.addValue("通过感测二氧化碳等多种化学有害气体及湿度来调整新风系统")
+					.addValue("全热交换器")
+
+					
+						));
+	}
+
+	public void initAPS3(List<MainGroupParam> details){
+		details.add((new MainGroupParam(null,null))
+				.addValue(new DivGroupParam(null,"APS移动式系列气相净化仪拥有行业领先的净化能力，能在完全去除PM2.5的基础上、将气体污染物的危害降至最低。"))
+				.addValue(new DivGroupParam(null,"独有Multi-Mix Media®气相分子筛，能在0.05秒内彻底去除有毒有害气体，技术源自加拿大Circul-Aire®公司。"))
+				.addValue(new DivGroupParam(null,"作为一个久经考验的顶级净化过滤媒体，此气相分子筛可对环境里的腐蚀、气味和有毒污染物质提供不间断的快速净化，还能有效消除普通空气过滤器无法消除的有毒有害气体，如：二氧化硫、二氧化氮、有机污染物，甚至在特殊地区可有效净化噁英等。"))
+				.addValue(new DivGroupParam(null,"气相和尘埃净化污染控制技术是当前最先进的、效率最高的解决方案，现有案例多应用于较为复杂的污染环境下。利用多级过滤，尘埃过滤器和气相过滤媒体相结合的方式，能非常有效地去除室内空气污染物。APS移动式气相净化仪这一高性能系统，集成了精密的元件材料与工程实践，可用于恶劣的工业和商业场合。").setDoDelim(true))
+				
+				.addValue(new DivGroupParam("特点",null))
+				.addValue(new DivGroupParam(null,"等离子发生器采用韩国 spe H•ion cluster 技术，通过 IST 专业评测机构认证，可高效灭菌、降解部分有害气体。","第一层 等离子段"))
+				.addValue(new DivGroupParam(null,"可滤除所有直径5μm以上的大颗粒粉尘，容尘量大，可清洗后重复使用。","第二层 初效过滤段"))
+				.addValue(new DivGroupParam(null,"其独特的“V”型工业级设计保证了高接触面积和低阻力。气相净化媒体能在0.05秒内去除数百种室内污染气体。即使室内环境有数十人吸烟，APS移动式气相净化仪依旧能表现出色。","第三层 气相分子筛"))
+				.addValue(new DivGroupParam(null,"PTFE材质的HEPA13高效过滤器专门针对PM2.5颗粒设计，甚至是0.1微米的颗粒也能达到99.99%的处理效率。","第四层 高效过滤段"))
+				
+					
+						);
+	}
 	@RequestMapping(value = "/ag")
 	public String ag(HttpServletRequest request, HttpServletResponse response) {
 		SolutionParam param = this.generateParam(1);
@@ -348,25 +447,31 @@ public class ProductController extends AbstractController {
 	public String multiMix(HttpServletRequest request,
 			HttpServletResponse response) {
 		SolutionParam param = this.generateParam(5);
-		param.addSample(new SolutionSampleParam("简介", "multi-mix_670x383.png",
-				""));
+		param.setTitle("MULTI-MIX® Media");
 
-		Map<String, MainGroupParam> details = new HashMap<String, MainGroupParam>();
+		List<MainGroupParam> details = new 	ArrayList<MainGroupParam>();
 		this.initMultiMixOverview(details);
 		this.initMultiMixMM1000(details);
 		this.initMultiMixMM3000(details);
 		this.initMultiMixMM7000(details);
 		this.initMultiMixMM9000(details);
 		
+		Map<Integer,String> keys = new HashMap<Integer, String>();
+		keys.put(0, "概览");
+		keys.put(1, "MM1000");
+		keys.put(2, "MM3000");
+		keys.put(3, "MM7000");
+		keys.put(4, "MM9000");
 		request.setAttribute("solutionParam", param);
 		request.setAttribute("detailPage", "productDetail3");
 		request.setAttribute("productDetailPage", "productDetailPage5");
 		request.setAttribute("details", details);
+		request.setAttribute("keys", keys);
 		return "/template/2ndTemplate.jsp";
 	}
 
-	public void initMultiMixOverview(Map<String, MainGroupParam> details){
-		details.put("overView",(new MainGroupParam(null,null))
+	public void initMultiMixOverview(List<MainGroupParam> details){
+		details.add((new MainGroupParam(null,null))
 				.addValue(new DivGroupParam(null, "Multi-Mix®化学过滤媒体经专门设计，用于去除广泛的空气污染物。Multi-Mix®化学过滤媒体种类繁多，即可单独使用，也可以组合使用，能有效消除商业和工业环境中的腐蚀性、异味及有毒污染物，提供持续不断的净化空气。"))
 				.addValue(new TableGroupParam("")
 						.addHeader(new TableHeaderParam("媒体", "100px")).addHeader(new TableHeaderParam("说明")).addHeader(new TableHeaderParam("应用"))
@@ -394,8 +499,8 @@ public class ProductController extends AbstractController {
 						.addValue(new String[]{"MM‐1955LTC CleanAire","由MM-1000C和MM-9000LTC按照50%的比例混合","该混合非常适用于过滤净化空气，改善室内空气质量"}))
 		);
 	}
-	public void initMultiMixMM1000(Map<String, MainGroupParam> details){
-		details.put("MM-1000",(new MainGroupParam(null,null))
+	public void initMultiMixMM1000(List<MainGroupParam> details){
+		details.add((new MainGroupParam(null,null))
 				.addValue(new DivGroupParam(null, "MM-1000 Multi-Mix®媒体是一种高表面积的活性氧化铝颗粒，与高锰酸钾浸渍制造而成。是一种能增强性能的化学过滤器，用于去除硫化氢（H2S），二氧化硫（SO2），二氧化氮（NO2），硫醇，以及气流中轻量有机物。MM-1000 Multi-Mix®媒体是一种化学吸附剂，通过吸附和氧化来过滤，由于球状形态、大小均匀，具有低压降。"))
 				.addValue(new DivGroupParam("典型物理属性", null))
 				.addValue(new TableGroupParam(null)
@@ -442,8 +547,8 @@ public class ProductController extends AbstractController {
 					
 						));
 	}
-	public void initMultiMixMM3000(Map<String, MainGroupParam> details){
-		details.put("MM-3000",(new MainGroupParam(null,null))
+	public void initMultiMixMM3000(List<MainGroupParam> details){
+		details.add((new MainGroupParam(null,null))
 				.addValue(new DivGroupParam(null, "MM-3000 Multi-Mix®媒体是一种活性炭颗粒，通过物理吸附，可去除各种有机化合物和挥发性有机化合物（VOCs）的臭味。MM-3000 Multi-Mix®媒体是从一种独特的烟煤培养基激活和制造而成的，具有低压降和高吸附去除能力。"))
 				.addValue(new DivGroupParam("典型物理属性", null))
 				.addValue(new TableGroupParam(null)
@@ -489,8 +594,8 @@ public class ProductController extends AbstractController {
 					
 						));
 	}
-	public void initMultiMixMM7000(Map<String, MainGroupParam> details){
-		details.put("MM-7000",(new MainGroupParam(null,null))
+	public void initMultiMixMM7000(List<MainGroupParam> details){
+		details.add((new MainGroupParam(null,null))
 				.addValue(new DivGroupParam(null, "MM-7000 Multi-Mix®媒体是一种磷酸浸渍增强性能的活性炭颗粒，用于去除基本的气体，如来自气流中的氨气（NH3）。MM-7000 Multi-Mix®媒体是一种从独特的烟煤培养基制造而成的化学吸附剂，具有低压降和高吸附去除能力。"))
 				.addValue(new DivGroupParam("典型物理属性", null))
 				.addValue(new TableGroupParam(null)
@@ -537,8 +642,8 @@ public class ProductController extends AbstractController {
 					
 						));
 	}
-	public void initMultiMixMM9000(Map<String, MainGroupParam> details){
-		details.put("MM-9000",(new MainGroupParam(null,null))
+	public void initMultiMixMM9000(List<MainGroupParam> details){
+		details.add((new MainGroupParam(null,null))
 				.addValue(new DivGroupParam(null, "MM-9000 Multi-Mix®媒体是一种增强性能的氢氧化钾浸渍粒状活性炭，用于去除污染气流中的酸性气体，如：硫化氢（H2S），二氧化硫（SO2），氯气（CL2），和盐酸（HCL）。MM-9000 Multi-Mix®媒体是一种从独特的烟煤培养基制造而成的化学吸附剂，具有低压降和高吸附去除能力。"))
 				.addValue(new DivGroupParam("典型物理属性", null))
 				.addValue(new TableGroupParam(null)

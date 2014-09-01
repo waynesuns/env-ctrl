@@ -2,6 +2,7 @@
 
 
 
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 
 
 
@@ -10,7 +11,7 @@
 <link rel="shortcut icon" href="../img/favicon.png" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=edge; chrome=1">
 <title>EC - 环境控制的标准制定者+解决方案提供商</title>
 <!-- Le styles -->
 <link href="../css/bootstrap.css" rel="stylesheet">
@@ -23,11 +24,17 @@
 
 	<!-- Fav and touch icons -->
 	<link rel="shortcut glyphicon" href="../img/logo_32x32.jpg">
+	<script type="text/javascript" src="../js/jquery-1.10.2.js"></script>
 	
-	<script type="text/javascript" src="../js/jquery-2.1.1.min.js"></script>
 	<!--[if lt IE 9]>
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="../js/html5shiv.js"></script>
+	<script src="../js/respond.min.js"></script>
+	<script src="../js/respond.matchmedia.addListener.min.js"></script>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<![endif]-->
+
+
+
 	<script type="text/javascript" src="../js/bootstrap.js"></script>
 	<script type="text/javascript" src="../js/jquery.htmlClean.js"></script>
 </head>
@@ -36,10 +43,10 @@
 
 <body> <div class="container">
 	<div class="row" style="margin-top: 10px;margin-bottom: 8px;">
-		<div class="col-md-1 col-sm-2 col-xs-0 hidden-xs hidden-xxs">
-			<a href="../index.html"><img src="../img/logo.jpg" /></a>
+		<div class="col-md-2 col-sm-2 col-xs-0 hidden-xs hidden-xxs">
+			<a href="../index.html"><img src="../img/logo.png" style="margin-top: 25px;"/></a>
 		</div>
-		<div class="col-md-11 col-sm-10 col-xs-12" style="margin-top: 7px">
+		<div class="col-md-10 col-sm-10 col-xs-12" style="margin-top: 7px">
 			<div class="row hidden-xs hidden-xxs" >
 				<div class="hot-line col-md-offset-9 col-md-3 col-sm-offset-7 col-sm-5">
 					<div style="float: left;text-align: left;"><img src="../img/icon/phone.png" style="height: 14px;width: 14px;margin-top: -2px;margin-right: 5px;"/>4008-725-000</div>
@@ -61,7 +68,7 @@
 					      	<img src="../img/search.png" >
 					      </button>
 					      <div class="visible-xs-block visible-xxs-block logo" >
-								<a href="../index.html"><img src="../img/logo.jpg" /></a>
+								<a href="../index.html"><img src="../img/logo.png" /></a>
 							</div>
 						<div class="collapse navbar-collapse" id="navbar-xs-search">
 								<!-- form class="navbar-left visible-xs-block" role="search" style="position: relative;">
@@ -117,47 +124,60 @@
 							</li>
 							<li class="nav-delim"><col-md->|</col-md-></li>
 							<li class="dropdown">
-							  	<a role="button" data-toggle="dropdown" href="#" onmouseover="$(this).click()">核心技术</a>
+							  	<a role="button" data-toggle="dropdown" href="#" onmouseover="$(this).click()">优势技术</a>
 								<ul class="dropdown-menu" style="width: 280px;">
-									<li>
-									<div style="min-height: 20px;"><a tabindex="-1" href="../technology/overview.html" style="padding-left: 35px;padding-right: 35px;">气相过滤和气相混合净化媒体简介</a></div>
-									</li>
-									<li>
-										<div style="min-height: 20px;"><a tabindex="-1" href="../technology/scope.html" style="padding-left: 35px;padding-right: 35px;">可去除的气态污染物及其介绍</a></div>
-									</li>
+									
+										<li>
+											<div style="min-height: 20px;"><a tabindex="-1" href="../technology/gas_filter.html" style="padding-left: 35px;padding-right: 35px;">气相过滤技术</a></div>
+										</li>
+									
+										<li>
+											<div style="min-height: 20px;"><a tabindex="-1" href="../technology/particles_filter.html" style="padding-left: 35px;padding-right: 35px;">颗粒物过滤技术</a></div>
+										</li>
+									
+										<li>
+											<div style="min-height: 20px;"><a tabindex="-1" href="../technology/degerming.html" style="padding-left: 35px;padding-right: 35px;">杀菌除菌技术</a></div>
+										</li>
+									
+										<li>
+											<div style="min-height: 20px;"><a tabindex="-1" href="../technology/power_refund.html" style="padding-left: 35px;padding-right: 35px;">能量回收技术</a></div>
+										</li>
+									
+										<li>
+											<div style="min-height: 20px;"><a tabindex="-1" href="../technology/energy_conservation.html" style="padding-left: 35px;padding-right: 35px;">高效节能技术</a></div>
+										</li>
+									
 								</ul>
 							</li>
 							<li class="nav-delim"><col-md->|</col-md-></li>
 							<li class="dropdown">
 							  	<a id="drop3" role="button" data-toggle="dropdown" href="#" onmouseover="$(this).click()">产品系列</a>
 								<ul class="dropdown-menu" style="width: 300px;">
-									<li>
-									<div style="min-height: 20px;"><a tabindex="-1" href="../product/multi_mix.html" style="padding-left: 35px;padding-right: 35px;">MULTI-MIX® Media</a></div>
-									</li>
-									<li>
-										<div style="min-height: 20px;"><a tabindex="-1" href="../product/aps.html" style="padding-left: 35px;padding-right: 35px;">APS系列 空气净化系统</a></div>
-									</li>
-									<li>
-										<div style="min-height: 20px;"><a tabindex="-1" href="../product/usah.html" style="padding-left: 35px;padding-right: 35px;">USAH系列 通用侧开门系列</a></div>
-									</li>
-									<li>
-										<div style="min-height: 20px;"><a tabindex="-1" href="../product/hds.html" style="padding-left: 35px;padding-right: 35px;">HDS系列 高浓度气体洗涤器净化机组</a></div>
-									</li>
-									<li>
-										<div style="min-height: 20px;"><a tabindex="-1" href="../product/das.html" style="padding-left: 35px;padding-right: 35px;">DAS系列 深床式气相净化机组</a></div>
-									</li>
-									<li>
-										<div style="min-height: 20px;"><a tabindex="-1" href="../product/tfs.html" style="padding-left: 35px;padding-right: 35px;">TFS 整体空气净化过滤系统</a></div>
-									</li>
-									<li>
-										<div style="min-height: 20px;"><a tabindex="-1" href="../product/ag.html" style="padding-left: 35px;padding-right: 35px;">AG系列 内循环净化系统</a></div>
-									</li>
-									<li>
-										<div style="min-height: 20px;"><a tabindex="-1" href="../product/apg_e.html" style="padding-left: 35px;padding-right: 35px;">APG-E系列 新风净化系统</a></div>
-									</li>
-									<li>
-										<div style="min-height: 20px;"><a tabindex="-1" href="../product/apg.html" style="padding-left: 35px;padding-right: 35px;">APG系列 内循环净化系统</a></div>
-									</li>
+									
+										<li>
+											<div style="min-height: 20px;"><a tabindex="-1" href="../product/aps.html" style="padding-left: 35px;padding-right: 35px;">APS系列空气净化系统</a></div>
+										</li>
+									
+										<li>
+											<div style="min-height: 20px;"><a tabindex="-1" href="../product/ag.html" style="padding-left: 35px;padding-right: 35px;">AG系列内循环净化系统</a></div>
+										</li>
+									
+										<li>
+											<div style="min-height: 20px;"><a tabindex="-1" href="../product/hds.html" style="padding-left: 35px;padding-right: 35px;">HDS系列高浓度气体洗涤器净化机组</a></div>
+										</li>
+									
+										<li>
+											<div style="min-height: 20px;"><a tabindex="-1" href="../product/das.html" style="padding-left: 35px;padding-right: 35px;">DAS系列深床式气相净化机组</a></div>
+										</li>
+									
+										<li>
+											<div style="min-height: 20px;"><a tabindex="-1" href="../product/usah.html" style="padding-left: 35px;padding-right: 35px;">USAH系列通用侧开门系列</a></div>
+										</li>
+									
+										<li>
+											<div style="min-height: 20px;"><a tabindex="-1" href="../product/multi_mix.html" style="padding-left: 35px;padding-right: 35px;">MULTI-MIX® Media</a></div>
+										</li>
+									
 								</ul>
 							</li>
 							<li class="nav-delim"><col-md->|</col-md-></li>
@@ -311,7 +331,7 @@
 			<ol class="breadcrumb">
 			  <li><a href="../index.html">首页</a></li>
 			  <li><a href="#">领域应用及解决方案</a></li>
-			  <li class="active">场馆及院校</li>
+			  <li style="padding-left: 1px;" class="active">场馆及院校</li>
 			</ol>
 			
 
@@ -350,32 +370,41 @@
 			<span class="title">产品系列</span>
 			<hr />
 			<ul class="list-unstyled visible-xs-block item">
-				<li>MULTI-MIX®媒介</li>
-				<li>APS系列空气净化系统</li>
-				<li>USAH系列通用侧开门系列</li>
-				<li>HDS系列高浓度气体洗涤器净化机组</li>
-				<li>DAS系列深床式气相净化机组</li>
-				<li>TFS整体空气净化过滤系统</li>
-				<li>AG系列内循环净化系统</li>
-				<li>APE系列新风净化系统</li>
-				<li>APG系列内循环净化系统</li>
+				
+					<li><a tabindex="-1" href="../product/aps.html" style="padding-left: 35px;padding-right: 35px;">APS系列空气净化系统</a></li>
+				
+					<li><a tabindex="-1" href="../product/ag.html" style="padding-left: 35px;padding-right: 35px;">AG系列内循环净化系统</a></li>
+				
+					<li><a tabindex="-1" href="../product/hds.html" style="padding-left: 35px;padding-right: 35px;">HDS系列高浓度气体洗涤器净化机组</a></li>
+				
+					<li><a tabindex="-1" href="../product/das.html" style="padding-left: 35px;padding-right: 35px;">DAS系列深床式气相净化机组</a></li>
+				
+					<li><a tabindex="-1" href="../product/usah.html" style="padding-left: 35px;padding-right: 35px;">USAH系列通用侧开门系列</a></li>
+				
+					<li><a tabindex="-1" href="../product/multi_mix.html" style="padding-left: 35px;padding-right: 35px;">MULTI-MIX® Media</a></li>
+				
 			</ul>
 			<div class="row hidden-xs " style="color: #666666;">
 				<div class="col-sm-6 ">
 					<ul class="list-unstyled item">
-						<li>MULTI-MIX®媒介</li>
-						<li>APS系列空气净化系统</li>
-						<li>USAH系列通用侧开门系列</li>
-						<li>HDS系列高浓度气体洗涤器净化机组</li>
-						<li>DAS系列深床式气相净化机组</li>
+						
+							<li><a tabindex="-1" href="../product/aps.html">APS系列空气净化系统</a></li>
+						
+							<li><a tabindex="-1" href="../product/ag.html">AG系列内循环净化系统</a></li>
+						
+							<li><a tabindex="-1" href="../product/hds.html">HDS系列高浓度气体洗涤器净化机组</a></li>
+						
 					</ul>
 				</div>
 				<div class="col-sm-6">
 					<ul class="list-unstyled item">
-						<li>TFS整体空气净化过滤系统</li>
-						<li>AG系列内循环净化系统</li>
-						<li>APE系列新风净化系统</li>
-						<li>APG系列内循环净化系统</li>
+						
+							<li><a tabindex="-1" href="../product/das.html">DAS系列深床式气相净化机组</a></li>
+						
+							<li><a tabindex="-1" href="../product/usah.html">USAH系列通用侧开门系列</a></li>
+						
+							<li><a tabindex="-1" href="../product/multi_mix.html">MULTI-MIX® Media</a></li>
+						
 					</ul>
 				</div>
 			</div>
@@ -386,7 +415,7 @@
 			<ul class="list-unstyled item">
 				<li>400服务热线</li>
 				<li>公司地址及业务联系电话</li>
-				<li>天猫旗舰店</li>
+				<!-- <li>天猫旗舰店</li> -->
 				<li>授权经销商</li>
 			</ul>
 		</div>
@@ -398,7 +427,6 @@
 				<a class="footer-link" href="../area/china.html">中国大陆</a>
 				<a class="footer-link" href="../policy/privacy_policy.html">隐私政策</a>
 				<a class="footer-link" href="../policy/use_policy.html">使用条款</a>
-				<a class="footer-link" href="../product/new.html">新品预览</a>
 				<img class="footer-icon" src="../img/sns_1.jpg"/>
 				<img class="footer-icon" src="../img/sns_2.jpg"/>
 				<div class="copyright" style="float: right;"><span class="">沪ICP备1409339号</span><span class="hidden-xs hidden-sm" style="padding-left: 15px;">©2014 EC INC, ALL RIGHTS RESERVED</span></div>
@@ -420,7 +448,6 @@
 			</div>
 			<div>
 				<a class="footer-link" href="../policy/use_policy.html">使用条款</a>
-				<a class="footer-link" href="../product/new.html">新品预览</a>
 				<span class="copyright" >©2014 EC INC, ALL RIGHTS RESERVED</span>
 			</div>
 		</div>
@@ -432,7 +459,6 @@
 				<a class="footer-link col-xs-3"  href="../area/china.html">中国大陆</a>
 				<a class="footer-link col-xs-3"  href="../policy/privacy_policy.html">隐私政策</a>
 				<a class="footer-link col-xs-3"  href="../policy/use_policy.html">使用条款</a>
-				<a class="footer-link col-xs-3"  href="../product/new.html">新品预览</a>
 			</div>
 			<div>
 				<img class="footer-icon" src="../img/sns_1.jpg"></img>

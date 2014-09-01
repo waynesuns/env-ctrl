@@ -2,6 +2,7 @@
 
 
 
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 
 
 
@@ -10,7 +11,7 @@
 <link rel="shortcut icon" href="../img/favicon.png" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=edge; chrome=1">
 <title>EC - 环境控制的标准制定者+解决方案提供商</title>
 <!-- Le styles -->
 <link href="../css/bootstrap.css" rel="stylesheet">
@@ -23,11 +24,17 @@
 
 	<!-- Fav and touch icons -->
 	<link rel="shortcut glyphicon" href="../img/logo_32x32.jpg">
+	<script type="text/javascript" src="../js/jquery-1.10.2.js"></script>
 	
-	<script type="text/javascript" src="../js/jquery-2.1.1.min.js"></script>
 	<!--[if lt IE 9]>
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="../js/html5shiv.js"></script>
+	<script src="../js/respond.min.js"></script>
+	<script src="../js/respond.matchmedia.addListener.min.js"></script>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<![endif]-->
+
+
+
 	<script type="text/javascript" src="../js/bootstrap.js"></script>
 	<script type="text/javascript" src="../js/jquery.htmlClean.js"></script>
 </head>
@@ -36,10 +43,10 @@
 
 <body> <div class="container">
 	<div class="row" style="margin-top: 10px;margin-bottom: 8px;">
-		<div class="col-md-1 col-sm-2 col-xs-0 hidden-xs hidden-xxs">
-			<a href="../index.html"><img src="../img/logo.jpg" /></a>
+		<div class="col-md-2 col-sm-2 col-xs-0 hidden-xs hidden-xxs">
+			<a href="../index.html"><img src="../img/logo.png" style="margin-top: 25px;"/></a>
 		</div>
-		<div class="col-md-11 col-sm-10 col-xs-12" style="margin-top: 7px">
+		<div class="col-md-10 col-sm-10 col-xs-12" style="margin-top: 7px">
 			<div class="row hidden-xs hidden-xxs" >
 				<div class="hot-line col-md-offset-9 col-md-3 col-sm-offset-7 col-sm-5">
 					<div style="float: left;text-align: left;"><img src="../img/icon/phone.png" style="height: 14px;width: 14px;margin-top: -2px;margin-right: 5px;"/>4008-725-000</div>
@@ -61,7 +68,7 @@
 					      	<img src="../img/search.png" >
 					      </button>
 					      <div class="visible-xs-block visible-xxs-block logo" >
-								<a href="../index.html"><img src="../img/logo.jpg" /></a>
+								<a href="../index.html"><img src="../img/logo.png" /></a>
 							</div>
 						<div class="collapse navbar-collapse" id="navbar-xs-search">
 								<!-- form class="navbar-left visible-xs-block" role="search" style="position: relative;">
@@ -117,47 +124,60 @@
 							</li>
 							<li class="nav-delim"><col-md->|</col-md-></li>
 							<li class="dropdown">
-							  	<a role="button" data-toggle="dropdown" href="#" onmouseover="$(this).click()">核心技术</a>
+							  	<a role="button" data-toggle="dropdown" href="#" onmouseover="$(this).click()">优势技术</a>
 								<ul class="dropdown-menu" style="width: 280px;">
-									<li>
-									<div style="min-height: 20px;"><a tabindex="-1" href="../technology/overview.html" style="padding-left: 35px;padding-right: 35px;">气相过滤和气相混合净化媒体简介</a></div>
-									</li>
-									<li>
-										<div style="min-height: 20px;"><a tabindex="-1" href="../technology/scope.html" style="padding-left: 35px;padding-right: 35px;">可去除的气态污染物及其介绍</a></div>
-									</li>
+									
+										<li>
+											<div style="min-height: 20px;"><a tabindex="-1" href="../technology/gas_filter.html" style="padding-left: 35px;padding-right: 35px;">气相过滤技术</a></div>
+										</li>
+									
+										<li>
+											<div style="min-height: 20px;"><a tabindex="-1" href="../technology/particles_filter.html" style="padding-left: 35px;padding-right: 35px;">颗粒物过滤技术</a></div>
+										</li>
+									
+										<li>
+											<div style="min-height: 20px;"><a tabindex="-1" href="../technology/degerming.html" style="padding-left: 35px;padding-right: 35px;">杀菌除菌技术</a></div>
+										</li>
+									
+										<li>
+											<div style="min-height: 20px;"><a tabindex="-1" href="../technology/power_refund.html" style="padding-left: 35px;padding-right: 35px;">能量回收技术</a></div>
+										</li>
+									
+										<li>
+											<div style="min-height: 20px;"><a tabindex="-1" href="../technology/energy_conservation.html" style="padding-left: 35px;padding-right: 35px;">高效节能技术</a></div>
+										</li>
+									
 								</ul>
 							</li>
 							<li class="nav-delim"><col-md->|</col-md-></li>
 							<li class="dropdown">
 							  	<a id="drop3" role="button" data-toggle="dropdown" href="#" onmouseover="$(this).click()">产品系列</a>
 								<ul class="dropdown-menu" style="width: 300px;">
-									<li>
-									<div style="min-height: 20px;"><a tabindex="-1" href="../product/multi_mix.html" style="padding-left: 35px;padding-right: 35px;">MULTI-MIX® Media</a></div>
-									</li>
-									<li>
-										<div style="min-height: 20px;"><a tabindex="-1" href="../product/aps.html" style="padding-left: 35px;padding-right: 35px;">APS系列 空气净化系统</a></div>
-									</li>
-									<li>
-										<div style="min-height: 20px;"><a tabindex="-1" href="../product/usah.html" style="padding-left: 35px;padding-right: 35px;">USAH系列 通用侧开门系列</a></div>
-									</li>
-									<li>
-										<div style="min-height: 20px;"><a tabindex="-1" href="../product/hds.html" style="padding-left: 35px;padding-right: 35px;">HDS系列 高浓度气体洗涤器净化机组</a></div>
-									</li>
-									<li>
-										<div style="min-height: 20px;"><a tabindex="-1" href="../product/das.html" style="padding-left: 35px;padding-right: 35px;">DAS系列 深床式气相净化机组</a></div>
-									</li>
-									<li>
-										<div style="min-height: 20px;"><a tabindex="-1" href="../product/tfs.html" style="padding-left: 35px;padding-right: 35px;">TFS 整体空气净化过滤系统</a></div>
-									</li>
-									<li>
-										<div style="min-height: 20px;"><a tabindex="-1" href="../product/ag.html" style="padding-left: 35px;padding-right: 35px;">AG系列 内循环净化系统</a></div>
-									</li>
-									<li>
-										<div style="min-height: 20px;"><a tabindex="-1" href="../product/apg_e.html" style="padding-left: 35px;padding-right: 35px;">APG-E系列 新风净化系统</a></div>
-									</li>
-									<li>
-										<div style="min-height: 20px;"><a tabindex="-1" href="../product/apg.html" style="padding-left: 35px;padding-right: 35px;">APG系列 内循环净化系统</a></div>
-									</li>
+									
+										<li>
+											<div style="min-height: 20px;"><a tabindex="-1" href="../product/aps.html" style="padding-left: 35px;padding-right: 35px;">APS系列空气净化系统</a></div>
+										</li>
+									
+										<li>
+											<div style="min-height: 20px;"><a tabindex="-1" href="../product/ag.html" style="padding-left: 35px;padding-right: 35px;">AG系列内循环净化系统</a></div>
+										</li>
+									
+										<li>
+											<div style="min-height: 20px;"><a tabindex="-1" href="../product/hds.html" style="padding-left: 35px;padding-right: 35px;">HDS系列高浓度气体洗涤器净化机组</a></div>
+										</li>
+									
+										<li>
+											<div style="min-height: 20px;"><a tabindex="-1" href="../product/das.html" style="padding-left: 35px;padding-right: 35px;">DAS系列深床式气相净化机组</a></div>
+										</li>
+									
+										<li>
+											<div style="min-height: 20px;"><a tabindex="-1" href="../product/usah.html" style="padding-left: 35px;padding-right: 35px;">USAH系列通用侧开门系列</a></div>
+										</li>
+									
+										<li>
+											<div style="min-height: 20px;"><a tabindex="-1" href="../product/multi_mix.html" style="padding-left: 35px;padding-right: 35px;">MULTI-MIX® Media</a></div>
+										</li>
+									
 								</ul>
 							</li>
 							<li class="nav-delim"><col-md->|</col-md-></li>
@@ -237,15 +257,6 @@
 				<div>
 				<div class="list-group-item ">
 					<div style="width: 160px;" >
-						<a href="../product/multi_mix.html" class="">MULTI-MIX® Media</a>
-					</div>
-					<div style="float: right;position: absolute;top:25%;right:0;"><a href="../product/multi_mix.html" class="">></a></div>
-				</div>
-				</div>
-			
-				<div>
-				<div class="list-group-item ">
-					<div style="width: 160px;" >
 						<a href="../product/aps.html" class="">APS系列空气净化系统</a>
 					</div>
 					<div style="float: right;position: absolute;top:25%;right:0;"><a href="../product/aps.html" class="">></a></div>
@@ -255,9 +266,9 @@
 				<div>
 				<div class="list-group-item ">
 					<div style="width: 160px;" >
-						<a href="../product/usah.html" class="">USAH系列通用侧开门系列</a>
+						<a href="../product/ag.html" class="">AG系列内循环净化系统</a>
 					</div>
-					<div style="float: right;position: absolute;top:25%;right:0;"><a href="../product/usah.html" class="">></a></div>
+					<div style="float: right;position: absolute;top:25%;right:0;"><a href="../product/ag.html" class="">></a></div>
 				</div>
 				</div>
 			
@@ -282,36 +293,18 @@
 				<div>
 				<div class="list-group-item ">
 					<div style="width: 160px;" >
-						<a href="../product/tfs.html" class="">TFS整体空气净化过滤系统</a>
+						<a href="../product/usah.html" class="">USAH系列通用侧开门系列</a>
 					</div>
-					<div style="float: right;position: absolute;top:25%;right:0;"><a href="../product/tfs.html" class="">></a></div>
+					<div style="float: right;position: absolute;top:25%;right:0;"><a href="../product/usah.html" class="">></a></div>
 				</div>
 				</div>
 			
 				<div>
 				<div class="list-group-item ">
 					<div style="width: 160px;" >
-						<a href="../product/ag.html" class="">AG系列内循环净化系统</a>
+						<a href="../product/multi_mix.html" class="">MULTI-MIX® Media</a>
 					</div>
-					<div style="float: right;position: absolute;top:25%;right:0;"><a href="../product/ag.html" class="">></a></div>
-				</div>
-				</div>
-			
-				<div>
-				<div class="list-group-item ">
-					<div style="width: 160px;" >
-						<a href="../product/apg_e.html" class="">APG-E系列新风净化系统</a>
-					</div>
-					<div style="float: right;position: absolute;top:25%;right:0;"><a href="../product/apg_e.html" class="">></a></div>
-				</div>
-				</div>
-			
-				<div>
-				<div class="list-group-item ">
-					<div style="width: 160px;" >
-						<a href="../product/apg.html" class="">APG系列内循环净化系统</a>
-					</div>
-					<div style="float: right;position: absolute;top:25%;right:0;"><a href="../product/apg.html" class="">></a></div>
+					<div style="float: right;position: absolute;top:25%;right:0;"><a href="../product/multi_mix.html" class="">></a></div>
 				</div>
 				</div>
 			
@@ -320,142 +313,1605 @@
 			<ol class="breadcrumb">
 			  <li><a href="../index.html">首页</a></li>
 			  <li><a href="#">产品系列</a></li>
-			  <li class="active">MULTI-MIX® Media</li>
+			  <li style="padding-left: 1px;" class="active">MULTI-MIX® Media</li>
 			</ol>
 			
 
 
+<div class="title">MULTI-MIX® Media</div>
 <ul class="nav nav-tabs nav-justified product_nav" role="tablist" style="margin-bottom: 10px;">
-  <li class="active"><a href="#feautre" role="tab" data-toggle="tab">功能设计</a></li>
-  <li><a href="#param" role="tab" data-toggle="tab">参数规格</a></li>
-  <li><a href="#download" role="tab" data-toggle="tab">下载</a></li>
-  <li><a href="#q&a" role="tab" data-toggle="tab">常见问题</a></li>
-  <li><a href="#contact" role="tab" data-toggle="tab">购买咨询</a></li>
+  
+  <li class="active"><a href="#tab_0" role="tab" data-toggle="tab">概览</a></li>
+  
+  <li class=""><a href="#tab_1" role="tab" data-toggle="tab">MM1000</a></li>
+  
+  <li class=""><a href="#tab_2" role="tab" data-toggle="tab">MM3000</a></li>
+  
+  <li class=""><a href="#tab_3" role="tab" data-toggle="tab">MM7000</a></li>
+  
+  <li class=""><a href="#tab_4" role="tab" data-toggle="tab">MM9000</a></li>
+  
 </ul>
 <!-- Tab panes -->
-<div class="tab-content">
-	<div class="tab-pane active" id="feautre">
+<div class="tab-content" style="margin-top: 24px;">
+	
+		<div class="tab-pane active" id="tab_0">
+			
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="info ">Multi-Mix®化学过滤媒体经专门设计，用于去除广泛的空气污染物。Multi-Mix®化学过滤媒体种类繁多，即可单独使用，也可以组合使用，能有效消除商业和工业环境中的腐蚀性、异味及有毒污染物，提供持续不断的净化空气。</div>
+
+
+
+	
+	
+		<div style="padding-bottom: 12px;"></div>
+	
+
+
+
+
+
+
+
+<div class="info" style="margin-bottom: 12px;"></div>
+
+<div class="table-responsive" style="margin-left: 0;margin-right: 0;padding-left: 0;padding-right: 0">
+	<table class="table table-hover table-bordered">
+		<thead class="">
+			
+				<th colspan="1" class="active" style="text-align: center;width: 100px">媒体</th>
+			
+				<th colspan="1" class="active" style="text-align: center;width: auto">说明</th>
+			
+				<th colspan="1" class="active" style="text-align: center;width: auto">应用</th>
+			
+		</thead>
 		
-
-
-<div class="title">MULTI-MIX® Media</div>
-<div class="info">以酒店和办公楼为代表的某些领域现阶段呈现出区域面积大、人数多、对空气质量要求高等三大特点；在早期的楼宇新风系统设计中，绝大部分新风系统知识加装了简单的初效过滤段，随着室外污染气体（以硫氧化物和氮氧化物为首）浓度的日益增长，去除新风中的有毒有害气体的需求显得更加迫切；针对此类项目，我们提出了系统的改造方案，即在不改变原有室内新风管道的前提下仅在新风机房增加气相过滤设备，在源头上去除污染气体以及PM2.5等颗粒物。</div>
-
-<hr/>
-<div class="title">案例</div>
-
-	<div class="sample-title">迪拜塔</div>
-	<div class="info">迪拜塔作为全球最著名的的七星级酒店，在设计之初，如何保证室内空气品质就是一个极其充满挑战的设计；后经工程师们设计，新风在引入到室内前，经过DAS净化机组的过滤，考虑到七星级酒店客人对于空气品质的要求，DAS机组内置的媒体净化段设计为3级，并标配的了初效以及高效颗粒物过滤段，整套净化系统设计完成投入使用后，酒店内的每个房间所获得的新风内含的颗粒物浓度以及有害气体浓度均降至标准以下，为入住的客人带来了最好呼吸的空气。</div>
-	
-	<div class="img"><img src="../img/sample/hotel_dubai.jpg" class="img-responsive"></div>
-	
-
-	<div class="sample-title">内华达州太浩湖海瑞斯赌场高层观光大厅</div>
-	<div class="info">大多数美国城市已禁止在酒吧和餐馆中吸烟。但吸烟者和非吸烟者是可以共存的：一个合理设计的过滤系统可以减少有害气体和颗粒物的排放，同时还能满足地方法律规章的要求。空气净化系统（A.P.S.）设计旨在去除由香烟雾释放的颗粒物和气相污染物。环境控制的目标是为高层观光大厅提供12ACH （换气次数每小时）风量的100%再循环空气，从而在烟雾集中区域有效去除ETS（环境烟草烟雾）同时使侧流（二手）烟雾对非吸烟者的影响降至最低。香烟雾是由颗粒物和气相污染物组成的特别复杂的混合物，因此它的处理必须经过不同尺度的过滤器。A.P.S.-1500空气净化系统通过一个HEPA（高效颗粒物捕获，95%）过滤器收集所有的颗粒物，再通过二阶媒体单元去除所有有害气体，其中包括香烟燃烧所释放的致癌物。</div>
-	
-	<div class="img"><img src="../img/sample/hotel_dubai.jpg" class="img-responsive"></div>
-	
-
-	<div class="sample-title">北京富凯大厦</div>
-	<div class="info">北京富凯大厦（北京证监会办公所在地）原有自己一套独立的新风系统，大厦每层均设有独立的新风机房，该套新风系统设计时仅安装了G4级别的初效过滤段，随着北京空气情况的日益恶劣，该套系统已远不能为办公人员提供洁净的新风；后经工程师现场勘测后，提出了在原有新风主机后加装AG系列净化系统的方案，在保证风量风压不变并且不改动原有室内管道的前提下仅对新风机房的管路进行了改造，项目改造完成后，现场进行了颗粒物浓度的检测，出风口的颗粒物浓度均为个位数，大大提高了室内的空气品质。</div>
-	
-	<div class="img"><img src="../img/sample/hotel_dubai.jpg" class="img-responsive"></div>
-	
-
-	<div class="sample-title">钓鱼台国宾馆</div>
-	<div class="info">一般来说，室内封闭环境空气质量要比室外空气质量差，尤其长时间使用空调的环境，各种污染更多。绝大多数的酒店客房是相对密闭的环境，只靠空调新风来调节空气。而我们传统的新风只有简单的针对毛发灰尘等大颗粒物的初效过滤器，对PM2.5颗粒物和各种气体污染的过滤几乎没有效果。而且酒店的相对密闭导致其装修污染物和各种生活异味很难快速散发，所以很多酒店在清洁房间后会喷洒香水来遮盖异味。而通过使用APG系列净化系统，能大大改善室内的空气质量，能去除包括各类装修污染物、PM2.5、从新风系统进来的室外汽车尾气甚至是前面住客留下的体味烟味等。</div>
-	
-	<div class="img"><img src="../img/sample/hotel_dubai.jpg" class="img-responsive"></div>
-	
-
-
-	</div>
-	<div class="tab-pane" id="param">
-		<div class="table-responsive">
-			<table class="table table-hover table-bordered">
-				<thead >
-					<th class="col-xs-6 active" colspan="2" style="text-align: center;">客户</th>
-					<th class="col-xs-6 active" style="text-align: center;">设备</th>
-				</thead>
+			<tr class="">
 				
-					<tr class="">
-						<td>达能</td>
-						<td>中国</td>
-						<td>空气净化</td>
-					</tr>
+					<td rowspan="1">MM‐100</td>
 				
-					<tr class="active">
-						<td>达能</td>
-						<td>中国</td>
-						<td>空气净化</td>
-					</tr>
+					<td rowspan="1">活性氧化铝颗粒浸渍金属催化剂</td>
 				
-					<tr class="">
-						<td>达能</td>
-						<td>中国</td>
-						<td>空气净化</td>
-					</tr>
+					<td rowspan="1">室温催化去除一氧化碳（CO）</td>
 				
-					<tr class="active">
-						<td>达能</td>
-						<td>中国</td>
-						<td>空气净化</td>
-					</tr>
+			</tr>
+		
+			<tr class="">
 				
-					<tr class="">
-						<td>达能</td>
-						<td>中国</td>
-						<td>空气净化</td>
-					</tr>
+					<td rowspan="1">MM‐200</td>
 				
-					<tr class="active">
-						<td>达能</td>
-						<td>中国</td>
-						<td>空气净化</td>
-					</tr>
+					<td rowspan="1">氢氧化钙浸渍钠和钾的氢氧化物</td>
 				
-			</table>
+					<td rowspan="1">去除二氧化碳（CO2）</td>
+				
+			</tr>
+		
+			<tr class="">
+				
+					<td rowspan="1">MM‐1000</td>
+				
+					<td rowspan="1">活性氧化铝颗粒浸渍到4-5%高锰酸钾</td>
+				
+					<td rowspan="1">氧化范围从有机到无机污染物。（如：甲醛-硫化氢）</td>
+				
+			</tr>
+		
+			<tr class="">
+				
+					<td rowspan="1">MM‐1000C</td>
+				
+					<td rowspan="1">超大的MMM‐1000粉碎成块</td>
+				
+					<td rowspan="1">比普通的MM-1000有更高的去除效率</td>
+				
+			</tr>
+		
+			<tr class="">
+				
+					<td rowspan="1">MM‐1100</td>
+				
+					<td rowspan="1">活性氧化铝颗粒浸渍到8-9%高锰酸钾</td>
+				
+					<td rowspan="1">比普通的MM-1000有更高的性能</td>
+				
+			</tr>
+		
+			<tr class="">
+				
+					<td rowspan="1">MM‐3000</td>
+				
+					<td rowspan="1">煤基70 CTC活性炭颗粒（直径3毫米的圆柱体）</td>
+				
+					<td rowspan="1">吸附有机蒸汽</td>
+				
+			</tr>
+		
+			<tr class="">
+				
+					<td rowspan="1">MM‐3000LP</td>
+				
+					<td rowspan="1">煤基70 CTC活性炭颗粒（直径4毫米的圆柱体）</td>
+				
+					<td rowspan="1">比常规的MM-3000有较低的压降</td>
+				
+			</tr>
+		
+			<tr class="">
+				
+					<td rowspan="1">MM‐3000C</td>
+				
+					<td rowspan="1">椰壳基活性炭</td>
+				
+					<td rowspan="1">对较轻的有机蒸汽有较高的吸附性能能</td>
+				
+			</tr>
+		
+			<tr class="">
+				
+					<td rowspan="1">MM‐6000</td>
+				
+					<td rowspan="1">氢氧化钙颗粒浸渍钠和钾的氢氧化物</td>
+				
+					<td rowspan="1">去除高浓度的氯气（用于紧急洗涤器）</td>
+				
+			</tr>
+		
+			<tr class="">
+				
+					<td rowspan="1">MM‐7000</td>
+				
+					<td rowspan="1">活性炭颗粒浸渍磷酸</td>
+				
+					<td rowspan="1">去除碱性气体，如氨气</td>
+				
+			</tr>
+		
+			<tr class="">
+				
+					<td rowspan="1">MM‐7000C</td>
+				
+					<td rowspan="1">椰壳活性炭浸渍磷酸</td>
+				
+					<td rowspan="1">用于非常低浓度的氨气（ppb级）</td>
+				
+			</tr>
+		
+			<tr class="">
+				
+					<td rowspan="1">MM‐8000</td>
+				
+					<td rowspan="1">活性炭浸渍碘</td>
+				
+					<td rowspan="1">用于去除汞（水银）</td>
+				
+			</tr>
+		
+			<tr class="">
+				
+					<td rowspan="1">MM‐9000</td>
+				
+					<td rowspan="1">活性炭颗粒浸渍氢氧化钾（直径3毫米圆柱体）</td>
+				
+					<td rowspan="1">去除酸性气体（.氢、氯气），此外也有去除有机蒸汽的性能</td>
+				
+			</tr>
+		
+			<tr class="">
+				
+					<td rowspan="1">MM‐9000LP</td>
+				
+					<td rowspan="1">活性炭颗粒浸渍氢氧化钾（直径4毫米圆柱体）</td>
+				
+					<td rowspan="1">比常规的MM-9000有较低的压降</td>
+				
+			</tr>
+		
+			<tr class="">
+				
+					<td rowspan="1">MM‐9000LT</td>
+				
+					<td rowspan="1">活性炭颗粒与轻度浸渍氢氧化钾</td>
+				
+					<td rowspan="1">对于酸性气体比常规的MM-9000有较低的性能，但对有机蒸汽有较高的性能</td>
+				
+			</tr>
+		
+			<tr class="">
+				
+					<td rowspan="1">MM‐9000LTC</td>
+				
+					<td rowspan="1">椰壳活性炭与轻度浸渍氢氧化钾</td>
+				
+					<td rowspan="1">用于去除低浓度的酸性气体（户外NOX、SO2）和有机蒸气</td>
+				
+			</tr>
+		
+	</table>
+</div>
+
+
+
+	
+		<hr style="margin-bottom: 40px;margin-top: 10px;"/>
+	
+	
+
+
+
+
+
+
+
+<div class="sample-title">混合媒体</div>
+
+
+
+<div class="info ">混合媒体主要应用于单靠一种媒体不能有效去除一定范围的气体或气体污染物，或并没有足够的空间或预算的情况。最常见的混合媒体如下表所示：</div>
+
+
+
+	
+	
+		<div style="padding-bottom: 12px;"></div>
+	
+
+
+
+
+
+
+
+<div class="info" style="margin-bottom: 12px;"></div>
+
+<div class="table-responsive" style="margin-left: 0;margin-right: 0;padding-left: 0;padding-right: 0">
+	<table class="table table-hover table-bordered">
+		<thead class="">
+			
+				<th colspan="1" class="active" style="text-align: center;width: 100px">媒体</th>
+			
+				<th colspan="1" class="active" style="text-align: center;width: auto">说明</th>
+			
+				<th colspan="1" class="active" style="text-align: center;width: auto">应用</th>
+			
+		</thead>
+		
+			<tr class="">
+				
+					<td rowspan="1">MM‐1355</td>
+				
+					<td rowspan="1">由MM-1000和MM-3000按照50%的比例混合</td>
+				
+					<td rowspan="1">该混合适用于去除综合的气味，可去除广泛的有机和无机污染物</td>
+				
+			</tr>
+		
+			<tr class="">
+				
+					<td rowspan="1">MM‐1955</td>
+				
+					<td rowspan="1">由MM-1000和MM-9000按照50%的比例混合</td>
+				
+					<td rowspan="1">该混合适用于工业上去除广泛的腐蚀性气体</td>
+				
+			</tr>
+		
+			<tr class="">
+				
+					<td rowspan="1">MM‐1955LTC CleanAire</td>
+				
+					<td rowspan="1">由MM-1000C和MM-9000LTC按照50%的比例混合</td>
+				
+					<td rowspan="1">该混合非常适用于过滤净化空气，改善室内空气质量</td>
+				
+			</tr>
+		
+	</table>
+</div>
+
+
+
+	
+	
+		<div style="padding-bottom: 12px;"></div>
+	
+
+
 		</div>
-	</div>
-	<div class="tab-pane" id="download">
-		<div class="table-responsive">
-			<table class="table table-bordered">
+	
+		<div class="tab-pane " id="tab_1">
 			
-				<tr class="active">
-					<td style="border-left: 0;border-right: 0;">高浓度气体洗涤净化器机组</td>
-					<td style="border-left: 0;border-right: 0;"><img src="../img/kv_1170.png" style="width: 13px;height: 17px;" class="icon_download" /></td>
-				</tr>
 			
-				<tr class="">
-					<td style="border-left: 0;border-right: 0;">高浓度气体洗涤净化器机组</td>
-					<td style="border-left: 0;border-right: 0;"><img src="../img/kv_1170.png" style="width: 13px;height: 17px;" class="icon_download" /></td>
-				</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="info ">MM-1000 Multi-Mix®媒体是一种高表面积的活性氧化铝颗粒，与高锰酸钾浸渍制造而成。是一种能增强性能的化学过滤器，用于去除硫化氢（H2S），二氧化硫（SO2），二氧化氮（NO2），硫醇，以及气流中轻量有机物。MM-1000 Multi-Mix®媒体是一种化学吸附剂，通过吸附和氧化来过滤，由于球状形态、大小均匀，具有低压降。</div>
+
+
+
+	
+	
+		<div style="padding-bottom: 12px;"></div>
+	
+
+
+
+
+
+
+
+<div class="sample-title">典型物理属性</div>
+
+
+
+
+
+	
+	
+		<div style="padding-bottom: 12px;"></div>
+	
+
+
+
+
+
+
+
+<div class="table-responsive" style="margin-left: 0;margin-right: 0;padding-left: 0;padding-right: 0">
+	<table class="table table-hover table-bordered">
+		<thead class="">
 			
-				<tr class="active">
-					<td style="border-left: 0;border-right: 0;">高浓度气体洗涤净化器机组</td>
-					<td style="border-left: 0;border-right: 0;"><img src="../img/kv_1170.png" style="width: 13px;height: 17px;" class="icon_download" /></td>
-				</tr>
+				<th colspan="1" class="active" style="text-align: center;width: 50%">名称</th>
 			
-				<tr class="">
-					<td style="border-left: 0;border-right: 0;">高浓度气体洗涤净化器机组</td>
-					<td style="border-left: 0;border-right: 0;"><img src="../img/kv_1170.png" style="width: 13px;height: 17px;" class="icon_download" /></td>
-				</tr>
+				<th colspan="1" class="active" style="text-align: center;width: auto">属性</th>
 			
-				<tr class="active">
-					<td style="border-left: 0;border-right: 0;">高浓度气体洗涤净化器机组</td>
-					<td style="border-left: 0;border-right: 0;"><img src="../img/kv_1170.png" style="width: 13px;height: 17px;" class="icon_download" /></td>
-				</tr>
-			
-				<tr class="">
-					<td style="border-left: 0;border-right: 0;">高浓度气体洗涤净化器机组</td>
-					<td style="border-left: 0;border-right: 0;"><img src="../img/kv_1170.png" style="width: 13px;height: 17px;" class="icon_download" /></td>
-				</tr>
-			
-			</table>
+		</thead>
+		
+			<tr class="">
+				
+					<td rowspan="1">H2S的容量（最小）</td>
+				
+					<td rowspan="1">0.10 g H2S/cc</td>
+				
+			</tr>
+		
+			<tr class="">
+				
+					<td rowspan="1">水分</td>
+				
+					<td rowspan="1">22 wt%</td>
+				
+			</tr>
+		
+			<tr class="">
+				
+					<td rowspan="1">压实（最小）</td>
+				
+					<td rowspan="1">2.7 kg （6 lb.）</td>
+				
+			</tr>
+		
+			<tr class="">
+				
+					<td rowspan="1">颗粒直径</td>
+				
+					<td rowspan="1">3.2 mm （1/8 in.）</td>
+				
+			</tr>
+		
+			<tr class="">
+				
+					<td rowspan="1">基体的表面面积</td>
+				
+					<td rowspan="1">250 m2/g</td>
+				
+			</tr>
+		
+			<tr class="">
+				
+					<td rowspan="1">形状</td>
+				
+					<td rowspan="1"> Spherical Pellet</td>
+				
+			</tr>
+		
+			<tr class="">
+				
+					<td rowspan="1">表观密度</td>
+				
+					<td rowspan="1"> 0.88 g/cc （55 lb./ft3）</td>
+				
+			</tr>
+		
+			<tr class="">
+				
+					<td rowspan="1">压降@ 50 fpm （0.25 m/s）</td>
+				
+					<td rowspan="1"> 1.0 in. of water/ft. of bed</td>
+				
+			</tr>
+		
+	</table>
+</div>
+
+
+
+	
+		<hr style="margin-bottom: 40px;margin-top: 10px;"/>
+	
+	
+
+
+
+
+
+
+
+<div class="sample-title">性能准则</div>
+
+
+
+
+
+	
+	
+		<div style="padding-bottom: 12px;"></div>
+	
+
+
+
+
+
+
+
+<div class="info" style="margin-bottom: 5px;">MM-1000 Multi-Mix®媒体在下列条件下性能稳定：</div>
+
+<ul>
+
+	<li>温度：-20℃至51℃（-4℉至125℉）</li>
+
+	<li>湿度：10%至95%RH</li>
+
+	<li>风量：从小于25立方英尺（42.5米/时）至超过100,000立方英尺（169,920米/时），速度从50每分钟英尺（0.254米/秒）至500每分钟英尺（2.54米/秒）。</li>
+
+</ul>
+
+
+	
+		<hr style="margin-bottom: 40px;margin-top: 10px;"/>
+	
+	
+
+
+
+
+
+
+
+<div class="sample-title">质量控制</div>
+
+
+
+
+
+	
+	
+		<div style="padding-bottom: 12px;"></div>
+	
+
+
+
+
+
+
+
+<div class="info" style="margin-bottom: 5px;">MM-1000 Multi-Mix®媒体在装运前经过了以下质量控制测试：</div>
+
+<ul>
+
+	<li>高锰酸钾含量</li>
+
+	<li>水分含量</li>
+
+	<li>粒度分布</li>
+
+	<li>体积密度</li>
+
+	<li>压实</li>
+
+</ul>
+
+
+	
+		<hr style="margin-bottom: 40px;margin-top: 10px;"/>
+	
+	
+
+
+
+
+
+
+
+<div class="sample-title">优势</div>
+
+
+
+
+
+	
+	
+		<div style="padding-bottom: 12px;"></div>
+	
+
+
+
+
+
+
+
+<ul>
+
+	<li>无毒，无害</li>
+
+	<li>非解吸</li>
+
+	<li>不支持细菌或真菌生长</li>
+
+	<li>UL认证1级不可燃</li>
+
+	<li>与其他的Multi-Mix®媒体可兼容</li>
+
+	<li>通过TECH-CHEKTM服务，实验室检测和分析可确定剩余使用寿命。</li>
+
+</ul>
+
+
+	
+		<hr style="margin-bottom: 40px;margin-top: 10px;"/>
+	
+	
+
+
+
+
+
+
+
+<div class="sample-title">安全预防措施</div>
+
+
+
+
+
+	
+	
+		<div style="padding-bottom: 12px;"></div>
+	
+
+
+
+
+
+
+
+<ul>
+
+	<li>避免接触易氧化物质</li>
+
+	<li>远离热源和易燃材料</li>
+
+	<li>在通风良好的区域操作</li>
+
+	<li>储存在阴凉、干燥区域，远离不相容的材料</li>
+
+	<li>当操作化学媒体时，始终佩戴护目镜和手套</li>
+
+	<li>当处理Multi-Mix®化学媒体时，工人应该遵循当地的安全指引</li>
+
+	<li>更多信息请参考材料安全数据表（M.S.D.S.）</li>
+
+</ul>
+
+
+	
+	
+		<div style="padding-bottom: 12px;"></div>
+	
+
+
 		</div>
-	</div>
-	<div class="tab-pane" id="desc"></div>
-	<div class="tab-pane" id="q&a"></div>
+	
+		<div class="tab-pane " id="tab_2">
+			
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="info ">MM-3000 Multi-Mix®媒体是一种活性炭颗粒，通过物理吸附，可去除各种有机化合物和挥发性有机化合物（VOCs）的臭味。MM-3000 Multi-Mix®媒体是从一种独特的烟煤培养基激活和制造而成的，具有低压降和高吸附去除能力。</div>
+
+
+
+	
+	
+		<div style="padding-bottom: 12px;"></div>
+	
+
+
+
+
+
+
+
+<div class="sample-title">典型物理属性</div>
+
+
+
+
+
+	
+	
+		<div style="padding-bottom: 12px;"></div>
+	
+
+
+
+
+
+
+
+<div class="table-responsive" style="margin-left: 0;margin-right: 0;padding-left: 0;padding-right: 0">
+	<table class="table table-hover table-bordered">
+		<thead class="">
+			
+				<th colspan="1" class="active" style="text-align: center;width: 50%">名称</th>
+			
+				<th colspan="1" class="active" style="text-align: center;width: auto">属性</th>
+			
+		</thead>
+		
+			<tr class="">
+				
+					<td rowspan="1">水分（最大）</td>
+				
+					<td rowspan="1">2 wt%</td>
+				
+			</tr>
+		
+			<tr class="">
+				
+					<td rowspan="1">硬度（最小）</td>
+				
+					<td rowspan="1">95 wt%</td>
+				
+			</tr>
+		
+			<tr class="">
+				
+					<td rowspan="1">颗粒直径</td>
+				
+					<td rowspan="1">3 mm</td>
+				
+			</tr>
+		
+			<tr class="">
+				
+					<td rowspan="1">基体的CTC（最小）</td>
+				
+					<td rowspan="1">70 wt%</td>
+				
+			</tr>
+		
+			<tr class="">
+				
+					<td rowspan="1">基体的表面面积</td>
+				
+					<td rowspan="1">1,250 m2/g</td>
+				
+			</tr>
+		
+			<tr class="">
+				
+					<td rowspan="1">形状</td>
+				
+					<td rowspan="1">Pellet</td>
+				
+			</tr>
+		
+			<tr class="">
+				
+					<td rowspan="1">表观密度</td>
+				
+					<td rowspan="1">30 lb./ft3</td>
+				
+			</tr>
+		
+			<tr class="">
+				
+					<td rowspan="1">灰分含量</td>
+				
+					<td rowspan="1">12% maximum</td>
+				
+			</tr>
+		
+			<tr class="">
+				
+					<td rowspan="1">压降@ 50 fpm （0.25 m/s）</td>
+				
+					<td rowspan="1">1.7 in. of water/ft. of bed</td>
+				
+			</tr>
+		
+	</table>
+</div>
+
+
+
+	
+		<hr style="margin-bottom: 40px;margin-top: 10px;"/>
+	
+	
+
+
+
+
+
+
+
+<div class="sample-title">性能准则</div>
+
+
+
+
+
+	
+	
+		<div style="padding-bottom: 12px;"></div>
+	
+
+
+
+
+
+
+
+<div class="info" style="margin-bottom: 5px;">MM-3000 Multi-Mix®媒体在下列条件下性能稳定：</div>
+
+<ul>
+
+	<li>温度：-20℃至46℃（-4℉至115℉）</li>
+
+	<li>湿度：不凝结</li>
+
+	<li>风量：从小于25立方英尺（42.5米/时）至超过100,000立方英尺（169,920米/时），速度从50每分钟英尺（0.254米/秒）至500每分钟英尺（2.54米/秒）。</li>
+
+</ul>
+
+
+	
+		<hr style="margin-bottom: 40px;margin-top: 10px;"/>
+	
+	
+
+
+
+
+
+
+
+<div class="sample-title">质量控制</div>
+
+
+
+
+
+	
+	
+		<div style="padding-bottom: 12px;"></div>
+	
+
+
+
+
+
+
+
+<div class="info" style="margin-bottom: 5px;">MM-3000 Multi-Mix®媒体在装运前经过了以下质量控制测试：</div>
+
+<ul>
+
+	<li>丁烷活性</li>
+
+	<li>水分含量</li>
+
+	<li>粒度分布</li>
+
+	<li>体积密度</li>
+
+</ul>
+
+
+	
+		<hr style="margin-bottom: 40px;margin-top: 10px;"/>
+	
+	
+
+
+
+
+
+
+
+<div class="sample-title">优势</div>
+
+
+
+
+
+	
+	
+		<div style="padding-bottom: 12px;"></div>
+	
+
+
+
+
+
+
+
+<ul>
+
+	<li>无毒，无害</li>
+
+	<li>UL认证1级不可燃</li>
+
+	<li>与其他的Multi-Mix®媒体可兼容</li>
+
+	<li>通过TECH-CHEKTM服务，实验室检测和分析可确定剩余使用寿命。</li>
+
+</ul>
+
+
+	
+		<hr style="margin-bottom: 40px;margin-top: 10px;"/>
+	
+	
+
+
+
+
+
+
+
+<div class="sample-title">安全预防措施</div>
+
+
+
+
+
+	
+	
+		<div style="padding-bottom: 12px;"></div>
+	
+
+
+
+
+
+
+
+<ul>
+
+	<li>潮湿的活性炭易于吸收大气中的氧气。密闭容器和通风不畅的区域可能存在危险的低氧状况。在进入低氧区域时，工人应该遵循联邦，省/州和当地的安全指引。</li>
+
+	<li>远离热源</li>
+
+	<li>在通风良好的区域操作</li>
+
+	<li>储存在阴凉、干燥区域，远离不相容的材料</li>
+
+	<li>当操作化学媒体时，始终佩戴护目镜和手套</li>
+
+	<li>当处理Multi-Mix®化学媒体时，工人应该遵循当地的安全指引</li>
+
+	<li>更多信息请参考材料安全数据表（M.S.D.S.）</li>
+
+</ul>
+
+
+	
+	
+		<div style="padding-bottom: 12px;"></div>
+	
+
+
+		</div>
+	
+		<div class="tab-pane " id="tab_3">
+			
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="info ">MM-7000 Multi-Mix®媒体是一种磷酸浸渍增强性能的活性炭颗粒，用于去除基本的气体，如来自气流中的氨气（NH3）。MM-7000 Multi-Mix®媒体是一种从独特的烟煤培养基制造而成的化学吸附剂，具有低压降和高吸附去除能力。</div>
+
+
+
+	
+	
+		<div style="padding-bottom: 12px;"></div>
+	
+
+
+
+
+
+
+
+<div class="sample-title">典型物理属性</div>
+
+
+
+
+
+	
+	
+		<div style="padding-bottom: 12px;"></div>
+	
+
+
+
+
+
+
+
+<div class="table-responsive" style="margin-left: 0;margin-right: 0;padding-left: 0;padding-right: 0">
+	<table class="table table-hover table-bordered">
+		<thead class="">
+			
+				<th colspan="1" class="active" style="text-align: center;width: 50%">名称</th>
+			
+				<th colspan="1" class="active" style="text-align: center;width: auto">属性</th>
+			
+		</thead>
+		
+			<tr class="">
+				
+					<td rowspan="1">NH3的容量（最小）</td>
+				
+					<td rowspan="1">5.5 wt% （0.05 g NH3/cc）</td>
+				
+			</tr>
+		
+			<tr class="">
+				
+					<td rowspan="1">水分</td>
+				
+					<td rowspan="1">15 wt%</td>
+				
+			</tr>
+		
+			<tr class="">
+				
+					<td rowspan="1">基体硬度</td>
+				
+					<td rowspan="1">95 wt%</td>
+				
+			</tr>
+		
+			<tr class="">
+				
+					<td rowspan="1">颗粒直径</td>
+				
+					<td rowspan="1">3 mm</td>
+				
+			</tr>
+		
+			<tr class="">
+				
+					<td rowspan="1">基体的CTC</td>
+				
+					<td rowspan="1">70 wt%</td>
+				
+			</tr>
+		
+			<tr class="">
+				
+					<td rowspan="1">基体的表面面积</td>
+				
+					<td rowspan="1">1,250 m2/g</td>
+				
+			</tr>
+		
+			<tr class="">
+				
+					<td rowspan="1">形状</td>
+				
+					<td rowspan="1"> Pellet</td>
+				
+			</tr>
+		
+			<tr class="">
+				
+					<td rowspan="1">表观密度</td>
+				
+					<td rowspan="1"> 0.64 g/cc （40 lb./ft3）</td>
+				
+			</tr>
+		
+			<tr class="">
+				
+					<td rowspan="1">压降@ 50 fpm （0.25 m/s）</td>
+				
+					<td rowspan="1">1.7 in. of water/ft. of bed</td>
+				
+			</tr>
+		
+	</table>
+</div>
+
+
+
+	
+		<hr style="margin-bottom: 40px;margin-top: 10px;"/>
+	
+	
+
+
+
+
+
+
+
+<div class="sample-title">性能准则</div>
+
+
+
+
+
+	
+	
+		<div style="padding-bottom: 12px;"></div>
+	
+
+
+
+
+
+
+
+<div class="info" style="margin-bottom: 5px;">MM-7000 Multi-Mix®媒体在下列条件下性能稳定：</div>
+
+<ul>
+
+	<li>温度：-20℃至51℃（-4℉至125℉）</li>
+
+	<li>湿度：10%至95%RH</li>
+
+	<li>风量：从小于25立方英尺（42.5米/时）至超过100,000立方英尺（169,920米/时），速度从60每分钟英尺（0.305米/秒）至500每分钟英尺（2.54米/秒）。</li>
+
+</ul>
+
+
+	
+		<hr style="margin-bottom: 40px;margin-top: 10px;"/>
+	
+	
+
+
+
+
+
+
+
+<div class="sample-title">质量控制</div>
+
+
+
+
+
+	
+	
+		<div style="padding-bottom: 12px;"></div>
+	
+
+
+
+
+
+
+
+<div class="info" style="margin-bottom: 5px;">MM-7000 Multi-Mix®媒体在装运前经过了以下质量控制测试：</div>
+
+<ul>
+
+	<li>磷酸含量</li>
+
+	<li>水分含量</li>
+
+	<li>粒度分布</li>
+
+	<li>体积密度</li>
+
+</ul>
+
+
+	
+		<hr style="margin-bottom: 40px;margin-top: 10px;"/>
+	
+	
+
+
+
+
+
+
+
+<div class="sample-title">优势</div>
+
+
+
+
+
+	
+	
+		<div style="padding-bottom: 12px;"></div>
+	
+
+
+
+
+
+
+
+<ul>
+
+	<li>无毒，无害</li>
+
+	<li>非解吸</li>
+
+	<li>不支持细菌或真菌生长</li>
+
+	<li>媒体浸渍能特别有效地去除氨气</li>
+
+	<li>与其他的Multi-Mix®媒体可兼容</li>
+
+	<li>通过TECH-CHEKTM服务，实验室检测和分析可确定剩余使用寿命。</li>
+
+</ul>
+
+
+	
+		<hr style="margin-bottom: 40px;margin-top: 10px;"/>
+	
+	
+
+
+
+
+
+
+
+<div class="sample-title">安全预防措施</div>
+
+
+
+
+
+	
+	
+		<div style="padding-bottom: 12px;"></div>
+	
+
+
+
+
+
+
+
+<ul>
+
+	<li>潮湿的活性炭易于吸收大气中的氧气。密闭的容器和通风不畅的区域可能存在危险的低氧水平。在进入低氧区域时，工人应该遵循联邦，省/州和当地的安全指引。</li>
+
+	<li>远离热源</li>
+
+	<li>在通风良好的区域操作</li>
+
+	<li>储存在阴凉、干燥区域，远离不相容的材料</li>
+
+	<li>当操作化学媒体时，始终佩戴护目镜和手套</li>
+
+	<li>当处理Multi-Mix®化学媒体时，工人应该遵循当地的安全指引</li>
+
+	<li>更多信息请参考材料安全数据表（M.S.D.S.）</li>
+
+</ul>
+
+
+	
+	
+		<div style="padding-bottom: 12px;"></div>
+	
+
+
+		</div>
+	
+		<div class="tab-pane " id="tab_4">
+			
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="info ">MM-9000 Multi-Mix®媒体是一种增强性能的氢氧化钾浸渍粒状活性炭，用于去除污染气流中的酸性气体，如：硫化氢（H2S），二氧化硫（SO2），氯气（CL2），和盐酸（HCL）。MM-9000 Multi-Mix®媒体是一种从独特的烟煤培养基制造而成的化学吸附剂，具有低压降和高吸附去除能力。</div>
+
+
+
+	
+	
+		<div style="padding-bottom: 12px;"></div>
+	
+
+
+
+
+
+
+
+<div class="sample-title">典型物理属性</div>
+
+
+
+
+
+	
+	
+		<div style="padding-bottom: 12px;"></div>
+	
+
+
+
+
+
+
+
+<div class="table-responsive" style="margin-left: 0;margin-right: 0;padding-left: 0;padding-right: 0">
+	<table class="table table-hover table-bordered">
+		<thead class="">
+			
+				<th colspan="1" class="active" style="text-align: center;width: 50%">名称</th>
+			
+				<th colspan="1" class="active" style="text-align: center;width: auto">属性</th>
+			
+		</thead>
+		
+			<tr class="">
+				
+					<td rowspan="1">H2S的容量（最小）</td>
+				
+					<td rowspan="1">0.16 g H2S/cc</td>
+				
+			</tr>
+		
+			<tr class="">
+				
+					<td rowspan="1">水分（最大） </td>
+				
+					<td rowspan="1">15 wt%</td>
+				
+			</tr>
+		
+			<tr class="">
+				
+					<td rowspan="1">基体硬度（最小）</td>
+				
+					<td rowspan="1">95 wt%</td>
+				
+			</tr>
+		
+			<tr class="">
+				
+					<td rowspan="1">颗粒直径</td>
+				
+					<td rowspan="1">3 mm</td>
+				
+			</tr>
+		
+			<tr class="">
+				
+					<td rowspan="1">基体的CTC</td>
+				
+					<td rowspan="1">70 wt%</td>
+				
+			</tr>
+		
+			<tr class="">
+				
+					<td rowspan="1">基体的表面面积</td>
+				
+					<td rowspan="1">1,250 m2/g</td>
+				
+			</tr>
+		
+			<tr class="">
+				
+					<td rowspan="1">形状</td>
+				
+					<td rowspan="1"> Pellet</td>
+				
+			</tr>
+		
+			<tr class="">
+				
+					<td rowspan="1">表观密度</td>
+				
+					<td rowspan="1">0.61 g/cc （38 lb./ft3）</td>
+				
+			</tr>
+		
+			<tr class="">
+				
+					<td rowspan="1">压降@ 50 fpm （0.25 m/s）</td>
+				
+					<td rowspan="1">1.7 in. of water/ft. of bed</td>
+				
+			</tr>
+		
+	</table>
+</div>
+
+
+
+	
+		<hr style="margin-bottom: 40px;margin-top: 10px;"/>
+	
+	
+
+
+
+
+
+
+
+<div class="sample-title">性能准则</div>
+
+
+
+
+
+	
+	
+		<div style="padding-bottom: 12px;"></div>
+	
+
+
+
+
+
+
+
+<div class="info" style="margin-bottom: 5px;">MM-7000 Multi-Mix®媒体在下列条件下性能稳定：</div>
+
+<ul>
+
+	<li>温度：-20℃至51℃（-4℉至125℉）</li>
+
+	<li>湿度：10%至95%RH</li>
+
+	<li>风量：从小于25立方英尺（42.5米/时）至超过100,000立方英尺（169,920米/时），速度从60每分钟英尺（0.305米/秒）至500每分钟英尺（2.54米/秒）。</li>
+
+</ul>
+
+
+	
+		<hr style="margin-bottom: 40px;margin-top: 10px;"/>
+	
+	
+
+
+
+
+
+
+
+<div class="sample-title">质量控制</div>
+
+
+
+
+
+	
+	
+		<div style="padding-bottom: 12px;"></div>
+	
+
+
+
+
+
+
+
+<div class="info" style="margin-bottom: 5px;">MM-9000 Multi-Mix®媒体在装运前经过了以下质量控制测试</div>
+
+<ul>
+
+	<li>氢氧化钾含量</li>
+
+	<li>水分含量</li>
+
+	<li>粒度分布</li>
+
+	<li>体积密度</li>
+
+</ul>
+
+
+	
+		<hr style="margin-bottom: 40px;margin-top: 10px;"/>
+	
+	
+
+
+
+
+
+
+
+<div class="sample-title">优势</div>
+
+
+
+
+
+	
+	
+		<div style="padding-bottom: 12px;"></div>
+	
+
+
+
+
+
+
+
+<ul>
+
+	<li>最大去除H2S的能力</li>
+
+	<li>设备使用媒体更换的频率更少，保护的时间更长</li>
+
+	<li>可用于所有的碳基的空气过滤系统</li>
+
+	<li>无毒，无害</li>
+
+	<li>非解吸</li>
+
+	<li>不支持细菌或真菌生长</li>
+
+	<li>与其他的Multi-Mix®媒体可兼容</li>
+
+	<li>通过TECH-CHEKTM服务，实验室检测和分析可确定剩余使用寿命。</li>
+
+</ul>
+
+
+	
+		<hr style="margin-bottom: 40px;margin-top: 10px;"/>
+	
+	
+
+
+
+
+
+
+
+<div class="sample-title">安全预防措施</div>
+
+
+
+
+
+	
+	
+		<div style="padding-bottom: 12px;"></div>
+	
+
+
+
+
+
+
+
+<ul>
+
+	<li>潮湿的活性炭易于吸收大气中的氧气。密闭的容器和通风不畅的区域可能存在危险的低氧水平。在进入低氧区域时，工人应该遵循联邦，省/州和当地的安全指引。</li>
+
+	<li>远离热源和易燃材料</li>
+
+	<li>在通风良好的区域操作</li>
+
+	<li>储存在阴凉、干燥区域，远离不相容的材料</li>
+
+	<li>当操作化学媒体时，始终佩戴护目镜和手套</li>
+
+	<li>当处理Multi-Mix®化学媒体时，工人应该遵循当地的安全指引</li>
+
+	<li>更多信息请参考材料安全数据表（M.S.D.S.）</li>
+
+</ul>
+
+
+	
+	
+		<div style="padding-bottom: 12px;"></div>
+	
+
+
+		</div>
+	
 </div>
 			<div style="margin-bottom: 120px;"></div>
 		</div>
@@ -474,32 +1930,41 @@
 			<span class="title">产品系列</span>
 			<hr />
 			<ul class="list-unstyled visible-xs-block item">
-				<li>MULTI-MIX®媒介</li>
-				<li>APS系列空气净化系统</li>
-				<li>USAH系列通用侧开门系列</li>
-				<li>HDS系列高浓度气体洗涤器净化机组</li>
-				<li>DAS系列深床式气相净化机组</li>
-				<li>TFS整体空气净化过滤系统</li>
-				<li>AG系列内循环净化系统</li>
-				<li>APE系列新风净化系统</li>
-				<li>APG系列内循环净化系统</li>
+				
+					<li><a tabindex="-1" href="../product/aps.html" style="padding-left: 35px;padding-right: 35px;">APS系列空气净化系统</a></li>
+				
+					<li><a tabindex="-1" href="../product/ag.html" style="padding-left: 35px;padding-right: 35px;">AG系列内循环净化系统</a></li>
+				
+					<li><a tabindex="-1" href="../product/hds.html" style="padding-left: 35px;padding-right: 35px;">HDS系列高浓度气体洗涤器净化机组</a></li>
+				
+					<li><a tabindex="-1" href="../product/das.html" style="padding-left: 35px;padding-right: 35px;">DAS系列深床式气相净化机组</a></li>
+				
+					<li><a tabindex="-1" href="../product/usah.html" style="padding-left: 35px;padding-right: 35px;">USAH系列通用侧开门系列</a></li>
+				
+					<li><a tabindex="-1" href="../product/multi_mix.html" style="padding-left: 35px;padding-right: 35px;">MULTI-MIX® Media</a></li>
+				
 			</ul>
 			<div class="row hidden-xs " style="color: #666666;">
 				<div class="col-sm-6 ">
 					<ul class="list-unstyled item">
-						<li>MULTI-MIX®媒介</li>
-						<li>APS系列空气净化系统</li>
-						<li>USAH系列通用侧开门系列</li>
-						<li>HDS系列高浓度气体洗涤器净化机组</li>
-						<li>DAS系列深床式气相净化机组</li>
+						
+							<li><a tabindex="-1" href="../product/aps.html">APS系列空气净化系统</a></li>
+						
+							<li><a tabindex="-1" href="../product/ag.html">AG系列内循环净化系统</a></li>
+						
+							<li><a tabindex="-1" href="../product/hds.html">HDS系列高浓度气体洗涤器净化机组</a></li>
+						
 					</ul>
 				</div>
 				<div class="col-sm-6">
 					<ul class="list-unstyled item">
-						<li>TFS整体空气净化过滤系统</li>
-						<li>AG系列内循环净化系统</li>
-						<li>APE系列新风净化系统</li>
-						<li>APG系列内循环净化系统</li>
+						
+							<li><a tabindex="-1" href="../product/das.html">DAS系列深床式气相净化机组</a></li>
+						
+							<li><a tabindex="-1" href="../product/usah.html">USAH系列通用侧开门系列</a></li>
+						
+							<li><a tabindex="-1" href="../product/multi_mix.html">MULTI-MIX® Media</a></li>
+						
 					</ul>
 				</div>
 			</div>
@@ -510,7 +1975,7 @@
 			<ul class="list-unstyled item">
 				<li>400服务热线</li>
 				<li>公司地址及业务联系电话</li>
-				<li>天猫旗舰店</li>
+				<!-- <li>天猫旗舰店</li> -->
 				<li>授权经销商</li>
 			</ul>
 		</div>
@@ -522,7 +1987,6 @@
 				<a class="footer-link" href="../area/china.html">中国大陆</a>
 				<a class="footer-link" href="../policy/privacy_policy.html">隐私政策</a>
 				<a class="footer-link" href="../policy/use_policy.html">使用条款</a>
-				<a class="footer-link" href="../product/new.html">新品预览</a>
 				<img class="footer-icon" src="../img/sns_1.jpg"/>
 				<img class="footer-icon" src="../img/sns_2.jpg"/>
 				<div class="copyright" style="float: right;"><span class="">沪ICP备1409339号</span><span class="hidden-xs hidden-sm" style="padding-left: 15px;">©2014 EC INC, ALL RIGHTS RESERVED</span></div>
@@ -544,7 +2008,6 @@
 			</div>
 			<div>
 				<a class="footer-link" href="../policy/use_policy.html">使用条款</a>
-				<a class="footer-link" href="../product/new.html">新品预览</a>
 				<span class="copyright" >©2014 EC INC, ALL RIGHTS RESERVED</span>
 			</div>
 		</div>
@@ -556,7 +2019,6 @@
 				<a class="footer-link col-xs-3"  href="../area/china.html">中国大陆</a>
 				<a class="footer-link col-xs-3"  href="../policy/privacy_policy.html">隐私政策</a>
 				<a class="footer-link col-xs-3"  href="../policy/use_policy.html">使用条款</a>
-				<a class="footer-link col-xs-3"  href="../product/new.html">新品预览</a>
 			</div>
 			<div>
 				<img class="footer-icon" src="../img/sns_1.jpg"></img>

@@ -1,138 +1,143 @@
 package com.ec.website.controller;
 
+import java.io.File;
+import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
+import java.util.HashMap;
+import java.util.Map;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.ec.website.param.ImageParam;
 import com.ec.website.param.SolutionParam;
-import com.ec.website.param.SolutionSampleParam;
+import com.ec.website.param.group.DivGroupParam;
+import com.ec.website.param.group.ImageGroupParam;
+import com.ec.website.param.group.MainGroupParam;
+import com.ec.website.util.DataImportUtil;
 
 @Controller
 @RequestMapping(value = "/solution")
 public class SolutionController extends AbstractController {
 
-	@RequestMapping(value = "/military")
-	public String military(HttpServletRequest request, HttpServletResponse response)
-	{
-		SolutionParam param = this.generateParam(0);
-		param.setActiveSubItem("军事");
-		param.setSubItemInfo("由于工作环境的重要性，某些涉及到军方的项目对其内部的环境质量要求更高，例如潜艇内部、逃生通道等；此类区域的空气污染物的浓度必须严格控制在ppt(parts-per-trillion,10–12) 级别，传统的颗粒物过滤系统以及单纯的物理性吸附无法解决此类污染问题；针对此类项目我们提供了多级气相媒体净化系统，并根据不同的污染物选配从MM-1000到MM-9000等不同的媒体滤料，以达到最好的气相净化效果。");
-		param.addSample(new SolutionSampleParam("联合国逃生通道", "military_un.jpg","联合国作为国际性的政务工作部门，为应对恐怖袭击、火灾或者自然灾害这些危害极大的突发事件需配备高质的逃生通道，而逃生通道内的空气品质是设计过程中重中之重的，为了保证逃生通道内的有害气体污染物浓度达到最低，我们的工程师们提出了深床式气相净化+室内小型净化机组的综合解决方案，在该项目中，深床式气相净化可以去除新风引进时内含的气态污染物，而室内小型净化机组则可针对逃生通道内的空气进行内循环过滤；该逃生通道投入使用后，经过监测，通道内的各项污染物浓度均低于国际标准。"));
-		param.addSample(new SolutionSampleParam("美国军方逃生通道", "美国军方逃生通道，作为战时备用的通道，其内部的通风系统的设计要求严格控制空气污染的浓度，特别是从室外引进的新风里污染物的浓度，针对此类特殊项目，工程师们提出了DAS（深床式气相过滤系统）+APS（小型室内净化机组）组合式净化系统，该系统能够在净化新风的同时对通道内的空气进行循环过滤，有效的降低了室内颗粒物的浓度和有害的污染气体。"));
-		request.setAttribute("detailPage", "solutionDetail");
-		request.setAttribute("solutionParam", param);
-		return "/template/2ndTemplate.jsp";
-	}
-	
-	@RequestMapping(value = "/chemica_industry")
-	public String chemicaIndustry(HttpServletRequest request, HttpServletResponse response)
+	@RequestMapping(value = "/industry")
+	public String industry(HttpServletRequest request, HttpServletResponse response) throws InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException, ClassNotFoundException, IOException
 	{
 		SolutionParam param = this.generateParam(1);
-		param.setActiveSubItem("化工");
-		param.setSubItemInfo("化工行业包含化工、炼油、冶金、能源、轻工、医药等多个领域，不同类型的化工领域特征污染物不同，按照污染物存在的形态，化工废气可分为颗粒污染物和气态污染物，颗粒污染物包括粉尘、烟尘、雾尘、煤尘等；气态污染物包括含硫化合物、含氯化合物、碳氧化合物、碳氢化合物、卤氧化合物等。这些污染物大多都有刺激性或腐蚀性，会直接损害人体健康，并腐蚀控制设备的表面；EC提出的空气净化方案除了能解决常见的颗粒物过滤外，还能利用其专业的气相媒体过滤段有效的去除多种有害气体，从而为客户提供真正意义上洁净的空气。");
-		param.addSample(new SolutionSampleParam("印度尼西亚安达兰纸浆造纸厂", "chemica_pp.jpg","安达兰纸浆造纸厂生产设备多，造成了周边污染气体浓度居高不下，尤其是与生产车间相距不远的办公室区域，我们的工程师在现场勘测完以后提出了采用DAS系列进行净化的方案，分别在每栋办公大楼的新风机房内加装一台30000m³/h的DAS机组，这种设计的优势在于可以将新风机组引入的新风进行气相媒体段的净化，从而将新风里污染气体的浓度降到最低值，颗粒物的浓度更是降低至个位数级别。"));
-		param.addSample(new SolutionSampleParam("扬子石化－巴斯夫", "扬子石化－巴斯夫有限责任公司属于世界五百强企业，其主要生产线通过裂解生产乙烯，由于在蒸汽裂解过程中易产生苯系有机物、其他烃类化合物以及氮化物和硫化物，多种有害物质随排风系统排放到大气中，严重影响了办公区域以及设备间的空气质量；该项目后经过工程师量身设计，为其控制室、设备间、马达室选用DAS（卧式深床气相净化系统）系列机型。该机组投入使用后，极大的降低了室外引进的新风中的VOC（挥发性有机物）和颗粒物浓度，改善了室内空气品质。对系统进行预定周期的检测后证实，原先12个月的设计使用周期在不更换媒体条件下仍可延长3个月。根据美国仪表学会的标准71.04，相关监测报告确认受保护区域的环境始终维持在G1水平。"));
-		request.setAttribute("detailPage", "solutionDetail");
+		Map<String, MainGroupParam> details = new HashMap<String, MainGroupParam>();
+		details.put("overView",(new MainGroupParam(null,null))
+		.addValue(new DivGroupParam(null, "工业包含石油化工、冶炼、造纸、印染等多个领域，不同类型的工业领域特征污染物不同，依据污染物的形态，可分为颗粒污染物和气态污染物：颗粒污染物包括粉尘、烟尘、雾尘、煤尘等；气态污染物包括含硫化合物、含氯化合物、碳氧化合物、碳氢化合物、卤氧化合物等。这些污染物大多都有刺激性或腐蚀性，会直接损害人体健康，并且能够腐蚀设备的表面甚至内部线路以及各零部件。"))
+		.addValue(DataImportUtil.doExcelImport(0, new File("/Users/weisun/git/ec/web-site/WebContent/excel/solution/industry.xlsx"), "常见污染物列表",null))
+		.addValue(new DivGroupParam(null, "针对工业类主要污染物为有害气体这一特征，IIECC提出的空气净化方案除了能过滤常见颗粒物外，还能利用专业的气相媒体过滤段，有效去除多种有害气体，为客户提供真正洁净的空气。"))
+		.addValue(new DivGroupParam(null, "Multi-Mix® Media家族拥有多种净化媒体，如专门针对酸性氧化物的MM-9000型媒体，和具备强氧化性的MM-1000型媒体。除单一媒体之外，根据IIECC以往处理工业类污染的经验，混合媒体MM-1955、MM-1355也能在相应环境下取得很好的净化效果。另外IIECC还能提供TECH-CHEKTM分析服务，即根据现场实际分析的有害气体成分、浓度，选取最合适的媒体。除了为用户提供具备最佳去除效果的媒体外，IIECC还会在选取净化设备时充分考虑到处理排放量的气体体积、气体浓度、现场安装条件等多个因素。面对每一个项目的不同要求，IIECC旗下的DAS、UASH产品系列都能在特定场合下，为工业类污染带来良好净化效果。"))
+		.addValue(new DivGroupParam(null, "IIECC完备的空气净化方案，能保证设备机房内达到G1标准，即设备可靠性不再被腐蚀影响。"))
+		.addValue(DataImportUtil.doExcelImport(1, new File("/Users/weisun/git/ec/web-site/WebContent/excel/solution/industry.xlsx"), "",new String[]{"100px",""}).addAnnon("表：依据ISA-711.04-1985对污染物严重级别的解释，在工业用过程检测和控制设备中，污染物浓度和存在的反应性级别的分布范围很大。某些环境属于严重腐蚀性，而另一些则较轻微。"))
+		.addValue(new DivGroupParam("案例", ""))
+		.addValue(new ImageGroupParam("BASF-YPC Company Ltd., Co. —— DAS Series</br>扬子石化－巴斯夫").addValue(new ImageParam("/solution/chemica.jpg","扬子石化－巴斯夫有限责任公司属于世界五百强企业，其主要生产线通过裂解生产乙烯。由于在蒸汽裂解过程中易产生苯系有机物、其他烃类化合物以及氮化物和硫化物，多种有害物质会随排风系统进入大气，严重影响办公区域及设备间的空气质量。后经工程师量身设计，为其控制室、设备间、马达室选用了DAS（卧式深床气相净化系统）系列机组。该机组投入使用后，极大降低了来自室外的新风中VOCs（挥发性有机化合物）和颗粒物的浓度，改善了室内空气品质。对系统进行预定周期的检测后证实，原先12个月的设计使用周期在不更换媒体的条件下还能延长3个月。根据美国仪表学会的标准ISA-711.04-1985，相关监测报告确认，受保护区域的环境始终维持在G1水平。")))
+		.addValue(new ImageGroupParam("Riau Andalan Pulp & Paper, Indonesia —— DAS Series</br>印度尼西亚安达兰纸浆造纸厂").addValue(new ImageParam(null,"安达兰纸浆造纸厂生产设备多，致使周边污染气体浓度居高不下，尤其是与生产车间相距不远的办公室区域。我们的工程师在现场勘测完后，提出了采用DAS系列净化的方案，分别在每栋办公大楼的新风机房内加装一台风量可达30000m³/h的DAS机组。这种设计的优势在于，可对新风机组引入的新风进行气相媒体段的净化，从而将新风中污染气体的浓度降至最低，颗粒物浓度更是降低至个位数级别，有效保证了室内人员呼吸空气的质量以及相关机电设备的使用寿命。")))
+		.addValue(new ImageGroupParam("Asiasymbol —— DAS Series</br>山东亚泰森博浆纸").addValue(new ImageParam(null,"山东日照亚太森博造纸厂生产线多，且生产过程中会产生以硫化物为首的酸性气态污染物，浓度过高时易对重要设备造成腐蚀，带来不可估量的损失。我们的工程师在现场勘测后，提出对其控制室、设备间采用DAS系列深床式净化机组的方案。净化设备投入使用后，有效避免了设备的腐蚀。根据美国仪表学会的标准ISA-711.04-1985，相关监测报告确认受保护区域的环境始终维持在G1水平。")))
+		.addValue(new ImageGroupParam("Dofasco —— Modular Unit</br>加拿大多法斯科公司").addValue(new ImageParam(null,"加拿大多法斯科公司，在冶炼过程中会产生浓度较高的酸性气体，对设备间造成腐蚀。后采用模块化单元后取得了良好的去除效果，大大降低室内的酸性气相污染物浓度。机电设备遭受腐蚀的速率显著下降，从而延长了相关设备的使用寿命，降低了企业的更换成本。")))
+				);
 		request.setAttribute("solutionParam", param);
+		request.setAttribute("details", details);
+		request.setAttribute("detailPage", "technology2");
+		request.setAttribute("productDetailPage", "productDetailPage5");
+		return "/template/2ndTemplate.jsp";
+	}
+	
+
+	@RequestMapping(value = "/municipal_administration")
+	public String municipalAdministration(HttpServletRequest request, HttpServletResponse response) throws InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException, ClassNotFoundException, IOException
+	{
+		SolutionParam param = this.generateParam(0);
+		Map<String, MainGroupParam> details = new HashMap<String, MainGroupParam>();
+		details.put("overView",(new MainGroupParam(null,null))
+		.addValue(new DivGroupParam(null, "市政工程是指城市生活配套的各种公共基础设施建设，主要包括机场、污水泵站、垃圾填埋场、隧道、大型车站等。这些公共基础设施在给人们带来生活保障的同时，难免也会产生一系列环境污染问题，如异味气体（以H2S为例）、高浓度腐蚀性气体（以SO2为例）等。"))
+		.addValue(DataImportUtil.doExcelImport(0, new File("/Users/weisun/git/ec/web-site/WebContent/excel/solution/municipal_administration.xlsx"), "常见污染物列表",null))
+		.addValue(new DivGroupParam(null, "市政类服务设施均呈现占地面积小、容纳人口多或处理量大的特点；且市政类的服务设施易产生有气味性的气体，或出现由人员众多带来的通风不畅、室内空气质量较差的问题。针对气味性气体的去除，IIECC并没有采用传统的湿式吸收、或单一加大空气循环量的方法，而是突破性地提出利用HDS干式洗涤塔等系列产品去除有毒有害气体的解决方案。干式洗涤塔能有效地消除污染物至ppm（10-9）级别。"))
+		.addValue(new DivGroupParam(null, "在IIECC的媒体家族中，有专门针对硫化氢等臭味气体的强氧化性媒体MM-1000，有比表面积大的活性炭媒体MM-3000，更有特殊配比的CleanAire型媒体。考虑到市政工程的安装条件，在净化设备的选择上我们也有多种应对方法。IIECC旗下的HDS机组能在较小占地面积下呈现良好净化效果，部分大风量或浓度较高的市政设施需用到DAS型机组，在某些特定的区域内部也会选用APS小型室内净化机组来提升空气质量。"))
+		.addValue(new DivGroupParam("案例", ""))
+		.addValue(new ImageGroupParam("Washington DullesInternational Airport —— USAH Series, MM-1355</br>华盛顿杜勒斯国际机场").addValue(new ImageParam("/solution/municipal_administration_1.jpg","华盛顿杜勒斯国际机场有1800名员工。机场办公大楼的设计原已包含新风系统，但因距机场跑道只有数十米，大楼完工后不断有员工反映办公区域内部空气质量差，现场勘测分析发现NOX，SO2，O3等有害气体浓度均高于标准数倍。后设计采用了IIECC的净化设备，即使大楼总流量为324000CFM（CFM：立方英尺每分钟）的气流经过USAH系统的两个并联处理部分，分别为建筑供应180000CFM和144000CFM的清洁空气。系统内置总重为80000 lb.的Multi-Mix® Media以保证空气品质等级。经USAH机组净化后，室内颗粒物的浓度和室内有害污染气体浓度均有效降低。")))
+		.addValue(new ImageGroupParam("Al Shindagha Tunnel, Dubai —— Modular Unit</br>迪拜隧道").addValue(new ImageParam("/solution/municipal_administration_2.jpg","由于过往车辆较多，海底隧道内部的尾气浓度偏高，而原有的内部通风设计并不能有效解决这一问题。汽车尾气的主要成分是氮氧化合物和硫氧化合物，因此我们选用了净化模块单元进行内循环过滤净化，有害气体经过媒体的吸附催化氧化后浓度显著降低，且有效减少了隧道内部VOCs的浓度。")))
+		.addValue(new ImageGroupParam("Sewage Pump Station in Shanghai Pudong District —— HDS Series</br>上海市浦东污水泵站").addValue(new ImageParam(null,"上海浦东污水泵站位于上海外环线处，近期规模为8000m³/d，远景设计规模可达10000m³/d。由于泵站紧邻居民楼（相距仅数十米），运行中产生的大量恶臭气体对周边环境带来了极大的影响。该泵站曾经采用雾化除臭工艺，但因臭气处理工艺不够完善，总体处理效果远低于预期。停用该除臭工艺后，选用了HDS系列机组净化，效果显著，恶臭气体浓度显著减小。")))
+		.addValue(new ImageGroupParam("Smithville Incineration Plant, Ontario —— HDS Series</br>安大略史密斯维拉焚化厂").addValue(new ImageParam(null,"史密斯维拉焚化厂在垃圾焚烧过程中会产生一系列臭味气体，严重影响周边居民的生活起居。考虑到臭味气体的危害性，我们选用了IIECC的HDS系列净化机组。设备投入使用后，气味得到了有效控制，将焚烧厂对周边的污染降低至可控范围内。")))
+				);
+		request.setAttribute("solutionParam", param);
+		request.setAttribute("details", details);
+		request.setAttribute("detailPage", "technology2");
+		request.setAttribute("productDetailPage", "productDetailPage5");
 		return "/template/2ndTemplate.jsp";
 	}
 
-	
-	@RequestMapping(value = "/municipal_administration")
-	public String municipalAdministration(HttpServletRequest request, HttpServletResponse response)
+	@RequestMapping(value = "/business")
+	public String business(HttpServletRequest request, HttpServletResponse response) throws InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException, ClassNotFoundException, IOException
 	{
 		SolutionParam param = this.generateParam(2);
-		param.setActiveSubItem("市政");
-		param.setSubItemInfo("市政工程主要指的是城市生活配套的各种公共基础设施建设，主要包括市政污水泵站、垃圾填埋场、隧道、大型车站等；这些公共基础设施在给人们带来生活保障的同时也难免会产生一系列的环境污染问题，例如异味气体（以H2S为例）、高浓度腐蚀性气体（以SO2为例），针对此类污染问题，EC提出了利用高浓度干式洗涤塔去除有毒有害气体的解决方案。干式洗涤塔将有效地消除污染物达到检测不到的水平。值得一提是，此方案维护工作量小，每年只需要更换维护即可,而无需传统湿式洗涤器复杂且频繁的维修程序。");
-		param.addSample(new SolutionSampleParam("蒙特利尔国际机场", "municipal_administration_montreal.jpg","蒙特利尔国际机场办公大楼内有1800名员工，该大楼原有设计中已含新风系统，但该大楼距机场跑道仅数十米，大楼完工后不断有员工反映在办公区域内部可以闻到飞机柴油的味道，经工程师设计后，机场办公大楼总流量为324000CFM的气流经过DAS系统的两个并联处理部分，分别为建筑供应180000CFM和144000CFM的清洁空气。总重为80000 lb.的Multi-Mix媒体内置于系统以保证空气品质等级。通过DAS机组净化后有效的降低了室内颗粒物的浓度和有害的室内污染气体浓度。"));
-		param.addSample(new SolutionSampleParam("迪拜隧道", "隧道在设计之初仅考虑了内部的通风设计，运营一段时间后，由于内部人数多，呼出的二氧化碳浓度持续走高，再加上挥发性有机物的浓度逐渐上升，单靠通风系统难以将隧道内部的污染气体浓度进行降低，后经我们的工程师推荐采用了APS小型净化机组系列，其主要作用是对通风后的隧道内空气进行一个内循环过滤净化，能够有效的降低VOCs的浓度，系统安装投入使用后，隧道内部空气质量大为好转，保证了隧道内部人员的呼吸健康。"));
-		param.addSample(new SolutionSampleParam("上海市浦东污水泵站", "上海浦东污水泵站位于上海外环线处，近期规模为8000m³/d,远景设计规模可达10000m³/d；由于泵站紧邻居民楼（相距仅数十米），运行中产生的大量恶臭气体对周边环境带来了极大的影响，为了完善该污水泵站功能，创造良好的生活工作环境，改建泵站除臭工程势在必行。在此之前，泵站曾经采用雾化除臭工艺，但由于臭气处理工艺不完善，总体处理效果远远低于预期，目前该除臭工艺已停用，泵站产生的臭气只能通过风机引入约8米的高空直接排放。直到选用HDS系列机组净化后，效果显著，恶臭气体浓度大大减小。"));
-		request.setAttribute("detailPage", "solutionDetail");
+		Map<String, MainGroupParam> details = new HashMap<String, MainGroupParam>();
+		details.put("overView",(new MainGroupParam(null,null))
+		.addValue(new DivGroupParam(null, "以酒店、办公楼宇、住宅为代表的商业领域，具有区域面积大、人数多、对空气质量要求高等三大特点。在早期的楼宇新风系统设计中，绝大部分只是加装了简单的初效过滤段，随着室外污染气体（以硫氧化物和氮氧化物为首）的浓度日益增长，去除有毒有害气体的需求显得愈加迫切。"))
+		.addValue(DataImportUtil.doExcelImport(0, new File("/Users/weisun/git/ec/web-site/WebContent/excel/solution/business.xlsx"), "常见污染物列表",null).addAnnon("注：常见的甲醛\\甲苯\\二甲苯等均属于VOCs（挥发性有机化合物）。"))
+		.addValue(new DivGroupParam(null, "IIECC提出的多重颗粒物过滤系统+气相净化的新风设计方案，不仅能使室内PM2.5降低到极低值，还能利用化学吸附催化氧化的原理处理掉室外引进新风中的气态污染物。"))
+		.addValue(new DivGroupParam(null, "商业类场所由于其环境的特殊性，以香烟烟雾为代表的颗粒物浓度多数偏高，部分硫氧化物、氮氧化物会经由开窗换气通风、或由新风机组引入室内。在此类情况下，IIECC除了选用强氧化性的媒体MM-1000来催化氧化以甲醛为首的有害气体外，还会根据VOCs的具体区别，选择不同比例的MM-3000进行吸收。"))
+		.addValue(new DivGroupParam(null, "商业项目与工业和市政类项目的最大区别，是对颗粒物浓度的处理级别要求更高。因此，IIECC定制选用了AAF的HEPA13过滤级别的高效过滤段，确保最有效地去除PM2.5。在净化设备的选择上，还会考虑到商业项目的处理循环风量、安装条件和污染物浓度。"))
+		.addValue(new DivGroupParam("案例", ""))
+		.addValue(new ImageGroupParam("Harrah's Casino, Summit View Lounge, Lake Tahoe, NV —— APS Series</br>内华达州太浩湖海瑞斯赌场高层观光大厅").addValue(new ImageParam("/solution/business_1.jpg","大多数美国城市已禁止在酒吧和餐馆中吸烟，事实上，吸烟者和非吸烟者是可以共存的。一个设计合理的过滤系统可以减少有害气体和颗粒物的排放，同时还能满足地方法律规章的要求。APS空气净化系统的设计旨在去除由香烟烟雾释放的颗粒物和气相污染物。内华达州太浩湖海瑞斯赌场环境控制的目标，是为高层观光大厅提供12ACH（每小时换气次数）风量的100%再循环空气，从而在烟雾集中区域有效去除ETS（环境烟草烟雾）同时使侧流（二手）烟雾对非吸烟者的影响降至最低。香烟雾是由颗粒物和气相污染物组成的复杂混合物，因此它的处理必须经过不同尺度的过滤器。APS-1500空气净化系统通过一个HEPA（95%的颗粒物去除率）过滤器收集所有的颗粒物，再通过二阶媒体单元去除所有有害气体，其中包括香烟燃烧所释放的致癌物。")))
+		
+		.addValue(new ImageGroupParam("Jumeirah Beach Hotel, Dubai —— APS Series</br>迪拜朱美拉海滩酒店").addValue(new ImageParam("/solution/business_2.jpg","海滩酒店的厨房在设计阶段时，起初只考虑到了普通油烟机以及排风系统。运营一段时间后，发现普通的通风换气系统无法解决烹饪产生的高浓度异味，长此以往不仅不利于厨房内部人员的日常工作，异味还容易通过门窗渗透至餐厅区域影响顾客的用餐环境。工程师现场勘测后，提出了利用气相过滤的方法吸收净化厨房异味气体。在IIECC的净化模块投入使用一段时间之后，内部异味得到了很好的控制，并且原有排风系统的使用频率也大大降低，减少了能源消耗。")))
+		.addValue(new ImageGroupParam("Jin Mao Tower, Shanghai —— APS Series</br>上海浦东金茂大厦").addValue(new ImageParam("/solution/business_3.jpg","金茂大厦等高端办公楼宇原有的系统设计中已包含有新风系统，虽具备较高级别的颗粒物过滤段，但是对常见氮氧化物和硫氧化物的去除率却很低，因此室外的气体污染物会在未被去除的情况下随新风一起进入室内。长期在这种空气质量下工作，会严重影响室内办公人员的身体健康以及工作效率。后选用了IIECC的APS系列机组在室内进行内循环净化，机组正常运行一段时间后，经检测室内的气体污染物浓度大幅下降，空气品质得到有效改善。")))
+		.addValue(new ImageGroupParam("Beijing Lido / Beijing Palace, Tomson Riviera… APS Series</br>北京丽都/北京丽宫、汤臣一品等高端社区").addValue(new ImageParam("/solution/business_4.jpg","一般来说室内空气污染比室外严重，但在国内目前的环境下，开窗换气的方法已然没有效果。在一些高级公寓和别墅项目中，业主们对空气质量极为重视，不仅要求PM2.5浓度低，更对空气中各类有毒有害气体的浓度也提出了较高要求，如空气质量指数中的SO2和NO2浓度等。IIECC的APS系列除了能有效去除PM2.5/PM10等颗粒物污染外，还能同时去除空气中的NOX，SOX，CO，O3等化学性污染，从而满足了业主对高品质空气的需求。除此之外，IIECC的APS系列机组还可以加装热回收系统，通过逆流式热交换方式回收能量、降低能耗。")))
+		.addValue(new ImageGroupParam("</br>").addValue(new ImageParam("/solution/business.jpg","")))
+		.addValue(new ImageGroupParam("</br>").addValue(new ImageParam("/solution/business.jpg","")))
+		);
 		request.setAttribute("solutionParam", param);
+		request.setAttribute("details", details);
+		request.setAttribute("detailPage", "technology2");
+		request.setAttribute("productDetailPage", "productDetailPage5");
 		return "/template/2ndTemplate.jsp";
 	}
-	
-	@RequestMapping(value = "/medical_treatment")
-	public String MedicalTreatment(HttpServletRequest request, HttpServletResponse response)
+
+	@RequestMapping(value = "/other")
+	public String other(HttpServletRequest request, HttpServletResponse response) throws InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException, ClassNotFoundException, IOException
 	{
 		SolutionParam param = this.generateParam(3);
-		param.setActiveSubItem("医疗");
-		param.setSubItemInfo("呼吸道感染、泌尿感染和肠胃道感染是医院感染部位的前三甲，呼吸道感染首当其冲。医院空气污染带来的感染难以防范又不易察觉，医院又是病菌的集散地，悬浮在空气中的PM2.5更是病菌的生生不息的乐土，这对于病人来说简直是“雪上加霜”。除此之外，医疗行业大量使用福尔马林（甲醛溶液）作为防腐消毒剂，甲醛不仅会带来刺鼻性气味且其本身属于有毒有害物质。气相媒体滤料MM-1000主要成分是高锰酸钾浸渍活性氧化铝和活性炭，能够有效的去除甲醛等有毒有害气体，同时配备的HEPA13级别的高效过滤段能够使颗粒物的去除率达到99.99%，全面满足医院空气污染治理需求。");
-		param.addSample(new SolutionSampleParam("美国内华达州里诺市肖沃医疗中心", "medical_treatment_washoe.jpg","美国内华达州里诺市肖沃医疗中心为解决空气污染问题，经工程师们推荐后选择了APS（小型室内净化机组）,安装后的APS分布于各个科室的吊顶空间内，经过内循环过滤净化，有效的去除了颗粒物以及污染气体；且APS在安装的过程中充分考虑了原有的室内空间，将立式与卧式两款机型与现场条件相匹配，营造一个最佳的设计与安装效果。"));
-		param.addSample(new SolutionSampleParam("多伦多法医病理实验室", "多伦多法医病理实验室由解剖室、尸体贮藏室、其它各种实验室、私人办公室和办公厅组成。未处理和已处理的腐烂尸体产生的异味以及有害气体严重影响了办公人员的身体健康；通过选用A.P.S.（小型气相净化机组）净化后，病理实验室室内的空气品质得到极大的改善，腐烂尸体的异味得到了有效的控制，整个实验室内的甲醛浓度也降到了室内标准值以下。"));
-		request.setAttribute("detailPage", "solutionDetail");
+		Map<String, MainGroupParam> details = new HashMap<String, MainGroupParam>();
+		details.put("overView",(new MainGroupParam(null,null))
+		.addValue(new DivGroupParam(null, "医疗、军事、院校场馆、金融机构等特殊的场所，常需要有针对性地去除某种或某几种特殊的气相污染物：如医疗所用的福尔马林溶液（甲醛溶液）易挥发，对人体健康产生影响；图书馆的文献资料会因酸性气体腐蚀令保存时限缩短；军事设施内部需要保持对有毒有害气体的去除能力等。"))
+		.addValue(DataImportUtil.doExcelImport(0, new File("/Users/weisun/git/ec/web-site/WebContent/excel/solution/other.xlsx"), "常见污染物列表",null))
+		.addValue(new DivGroupParam(null, "IIECC针对此类区域提出的专业气相净化方案，能有效去除空气中的有害气体及颗粒污染物。"))
+		.addValue(new DivGroupParam(null, "院校场馆、医疗军事等场所的空气污染呈现总体分布区域广、单体数量多等特点。综合考虑下，IIECC选用混合媒体MM-1355来催化氧化有害气体；针对这些场所的使用用途，IIECC还会根据实际情况选用AAF的HEPA13过滤级别的高效过滤段，以确保最有效去除PM2.5；在净化设备的选择上，根据现场情况通常会选用USAH、AG、APS等系列净化机组来实现空气的过滤及净化。"))
+		.addValue(new DivGroupParam("案例", ""))
+		.addValue(new ImageGroupParam("The George W. Bush Presidential Library and Museum —— APS Series</br>乔治布什总统图书馆博物院").addValue(new ImageParam("/solution/other_1.jpg","德克萨斯州大学城乔治布什图书馆内藏有大量的珍贵文献，但由于室内酸性氧化物的浓度日益增大，对文献的腐蚀愈加严重。后经工程师研究，采用了特别设计的组合Multi-Mix® Media（MM-1355），并经特殊处理，内置于二阶媒体单元系统。这种二阶式设计使乔治布什总统图书馆博物院的室外空气污染物在设备内的滞留时间达到0.2秒，因此能彻底去除氮氧化物（NOX），硫氧化物（SOX），臭氧（O3）和总烃在内的所有室外有害气体。另有效率高达90%的中效过滤器集成于USAH空气净化系统，可作为终端彻底去除颗粒物。所有已安装的过滤器均符合UL等级I标准，无论物理过滤器、化学媒体还是化学媒体容纳单元都具有UL等级I认可的防火和不燃特性。")))
+		.addValue(new ImageGroupParam("Washoe Medical Center - Reno, Nevada —— APS Series</br>美国内华达州里诺市肖沃医疗中心").addValue(new ImageParam("/solution/other_2.jpg","美国内华达州里诺市肖沃医疗中心为解决空气污染问题，经工程师们推荐后选择了APS小型室内净化机组。安装后的APS分布于各个科室的吊顶空间内，经过内循环过滤净化，能有效去除空气中的颗粒物、病菌以及气态污染物。且APS在安装过程中充分考虑了原有的室内空间，将立式与卧式两款机型与现场条件完美匹配，营造出绝佳设计与安装效果。")))
+		.addValue(new ImageGroupParam("Escape channels of UN —— DAS + APS Series</br>联合国逃生通道").addValue(new ImageParam("/solution/other_3.jpg","联合国作为国际性的政务工作部门，为应对恐怖袭击、火灾、自然灾害等危害极大的突发事件，需配备高质量的逃生通道，而内部的空气品质则是设计的重中之重。为保证通道内的有害气体污染物浓度达到最低，我们的工程师们提出了DAS深床式气相净化+APS小型净化机组的综合解决方案。在该项目中，DAS深床式气相净化可以去除新风引进时内含的气态污染物，而APS小型净化机组则可针对逃生通道内的空气，进行内循环过滤。该逃生通道投入使用后，经过监测，通道内的各项污染物浓度均低于国际标准。")))
+		.addValue(new ImageGroupParam("Beijing Focus Building / AG Series</br>北京富凯大厦").addValue(new ImageParam("/solution/other_4.jpg","北京富凯大厦（北京证监会办公所在地）原有的新风系统，在每层均设有独立的新风机房。然而该套新风系统设计时仅安装了G4级别的初效过滤段，随着北京空气情况的日益恶劣，该套系统已无法提供洁净的新风。后经工程师现场勘测后，提出了在原有新风主机后加装AG系列净化系统的方案，在保证风量风压不变、并且不改动原有室内管道的前提下，仅对新风机房的管路进行了改造。项目改造完成后，现场进行了颗粒物浓度的检测，出风口的颗粒物浓度均为个位数，室内空气品质显著提升。")))
+		.addValue(new ImageGroupParam("</br>").addValue(new ImageParam("/solution/other_5.jpg","")))
+		);
 		request.setAttribute("solutionParam", param);
+		request.setAttribute("details", details);
+		request.setAttribute("detailPage", "technology2");
+		request.setAttribute("productDetailPage", "productDetailPage5");
 		return "/template/2ndTemplate.jsp";
 	}
-	
-	@RequestMapping(value = "/residence")
-	public String residence(HttpServletRequest request, HttpServletResponse response)
-	{
-		SolutionParam param = this.generateParam(4);
-		param.setActiveSubItem("住宅");
-		param.setSubItemInfo("考虑到人类本身对于新风的需求性，现阶段大部分住宅系统开始安装新风系统，但室外空气实际质量并不理想，污染物不仅仅包括PM2.5 等颗粒物，氮氧化物和硫氧化物给人带来的危害更大，此类新风一旦引入室内，非但不能起到给人带来舒适度的作用，还会给人们的呼吸系统带来危害；针对住宅类的新风系统，EC提出了多重颗粒物过滤系统+气相净化的新风设计方案，不仅能够使室内PM2.5降低到极低值，还能利用化学吸附催化氧化的原理处理掉室外引进新风中的污染气体。");
-		param.addSample(new SolutionSampleParam("东渡国际", "residence_dongdu.jpg","东渡国际中心作为上海高档的大平层住宅类别墅，设计方在考虑暖通设计时就对空气净化提出了严格的要求，后经工程师们推荐选用了新风与内循环净化混合的AG系列机型，该机型的特征是将内循环净化和新风引进设计在一个机组内部，这样既满足了住宅类的通风要求，又实现了内循环净化，在该套机组设备的运转下，可以保证室内的PM2.5浓度持续保持在国标以下，让室内人员呼吸时不再受雾霾之苦。"));
-		param.addSample(new SolutionSampleParam("北京丽都/北京丽宫、汤臣一品等高端社区", "一般来说室内空气污染会比室外严重，但在国内目前的环境下，人们平时都会采用开窗换气的方法已经没有效果。在一些高级公寓和别墅项目中，业主们对空气质量有较高要求，不仅要求空气中尽量少的PM2.5浓度，更对空气中所含的各类有毒有害气体的浓度也提出了高要求。比如空气质量指数中的SO2和NO2浓度等。在这个条件下我们的APG40M系列除有效去除PM2.5/PM10等颗粒物污染以外，还同时去除空气中的NOX，SOX，CO，O3等化学性污染，从而满足了业主对高品质空气的需求"));
-		request.setAttribute("detailPage", "solutionDetail");
-		request.setAttribute("solutionParam", param);
-		return "/template/2ndTemplate.jsp";
+	public SolutionParam generateParam(int subItemIndex) {
+		SolutionParam param = SolutionController.generateParam();
+		param.setActiveSubItem(param.getSubItems().get(subItemIndex).getName());
+		param.setTitle(param.getActiveSubItem());
+		return param;
 	}
-	
-	@RequestMapping(value = "/hotel")
-	public String hotel(HttpServletRequest request, HttpServletResponse response)
-	{
-		SolutionParam param = this.generateParam(7);
-		param.setActiveSubItem("酒店及办公楼宇");
-		param.setSubItemInfo("以酒店和办公楼为代表的某些领域现阶段呈现出区域面积大、人数多、对空气质量要求高等三大特点；在早期的楼宇新风系统设计中，绝大部分新风系统知识加装了简单的初效过滤段，随着室外污染气体（以硫氧化物和氮氧化物为首）浓度的日益增长，去除新风中的有毒有害气体的需求显得更加迫切；针对此类项目，我们提出了系统的改造方案，即在不改变原有室内新风管道的前提下仅在新风机房增加气相过滤设备，在源头上去除污染气体以及PM2.5等颗粒物。");
-		param.addSample(new SolutionSampleParam("迪拜塔", "hotel_dubai.jpg","迪拜塔作为全球最著名的的七星级酒店，在设计之初，如何保证室内空气品质就是一个极其充满挑战的设计；后经工程师们设计，新风在引入到室内前，经过DAS净化机组的过滤，考虑到七星级酒店客人对于空气品质的要求，DAS机组内置的媒体净化段设计为3级，并标配的了初效以及高效颗粒物过滤段，整套净化系统设计完成投入使用后，酒店内的每个房间所获得的新风内含的颗粒物浓度以及有害气体浓度均降至标准以下，为入住的客人带来了最好呼吸的空气。"));
-		param.addSample(new SolutionSampleParam("内华达州太浩湖海瑞斯赌场高层观光大厅", "大多数美国城市已禁止在酒吧和餐馆中吸烟。但吸烟者和非吸烟者是可以共存的：一个合理设计的过滤系统可以减少有害气体和颗粒物的排放，同时还能满足地方法律规章的要求。空气净化系统（A.P.S.）设计旨在去除由香烟雾释放的颗粒物和气相污染物。环境控制的目标是为高层观光大厅提供12ACH （换气次数每小时）风量的100%再循环空气，从而在烟雾集中区域有效去除ETS（环境烟草烟雾）同时使侧流（二手）烟雾对非吸烟者的影响降至最低。香烟雾是由颗粒物和气相污染物组成的特别复杂的混合物，因此它的处理必须经过不同尺度的过滤器。A.P.S.-1500空气净化系统通过一个HEPA（高效颗粒物捕获，95%）过滤器收集所有的颗粒物，再通过二阶媒体单元去除所有有害气体，其中包括香烟燃烧所释放的致癌物。"));
 
-		param.addSample(new SolutionSampleParam("北京富凯大厦", "北京富凯大厦（北京证监会办公所在地）原有自己一套独立的新风系统，大厦每层均设有独立的新风机房，该套新风系统设计时仅安装了G4级别的初效过滤段，随着北京空气情况的日益恶劣，该套系统已远不能为办公人员提供洁净的新风；后经工程师现场勘测后，提出了在原有新风主机后加装AG系列净化系统的方案，在保证风量风压不变并且不改动原有室内管道的前提下仅对新风机房的管路进行了改造，项目改造完成后，现场进行了颗粒物浓度的检测，出风口的颗粒物浓度均为个位数，大大提高了室内的空气品质。"));
-		param.addSample(new SolutionSampleParam("钓鱼台国宾馆", "一般来说，室内封闭环境空气质量要比室外空气质量差，尤其长时间使用空调的环境，各种污染更多。绝大多数的酒店客房是相对密闭的环境，只靠空调新风来调节空气。而我们传统的新风只有简单的针对毛发灰尘等大颗粒物的初效过滤器，对PM2.5颗粒物和各种气体污染的过滤几乎没有效果。而且酒店的相对密闭导致其装修污染物和各种生活异味很难快速散发，所以很多酒店在清洁房间后会喷洒香水来遮盖异味。而通过使用APG系列净化系统，能大大改善室内的空气质量，能去除包括各类装修污染物、PM2.5、从新风系统进来的室外汽车尾气甚至是前面住客留下的体味烟味等。"));
-		
-		request.setAttribute("detailPage", "solutionDetail");
-		request.setAttribute("solutionParam", param);
-		return "/template/2ndTemplate.jsp";
-	}
-	
-	@RequestMapping(value = "/stadium")
-	public String stadium(HttpServletRequest request, HttpServletResponse response)
-	{
-		SolutionParam param = this.generateParam(5);
-		param.setActiveSubItem("场馆及院校");
-		param.setSubItemInfo("院校和场馆属于人流比较集中的区域，其内部空气污染物浓度过高时人容易产生疲劳和易怒，这些区域的通风系统设计的原则在是能应对一切可能的室外空气质量问题的同时，以最小的运行费用为室内环境提供合适的空气质量。EC针对此类区域提出了专业气相净化方案，能够有效的去除空气中的硫氧化物、氮氧化物、烃类和挥发性有机物。");
-		param.addSample(new SolutionSampleParam("乔治布什总统图书馆博物院", "stadium_george.jpg","德克萨斯州大学城乔治布什图书馆内藏有大量的珍贵文献，但由于室内酸性氧化物的浓度日益增大，对文献的腐蚀呈愈演愈烈之势，后经工程师们设计，媒体采用了特别设计的一种组合：高锰酸钾加上活性炭。Multi-Mix® Media（MM-1355）组合媒体经特殊处理，内置于一个二阶媒体单元系统。这种二阶式设计使乔治布什总统图书馆博物院的室外空气污染物在设备内滞留时间达到0.2秒，因此能彻底去除氮氧化物（NOX），硫氧化物（SOX）,臭氧（O3）和总烃在内的所有室外有害气体。效率达90%的终过滤器集成于USAH空气净化系统，作为对颗粒物的终端去除。所有已安装的过滤器具有UL等级I标准。无论物理过滤器、化学媒体还是化学媒体容纳单元都具有UL等级I认可的防火和不燃特性。"));
-		param.addSample(new SolutionSampleParam("佛罗里达州迈阿密市戴德郡学校", "戴德郡小学原有的通风系统设计中设计了新风系统，但该新风系统只能过滤大颗粒物，室外的气体污染物随新风进入室内，再加上室内人数较多，且前期装饰过程中产生的化学物质逐渐开始散发出来，多种因素造成室内空气质量大幅度下降，前期只能通过加大新风量的置换来缓解这种状况，后加装了APS-400机组进行过滤再循环后，达到了设计者预期的污染物过滤要求并使总新风量减少了大约50%，新风量的减少也意味着每年用于制冷的能量也显著减小。"));
-		request.setAttribute("detailPage", "solutionDetail");
-		request.setAttribute("solutionParam", param);
-		return "/template/2ndTemplate.jsp";
-	}
-	@RequestMapping(value = "/overview")
-	public String overview(HttpServletRequest request, HttpServletResponse response)
-	{
-		SolutionParam param = this.generateParam(6);
-		param.setActiveSubItem("概览");
-		param.setSubItemInfo("EC提出的空气净化解决方案不仅仅针对PM2.5等颗粒物的去除，更旨在有效去除有毒有害的污染气体；正因为EC能为不同行业的不同污染物提供量身定做的净化设备，多年来，EC为多个行业的代表性公司提供了解决方案并在项目的实际运行中取得了良好的净化效果。");
-		request.setAttribute("detailPage", "solutionDetail");
-		request.setAttribute("solutionParam", param);
-		return "/template/2ndTemplate.jsp";
-	}
-	public SolutionParam generateParam(int subItemIndex){
+	public static SolutionParam generateParam() {
 		SolutionParam param = new SolutionParam();
 		param.setHeaderPicName("solution");
 		param.setSubItemTitle("领域应用及解决方案");
 		param.setSubItemHeaderImgInfo("多年来，EC为多个行业的代表性公司提供了解决方案并在项目的实际运行中取得了良好的净化效果。");
-		param.addSubItem("概览", "solution/overview.html");
-		param.addSubItem("化工", "solution/chemica_industry.html");
-		param.addSubItem("医疗", "solution/medical_treatment.html");
 		param.addSubItem("市政", "solution/municipal_administration.html");
-		param.addSubItem("军事", "solution/military.html");
-		param.addSubItem("住宅", "solution/residence.html");
-		param.addSubItem("场馆及院校", "solution/stadium.html");
-		param.addSubItem("酒店及办公楼宇", "solution/hotel.html");
+		param.addSubItem("工业", "solution/industry.html");
+		param.addSubItem("商业", "solution/business.html");
+		param.addSubItem("其他", "solution/other.html");
 		return param;
 	}
-
 }

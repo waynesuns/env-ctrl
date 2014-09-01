@@ -6,6 +6,7 @@ public abstract class AbstractGroupParam<T,V> {
 	private String type = "div";
 	private String title;
 	private boolean isDoDelim;
+	private String cssClassName;
 	
 	public AbstractGroupParam(String type,String title){
 		this.type = type;
@@ -40,6 +41,15 @@ public abstract class AbstractGroupParam<T,V> {
 
 	public AbstractGroupParam<T, V> setDoDelim(boolean isDoDelim) {
 		this.isDoDelim = isDoDelim;
+		return this;
+	}
+
+	public String getCssClassName() {
+		return cssClassName;
+	}
+
+	public AbstractGroupParam<T, V> setCssClassName(String cssClassName) {
+		this.cssClassName = cssClassName;
 		return this;
 	}
 	

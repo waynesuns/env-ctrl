@@ -2,6 +2,7 @@
 
 
 
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 
 
 
@@ -10,7 +11,7 @@
 <link rel="shortcut icon" href="../img/favicon.png" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=edge; chrome=1">
 <title>EC - 环境控制的标准制定者+解决方案提供商</title>
 <!-- Le styles -->
 <link href="../css/bootstrap.css" rel="stylesheet">
@@ -23,11 +24,17 @@
 
 	<!-- Fav and touch icons -->
 	<link rel="shortcut glyphicon" href="../img/logo_32x32.jpg">
+	<script type="text/javascript" src="../js/jquery-1.10.2.js"></script>
 	
-	<script type="text/javascript" src="../js/jquery-2.1.1.min.js"></script>
 	<!--[if lt IE 9]>
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="../js/html5shiv.js"></script>
+	<script src="../js/respond.min.js"></script>
+	<script src="../js/respond.matchmedia.addListener.min.js"></script>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<![endif]-->
+
+
+
 	<script type="text/javascript" src="../js/bootstrap.js"></script>
 	<script type="text/javascript" src="../js/jquery.htmlClean.js"></script>
 </head>
@@ -36,10 +43,10 @@
 
 <body> <div class="container">
 	<div class="row" style="margin-top: 10px;margin-bottom: 8px;">
-		<div class="col-md-1 col-sm-2 col-xs-0 hidden-xs hidden-xxs">
-			<a href="../index.html"><img src="../img/logo.jpg" /></a>
+		<div class="col-md-2 col-sm-2 col-xs-0 hidden-xs hidden-xxs">
+			<a href="../index.html"><img src="../img/logo.png" style="margin-top: 25px;"/></a>
 		</div>
-		<div class="col-md-11 col-sm-10 col-xs-12" style="margin-top: 7px">
+		<div class="col-md-10 col-sm-10 col-xs-12" style="margin-top: 7px">
 			<div class="row hidden-xs hidden-xxs" >
 				<div class="hot-line col-md-offset-9 col-md-3 col-sm-offset-7 col-sm-5">
 					<div style="float: left;text-align: left;"><img src="../img/icon/phone.png" style="height: 14px;width: 14px;margin-top: -2px;margin-right: 5px;"/>4008-725-000</div>
@@ -61,7 +68,7 @@
 					      	<img src="../img/search.png" >
 					      </button>
 					      <div class="visible-xs-block visible-xxs-block logo" >
-								<a href="../index.html"><img src="../img/logo.jpg" /></a>
+								<a href="../index.html"><img src="../img/logo.png" /></a>
 							</div>
 						<div class="collapse navbar-collapse" id="navbar-xs-search">
 								<!-- form class="navbar-left visible-xs-block" role="search" style="position: relative;">
@@ -117,47 +124,60 @@
 							</li>
 							<li class="nav-delim"><col-md->|</col-md-></li>
 							<li class="dropdown">
-							  	<a role="button" data-toggle="dropdown" href="#" onmouseover="$(this).click()">核心技术</a>
+							  	<a role="button" data-toggle="dropdown" href="#" onmouseover="$(this).click()">优势技术</a>
 								<ul class="dropdown-menu" style="width: 280px;">
-									<li>
-									<div style="min-height: 20px;"><a tabindex="-1" href="../technology/overview.html" style="padding-left: 35px;padding-right: 35px;">气相过滤和气相混合净化媒体简介</a></div>
-									</li>
-									<li>
-										<div style="min-height: 20px;"><a tabindex="-1" href="../technology/scope.html" style="padding-left: 35px;padding-right: 35px;">可去除的气态污染物及其介绍</a></div>
-									</li>
+									
+										<li>
+											<div style="min-height: 20px;"><a tabindex="-1" href="../technology/gas_filter.html" style="padding-left: 35px;padding-right: 35px;">气相过滤技术</a></div>
+										</li>
+									
+										<li>
+											<div style="min-height: 20px;"><a tabindex="-1" href="../technology/particles_filter.html" style="padding-left: 35px;padding-right: 35px;">颗粒物过滤技术</a></div>
+										</li>
+									
+										<li>
+											<div style="min-height: 20px;"><a tabindex="-1" href="../technology/degerming.html" style="padding-left: 35px;padding-right: 35px;">杀菌除菌技术</a></div>
+										</li>
+									
+										<li>
+											<div style="min-height: 20px;"><a tabindex="-1" href="../technology/power_refund.html" style="padding-left: 35px;padding-right: 35px;">能量回收技术</a></div>
+										</li>
+									
+										<li>
+											<div style="min-height: 20px;"><a tabindex="-1" href="../technology/energy_conservation.html" style="padding-left: 35px;padding-right: 35px;">高效节能技术</a></div>
+										</li>
+									
 								</ul>
 							</li>
 							<li class="nav-delim"><col-md->|</col-md-></li>
 							<li class="dropdown">
 							  	<a id="drop3" role="button" data-toggle="dropdown" href="#" onmouseover="$(this).click()">产品系列</a>
 								<ul class="dropdown-menu" style="width: 300px;">
-									<li>
-									<div style="min-height: 20px;"><a tabindex="-1" href="../product/multi_mix.html" style="padding-left: 35px;padding-right: 35px;">MULTI-MIX® Media</a></div>
-									</li>
-									<li>
-										<div style="min-height: 20px;"><a tabindex="-1" href="../product/aps.html" style="padding-left: 35px;padding-right: 35px;">APS系列 空气净化系统</a></div>
-									</li>
-									<li>
-										<div style="min-height: 20px;"><a tabindex="-1" href="../product/usah.html" style="padding-left: 35px;padding-right: 35px;">USAH系列 通用侧开门系列</a></div>
-									</li>
-									<li>
-										<div style="min-height: 20px;"><a tabindex="-1" href="../product/hds.html" style="padding-left: 35px;padding-right: 35px;">HDS系列 高浓度气体洗涤器净化机组</a></div>
-									</li>
-									<li>
-										<div style="min-height: 20px;"><a tabindex="-1" href="../product/das.html" style="padding-left: 35px;padding-right: 35px;">DAS系列 深床式气相净化机组</a></div>
-									</li>
-									<li>
-										<div style="min-height: 20px;"><a tabindex="-1" href="../product/tfs.html" style="padding-left: 35px;padding-right: 35px;">TFS 整体空气净化过滤系统</a></div>
-									</li>
-									<li>
-										<div style="min-height: 20px;"><a tabindex="-1" href="../product/ag.html" style="padding-left: 35px;padding-right: 35px;">AG系列 内循环净化系统</a></div>
-									</li>
-									<li>
-										<div style="min-height: 20px;"><a tabindex="-1" href="../product/apg_e.html" style="padding-left: 35px;padding-right: 35px;">APG-E系列 新风净化系统</a></div>
-									</li>
-									<li>
-										<div style="min-height: 20px;"><a tabindex="-1" href="../product/apg.html" style="padding-left: 35px;padding-right: 35px;">APG系列 内循环净化系统</a></div>
-									</li>
+									
+										<li>
+											<div style="min-height: 20px;"><a tabindex="-1" href="../product/aps.html" style="padding-left: 35px;padding-right: 35px;">APS系列空气净化系统</a></div>
+										</li>
+									
+										<li>
+											<div style="min-height: 20px;"><a tabindex="-1" href="../product/ag.html" style="padding-left: 35px;padding-right: 35px;">AG系列内循环净化系统</a></div>
+										</li>
+									
+										<li>
+											<div style="min-height: 20px;"><a tabindex="-1" href="../product/hds.html" style="padding-left: 35px;padding-right: 35px;">HDS系列高浓度气体洗涤器净化机组</a></div>
+										</li>
+									
+										<li>
+											<div style="min-height: 20px;"><a tabindex="-1" href="../product/das.html" style="padding-left: 35px;padding-right: 35px;">DAS系列深床式气相净化机组</a></div>
+										</li>
+									
+										<li>
+											<div style="min-height: 20px;"><a tabindex="-1" href="../product/usah.html" style="padding-left: 35px;padding-right: 35px;">USAH系列通用侧开门系列</a></div>
+										</li>
+									
+										<li>
+											<div style="min-height: 20px;"><a tabindex="-1" href="../product/multi_mix.html" style="padding-left: 35px;padding-right: 35px;">MULTI-MIX® Media</a></div>
+										</li>
+									
 								</ul>
 							</li>
 							<li class="nav-delim"><col-md->|</col-md-></li>
@@ -237,15 +257,6 @@
 				<div>
 				<div class="list-group-item ">
 					<div style="width: 160px;" >
-						<a href="../product/multi_mix.html" class="">MULTI-MIX® Media</a>
-					</div>
-					<div style="float: right;position: absolute;top:25%;right:0;"><a href="../product/multi_mix.html" class="">></a></div>
-				</div>
-				</div>
-			
-				<div>
-				<div class="list-group-item ">
-					<div style="width: 160px;" >
 						<a href="../product/aps.html" class="">APS系列空气净化系统</a>
 					</div>
 					<div style="float: right;position: absolute;top:25%;right:0;"><a href="../product/aps.html" class="">></a></div>
@@ -255,9 +266,9 @@
 				<div>
 				<div class="list-group-item ">
 					<div style="width: 160px;" >
-						<a href="../product/usah.html" class="">USAH系列通用侧开门系列</a>
+						<a href="../product/ag.html" class="">AG系列内循环净化系统</a>
 					</div>
-					<div style="float: right;position: absolute;top:25%;right:0;"><a href="../product/usah.html" class="">></a></div>
+					<div style="float: right;position: absolute;top:25%;right:0;"><a href="../product/ag.html" class="">></a></div>
 				</div>
 				</div>
 			
@@ -282,36 +293,18 @@
 				<div>
 				<div class="list-group-item ">
 					<div style="width: 160px;" >
-						<a href="../product/tfs.html" class="">TFS整体空气净化过滤系统</a>
+						<a href="../product/usah.html" class="">USAH系列通用侧开门系列</a>
 					</div>
-					<div style="float: right;position: absolute;top:25%;right:0;"><a href="../product/tfs.html" class="">></a></div>
+					<div style="float: right;position: absolute;top:25%;right:0;"><a href="../product/usah.html" class="">></a></div>
 				</div>
 				</div>
 			
 				<div>
 				<div class="list-group-item ">
 					<div style="width: 160px;" >
-						<a href="../product/ag.html" class="">AG系列内循环净化系统</a>
+						<a href="../product/multi_mix.html" class="">MULTI-MIX® Media</a>
 					</div>
-					<div style="float: right;position: absolute;top:25%;right:0;"><a href="../product/ag.html" class="">></a></div>
-				</div>
-				</div>
-			
-				<div>
-				<div class="list-group-item ">
-					<div style="width: 160px;" >
-						<a href="../product/apg_e.html" class="">APG-E系列新风净化系统</a>
-					</div>
-					<div style="float: right;position: absolute;top:25%;right:0;"><a href="../product/apg_e.html" class="">></a></div>
-				</div>
-				</div>
-			
-				<div>
-				<div class="list-group-item ">
-					<div style="width: 160px;" >
-						<a href="../product/apg.html" class="">APG系列内循环净化系统</a>
-					</div>
-					<div style="float: right;position: absolute;top:25%;right:0;"><a href="../product/apg.html" class="">></a></div>
+					<div style="float: right;position: absolute;top:25%;right:0;"><a href="../product/multi_mix.html" class="">></a></div>
 				</div>
 				</div>
 			
@@ -320,147 +313,547 @@
 			<ol class="breadcrumb">
 			  <li><a href="../index.html">首页</a></li>
 			  <li><a href="#">产品系列</a></li>
-			  <li class="active">APS系列空气净化系统</li>
+			  <li style="padding-left: 1px;" class="active">APS系列空气净化系统</li>
 			</ol>
 			
 
 
+<div class="title">APS系列空气净化系统</div>
 <ul class="nav nav-tabs nav-justified product_nav" role="tablist" style="margin-bottom: 10px;">
-  <li class="active"><a href="#feautre" role="tab" data-toggle="tab">功能设计</a></li>
-  <li><a href="#param" role="tab" data-toggle="tab">参数规格</a></li>
-  <li><a href="#download" role="tab" data-toggle="tab">下载</a></li>
-  <li><a href="#q&a" role="tab" data-toggle="tab">常见问题</a></li>
-  <li><a href="#contact" role="tab" data-toggle="tab">购买咨询</a></li>
+  
+  <li class="active"><a href="#tab_0" role="tab" data-toggle="tab">立式系列</a></li>
+  
+  <li class=""><a href="#tab_1" role="tab" data-toggle="tab">暗藏式系列</a></li>
+  
+  <li class=""><a href="#tab_2" role="tab" data-toggle="tab">移动式系列</a></li>
+  
 </ul>
 <!-- Tab panes -->
-<div class="tab-content">
-	<div class="tab-pane active" id="feautre">
+<div class="tab-content" style="margin-top: 24px;">
+	
+		<div class="tab-pane active" id="tab_0">
+			
+			
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="row">
+	
+	
+	
+
+
+
+
+
+<div class="info col-xxs-12 col-md-6">APS小型气相净化机组，被设计成为能在较小空间内有效去除微尘和污染的空气净化装置，并能同时减少新风的风量，降低建筑能耗。</br></br>APS系统严格符合最新建筑通风设备标准和室内空气质量要求。其特色是多级过滤系统，包括高效率的气相净化媒体，能提供极高能效的净化过滤。</div>
+
+	
+	
+	
+	
+
+
+
+
+
+	<div class="img col-xxs-12 col-md-6">
+		<img src="../img/product/aps_h.png" class="img-responsive">
 		
-
-
-<div class="title">案例</div>
+	</div>
+	
 
 	
-	<div class="sample-title" style="margin-bottom: 0">迪拜塔</div>
-	<div class="row" style="padding-top: 12px">
-		<div class="info col-xs-7" style="margin-bottom: 0">迪拜塔作为全球最著名的的七星级酒店，在设计之初，如何保证室内空气品质就是一个极其充满挑战的设计；后经工程师们设计，新风在引入到室内前，经过DAS净化机组的过滤，考虑到七星级酒店客人对于空气品质的要求，DAS机组内置的媒体净化段设计为3级，并标配的了初效以及高效颗粒物过滤段，整套净化系统设计完成投入使用后，酒店内的每个房间所获得的新风内含的颗粒物浓度以及有害气体浓度均降至标准以下，为入住的客人带来了最好呼吸的空气。</div>
-		<div class="img col-xs-5"><img src="../img/sample/hotel_dubai.jpg" class="img-responsive"></div>
-	</div>
+	
+</div>
+
+
+	
+	
+		<div style="padding-bottom: 12px;"></div>
+	
+
+
+
+
+
+
+
+<div class="info" style="margin-bottom: 5px;">APS过滤部分符合所有的ASHRAE标准，包括：</div>
+
+<ul>
+
+	<li>30%初效过滤；</li>
+
+	<li>多段混合化学媒体箱，加入MM-1000 Multi-Mix®媒体（可选用其他媒体配方）；</li>
+
+	<li>空气过滤器对0.3微米尘埃最高可达到99.99%的过滤率。</li>
+
+</ul>
+
+
+	
+	
+		<div style="padding-bottom: 12px;"></div>
+	
+
+
+
+
+
+
+
+
+
+<div class="info ">APS具有极高的性价比，可用于教室、医院、实验室、监狱、研究所、宾馆、吸烟室、会议室等，能轻松解决目前的室内空气质量问题。</div>
+
+
 
 	
 		<hr style="margin-bottom: 40px;margin-top: 10px;"/>
 	
-	<div class="sample-title" style="margin-bottom: 0">内华达州太浩湖海瑞斯赌场高层观光大厅</div>
-	<div class="row" style="padding-top: 12px">
-		<div class="info col-xs-7" style="margin-bottom: 0">大多数美国城市已禁止在酒吧和餐馆中吸烟。但吸烟者和非吸烟者是可以共存的：一个合理设计的过滤系统可以减少有害气体和颗粒物的排放，同时还能满足地方法律规章的要求。空气净化系统（A.P.S.）设计旨在去除由香烟雾释放的颗粒物和气相污染物。环境控制的目标是为高层观光大厅提供12ACH （换气次数每小时）风量的100%再循环空气，从而在烟雾集中区域有效去除ETS（环境烟草烟雾）同时使侧流（二手）烟雾对非吸烟者的影响降至最低。香烟雾是由颗粒物和气相污染物组成的特别复杂的混合物，因此它的处理必须经过不同尺度的过滤器。A.P.S.-1500空气净化系统通过一个HEPA（高效颗粒物捕获，95%）过滤器收集所有的颗粒物，再通过二阶媒体单元去除所有有害气体，其中包括香烟燃烧所释放的致癌物。</div>
-		<div class="img col-xs-5"><img src="../img/sample/hotel_dubai.jpg" class="img-responsive"></div>
-	</div>
+	
+
+
+
+
+
+
+
+<div class="sample-title">特点</div>
+
+
+
+
+
+	
+	
+		<div style="padding-bottom: 12px;"></div>
+	
+
+
+
+
+
+
+
+<div class="info" style="margin-bottom: 5px;">MM-1000 Multi-Mix®媒体在装运前经过了以下质量控制测试：</div>
+
+<ul>
+
+	<li>低噪音</li>
+
+	<li>紧凑设计</li>
+
+	<li>卧式或立式结构</li>
+
+	<li>多级空气过滤</li>
+
+	<li>提高室内空气质量</li>
+
+	<li>减少新风能量负荷</li>
+
+	<li>双层绝缘PU面板结构</li>
+
+	<li>30%初效过滤器</li>
+
+	<li>一至三级气相分子筛</li>
+
+	<li>过滤臭味和有毒气体</li>
+
+	<li>快速门锁扣</li>
+
+	<li>检修门</li>
+
+	<li>启动开关</li>
+
+</ul>
+
 
 	
 		<hr style="margin-bottom: 40px;margin-top: 10px;"/>
 	
-	<div class="sample-title" style="margin-bottom: 0">北京富凯大厦</div>
-	<div class="row" style="padding-top: 12px">
-		<div class="info col-xs-7" style="margin-bottom: 0">北京富凯大厦（北京证监会办公所在地）原有自己一套独立的新风系统，大厦每层均设有独立的新风机房，该套新风系统设计时仅安装了G4级别的初效过滤段，随着北京空气情况的日益恶劣，该套系统已远不能为办公人员提供洁净的新风；后经工程师现场勘测后，提出了在原有新风主机后加装AG系列净化系统的方案，在保证风量风压不变并且不改动原有室内管道的前提下仅对新风机房的管路进行了改造，项目改造完成后，现场进行了颗粒物浓度的检测，出风口的颗粒物浓度均为个位数，大大提高了室内的空气品质。</div>
-		<div class="img col-xs-5"><img src="../img/sample/hotel_dubai.jpg" class="img-responsive"></div>
-	</div>
+	
+
+
+
+
+
+
+
+<div class="sample-title">可选项</div>
+
+
+
+
 
 	
-		<hr style="margin-bottom: 40px;margin-top: 10px;"/>
 	
-	<div class="sample-title" style="margin-bottom: 0">钓鱼台国宾馆</div>
-	<div class="row" style="padding-top: 12px">
-		<div class="info col-xs-7" style="margin-bottom: 0">一般来说，室内封闭环境空气质量要比室外空气质量差，尤其长时间使用空调的环境，各种污染更多。绝大多数的酒店客房是相对密闭的环境，只靠空调新风来调节空气。而我们传统的新风只有简单的针对毛发灰尘等大颗粒物的初效过滤器，对PM2.5颗粒物和各种气体污染的过滤几乎没有效果。而且酒店的相对密闭导致其装修污染物和各种生活异味很难快速散发，所以很多酒店在清洁房间后会喷洒香水来遮盖异味。而通过使用APG系列净化系统，能大大改善室内的空气质量，能去除包括各类装修污染物、PM2.5、从新风系统进来的室外汽车尾气甚至是前面住客留下的体味烟味等。</div>
-		<div class="img col-xs-5"><img src="../img/sample/hotel_dubai.jpg" class="img-responsive"></div>
-	</div>
+		<div style="padding-bottom: 12px;"></div>
+	
 
-	</div>
-	<div class="tab-pane" id="param">
-		<div class="table-responsive">
-			<table class="table table-hover table-bordered">
-				<thead >
-					<th class="col-xs-6 active" colspan="2" style="text-align: center;">客户</th>
-					<th class="col-xs-6 active" style="text-align: center;">设备</th>
-				</thead>
-				
-					<tr class="">
-						<td>达能</td>
-						<td>中国</td>
-						<td>空气净化</td>
-					</tr>
-				
-					<tr class="active">
-						<td>达能</td>
-						<td>中国</td>
-						<td>空气净化</td>
-					</tr>
-				
-					<tr class="">
-						<td>达能</td>
-						<td>中国</td>
-						<td>空气净化</td>
-					</tr>
-				
-					<tr class="active">
-						<td>达能</td>
-						<td>中国</td>
-						<td>空气净化</td>
-					</tr>
-				
-					<tr class="">
-						<td>达能</td>
-						<td>中国</td>
-						<td>空气净化</td>
-					</tr>
-				
-					<tr class="active">
-						<td>达能</td>
-						<td>中国</td>
-						<td>空气净化</td>
-					</tr>
-				
-			</table>
+
+
+
+
+
+
+<ul>
+
+	<li>90%中效过滤器</li>
+
+	<li>带式传动内置风机</li>
+
+	<li>压差表</li>
+
+	<li>手动风阀</li>
+
+	<li>机组装有变速控制器，可装在机组上或遥控*</li>
+
+	<li>压差表可监控系统压力</li>
+
+	<li>水加热盘管</li>
+
+	<li>直膨式或冷冻水制冷盘管</li>
+
+</ul>
+
+
+	
+	
+		<div style="padding-bottom: 12px;"></div>
+	
+
+
 		</div>
+	
+		<div class="tab-pane " id="tab_1">
+			
+			
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="row">
+	
+	
+	
+
+
+
+
+
+<div class="info col-xxs-12 col-md-6">APS系列净化新风系统，能在提供舒适新风的同时，将热量与湿气在排风与新风间转移以节省空调用于处理新风的能耗。新一代高效率净化全热交换器，可净化补进新风，有效去除外界异味、汽车尾气以及PM2.5等空气污染，以极高的能量回收效率，彻底解决人们对工作生活环境高品质的渴求。它被广泛应用于有空气品质问题的宾馆、公寓、住宅、商务楼、医院、展览建筑、公寓和公共建筑等。</div>
+
+	
+	
+	
+	
+
+
+
+
+
+	<div class="img col-xxs-12 col-md-6">
+		<img src="../img/product/aps_v.png" class="img-responsive">
+		
 	</div>
-	<div class="tab-pane" id="download">
-		<div class="table-responsive">
-			<table class="table table-bordered">
-			
-				<tr class="active">
-					<td style="border-left: 0;border-right: 0;">高浓度气体洗涤净化器机组</td>
-					<td style="border-left: 0;border-right: 0;"><img src="../img/kv_1170.png" style="width: 13px;height: 17px;" class="icon_download" /></td>
-				</tr>
-			
-				<tr class="">
-					<td style="border-left: 0;border-right: 0;">高浓度气体洗涤净化器机组</td>
-					<td style="border-left: 0;border-right: 0;"><img src="../img/kv_1170.png" style="width: 13px;height: 17px;" class="icon_download" /></td>
-				</tr>
-			
-				<tr class="active">
-					<td style="border-left: 0;border-right: 0;">高浓度气体洗涤净化器机组</td>
-					<td style="border-left: 0;border-right: 0;"><img src="../img/kv_1170.png" style="width: 13px;height: 17px;" class="icon_download" /></td>
-				</tr>
-			
-				<tr class="">
-					<td style="border-left: 0;border-right: 0;">高浓度气体洗涤净化器机组</td>
-					<td style="border-left: 0;border-right: 0;"><img src="../img/kv_1170.png" style="width: 13px;height: 17px;" class="icon_download" /></td>
-				</tr>
-			
-				<tr class="active">
-					<td style="border-left: 0;border-right: 0;">高浓度气体洗涤净化器机组</td>
-					<td style="border-left: 0;border-right: 0;"><img src="../img/kv_1170.png" style="width: 13px;height: 17px;" class="icon_download" /></td>
-				</tr>
-			
-				<tr class="">
-					<td style="border-left: 0;border-right: 0;">高浓度气体洗涤净化器机组</td>
-					<td style="border-left: 0;border-right: 0;"><img src="../img/kv_1170.png" style="width: 13px;height: 17px;" class="icon_download" /></td>
-				</tr>
-			
-			</table>
+	
+
+	
+	
+</div>
+
+
+	
+	
+		<div style="padding-bottom: 12px;"></div>
+	
+
+
+
+
+
+
+
+<div class="sample-title">特点</div>
+
+
+
+
+
+	
+	
+		<div style="padding-bottom: 12px;"></div>
+	
+
+
+
+
+
+
+
+<div class="info" style="margin-bottom: 5px;">MM-1000 Multi-Mix®媒体在装运前经过了以下质量控制测试：</div>
+
+<ul>
+
+	<li>在空调与采暖季节，可节省空调采暖能耗15%以上；</li>
+
+	<li>高效纸质换热芯体具有极强的湿气吸附与传递功能；</li>
+
+	<li>高效低噪音直流马达系统（部分机型除外）；</li>
+
+	<li>机组采用上海宝钢耐指纹板材，人性化设计，外表美观；</li>
+
+	<li>机组配置我司特有的过滤净化段，能有效去除有毒有害气体；</li>
+
+	<li>灵巧简洁的设计使保养极为简便，拆卸几颗螺钉即可维修机组内的任一部件；</li>
+
+	<li>采用特殊吸音材料和优质电机，低噪音，低能耗。</li>
+
+	<li>启动开关</li>
+
+</ul>
+
+
+	
+		<hr style="margin-bottom: 40px;margin-top: 10px;"/>
+	
+	
+
+
+
+
+
+
+
+<div class="sample-title">可选项</div>
+
+
+
+
+
+	
+	
+		<div style="padding-bottom: 12px;"></div>
+	
+
+
+
+
+
+
+
+<ul>
+
+	<li>智能控制系统</li>
+
+	<li>通过感测二氧化碳等多种化学有害气体及湿度来调整新风系统</li>
+
+	<li>全热交换器</li>
+
+</ul>
+
+
+	
+	
+		<div style="padding-bottom: 12px;"></div>
+	
+
+
 		</div>
-	</div>
-	<div class="tab-pane" id="desc"></div>
-	<div class="tab-pane" id="q&a"></div>
+	
+		<div class="tab-pane " id="tab_2">
+			
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="info ">APS移动式系列气相净化仪拥有行业领先的净化能力，能在完全去除PM2.5的基础上、将气体污染物的危害降至最低。</div>
+
+
+
+	
+	
+		<div style="padding-bottom: 12px;"></div>
+	
+
+
+
+
+
+
+
+
+
+<div class="info ">独有Multi-Mix Media®气相分子筛，能在0.05秒内彻底去除有毒有害气体，技术源自加拿大Circul-Aire®公司。</div>
+
+
+
+	
+	
+		<div style="padding-bottom: 12px;"></div>
+	
+
+
+
+
+
+
+
+
+
+<div class="info ">作为一个久经考验的顶级净化过滤媒体，此气相分子筛可对环境里的腐蚀、气味和有毒污染物质提供不间断的快速净化，还能有效消除普通空气过滤器无法消除的有毒有害气体，如：二氧化硫、二氧化氮、有机污染物，甚至在特殊地区可有效净化噁英等。</div>
+
+
+
+	
+	
+		<div style="padding-bottom: 12px;"></div>
+	
+
+
+
+
+
+
+
+
+
+<div class="info ">气相和尘埃净化污染控制技术是当前最先进的、效率最高的解决方案，现有案例多应用于较为复杂的污染环境下。利用多级过滤，尘埃过滤器和气相过滤媒体相结合的方式，能非常有效地去除室内空气污染物。APS移动式气相净化仪这一高性能系统，集成了精密的元件材料与工程实践，可用于恶劣的工业和商业场合。</div>
+
+
+
+	
+		<hr style="margin-bottom: 40px;margin-top: 10px;"/>
+	
+	
+
+
+
+
+
+
+
+<div class="sample-title">特点</div>
+
+
+
+
+
+	
+	
+		<div style="padding-bottom: 12px;"></div>
+	
+
+
+
+
+
+
+
+
+<h5>第一层 等离子段</h5>
+
+
+<div class="info ">等离子发生器采用韩国 spe H•ion cluster 技术，通过 IST 专业评测机构认证，可高效灭菌、降解部分有害气体。</div>
+
+
+
+	
+	
+		<div style="padding-bottom: 12px;"></div>
+	
+
+
+
+
+
+
+
+
+<h5>第二层 初效过滤段</h5>
+
+
+<div class="info ">可滤除所有直径5μm以上的大颗粒粉尘，容尘量大，可清洗后重复使用。</div>
+
+
+
+	
+	
+		<div style="padding-bottom: 12px;"></div>
+	
+
+
+
+
+
+
+
+
+<h5>第三层 气相分子筛</h5>
+
+
+<div class="info ">其独特的“V”型工业级设计保证了高接触面积和低阻力。气相净化媒体能在0.05秒内去除数百种室内污染气体。即使室内环境有数十人吸烟，APS移动式气相净化仪依旧能表现出色。</div>
+
+
+
+	
+	
+		<div style="padding-bottom: 12px;"></div>
+	
+
+
+
+
+
+
+
+
+<h5>第四层 高效过滤段</h5>
+
+
+<div class="info ">PTFE材质的HEPA13高效过滤器专门针对PM2.5颗粒设计，甚至是0.1微米的颗粒也能达到99.99%的处理效率。</div>
+
+
+
+	
+	
+		<div style="padding-bottom: 12px;"></div>
+	
+
+
+		</div>
+	
 </div>
 			<div style="margin-bottom: 120px;"></div>
 		</div>
@@ -479,32 +872,41 @@
 			<span class="title">产品系列</span>
 			<hr />
 			<ul class="list-unstyled visible-xs-block item">
-				<li>MULTI-MIX®媒介</li>
-				<li>APS系列空气净化系统</li>
-				<li>USAH系列通用侧开门系列</li>
-				<li>HDS系列高浓度气体洗涤器净化机组</li>
-				<li>DAS系列深床式气相净化机组</li>
-				<li>TFS整体空气净化过滤系统</li>
-				<li>AG系列内循环净化系统</li>
-				<li>APE系列新风净化系统</li>
-				<li>APG系列内循环净化系统</li>
+				
+					<li><a tabindex="-1" href="../product/aps.html" style="padding-left: 35px;padding-right: 35px;">APS系列空气净化系统</a></li>
+				
+					<li><a tabindex="-1" href="../product/ag.html" style="padding-left: 35px;padding-right: 35px;">AG系列内循环净化系统</a></li>
+				
+					<li><a tabindex="-1" href="../product/hds.html" style="padding-left: 35px;padding-right: 35px;">HDS系列高浓度气体洗涤器净化机组</a></li>
+				
+					<li><a tabindex="-1" href="../product/das.html" style="padding-left: 35px;padding-right: 35px;">DAS系列深床式气相净化机组</a></li>
+				
+					<li><a tabindex="-1" href="../product/usah.html" style="padding-left: 35px;padding-right: 35px;">USAH系列通用侧开门系列</a></li>
+				
+					<li><a tabindex="-1" href="../product/multi_mix.html" style="padding-left: 35px;padding-right: 35px;">MULTI-MIX® Media</a></li>
+				
 			</ul>
 			<div class="row hidden-xs " style="color: #666666;">
 				<div class="col-sm-6 ">
 					<ul class="list-unstyled item">
-						<li>MULTI-MIX®媒介</li>
-						<li>APS系列空气净化系统</li>
-						<li>USAH系列通用侧开门系列</li>
-						<li>HDS系列高浓度气体洗涤器净化机组</li>
-						<li>DAS系列深床式气相净化机组</li>
+						
+							<li><a tabindex="-1" href="../product/aps.html">APS系列空气净化系统</a></li>
+						
+							<li><a tabindex="-1" href="../product/ag.html">AG系列内循环净化系统</a></li>
+						
+							<li><a tabindex="-1" href="../product/hds.html">HDS系列高浓度气体洗涤器净化机组</a></li>
+						
 					</ul>
 				</div>
 				<div class="col-sm-6">
 					<ul class="list-unstyled item">
-						<li>TFS整体空气净化过滤系统</li>
-						<li>AG系列内循环净化系统</li>
-						<li>APE系列新风净化系统</li>
-						<li>APG系列内循环净化系统</li>
+						
+							<li><a tabindex="-1" href="../product/das.html">DAS系列深床式气相净化机组</a></li>
+						
+							<li><a tabindex="-1" href="../product/usah.html">USAH系列通用侧开门系列</a></li>
+						
+							<li><a tabindex="-1" href="../product/multi_mix.html">MULTI-MIX® Media</a></li>
+						
 					</ul>
 				</div>
 			</div>
@@ -515,7 +917,7 @@
 			<ul class="list-unstyled item">
 				<li>400服务热线</li>
 				<li>公司地址及业务联系电话</li>
-				<li>天猫旗舰店</li>
+				<!-- <li>天猫旗舰店</li> -->
 				<li>授权经销商</li>
 			</ul>
 		</div>
@@ -527,7 +929,6 @@
 				<a class="footer-link" href="../area/china.html">中国大陆</a>
 				<a class="footer-link" href="../policy/privacy_policy.html">隐私政策</a>
 				<a class="footer-link" href="../policy/use_policy.html">使用条款</a>
-				<a class="footer-link" href="../product/new.html">新品预览</a>
 				<img class="footer-icon" src="../img/sns_1.jpg"/>
 				<img class="footer-icon" src="../img/sns_2.jpg"/>
 				<div class="copyright" style="float: right;"><span class="">沪ICP备1409339号</span><span class="hidden-xs hidden-sm" style="padding-left: 15px;">©2014 EC INC, ALL RIGHTS RESERVED</span></div>
@@ -549,7 +950,6 @@
 			</div>
 			<div>
 				<a class="footer-link" href="../policy/use_policy.html">使用条款</a>
-				<a class="footer-link" href="../product/new.html">新品预览</a>
 				<span class="copyright" >©2014 EC INC, ALL RIGHTS RESERVED</span>
 			</div>
 		</div>
@@ -561,7 +961,6 @@
 				<a class="footer-link col-xs-3"  href="../area/china.html">中国大陆</a>
 				<a class="footer-link col-xs-3"  href="../policy/privacy_policy.html">隐私政策</a>
 				<a class="footer-link col-xs-3"  href="../policy/use_policy.html">使用条款</a>
-				<a class="footer-link col-xs-3"  href="../product/new.html">新品预览</a>
 			</div>
 			<div>
 				<img class="footer-icon" src="../img/sns_1.jpg"></img>
