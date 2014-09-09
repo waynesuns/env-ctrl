@@ -186,7 +186,7 @@ public class TechnologyController extends AbstractController {
 					 .addValue(new String[]{"Multi-Mix®</br>MM-9000","MM-9000是直径为1/8-inch（0.3厘米）的立柱型颗粒，由活性碳和氢氧化钾组成。氢氧化钾进入活性碳提高吸附效率及能力。吸附反应后有害物被中和或被氧化成非腐蚀性物质。"})
 				 	.setDoDelim(true)
 			     )
-			     .addValue(new TableGroupParam("Multi-Mix® Media主要有四种基本规格，各自有不同的化学成份，具体如下：")
+			     .addValue(new TableGroupParam("MM-1000气相净化媒体的过滤性能:")
 			     	 .addHeader(new TableHeaderParam("成份")).addHeader(new TableHeaderParam("COMPOUNDS")).addHeader(new TableHeaderParam("代码","45px"))
 			     	 .addHeader(new TableHeaderParam("成份")).addHeader(new TableHeaderParam("COMPOUNDS")).addHeader(new TableHeaderParam("代码","45px"))
 			     	

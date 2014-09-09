@@ -89,8 +89,6 @@ public class SolutionController extends AbstractController {
 		.addValue(new ImageGroupParam("Jumeirah Beach Hotel, Dubai —— APS Series</br>迪拜朱美拉海滩酒店").addValue(new ImageParam("/solution/business_2.jpg","海滩酒店的厨房在设计阶段时，起初只考虑到了普通油烟机以及排风系统。运营一段时间后，发现普通的通风换气系统无法解决烹饪产生的高浓度异味，长此以往不仅不利于厨房内部人员的日常工作，异味还容易通过门窗渗透至餐厅区域影响顾客的用餐环境。工程师现场勘测后，提出了利用气相过滤的方法吸收净化厨房异味气体。在IIECC的净化模块投入使用一段时间之后，内部异味得到了很好的控制，并且原有排风系统的使用频率也大大降低，减少了能源消耗。")))
 		.addValue(new ImageGroupParam("Jin Mao Tower, Shanghai —— APS Series</br>上海浦东金茂大厦").addValue(new ImageParam("/solution/business_3.jpg","金茂大厦等高端办公楼宇原有的系统设计中已包含有新风系统，虽具备较高级别的颗粒物过滤段，但是对常见氮氧化物和硫氧化物的去除率却很低，因此室外的气体污染物会在未被去除的情况下随新风一起进入室内。长期在这种空气质量下工作，会严重影响室内办公人员的身体健康以及工作效率。后选用了IIECC的APS系列机组在室内进行内循环净化，机组正常运行一段时间后，经检测室内的气体污染物浓度大幅下降，空气品质得到有效改善。")))
 		.addValue(new ImageGroupParam("Beijing Lido / Beijing Palace, Tomson Riviera… APS Series</br>北京丽都/北京丽宫、汤臣一品等高端社区").addValue(new ImageParam("/solution/business_4.jpg","一般来说室内空气污染比室外严重，但在国内目前的环境下，开窗换气的方法已然没有效果。在一些高级公寓和别墅项目中，业主们对空气质量极为重视，不仅要求PM2.5浓度低，更对空气中各类有毒有害气体的浓度也提出了较高要求，如空气质量指数中的SO2和NO2浓度等。IIECC的APS系列除了能有效去除PM2.5/PM10等颗粒物污染外，还能同时去除空气中的NOX，SOX，CO，O3等化学性污染，从而满足了业主对高品质空气的需求。除此之外，IIECC的APS系列机组还可以加装热回收系统，通过逆流式热交换方式回收能量、降低能耗。")))
-		.addValue(new ImageGroupParam("</br>").addValue(new ImageParam("/solution/business.jpg","")))
-		.addValue(new ImageGroupParam("</br>").addValue(new ImageParam("/solution/business.jpg","")))
 		);
 		request.setAttribute("solutionParam", param);
 		request.setAttribute("details", details);
@@ -114,7 +112,6 @@ public class SolutionController extends AbstractController {
 		.addValue(new ImageGroupParam("Washoe Medical Center - Reno, Nevada —— APS Series</br>美国内华达州里诺市肖沃医疗中心").addValue(new ImageParam("/solution/other_2.jpg","美国内华达州里诺市肖沃医疗中心为解决空气污染问题，经工程师们推荐后选择了APS小型室内净化机组。安装后的APS分布于各个科室的吊顶空间内，经过内循环过滤净化，能有效去除空气中的颗粒物、病菌以及气态污染物。且APS在安装过程中充分考虑了原有的室内空间，将立式与卧式两款机型与现场条件完美匹配，营造出绝佳设计与安装效果。")))
 		.addValue(new ImageGroupParam("Escape channels of UN —— DAS + APS Series</br>联合国逃生通道").addValue(new ImageParam("/solution/other_3.jpg","联合国作为国际性的政务工作部门，为应对恐怖袭击、火灾、自然灾害等危害极大的突发事件，需配备高质量的逃生通道，而内部的空气品质则是设计的重中之重。为保证通道内的有害气体污染物浓度达到最低，我们的工程师们提出了DAS深床式气相净化+APS小型净化机组的综合解决方案。在该项目中，DAS深床式气相净化可以去除新风引进时内含的气态污染物，而APS小型净化机组则可针对逃生通道内的空气，进行内循环过滤。该逃生通道投入使用后，经过监测，通道内的各项污染物浓度均低于国际标准。")))
 		.addValue(new ImageGroupParam("Beijing Focus Building / AG Series</br>北京富凯大厦").addValue(new ImageParam("/solution/other_4.jpg","北京富凯大厦（北京证监会办公所在地）原有的新风系统，在每层均设有独立的新风机房。然而该套新风系统设计时仅安装了G4级别的初效过滤段，随着北京空气情况的日益恶劣，该套系统已无法提供洁净的新风。后经工程师现场勘测后，提出了在原有新风主机后加装AG系列净化系统的方案，在保证风量风压不变、并且不改动原有室内管道的前提下，仅对新风机房的管路进行了改造。项目改造完成后，现场进行了颗粒物浓度的检测，出风口的颗粒物浓度均为个位数，室内空气品质显著提升。")))
-		.addValue(new ImageGroupParam("</br>").addValue(new ImageParam("/solution/other_5.jpg","")))
 		);
 		request.setAttribute("solutionParam", param);
 		request.setAttribute("details", details);
@@ -132,7 +129,7 @@ public class SolutionController extends AbstractController {
 	public static SolutionParam generateParam() {
 		SolutionParam param = new SolutionParam();
 		param.setHeaderPicName("solution");
-		param.setSubItemTitle("领域应用及解决方案");
+		param.setSubItemTitle("应用领域");
 		param.setSubItemHeaderImgInfo("多年来，EC为多个行业的代表性公司提供了解决方案并在项目的实际运行中取得了良好的净化效果。");
 		param.addSubItem("市政", "solution/municipal_administration.html");
 		param.addSubItem("工业", "solution/industry.html");

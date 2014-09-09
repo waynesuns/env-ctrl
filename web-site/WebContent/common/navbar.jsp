@@ -36,13 +36,13 @@
 								</form -->
 						      
 						</div>
-						<div class="collapse navbar-collapse" id="navbar-xs-main" style="margin-top: 4px;margin-left: 15px;">
+						<div class="collapse navbar-collapse" id="navbar-xs-main" style="margin-top: 10px;margin-left: 15px;">
 					      <ul class="nav navbar-nav visible-xs-block visible-xxs-block">
 					        <li class="gray">
-								<a id="drop0" role="button" href="${path}solution/index.html">领域应用及解决方案</a>
+								<a id="drop0" role="button" href="${path}solution/index.html">应用领域</a>
 							</li>
 							<li class="">
-							  <a id="drop2" role="button" href="${path}technology/index.html">核心技术</a>
+							  <a id="drop2" role="button" href="${path}technology/index.html">优势技术</a>
 							</li>
 							<li class="gray">
 							  <a id="drop3" role="button" href="${path}product/index.html">产品系列</a>
@@ -61,7 +61,7 @@
 					    <div class="collapse navbar-collapse" id="navbar-main" style="width: 100%;padding-right: 0;">
 					      <ul class="nav navbar-nav" style="width: 100%;">
 					        <li class="dropdown">
-								<a id="drop0" role="button" data-toggle="dropdown" href="#" onmouseover="$(this).click()">领域应用及解决方案</a>
+								<a id="drop0" role="button" data-toggle="dropdown" href="#" onmouseover="$(this).click()">应用领域</a>
 							    <ul id="drop1" class="dropdown-menu row" style="width: 280px;">
 									<c:forEach var="menu" items="${solutionMenus.subItems}">
 										<li>
@@ -120,15 +120,11 @@
 							<li class="dropdown">
 							  	<a id="drop5" role="button" data-toggle="dropdown" href="#" onmouseover="$(this).click()">联系我们</a>
 								<ul class="dropdown-menu" style="width: 150px;">
-									<li>
-									<div style="min-height: 20px;"><a tabindex="-1" href="${path}contact_us/contact_info.html" style="padding-left: 35px;padding-right: 35px;">联系方式</a></div>
-									</li>
-									<li>
-										<div style="min-height: 20px;"><a tabindex="-1" href="${path}contact_us/tmall.html" style="padding-left: 35px;padding-right: 35px;">天猫旗舰店</a></div>
-									</li>
-									<li>
-										<div style="min-height: 20px;"><a tabindex="-1" href="${path}contact_us/dealer_list.html" style="padding-left: 35px;padding-right: 35px;">授权经销商</a></div>
-									</li>
+									<c:forEach var="contactUsMenu" items="${contactUsMenus.subItems}">
+										<li>
+											<div style="min-height: 20px;"><a tabindex="-1" href="${path}${contactUsMenu.url}" style="padding-left: 35px;padding-right: 35px;">${contactUsMenu.name}</a></div>
+										</li>
+									</c:forEach>
 								</ul>
 							</li>
 							

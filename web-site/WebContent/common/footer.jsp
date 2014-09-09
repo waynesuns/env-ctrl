@@ -33,10 +33,9 @@
 			<span class="title">联系我们</span>
 			<hr/>
 			<ul class="list-unstyled item">
-				<li>400服务热线</li>
-				<li>公司地址及业务联系电话</li>
-				<!-- <li>天猫旗舰店</li> -->
-				<li>授权经销商</li>
+				<c:forEach var="contactUsMenu" items="${contactUsMenus.subItems}">
+					<li><a tabindex="-1" href="${path}${contactUsMenu.url}">${contactUsMenu.name}</a></li>
+				</c:forEach>
 			</ul>
 		</div>
 	</div>
