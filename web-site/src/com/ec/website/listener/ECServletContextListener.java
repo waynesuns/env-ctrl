@@ -3,6 +3,7 @@ package com.ec.website.listener;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 
+import com.ec.website.controller.AboutUsController;
 import com.ec.website.controller.ContactUs;
 import com.ec.website.controller.ProductController;
 import com.ec.website.controller.SolutionController;
@@ -22,6 +23,7 @@ public class ECServletContextListener implements ServletContextListener {
 		event.getServletContext().setAttribute("technologyMenus", TechnologyController.generateParam());
 		event.getServletContext().setAttribute("solutionMenus", SolutionController.generateParam());
 		event.getServletContext().setAttribute("contactUsMenus", ContactUs.generateParam());
+		event.getServletContext().setAttribute("aboutUsMenus", AboutUsController.generateParam());
 		
 	}
 

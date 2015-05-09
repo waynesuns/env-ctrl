@@ -8,7 +8,7 @@
 		<div class="panel panel-default">
 			<div class="panel-heading ${i.index==0?'active':''}">
 				<h4 class="panel-title">
-					<a id="a" data-toggle="collapse" data-parent="#accordion" href="#case_${i.index}"><c:out value="${groupParam.groupName}"></c:out><div class="panel-button"></div></a>
+					<a id="a" data-toggle="collapse" data-parent="#accordion" href="#case_${i.index}"><c:out value="${groupParam.groupName}" escapeXml="false"></c:out><div class="panel-button"></div></a>
 				</h4>
 			</div>
 			<div id="case_${i.index}" class="panel-collapse collapse ${i.index==0?'in':''}">
@@ -22,9 +22,9 @@
 							</thead>
 							<c:forEach var="item" items="${groupParam.items}" varStatus="j">
 								<tr class="${j.index%2==1?'active':''}">
-									<td><c:out value="${item.lastName}"/></td>
-									<td><c:out value="${item.productName}"/></td>
-									<td><c:out value="${item.itemName}"/></td>
+									<td><c:out value="${item.lastName}" escapeXml="false"/></td>
+									<td><c:out value="${item.productName}" escapeXml="false"/></td>
+									<td><c:out value="${item.itemName}" escapeXml="false"/></td>
 								</tr>
 							</c:forEach>
 						</table>

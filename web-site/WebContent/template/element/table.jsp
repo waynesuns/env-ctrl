@@ -7,7 +7,7 @@
 	<table class="table table-hover table-bordered">
 		<thead class="">
 			<c:forEach var="tableHeader" items="${paramGroup.headers}">
-				<th colspan="${tableHeader.colspan}" class="active" style="text-align: center;width: <c:out value="${tableHeader.width}" default="auto"/>"><c:out value="${tableHeader.name}"></c:out></th>
+				<th colspan="${tableHeader.colspan}" class="active" style="text-align: center;width: <c:out escapeXml="false" value="${tableHeader.width}" default="auto"/>"><c:out escapeXml="false" value="${tableHeader.name}"></c:out></th>
 			</c:forEach>
 		</thead>
 		<c:forEach var="value" items="${paramGroup.values}" varStatus="i">

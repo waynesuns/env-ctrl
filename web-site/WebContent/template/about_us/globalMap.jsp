@@ -11,7 +11,7 @@
 <div class="">
 <div class="row" style="margin-top: 30">
 	<div class="col-lg-3 col-sm-4 col-xs-3">
-		<span class=" title"><c:out value="${groupParam.name}"/></span>
+		<span class=" title"><c:out value="${groupParam.name}" escapeXml="false"/></span>
 		<hr/>
 	</div>
 </div>
@@ -23,7 +23,7 @@
 		<div>
 			<img alt="" src="${path}${partner.logo}" class="img-responsive ">
 			<div class="caption text-center">
-				<p><c:out value="${partner.name}"/></p>
+				<p><c:out value="${partner.name}" escapeXml="false"/></p>
 			</div>
 		</div>
 	</div>

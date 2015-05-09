@@ -20,33 +20,32 @@
 	    <div class="item active">
 	        <img src="img/kv_1170.png" class="kv kv1" >
 	      	<div class="carousel-caption-kv col-sm-6 col-xs-10 hidden-xxs">
-	      		<div class="title">APG-40M</div>
+	      		<div class="title">APS-550M</div>
 				<div class="content">
-					<p>滤料重达约<font class="red">5000</font>克</p>
-					<p>总表面积约为<font class="red">5100000</font>平方米</p>
-					<p>相当于<font class="red">700</font>个足球场的面积</p>
+					<p>双分子筛结构可装填最大重达<font class="red">10000</font>克的气相净化媒体</p>
+					<p>总表面积约为<font class="red">6500000</font>平方米，相当于<font class="red">900</font>个足球场的面积</p>
 				</div>
-				<button class="btn btn-danger">了解详情</button>
+				<button class="btn btn-danger" onclick="window.location.href='aps550m/index.html'">了解详情</button>
 	      	</div>
 	    </div>
 	    <div class="item">
 	        <img src="img/kv_1170.png" class="kv kv2">
 	      	<div class="carousel-caption-kv col-sm-6 col-xs-12 hidden-xxs"><div class="title">99.99%</div>
 				<div class="content">
-					<p>高校过滤端能够使颗粒物的去除率达到<font class="red">99.99%</font></p>
+					<p>高效过滤段能够使颗粒物的去除率达到<font class="red">99.99%</font></p>
 					<p>全面满足医院空气污染治理需求</p>
 				</div>
-				<button class="btn btn-danger">了解详情</button>
+				<button class="btn btn-danger" onclick="window.location.href='technology/particles_filter.html'">了解详情</button>
 	      	</div>
 	    </div>
 	    <div class="item">
 	        <img src="img/kv_1170.png" class="kv kv3">
 	      	<div class="carousel-caption-kv col-sm-6 col-xs-10 hidden-xxs"><div class="title">0.05秒彻底净化</div>
 				<div class="content">
-					<p><font class="red">Multi-Mix</font><font class="red" style="padding-left: 3px;">Media</font>气相分子筛</p>
+					<p><font class="red">Multi-Mix</font><sup class="red">®</sup><font class="red" style="padding-left: 3px;">Media</font>气相分子筛</p>
 					<p><font class="red">0.05</font>秒彻底去除有毒有害气体</p>
 				</div>
-				<button class="btn btn-danger">了解详情</button>
+				<button class="btn btn-danger" onclick="window.location.href='technology/gas_filter.html'">了解详情</button>
 	      	</div>
 	    </div>
   </div>
@@ -70,20 +69,20 @@
   <div class="container">
 	<div class="row subtitle" style="margin-top: 40px;">
 		<div class="col-sm-3 col-xs-6 col-xxs-12">
-			<img alt="140x140" src="img/teaser.jpg" class="img-responsive"/>
-			<span class="title"">Multi-Mix Media 气相净化媒体应用手册</span>
+			<img alt="140x140" src="img/home/homepage_pic_s1.jpg" class="img-responsive" onclick="window.location.href='product/multi_mix.html'" />
+			<div class="title" style="text-align: center;"><a href="product/multi_mix.html">Multi-Mix<sup>®</sup> Media气相净化媒体简介</a></div>
 		</div>
 		<div class="col-sm-3 col-xs-6 col-xxs-12">
-			<img alt="140x140" src="img/teaser.jpg" class="img-responsive"/>
-			<span class="title">网易数读：近1/4卫生城市空气质量亮红灯</span>
+			<img alt="140x140" src="img/home/homepage_pic_s2.jpg" class="img-responsive" onclick="window.location.href='about_us/20140930_apic.html'" />
+			<div class="title" style="text-align: center;"><a href="about_us/20140930_apic.html">中国空气质量现状</a></div>
 		</div>
 		<div class="col-sm-3 col-xs-6 col-xxs-12">
-			<img alt="140x140" src="img/teaser.jpg" class="img-responsive"/>
-			<span class="title">案例研究：扬子石化—巴斯夫</span>
+			<img alt="140x140" src="img/home/homepage_pic_s3.jpg" class="img-responsive" onclick="window.location.href='solution/industry.html'" />
+			<div class="title" style="text-align: center;"><a href="solution/industry.html">案例研究：扬子石化—巴斯夫</a></div>
 		</div>
 		<div class="col-sm-3 col-xs-6 col-xxs-12">
-			<img alt="140x140" src="img/teaser.jpg" class="img-responsive"/>
-			<span class="title">室内空气质量与人体健康白皮书</span>
+			<img alt="140x140" src="img/home/homepage_pic_s4.jpg" class="img-responsive"  onclick="window.location.href='product/aps.html'" />
+			<div class="title" style="text-align: center;"><a href="product/aps.html">APS系列小型气相净化系统简介</a></div>
 		</div>
 	</div></div>
 </div>

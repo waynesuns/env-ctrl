@@ -446,6 +446,13 @@
 	padding-bottom: 12px;
 }
 
+.product .item >li > a:hover,
+.product > div > div > ul > li > a:hover,
+.product .item >li > a:focus,
+.product > div > div > ul > li > a:focus{
+	color:#009BDF;
+}
+
 .contact-us,
 .product{
 	padding-top: 40px;
@@ -589,7 +596,7 @@
 }
 .header_img .info{
 	font-size: 15px;
-	max-width: 350px;
+	max-width: 300px;
 }
 .subitem .content{
 	margin-left: 285px;
@@ -661,8 +668,44 @@
 		padding-top: 30px;
 		margin-top: 28px;
 	}
-	.col-xxs-12{
-		width: 100%;
+	.col-xxs-1, .col-xxs-2, .col-xxs-3, .col-xxs-4, .col-xxs-5, .col-xxs-6, .col-xxs-7, .col-xxs-8, .col-xxs-9, .col-xxs-10, .col-xxs-11, .col-xxs-12 {
+	  float: left;
+	}
+	.col-xxs-12 {
+	  width: 100%;
+	}
+	.col-xxs-11 {
+	  width: 91.66666667%;
+	}
+	.col-xxs-10 {
+	  width: 83.33333333%;
+	}
+	.col-xxs-9 {
+	  width: 75%;
+	}
+	.col-xxs-8 {
+	  width: 66.66666667%;
+	}
+	.col-xxs-7 {
+	  width: 58.33333333%;
+	}
+	.col-xxs-6 {
+	  width: 50%;
+	}
+	.col-xxs-5 {
+	  width: 41.66666667%;
+	}
+	.col-xxs-4 {
+	  width: 33.33333333%;
+	}
+	.col-xxs-3 {
+	  width: 25%;
+	}
+	.col-xxs-2 {
+	  width: 16.66666667%;
+	}
+	.col-xxs-1 {
+	  width: 8.33333333%;
 	}
 	.carousel-caption-kv {
 	  top:30px;
@@ -905,16 +948,19 @@
 		background-image: url("../img/header/737/header_4.jpg");
 	}
 	.header_img >div > img.product{
-		background-image: url("../img/header/737/header_1.jpg");
+		background-image: url("../img/header/737/header_3.jpg");
 	}
 	.header_img >div > img.solution{
-		background-image: url("../img/header/737/header_3.jpg");
+		background-image: url("../img/header/737/header_1.jpg");
 	}
 	.header_img >div > img.technology{
 		background-image: url("../img/header/737/header_2.jpg");
 	}
 	.header_img >div > img.contact_us{
 		background-image: url("../img/header/737/header_5.jpg");
+	}
+	.subtitle .title{
+		height: 50px;
 	}
 }
 @media (min-width: 568px) and (max-width: 667px) {
@@ -931,16 +977,19 @@
 		background-image: url("../img/header/637/header_4.jpg");
 	}
 	.header_img >div > img.product{
-		background-image: url("../img/header/637/header_1.jpg");
+		background-image: url("../img/header/637/header_3.jpg");
 	}
 	.header_img >div > img.solution{
-		background-image: url("../img/header/637/header_3.jpg");
+		background-image: url("../img/header/637/header_1.jpg");
 	}
 	.header_img >div > img.technology{
 		background-image: url("../img/header/637/header_2.jpg");
 	}
 	.header_img >div > img.contact_us{
 		background-image: url("../img/header/637/header_5.jpg");
+	}
+	.subtitle .title{
+		height: 60px;
 	}
 }
 @media (min-width: 468px) and (max-width: 567px) {
@@ -957,16 +1006,19 @@
 		background-image: url("../img/header/537/header_4.jpg");
 	}
 	.header_img >div > img.product{
-		background-image: url("../img/header/537/header_1.jpg");
+		background-image: url("../img/header/537/header_3.jpg");
 	}
 	.header_img >div > img.solution{
-		background-image: url("../img/header/537/header_3.jpg");
+		background-image: url("../img/header/537/header_1.jpg");
 	}
 	.header_img >div > img.technology{
 		background-image: url("../img/header/537/header_2.jpg");
 	}
 	.header_img >div > img.contact_us{
 		background-image: url("../img/header/537/header_5.jpg");
+	}
+	.subtitle .title{
+		height: 70px;
 	}
 }
 @media (min-width: 401px) and (max-width: 467px) {
@@ -984,16 +1036,19 @@
 		background-image: url("../img/header/437/header_4.jpg");
 	}
 	.header_img >div > img.product{
-		background-image: url("../img/header/437/header_1.jpg");
+		background-image: url("../img/header/437/header_3.jpg");
 	}
 	.header_img >div > img.solution{
-		background-image: url("../img/header/437/header_3.jpg");
+		background-image: url("../img/header/437/header_1.jpg");
 	}
 	.header_img >div > img.technology{
 		background-image: url("../img/header/437/header_2.jpg");
 	}
 	.header_img >div > img.contact_us{
 		background-image: url("../img/header/437/header_5.jpg");
+	}
+	.subtitle .title{
+		height: 80px;
 	}
 }
 @media (min-width: 401px) and (max-width: 767px) {

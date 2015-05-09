@@ -61,13 +61,15 @@ public class HtmlGenerator {
 		urls.add("solution/index.html");
 		
 		urls.add("about_us/summary.html");
-		urls.add("about_us/news.html");
+		//urls.add("about_us/news.html");
 		urls.add("about_us/download.html");
 		urls.add("about_us/certification.html");
 		urls.add("about_us/global_map.html");
 		urls.add("about_us/case_list.html");
 		urls.add("about_us/index.html");
-		
+
+		urls.add("about_us/20140930_apic.html");
+
 		urls.add("product/aps.html");
 		urls.add("product/ag.html");
 		urls.add("product/hds.html");
@@ -84,8 +86,8 @@ public class HtmlGenerator {
 		urls.add("technology/index.html");
 		
 		urls.add("contact_us/contact_info.html");
-		urls.add("contact_us/tmall.html");
-		urls.add("contact_us/dealer_list.html");
+		//urls.add("contact_us/tmall.html");
+		//urls.add("contact_us/dealer_list.html");
 		urls.add("contact_us/index.html");
 		HtmlGenerator.generateHtml(urls);
 	}

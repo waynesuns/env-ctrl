@@ -1,6 +1,6 @@
 <%@ page language="java" pageEncoding="UTF-8" contentType="text/html;charset=utf-8"%>
 <%@include file="/common/taglib.jsp"%>
-<div class="title"><c:out value="${solutionParam.activeSubItem}"/></div>
+<div class="title"><c:out value="${solutionParam.activeSubItem}" escapeXml="false"/></div>
 <c:forEach var="sample" items="${solutionParam.samples}" varStatus="i">
 	<div class="sample-title" style="margin-bottom: 0">${sample.title}</div>
 	<div class="row" style="padding-top: 0;">

@@ -39,9 +39,9 @@ public class TechnologyController extends AbstractController {
 		
 		details.put("overView",(new MainGroupParam(null,null))
 				.addValue(new DivGroupParam(null, "IIECC在设计产品效能时考虑了节能，因此，我们选择了德国ebmpapst公司作为提供高效动力的合作伙伴。"))
-				.addValue(new DivGroupParam(null, "德国依必安派特（ebmpapst）公司于1963年在德国成立。作为在电机和风机产业领域的技术领导者之一，回收利用、避免浪费、生态材料、降低排放水平、降低能耗从而实现更高的效率是ebmpapst的产品特点，也恰好符合EC的一贯要求。此外ebmpapst也是可靠持久的代名词，在正常使用环境下，每一个ebmpapst风机都能连续安全运行5万小时以上。"))
-				.addValue(new DivGroupParam(null, "IIECC更在部分产品中选装了绿色科技EC技术（GreenTech）电机，以及RaidCal（超凡曲线）叶轮设计的风机。EC电机为无刷直流驱动装置，集成驱动电子设备，易于控制且效率高达90%，在各种负荷条件下都可安静高效运行。依必安派特（ebmpapst）采用外转子结构的电机设计，电机直接与叶片相连，不仅使电机散热更佳，也令风机结构更紧凑。RadiCal（超凡曲线）叶轮的创新几何结构设计，显著优化了风机的空气动力特性和声学特性，有效增强风机性能，同时降低声噪。绿色电机和创新叶轮的完美结合，打造出了“绿色科技EC超凡曲线离心风机”（ebmpapst GreenTech EC RadiCal Fan），使得安装有这款风机的空气净化系统结构更小巧、性能更卓越、质量更可靠。"))
-				.addValue(new ImageGroupParam(null).addValue(new ImageParam("/technology/ebmpapst_670x400.png","图：RadiCal风机在4种不同转速下，各阻力点的风速曲线图。由此可以看出采用EC技术的RadiCal风机在各种相应条件下的完美表现。")))
+				.addValue(new DivGroupParam(null, "德国依必安派特（ebmpapst）公司于1963年在德国成立。作为在电机和风机产业领域的技术领导者之一，回收利用、避免浪费、生态材料、降低排放水平、降低能耗从而实现更高的效率是ebmpapst的产品特点，也恰好符合IIECC的一贯要求。此外ebmpapst也是可靠持久的代名词，在正常使用环境下，每一个ebmpapst风机都能连续安全运行5万小时以上。"))
+				.addValue(new DivGroupParam(null, "IIECC更在部分产品中选装了绿色科技EC技术（GreenTech）电机，以及RaidCal（超凡曲线）叶轮设计的风机。EC电机为无刷直流驱动装置，集成驱动电子设备，易于控制且效率高达90%，在各种负荷条件下都可安静高效运行。依必安派特（ebmpapst）采用外转子结构的电机设计，电机直接与叶片相连，不仅使电机散热更佳，也令风机结构更紧凑。RadiCal（超凡曲线）叶轮的创新几何结构设计，显著优化了风机的空气动力特性和声学特性，有效增强风机性能，同时降低声噪。绿色电机和创新叶轮的完美结合，打造出了“ 绿色科技EC超凡曲线离心风机” （ ebmpapst GreenTech EC RadiCal Fan），使得安装有这款风机的空气净化系统结构更小巧、性能更卓越、质量更可靠。"))
+				.addValue(new ImageGroupParam(null).addValue(new ImageParam("/technology/ebmpapst_670x404.png","图：RadiCal风机在4种不同转速下，各阻力点的风速曲线图。由此可以看出采用EC技术的RadiCal风机在各种条件下的完美表现。")))
 		);
 		
 		
@@ -62,12 +62,14 @@ public class TechnologyController extends AbstractController {
 		
 		
 		details.put("overView",(new MainGroupParam(null,null))
-				.addValue(new DivGroupParam(null, "IIECC选用的颗粒物过滤器系列，由拥有90年历史的国际过滤器领导品牌AAF公司运用世界最先进技术研制而成。AAF是全球公认的过滤器行业高品质、专业化和技术革新的代表，也是全球最大的商业、工业和住宅用空气过滤器产品的生产厂和销售商。1960年，AAF曾为阿波罗登月飞船提供空气过滤器，以防止月球污染，而美国白宫也有使用AAF空气过滤器。"))
-				.addValue(new DivGroupParam(null, "AAF的AmMet系列初效过滤器有着阻力低、容尘量高、使用寿命长、方便清洗的优点。"))
-				.addValue(new DivGroupParam(null, "AAF的PTFE材质的MEGAcelTM HEPA高效过滤器及ULPA超效过滤器，是行业技术巅峰的代表。对0.1微米的颗粒，拦截率最高可达99.999995％。"))
-				.addValue(new DivGroupParam(null, "PTFE材质的超高效过滤器能在更少能耗情况下，保持极低阻力和超高效率，为EC设备的完美表现提供了最佳基础。PTFE材质还具有抗环境腐蚀能力强、化学气体散播性极低、强度高、符合I11301且通过UL900的防火1级标准等优点。"))
-				.addValue(new DivGroupParam(null, "目前世界范围内绝大多数净化产品还采用玻璃纤维材质的过滤器，而IIECC已率先在多个系列中采用了PTFE材质的过滤器。并且每片AAF PTFE过滤器在装配前都经过IIECC的严格测试，确保没有任何泄漏点，力求让每一位用户都能放心使用。"))
-				.addValue(new ImageGroupParam(null).addValue(new ImageParam("/technology/aaf_670x383.png","图：AAF MEGACel高效曲线图。从这张图中可以看出，达到同样过滤率的条件下，采用PTFE材质的过滤器可以做到更薄，在同等的面风速条件下阻力更低，从而实现更高效率。")))
+				.addValue(new DivGroupParam(null, "IIECC选用有90年历史的国际过滤器大牌AAF公司研制的代表世界先进技术的颗粒物过滤器系列。AAF是全球公认的过滤器行业高品质、专业化和技术革新的代表，是全球最大的商业、工业和住宅用空气过滤器产品的生产厂家和销售商。"))
+				.addValue(new DivGroupParam(null, "1960年AAF为阿波罗登月飞船提供空气过滤器，防止月球污染，美国白宫也有使用AAF空气过滤器。"))
+				.addValue(new ImageGroupParam(null).addValue(new ImageParam("/technology/particles_filter_670x383.jpg","</br>AAF的系列初效过滤器有着阻力低、容尘量高、使用寿命长、方便清洗的优点。")))
+				//.addValue(new DivGroupParam(null, "AAF的系列初效过滤器有着阻力低、容尘量高、使用寿命长、方便清洗的优点。"))
+				.addValue(new DivGroupParam(null, "AAF的PTFE材质HEPA高效过滤器及ULPA超高效过滤器，代表了行业内最巅峰的技术，最高能达到对0.1微米的颗粒进行99.999995％的拦截率。"))
+				.addValue(new DivGroupParam(null, "PTFE材质的高效和超高效过滤器在更低的能耗下保持着极低的阻力和超高效率，为IIECC设备的完美表现提供了最佳的基础。PTFE材质还具有抗环境腐蚀能力强、极低的化学气体散播性、强度高、符合I11301且通过UL900的防火1级标准等优点。"))
+				.addValue(new DivGroupParam(null, "目前世界范围内绝大多数净化产品还是采用玻璃纤维材质的过滤器，而IIECC已经率先在多个系列中采用了PTFE材质的过滤器。并且每片AAF PTFE过滤器在装配前都经过IIECC的严格测试，确保没有任何泄漏点，能让每一个最终用户都放心使用。"))
+				.addValue(new ImageGroupParam(null).addValue(new ImageParam("/technology/aaf_670x394.png","图：AAF MEGACel高效过滤器性能曲线图。从这张图中可以看出，在达到同样过滤率的条件下，采用PTFE材质的过滤器可以做到更薄，在同等的面风速条件下，阻力更低，从而能达到更高的效率。")))
 		);
 		
 		request.setAttribute("solutionParam", param);
@@ -87,15 +89,15 @@ public class TechnologyController extends AbstractController {
 		
 		details.put("overView",(new MainGroupParam(null,null))
 				.addValue(new RowGroupParam(null,null)
-					.addValue(new DivGroupParam(null, "从室外引进新风、室内进行排风的同时，会引起能量损失。以夏季为例：因室外温度较高、室内温度较低，室内空气排出时将会带走一部分冷量，EC设备的全热交换系统能最大限度的回收这部分冷量，从而降低空调能耗。").setCssClassName("col-xxs12 col-md-6"))
+					.addValue(new DivGroupParam(null, "从室外引进新风、从室内进行排风的同时，会引起能量损失。以夏季为例：因室外温度较高、室内温度较低，室内空气排出时会带走一部分冷量，IIECC设备的全热交换系统能最大限度地回收这部分冷量，从而降低空调能耗。").setCssClassName("col-xxs12 col-md-6"))
 					.addValue(new ImageGroupParam(null).addValue(new ImageParam("/technology/energy_recovery_670x383.png",null)).setCssClassName("col-xxs12 col-md-6")))
-				.addValue(new DivGroupParam(null, "全热交换器的工作原理：当产品工作时，室内排风和新风分别呈交叉方式逆流经换热器芯体。由于气流分隔板两侧的气流存在温差和分压差，两股气流通过分隔板时就会进行传热，引起全热交换过程。夏季运行时，新风从排风侧获得冷量，温度降低；冬季运行时，新风从排风侧获得热量，温度升高。"))
+				.addValue(new DivGroupParam(null, "全热交换器的工作原理：工作时，室内排风和新风分别呈交叉方式逆流经过换热器芯体，由于分隔板两侧的气流存在温差和分压差，两股气流通过分隔板时就会进行传热，产生全热交换过程。夏季运行时，新风从排风侧获得冷量，温度降低；冬季运行时，新风从排风侧获得热量，温度升高。"))
 				.addValue(new OlGroupParam(null)
-					.addValue("采用独特的热函传递材料传热；")
+					.addValue("采用独特的热函传递材料进行传热；")
 					.addValue("逆流式热交换方式，全热交换效率可达75％；")
-					.addValue("ABS框架结构，风阻低，不会收缩变形，坚固耐用，日常维护简便；")
+					.addValue("ABS 框架结构，风阻低，不会收缩变形，坚固耐用，日常维护简便；")
 					.addValue("热交换材料透气率极低，新风排风两股空气完全隔离，无交叉污染；")
-					.addValue("可模块组合，能在维持低风阻的同时，实现在大风量产品上的应用。")
+					.addValue("可模块组合，维持低风阻同时实现在在大风量产品上的应用；")
 				 )
 		);
 		
@@ -114,21 +116,26 @@ public class TechnologyController extends AbstractController {
 		Map<String, MainGroupParam> details = new HashMap<String, MainGroupParam>();
 		TableTdParam[] a = new TableTdParam[]{};
 		details.put("overView",(new MainGroupParam(null,null))
-				.addValue(new RowGroupParam(null,null)
-					.addValue(new DivGroupParam(null, "IIECC选用独特的Multi-Mix® Media气相净化媒体技术，来消除空气中各种有毒有害气体。气相净化媒体的净化原理为：物理吸附、吸收、化学吸附、催化。确保了各种有害气体彻底不可逆的被消除，没有后顾之忧。").setCssClassName("col-xxs12 col-md-6"))
-					.addValue(new ImageGroupParam(null).addValue(new ImageParam("/technology/gas_1.png",null)).setCssClassName("col-xxs12 col-md-6")).setDoDelim(true))
+				//.addValue(new RowGroupParam(null,null)
+				.addValue(new DivGroupParam(null, "IIECC选用独特的Multi-Mix<sup>®</sup> Media气相净化媒体技术，通过物理吸附、吸收、化学吸附、催化的原理，不可逆地彻底消除空气中各种有毒有害气体。"))
+					//.addValue(new DivGroupParam(null, "IIECC选用独特的Multi-Mix® Media气相净化媒体技术，来消除空气中各种有毒有害气体。气相净化媒体的净化原理为：物理吸附、吸收、化学吸附、催化。确保了各种有害气体彻底不可逆的被消除，没有后顾之忧。").setCssClassName("col-xxs12 col-md-6"))
+					//.addValue(new ImageGroupParam(null).addValue(new ImageParam("/technology/gas_1.png",null)).setCssClassName("col-xxs12 col-md-6")).setDoDelim(true))
+				.addValue(new DivGroupParam(null, "<b>吸附（Adsorption）</b></br>吸附是一种物理过程，污染物（液体、气体、或悬浮物）会吸附在吸附剂材料的表面或是毛孔内。吸附是一个可逆过程，无化学反应发生。"))
+				.addValue(new DivGroupParam(null, "<b>吸收（Absorption）</b></br>吸收是指污染物渗透到另一种物质的结构中的过程，这是不同于吸附的地方，吸附是一种物质存在于另一种物质的表面。"))
+				.addValue(new DivGroupParam(null, "<b>化学吸附（Chemisorption）</b></br>化学吸附与物理吸附过程相关，化学吸附是指由吸附剂与污染物之间产生的化学作用而产生的吸附，化学吸附是通常被认为是一个不可逆转的进程。"))
+				.addValue(new DivGroupParam(null, "<b>催化（Catalysis）</b></br>催化是一个过程，在催化剂的作用下形成另一种物质的化学变化。这种变化（通常是导致或加速化学反应）将去除污染物而催化剂本身没有发生任何变化的。").setDoDelim(true))
 				.addValue(new DivGroupParam("气相净化原理", ""))
-				.addValue(new ImageGroupParam(null).addValue(new ImageParam("/technology/process_670x383.png",null)).setDoDelim(true))
+				.addValue(new ImageGroupParam(null).addValue(new ImageParam("/technology/process_670x563.png",null)).setDoDelim(true))
 				.addValue(new DivGroupParam("气相净化示意图", ""))
-				.addValue(new ImageGroupParam(null).addValue(new ImageParam("/technology/theory_670x383.png",null)))
-				.addValue(new UlGroupParam("不同于现有的其他技术，Multi-Mix® Media气相净化媒体具有通用性强、简单可靠、节能、高效的特点。具体表现在：")
-					.addValue("Multi-Mix® Media适用广泛，可应用于多个领域，新建或改造项目均可胜任，且无需复杂的维护保养程序；")
-					.addValue("Multi-Mix® Media具有高挤压强度，不易磨损，高孔隙结构，使用寿命更长久；")
-					.addValue("Multi-Mix® Media具有高稳定性，在环境温度湿度发生突然变化的情况下，不会释放出已处理的污染物质，适用的温度范围在-40℃至48.9℃，湿度范围10％到95％；")
-					.addValue("能充分利用循环空气，减少对室外空气的需求；")
-					.addValue("可高效迅速地去除环境中多种空气污染物，通过调节媒体配比，还可解决ppb（10-9，即10亿分之一）级别的细微污染、至超过25ppm（10-6，即百万分之一）级别的严重环境污染问题。").setDoDelim(true)
+				.addValue(new ImageGroupParam(null).addValue(new ImageParam("/technology/theory_670x589.png",null)))
+				.addValue(new UlGroupParam("不同于现有的其他技术，Multi-Mix<sup>®</sup> Media气相净化媒体具有通用性强、简单可靠、节能、高效的特点。具体表现在：")
+					.addValue("Multi-Mix<sup>®</sup>Media适用广泛，可应用于多领域，不论是新建项目或者是改造项目都可以胜任；不需要复杂的维护保养程序；")
+					.addValue("Multi-Mix<sup>®</sup>Media具有高挤压强度，不易磨损，高孔隙结构使用寿命更长久；")
+					.addValue("Multi-Mix<sup>®</sup>Media稳定性高，在环境温度湿度发生突然变化的情况下，不会释放出已处理的污染物质，适用的温度范围在零下40摄氏度到48.9摄氏度，湿度范围10％到95％；")
+					.addValue("充分利用循环空气从而减少对室外空气的需求；")
+					.addValue("高效迅速地去除环境中多种空气污染物，并且通过调节媒体配比，可以解决从ppb（10亿分之一）级别的细微污染至超过25ppm（百万分之一）级别的严重的环境污染问题。").setDoDelim(true)
 				 )
-				 .addValue(new TableGroupParam("经过多次且广泛的科学实验，我们为Multi-Mix® Media对各种有毒有害气体的处理能力进行了总结：")
+				 .addValue(new TableGroupParam("经过反复科学实验，我们对Multi-Mix<sup>®</sup>Media气相净化媒体处理各类有毒有害气体的能力进行了如下总结：")
 					 .addHeader(new TableHeaderParam("种类")).addHeader(new TableHeaderParam("名称",2)).addHeader(new TableHeaderParam("代表性气味",2))
 					 .addValue(new TableTdParam[]{new TableTdParam("醇类</br>ALCOHOLS",3),new TableTdParam("乙醇"),new TableTdParam("Ethyl Alcohol"),new TableTdParam("酒精"),new TableTdParam("Liquor")})
 					 .addValue(new TableTdParam[]{new TableTdParam("丙醇"),new TableTdParam("Isopropyl Alcohol"),new TableTdParam("外用酒精"),new TableTdParam("Rubbing alcohol")})
@@ -176,14 +183,14 @@ public class TechnologyController extends AbstractController {
 					 .addValue(new TableTdParam[]{new TableTdParam("硫化物</br>SULFIDES",3),new TableTdParam("二烯丙基二硫化物"),new TableTdParam("Allyl Disulfide"),new TableTdParam("大蒜油"),new TableTdParam("Garlic oil")})
 					 .addValue(new TableTdParam[]{new TableTdParam("碳硫化物"),new TableTdParam("Carbon Disulfide"),new TableTdParam("有机物溶解（类似于硫化氢）"),new TableTdParam("Organic solvent（odor similar to Hydrogen Sulfide）")})
 					 .addValue(new TableTdParam[]{new TableTdParam("硫化氢"),new TableTdParam("Hydrogen Sulfide"),new TableTdParam("腐烂的鸡蛋"),new TableTdParam("Rotten eggs")})
-					 .addAnnon("表：可以与Multi-Mix® Media气相媒体发生化学反应的成分").setDoDelim(true)
+					 .addAnnon("表：可以与Multi-Mix<sup>®</sup> Media气相媒体发生化学反应的成分").setDoDelim(true)
 				 )
-			     .addValue(new TableGroupParam("Multi-Mix® Media主要有四种基本规格，各自有不同的化学成份，具体如下：")
+			     .addValue(new TableGroupParam("Multi-Mix<sup>®</sup> Media主要有四种基本规格，各自有不同的化学成份，具体如下：")
 				     .addHeader(new TableHeaderParam("规格","85px")).addHeader(new TableHeaderParam("化学成分"))
-				     .addValue(new String[]{"Multi-Mix®</br>MM-1000","MM-1000是直径为1/8-inch（0.3厘米）的紫色球体颗粒，由活性矾土及高锰酸钾组成。腐蚀性气体被吸附后与高锰酸钾反应，再通过紫色颗粒分解。腐蚀性气体被氧化成无毒无害的非腐蚀性气体。"})
-		    		 .addValue(new String[]{"Multi-Mix®</br>MM-3000","MM-3000是直径为1/8-inch（0.3厘米）的立柱型颗粒--活性碳组成。通过物理吸收来过滤气体，该过程为凝结形式。活性碳对腐蚀气体有很强的吸收作用。"})
-					 .addValue(new String[]{"Multi-Mix®</br>MM-7000","MM-7000是直径为1/8-inch（0.3厘米）的立柱型颗粒，由活性碳与磷酸组成。磷酸进入活性碳提高吸附效率和能力，吸附反应后使有毒气体成中性。"})
-					 .addValue(new String[]{"Multi-Mix®</br>MM-9000","MM-9000是直径为1/8-inch（0.3厘米）的立柱型颗粒，由活性碳和氢氧化钾组成。氢氧化钾进入活性碳提高吸附效率及能力。吸附反应后有害物被中和或被氧化成非腐蚀性物质。"})
+				     .addValue(new String[]{"Multi-Mix<sup>®</sup></br>MM-1000","MM-1000是直径为1/8-inch（0.3厘米）的紫色球体颗粒，由活性矾土及高锰酸钾组成。腐蚀性气体被吸附后与高锰酸钾反应，再通过紫色颗粒分解。腐蚀性气体被氧化成无毒无害的非腐蚀性气体。"})
+		    		 .addValue(new String[]{"Multi-Mix<sup>®</sup></br>MM-3000","MM-3000是直径为1/8-inch（0.3厘米）的立柱型颗粒—活性碳组成。通过物理吸收来过滤气体，该过程为凝结形式。活性碳对腐蚀气体有很强的吸收作用。"})
+					 .addValue(new String[]{"Multi-Mix<sup>®</sup></br>MM-7000","MM-7000是直径为1/8-inch（0.3厘米）的立柱型颗粒，由活性碳与磷酸组成。磷酸进入活性碳提高吸附效率和能力，吸附反应后使有毒气体成中性。"})
+					 .addValue(new String[]{"Multi-Mix<sup>®</sup></br>MM-9000","MM-9000是直径为1/8-inch（0.3厘米）的立柱型颗粒，由活性碳和氢氧化钾组成。氢氧化钾进入活性碳提高吸附效率及能力。吸附反应后有害物被中和或被氧化成非腐蚀性物质。"})
 				 	.setDoDelim(true)
 			     )
 			     .addValue(new TableGroupParam("MM-1000气相净化媒体的过滤性能:")
@@ -335,14 +342,14 @@ public class TechnologyController extends AbstractController {
 		
 		
 		details.put("overView",(new MainGroupParam(null,null))
-				.addValue(new DivGroupParam(null, "IIECC选用由韩国排名第一的spe公司生产的等离子发生器（部分产品选装），可高效灭菌、降解部分有害气体。"))
+				.addValue(new DivGroupParam(null, "IIECC选用韩国排名第一的Spe公司生产的等离子发生器（部分产品选装），可高效灭菌、降解部分有害气体。"))
 				.addValue(new DivGroupParam(null, "等离子的工作原理：在电场作用下，产生大量的小离子群，小离子与空气中的氧分子碰撞形成正负氧离子。"))
-				.addValue(new ImageGroupParam(null).addValue(new ImageParam("/technology/ion_1_670x177.png",null)))
-				.addValue(new DivGroupParam(null, "正氧离子具有很强的活性，能在极短时间内氧化分解甲硫醇、氨、硫化氢等污染因子，并打开有机物挥发性气体的化学链，经过一系列的反应后最终生成二氧化碳和水。正氧离子还能破坏空气中细菌的生存环境，使细菌和孢子失去活性，丧失繁殖能力，从而降低室内细菌的浓度。"))
-				.addValue(new ImageGroupParam(null).addValue(new ImageParam("/technology/ion_2_670x169.png",null)))
-				.addValue(new DivGroupParam(null, "负氧离子可以吸附大于自身重量几十倍的悬浮颗粒，靠自重沉降下来，清除空气中的悬浮胶体（气溶胶）以达到净化空气的目的。"))
-				.addValue(new DivGroupParam(null, "经过日本kitasato、三星电子、KTR等权威检测机构检测，该等离子发生器对H1N1、VOCs、硫化氢、大肠杆菌、三甲胺、甲苯等都具有高效去除率，并且也经过了臭氧测试达到国际标准。"))
-				.addValue(new TableGroupParam("经过多次且广泛的科学实验，我们为Multi-Mix® Media对各种有毒有害气体的处理能力进行了总结：")
+				.addValue(new ImageGroupParam(null).addValue(new ImageParam("/technology/ion_1_670x258.png",null)))
+				.addValue(new DivGroupParam(null, "正氧离子具有很强的活性，能在极短时间内氧化分解甲硫醇、氨、硫化氢等污染因子，并打开有机物挥发性气体的化学链，经过一系列的反应最终生成二氧化碳和水。正氧离子还能破坏空气中细菌的生存环境，使细菌和孢子失去活性，丧失繁殖能力，从而降低室内细菌的浓度。"))
+				.addValue(new ImageGroupParam(null).addValue(new ImageParam("/technology/ion_2_670x315.png",null)))
+				.addValue(new DivGroupParam(null, "负氧离子可以吸附大于自身重量几十倍的悬浮颗粒，靠自身重力沉降下来，清除空气中的悬浮胶体（气溶胶），以达到净化空气的目的。"))
+				.addValue(new DivGroupParam(null, "经日本Kitasato、三星电子、KTR等权威检测机构检测，该等离子发生器对H1N1、VOCs、硫化氢、大肠杆菌、三甲胺、甲苯等都具有高效去除率，并通过了臭氧测试，达到国际标准。"))
+				.addValue(new TableGroupParam("离子发生器检测数据如下：")
 					.addHeader(new TableHeaderParam("可去除的污染物"))
 					.addHeader(new TableHeaderParam("去除效率"))
 					.addHeader(new TableHeaderParam("检测机构"))
@@ -352,9 +359,9 @@ public class TechnologyController extends AbstractController {
 					.addValue(new String[]{"E. Coli大肠杆菌","99%","KTR"})
 					.addValue(new String[]{"Toluene甲苯","92%","Inha Univ, KTR"})
 					.addValue(new String[]{"Trimethylamine三甲胺","60%","KTR"})
-					.addValue(new String[]{"H2S硫化氢","98%","KTR"})
-					.addValue(new String[]{"Safety for O3臭氧","0.045ppm","KCL （with 50 CMH Fan）"})
-				 	.addAnnon("表：离子发生器检测数据")
+					.addValue(new String[]{"H<sub>2</sub>S硫化氢","98%","KTR"})
+					.addValue(new String[]{"Safety for O<sub>3</sub>臭氧","0.045ppm","KCL （with 50 CMH Fan）"})
+				 	.addAnnon("")
 				 )
 		);
 
@@ -400,7 +407,7 @@ public class TechnologyController extends AbstractController {
 		SolutionParam param = new SolutionParam();
 		param.setHeaderPicName("technology");
 		param.setSubItemTitle("优势技术");
-		param.setSubItemHeaderImgInfo("近50年来，凭借着技术优势和可靠的质量，CA一直是气相过滤和能量回收领域的领导者。");
+		param.setSubItemHeaderImgInfo("IIECC和各行业的龙头企业倾力合作，在引入先进技术的同时，联合开发、反复试验、严苛测试，最终将解决方案完美转化为产品并付诸实施。");
 		param.addSubItem("气相过滤技术", "technology/gas_filter.html");
 		param.addSubItem("颗粒物过滤技术", "technology/particles_filter.html");
 		param.addSubItem("杀菌除菌技术", "technology/degerming.html");

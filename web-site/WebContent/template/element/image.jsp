@@ -10,7 +10,7 @@
 		</c:if>
 		
 		<c:if test="${value.annon !=null}">
-			<div class="info" style="margin-top: 12px;"><c:out value="${value.annon}"/></div>
+			<div class="info" style="margin-top: 12px;"><c:out value="${value.annon}" escapeXml="false"/></div>
 		</c:if>
 	</div>
 	

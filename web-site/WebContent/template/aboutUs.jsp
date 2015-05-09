@@ -5,3 +5,11 @@
 <div class="info">${solutionParam.subItemInfo}</div>
 
 <c:import url="${productDetailPage}.jsp"></c:import>
+<c:if test="${guildParam!=null}">
+<div style="margin-bottom: 120px;"></div>
+<c:set var="solutionParam" value="${guildParam}" scope="request"></c:set>
+<div class="title">${solutionParam.title}</div>
+<div class="info">${solutionParam.subItemInfo}</div>
+
+<c:import url="${productDetailPage}.jsp"></c:import>
+</c:if>

@@ -13,7 +13,7 @@ public abstract class AbstractController {
 	@RequestMapping(value = "/index")
 	public String index(HttpServletRequest request, HttpServletResponse response){
 		
-		SolutionParam param = this.generateParam(1);
+		SolutionParam param = this.generateParam(0);
 
 		request.setAttribute("solutionParam", param);
 		return "/template/2ndIndex.jsp";

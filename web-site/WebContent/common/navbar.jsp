@@ -48,7 +48,7 @@
 							  <a id="drop3" role="button" href="${path}product/index.html">产品系列</a>
 							</li>
 							<li class="">
-							  <a id="drop4" role="button" href="${path}about_us/index.html">关于EC</a>
+							  <a id="drop4" role="button" href="${path}about_us/index.html">关于IIECC</a>
 							</li>
 							<li class="gray">
 							  <a id="drop5" role="button" href="${path}contact_us/index.html">联系我们</a>
@@ -94,26 +94,13 @@
 							</li>
 							<li class="nav-delim"><col-md->|</col-md-></li>
 							<li class="dropdown">
-							  	<a id="drop4" role="button" data-toggle="dropdown" href="#" onmouseover="$(this).click()">关于EC</a>
+							  	<a id="drop4" role="button" data-toggle="dropdown" href="#" onmouseover="$(this).click()">关于IIECC</a>
 								<ul class="dropdown-menu" style="width: 150px;">
-									<li>
-									<div style="min-height: 20px;"><a tabindex="-1" href="${path}about_us/summary.html" style="padding-left: 35px;padding-right: 35px;">公司简介</a></div>
-									</li>
-									<li>
-										<div style="min-height: 20px;"><a tabindex="-1" href="${path}about_us/news.html" style="padding-left: 35px;padding-right: 35px;">新闻及公告</a></div>
-									</li>
-									<li>
-										<div style="min-height: 20px;"><a tabindex="-1" href="${path}about_us/download.html" style="padding-left: 35px;padding-right: 35px;">资料下载</a></div>
-									</li>
-									<li>
-										<div style="min-height: 20px;"><a tabindex="-1" href="${path}about_us/certification.html" style="padding-left: 35px;padding-right: 35px;">认证及资质</a></div>
-									</li>
-									<li>
-										<div style="min-height: 20px;"><a tabindex="-1" href="${path}about_us/global_map.html" style="padding-left: 35px;padding-right: 35px;">国际合作</a></div>
-									</li>
-									<li>
-										<div style="min-height: 20px;"><a tabindex="-1" href="${path}about_us/case_list.html" style="padding-left: 35px;padding-right: 35px;">我们的客户</a></div>
-									</li>
+									<c:forEach var="aboutUsMenu" items="${aboutUsMenus.subItems}">
+										<li>
+											<div style="min-height: 20px;"><a tabindex="-1" href="${path}${aboutUsMenu.url}" style="padding-left: 35px;padding-right: 35px;">${aboutUsMenu.name}</a></div>
+										</li>
+									</c:forEach>
 								</ul>
 							</li>
 							<li class="nav-delim"><col-md->|</col-md-></li>
