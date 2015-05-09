@@ -228,8 +228,8 @@
 		</plugins>
 	</build>
 	<scm>
-		<connection>scm:svn:https://www.svn.com:8443/svn/utils/trunk/</connection>
-		<developerConnection>scm:svn:https://www.svn.com:8443/svn/utils/trunk/</developerConnection>
+		<connection>scm:git:https://github.com/waynesuns/env-ctrl/utils/</connection>
+		<developerConnection>scm:git:https://github.com/waynesuns/env-ctrl/utils/</developerConnection>
 	</scm>
 	<distributionManagement>
 	  <repository>  
