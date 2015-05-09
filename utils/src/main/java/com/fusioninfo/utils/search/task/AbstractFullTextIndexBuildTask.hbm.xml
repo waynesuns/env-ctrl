@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="net.webuilder.framework.biz.search.task.AbstractFullTextIndexBuildTask" table="biz_full_text_index_build_task">
+		<id name="id" column="id" unsaved-value="null">
+			<generator class="uuid.hex"/>
+		</id>
+		<discriminator column="discriminator"/>
+		<version name="version" column="version"/>
+		<property name="createTime" column="create_time"/>
+		<many-to-one name="createUser" column="create_user" class="org.socko.biz.user.AbstractUser"/>
+		<property name="updateTime" column="update_time"/>
+		<many-to-one name="updateUser" column="update_user" class="org.socko.biz.user.AbstractUser"/>
+		<property name="ownerClass" column="owner_class"/>
+		<property name="ownerId" column="owner_id"/>
+		<property name="operateType" column="operate_type"/>
+		<subclass name="net.webuilder.framework.biz.search.task.FullTextFileIndexBuildTask" discriminator-value="1">				
+		</subclass>
+		<subclass name="net.webuilder.framework.biz.search.task.FullTextIndexBuildTask" discriminator-value="2">
+		</subclass>
+	</class>
+</hibernate-mapping>
