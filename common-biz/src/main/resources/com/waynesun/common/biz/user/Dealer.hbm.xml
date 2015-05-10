@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.fusioninfo.common.biz.user.AbstractDealer" table="auth_dealer">
+		<cache usage="read-write" />
+		<id name="id" column="dealer_id" unsaved-value="null">
+			<generator class="identity" />
+		</id>
+		<discriminator column="discriminator" />
+		<version name="version" column="version" />
+		<property name="state" type="com.fusioninfo.pojo.type.PojoStateType" />
+		<property name="createTime" column="create_time" />
+		<property name="updateTime" column="update_time" />
+		<many-to-one name="createUser" column="create_user" class="com.fusioninfo.common.biz.user.AbstractUser" />
+		<many-to-one name="updateUser" column="update_user" class="com.fusioninfo.common.biz.user.AbstractUser" />
+		<!-- <set name="subDealers" >
+			<key column="parent_id" />
+			<one-to-many class="com.fusioninfo.common.biz.user.AbstractDealer"/>
+		</set> -->
+		<property name="dealerCode" column="dealer_code" />
+		<property name="dealerGroup" column="dealer_group" />
+		<property name="dealerType" column="dealer_type" />
+		<property name="name" />
+		<property name="telephone" />
+		<property name="fax" />
+		<property name="email" />
+		<property name="province" />
+		<property name="city" />
+		<property name="district" />
+		<property name="zipCode" column="zip_code" />
+		<property name="address" />
+		<property name="manager" />
+		<property name="contactName" column="contact_name" />
+		<property name="area" />
+		<property name="penddingReachedAmt" column="pendding_reached_amt" />
+		<property name="sendToSubDealer" column="send_to_sub_dealer" />
+		<many-to-one name="assessor" column="assessor_id" class="com.fusioninfo.common.biz.user.AbstractUser" />
+		<subclass name="com.fusioninfo.common.biz.user.Manufacturer" discriminator-value="0">
+			<set name="regions">
+				<key column="parent_id" />
+				<one-to-many class="com.fusioninfo.common.biz.user.Region" />
+			</set>
+		</subclass>
+		<subclass name="com.fusioninfo.common.biz.user.Region" discriminator-value="1">
+			<many-to-one name="manufacturer" column="parent_id"
+				class="com.fusioninfo.common.biz.user.Manufacturer" />
+			<set name="oneLevelDealers">
+				<key column="parent_id" />
+				<one-to-many class="com.fusioninfo.common.biz.user.OneLevelDealer" />
+			</set>
+		</subclass>
+		<subclass name="com.fusioninfo.common.biz.user.Dealer" abstract="true" discriminator-value="4">
+		 
+			<property name="hotline" column="hotline" />
+			<property name="deliveryAddress" column="delivery_address" />
+			<property name="deliveryPerson" column="delivery_person" />
+			<property name="deliveryPhoneNo" column="delivery_phone_no" />
+			<property name="managerTelNo" column="manager_no" />
+			
+			<subclass name="com.fusioninfo.common.biz.user.OneLevelDealer" discriminator-value="2">
+				<many-to-one name="region" column="parent_id"
+					class="com.fusioninfo.common.biz.user.Region" />
+				<set name="towLevelDealers">
+					<key column="parent_id" />
+					<one-to-many class="com.fusioninfo.common.biz.user.TwoLevelDealer" />
+				</set>
+			</subclass>
+			<subclass name="com.fusioninfo.common.biz.user.TwoLevelDealer" discriminator-value="3">
+				<many-to-one name="oneLevelDealer" column="parent_id" class="com.fusioninfo.common.biz.user.OneLevelDealer" />
+			</subclass>
+		</subclass>
+	</class>
+</hibernate-mapping> 

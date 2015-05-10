@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.fusioninfo.common.biz.user.FtpUser"  table="v_ftp_user">
+		<id name="id" column="login_account_id" unsaved-value="null">
+			<generator class="identity" />
+		</id>
+		<property name="userId" column="user_id" />
+		<property name="name" column="user_name" />
+		<property name="password" />
+		<property name="homedirectory"  />
+			<property name="enableflag"  />
+			<property name="writepermission"  />
+			<property name="idletime"  />
+			<property name="uploadrate"  />
+			<property name="downloadrate"  />
+			<property name="maxloginperip"  />
+	</class>
+</hibernate-mapping>

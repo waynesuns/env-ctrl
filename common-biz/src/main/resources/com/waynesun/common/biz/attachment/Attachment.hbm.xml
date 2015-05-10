@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.fusioninfo.common.biz.attachment.Attachment" table="sys_attachment">
+		<cache usage="read-write"/>
+		<id name="id" column="attachment_id" unsaved-value="null">
+			<generator class="identity"/>
+		</id>
+		<version name="version" column="version"/>
+		<property name="state" type="com.fusioninfo.pojo.type.PojoStateType"/>
+		<property name="createTime" column="create_time"/>
+		<property name="updateTime" column="update_time"/>
+		<many-to-one name="createUser" column="create_user" class="com.fusioninfo.common.biz.user.AbstractUser"/>
+		<many-to-one name="updateUser" column="update_user" class="com.fusioninfo.common.biz.user.AbstractUser"/>
+		<many-to-one name="announcement" column="announcement_id" class="com.fusioninfo.common.biz.announcement.Announcement"/>
+		<property name="fileName" column="title"/>
+		<property name="filePath" column="file_path"/>
+	</class>
+</hibernate-mapping>

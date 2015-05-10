@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.fusioninfo.common.biz.veh.VehicleBrand" table="veh_brand">
+		<cache usage="read-write"/>
+		<id name="id" column="brand_id" unsaved-value="null">
+			<generator class="identity"/>
+		</id>
+		<property name="state" column="state" type="com.fusioninfo.pojo.type.PojoStateType"/>
+		<many-to-one name="createUser" column="create_user" class="com.fusioninfo.common.biz.user.AbstractUser" />
+		<many-to-one name="updateUser" column="update_user" class="com.fusioninfo.common.biz.user.AbstractUser" />
+		<property name="createTime" column="create_date"/>
+		<property name="updateTime" column="update_date"/>
+		<property name="name" column="name"/>
+	</class>
+</hibernate-mapping>

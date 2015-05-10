@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.fusioninfo.common.biz.user.AbstractUser" table="auth_user">
+		<cache usage="read-write" />
+		<id name="id" column="user_id" unsaved-value="null">
+			<generator class="identity" />
+		</id>
+		<discriminator column="discriminator" />
+		<version name="version" column="version" />
+		<property name="createTime" column="create_time" />
+		<property name="updateTime" column="update_time" />
+		<many-to-one name="createUser" column="create_user"
+			class="com.fusioninfo.common.biz.user.AbstractUser" />
+		<many-to-one name="updateUser" column="update_user"
+			class="com.fusioninfo.common.biz.user.AbstractUser" />
+		<property name="state"
+			type="com.fusioninfo.pojo.type.PojoStateType" />
+		<property name="name" />
+		<!--<property name="phone" column="user_phone"/> -->
+		<many-to-one name="dealer" column="dealer_id"
+			class="com.fusioninfo.common.biz.user.AbstractDealer" lazy="false" fetch="join"/>
+		<one-to-one name="account"
+			class="com.fusioninfo.common.biz.user.LoginAccount" property-ref="user"
+			fetch="join" />
+		<set name="roles" table="auth_user_role" lazy="true">
+			<key column="user_id" />
+			<many-to-many class="com.fusioninfo.common.biz.role.Role"
+				column="role_id" />
+		</set>
+		<property name="penddingReadAnnonAmt" column="pendding_read_annon_amt" />
+		<subclass name="com.fusioninfo.common.biz.user.Employee"
+			discriminator-value="0">
+			<property name="employeeId" column="employee_id" />
+		</subclass>
+	</class>
+</hibernate-mapping>
