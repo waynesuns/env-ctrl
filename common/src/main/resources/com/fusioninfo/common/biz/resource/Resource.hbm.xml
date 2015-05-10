@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.fusioninfo.common.biz.resource.Resource" table="auth_resource">
+		<cache usage="read-write" />
+		<id name="id" column="resource_id" unsaved-value="null">
+			<generator class="identity" />
+		</id>
+		<discriminator column="discriminator" />
+		<version name="version" column="version" />
+		<property name="createTime" column="create_time" />
+		<property name="updateTime" column="update_time" />
+		<many-to-one name="createUser" column="create_user"
+			class="com.fusioninfo.common.biz.user.AbstractUser" />
+		<many-to-one name="updateUser" column="update_user"
+			class="com.fusioninfo.common.biz.user.AbstractUser" />
+		<property name="state"
+			type="com.fusioninfo.pojo.type.PojoStateType" />
+		<property name="name" />
+		<property name="code" />
+		<property name="orderNumber" column="order_number" />
+		<property name="imgPath" column="img_path" />
+		<property name="path" />
+		<property name="level" column="resource_level" />
+		<property name="value" />
+		<set name="roles" table="auth_role_resource" lazy="true" fetch="subselect"
+			inverse="true">
+			<key column="resource_id" />
+			<many-to-many class="com.fusioninfo.common.biz.role.Role"
+				column="role_id" />
+		</set>
+		<subclass name="com.fusioninfo.common.biz.resource.MenuCategory"
+			discriminator-value="0">
+			<set name="menus" lazy="true" order-by="order_number">
+				<key column="parent_id" />
+				<one-to-many class="com.fusioninfo.common.biz.resource.Menu" />
+			</set>
+		</subclass>
+		<subclass name="com.fusioninfo.common.biz.resource.Menu"
+			discriminator-value="1">
+			<many-to-one name="category"
+				class="com.fusioninfo.common.biz.resource.MenuCategory" column="parent_id" />
+			<set name="buttons" order-by="order_number">
+				<key column="parent_id" />
+				<one-to-many class="com.fusioninfo.common.biz.resource.Button" />
+			</set>
+		</subclass>
+		<subclass name="com.fusioninfo.common.biz.resource.Button"
+			discriminator-value="2">
+			<many-to-one name="menu" column="parent_id" />
+		</subclass>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.fusioninfo.common.biz.announcement.AnnouncementFeedback" table="sys_announcement_feedback">
+		<cache usage="read-write" />
+		<id name="id" column="announcement_feedback_id" unsaved-value="null">
+			<generator class="identity" />
+		</id>
+		<version name="version" column="version"  />
+		<property name="createTime" column="create_time" />
+		<property name="updateTime" column="update_time" />
+		<many-to-one name="createUser" column="create_user" class="com.fusioninfo.common.biz.user.AbstractUser" />
+		<many-to-one name="updateUser" column="update_user" class="com.fusioninfo.common.biz.user.AbstractUser" />
+		<property name="state" type="com.fusioninfo.pojo.type.PojoStateType"/>
+		
+		<property name="status" type="com.fusioninfo.common.biz.announcement.AnnouncementReadStatusType"/>
+		<many-to-one name="announcement" lazy="false" fetch="join" column="announcement_id" class="com.fusioninfo.common.biz.announcement.Announcement"/>
+		<many-to-one name="user" lazy="false" fetch="join" column="user_id" class="com.fusioninfo.common.biz.user.AbstractUser" />
+	</class>
+</hibernate-mapping>

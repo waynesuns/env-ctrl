@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.fusioninfo.utils.file.AbstractFile"  table="biz_file">
+		<cache usage="read-write" />
+		<id name="id" column="file_id" unsaved-value="null">
+			<generator class="identity" />
+		</id>
+		<discriminator column="discriminator" />
+		<version name="version" column="version" />
+		<property name="createTime" column="create_time" />
+		<property name="updateTime" column="update_time" />
+		<many-to-one name="createUser" column="create_user"
+			class="com.fusioninfo.common.biz.user.AbstractUser" />
+		<many-to-one name="updateUser" column="update_user"
+			class="com.fusioninfo.common.biz.user.AbstractUser" />
+		<property name="state"
+			type="com.fusioninfo.pojo.type.PojoStateType" />
+		<property name="fileName" column="file_name" />
+		<property name="filePath" column="file_path" />
+		<property name="uuid" column="file_uuid" />
+		<property name="fileSuffix" column="file_suffix"></property>
+		<subclass discriminator-value="0" name="com.fusioninfo.utils.file.binary.AbstractBinaryFile">
+			<subclass discriminator-value="1" name="com.fusioninfo.utils.file.binary.Zip"></subclass>
+		</subclass>
+		<subclass discriminator-value="2" name="com.fusioninfo.utils.file.document.AbstractDocument">
+			<subclass discriminator-value="3" name="com.fusioninfo.utils.file.document.Doc"></subclass>
+			<subclass discriminator-value="4" name="com.fusioninfo.utils.file.document.Pdf"></subclass>
+			<subclass discriminator-value="5" name="com.fusioninfo.utils.file.document.Ppt"></subclass>
+			<subclass discriminator-value="6" name="com.fusioninfo.utils.file.document.Xls"></subclass>
+		</subclass>
+		<subclass discriminator-value="7" name="com.fusioninfo.utils.file.media.AbstractMedia">
+			<subclass discriminator-value="8" name="com.fusioninfo.utils.file.media.Audio"></subclass>
+			<subclass discriminator-value="9" name="com.fusioninfo.utils.file.media.Image"></subclass>
+			<subclass discriminator-value="10" name="com.fusioninfo.utils.file.media.Vido"></subclass>
+		</subclass>
+		<subclass discriminator-value="11" name="com.fusioninfo.utils.file.UnknownFile">
+		</subclass>
+	</class>
+</hibernate-mapping>
