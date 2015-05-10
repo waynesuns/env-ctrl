@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib>
+	<tlib-version>1.2</tlib-version>
+	<jsp-version>1.2</jsp-version>
+	<short-name>MyTaglib</short-name>
+	<tag>
+		<name>config</name>
+		<tag-class>com.chinasshp.sgmw.util.tag.config.ConfigTag</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>code</name>
+		    <required>true</required>
+		    <rtexprvalue>true</rtexprvalue>
+		    <type>java.lang.String</type>
+		</attribute>
+	</tag>
+</taglib>

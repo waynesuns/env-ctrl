@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security" xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    					http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+                        http://www.springframework.org/schema/security 
+                        http://www.springframework.org/schema/security/spring-security-3.0.xsd">
+	<!-- create-session：always（一直）、never（从不） -->
+	<http auto-config="true">
+		<!-- 不需要验证的地址 -->
+		<access-denied-handler error-page="/403.do" />
+		<intercept-url pattern="/css/**" filters="none" />
+		<intercept-url pattern="/js/**" filters="none" />
+		<intercept-url pattern="/images/**" filters="none" />
+		<intercept-url pattern="/login.do" filters="none" />
+		<intercept-url pattern="/invalidSsession.do" filters="none" />
+		<intercept-url pattern="/index.do" filters="none" />
+		<intercept-url pattern="/home.do" filters="none" />
+		<intercept-url pattern="/favicon.ico" filters="none" />
+		<intercept-url pattern="/welcome.jsp" filters="none" />
+		<intercept-url pattern="/ws/*" filters="none" />
+		<!-- 指定登陆页面-authentication-failure-url：登陆失败跳转的RRL；default-target-url：成功后跳转URL -->
+		<form-login login-page="/invalidSsession.do" default-target-url="/home.do" authentication-failure-handler-ref="authenticationFaileHandler" authentication-success-handler-ref="authenticationSuccessHandler" />
+		<!-- 登出后要显示的页面 -->
+		<logout success-handler-ref="logoutSuccessHandler"/>
+
+		<!-- 默认过滤器的加载 -->
+		<http-basic />
+		<!-- 配置持久化登陆或者记住我下次自动登陆的认证 -->
+		<!-- <remember-me user-service-ref="userDetailsService" key="foobar" /> -->
+		<custom-filter ref="requestHeaderProcessingFilter" after="SERVLET_API_SUPPORT_FILTER"/>
+		<custom-filter ref="resourceSecurityInterceptor" after="FILTER_SECURITY_INTERCEPTOR"/>
+		<!-- <custom-filter ref="authenticationProcessingFilter" position="PRE_AUTH_FILTER"/> -->
+	</http>
+	<!-- 配置用户信息 -->
+	<authentication-manager alias="authenticationManager">
+		<authentication-provider user-service-ref="userDetailsService">
+			<password-encoder hash="md5"/>
+		</authentication-provider>
+	</authentication-manager>
+	<beans:bean id="userDetailsService" class="com.fusioninfo.common.biz.security.support.SecurityManagerSupport">
+		<!-- <beans:property name="sessionFactory">
+			<beans:ref bean="sessionFactory"/>
+		</beans:property> -->
+	</beans:bean>
+	<beans:bean id="requestHeaderProcessingFilter" class="com.fusioninfo.common.biz.security.interceptor.RequestHeaderProcessingFilter"/>
+	
+	<beans:bean id="resourceSecurityInterceptor" class="org.springframework.security.web.access.intercept.FilterSecurityInterceptor">
+		<!-- 认证管理器，实现用户认证的入口 -->
+		<beans:property name="authenticationManager" ref="authenticationManager"/>
+		<!-- 访问决策器，决定某个用户具有的角色，是否有足够的权限去访问某个资源 -->
+		<beans:property name="accessDecisionManager" ref="accessDecisionManager"/>
+		<!-- 资源源数据定义，即定义某一资源可以被哪些角色访问 -->
+		<beans:property name="securityMetadataSource">
+			<beans:ref bean="secureResourceFilterInvocationDefinitionSource"/>
+		</beans:property>
+		<beans:property name="observeOncePerRequest" value="false" />
+	</beans:bean>
+	<!-- 自定义资源拦截器 -->
+	<beans:bean id="secureResourceFilterInvocationDefinitionSource" class="com.fusioninfo.common.biz.security.interceptor.SecureResourceFilterInvocationDefinitionSource">
+	</beans:bean>
+	<!-- 访问决策器，决定某个用户具有的角色，是否有足够的权限去访问某个资源 -->
+	<beans:bean id="accessDecisionManager" class="org.springframework.security.access.vote.AffirmativeBased">
+	    <beans:property name="allowIfAllAbstainDecisions" value="false"/>
+	    <beans:property name="decisionVoters">
+	        <beans:list>
+	            <beans:bean class="org.springframework.security.access.vote.RoleVoter">
+	            	<beans:property name="rolePrefix" value=""/>
+	            </beans:bean>
+	            <beans:bean class="org.springframework.security.access.vote.AuthenticatedVoter"/>
+	        </beans:list>
+	    </beans:property>
+	</beans:bean>
+	<!-- 登出成功后续处理 -->
+	<beans:bean id="logoutSuccessHandler" class="com.fusioninfo.common.biz.security.support.CustomLogoutSuccessHandler">
+		<beans:property name="targetUrl" value="login.do?state=1"/>
+	</beans:bean>
+	<!-- 登陆成功后续处理 -->
+	<beans:bean id="authenticationSuccessHandler" class="com.fusioninfo.common.biz.security.support.CustomAuthenticationSuccessHandler" >
+		<!-- <beans:property name="targetUrl" value="login/show.do"/>
+		<beans:property name="seatTargetUrl" value="task_remind/show/home.do?showState=1"/> -->
+		<beans:property name="targetUrl" value="login/show.do"/>
+<!-- 		<beans:property name="seatTargetUrl" value="login/show.do"/> -->
+	</beans:bean>
+	<beans:bean id="authenticationFaileHandler" class="com.fusioninfo.common.biz.security.support.CustomAuthenticationFailureHandler" >
+		<beans:property name="targetUrl" value="/login.do"/>
+	</beans:bean>
+	<!-- 国际化支持 -->  
+    <!-- Bean id 必须是"messageSource"，因为Spring 在装配系统Bean 时会根据这个名字进行查找-->  
+    <!-- <beans:bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+		<beans:property name="basenames">
+			<beans:list>
+				<beans:value>messages</beans:value>
+				<beans:value>org/springframework/security/messages</beans:value>
+			</beans:list>
+		</beans:property>
+	</beans:bean> -->
+</beans:beans>

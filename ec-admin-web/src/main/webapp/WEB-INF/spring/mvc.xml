@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:dwr="http://www.directwebremoting.org/schema/spring-dwr"
+	xmlns:jaxws="http://cxf.apache.org/jaxws"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/mvc
+    http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
+    http://www.springframework.org/schema/tx  
+    http://www.springframework.org/schema/tx/spring-tx-4.0.xsd 
+    http://www.springframework.org/schema/aop 
+    http://www.springframework.org/schema/aop/spring-aop-4.0.xsd 
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd
+    http://cxf.apache.org/jaxws 
+ 	http://cxf.apache.org/schemas/jaxws.xsd">
+
+ 	<!-- 使用注解方式定义事务 -->
+	<import resource="aop-mvc.xml"/>
+
+	<context:component-scan base-package="com.fusioninfo.common.web.control.**">
+	  <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller" />
+	  <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Service" />
+	  <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Repository" />
+	</context:component-scan>
+	<!-- 对模型视图名称的解析，即在模型视图名称添加前后缀 -->
+	<bean id="viewResolver"	class="com.fusioninfo.common.web.view.TilesAndJstlViewResolver" p:prefix="/WEB-INF/pages/">
+		<property name="viewClass" value="com.fusioninfo.common.web.view.TilesAndJstlView" />
+	</bean>
+
+	<bean id="tilesConfigurer"
+		class="org.springframework.web.servlet.view.tiles.TilesConfigurer">
+		<property name="factoryClass">
+			<value>org.apache.struts.tiles.xmlDefinition.I18nFactorySet</value>
+		</property>
+		<property name="definitions">
+			<ref bean="tilesDefinitions" />
+		</property>
+	</bean>
+	<bean id="tilesDefinitions" class="java.util.ArrayList">
+		<constructor-arg>
+			<list>
+				<value>/WEB-INF/tiles/general.xml</value>
+			</list>
+		</constructor-arg>
+	</bean>
+	<bean id="localeResolver" class="org.springframework.web.servlet.i18n.CookieLocaleResolver">
+		<property name="cookieName" value="clientlanguage"/>
+		<property name="cookieMaxAge">
+			<value>2592000</value>
+		</property>
+	</bean>
+
+	<!-- 异常处理机制 -->
+	<bean id="exceptionResolver"
+		class="com.fusioninfo.common.web.resolver.MultiExceptionResolver">
+		<property name="defaultErrorView">
+			<value>/errors/exception.jsp</value>
+		</property>
+		<property name="xmlHttpHeaderTag">
+			<value>X-Requested-With</value>
+		</property>
+		<property name="exceptionMappings">
+			<props>
+				<prop key="com.fusioninfo.exception.BizException">/errors/biz_exception.jsp</prop>
+				<prop key="com.fusioninfo.exception.NoUserException">/errors/no_user_exception.jsp</prop>
+				<prop key="org.hibernate.StaleObjectStateException">/errors/optimistic_locking_exception.jsp</prop>
+				<prop key="org.springframework.orm.hibernate4.HibernateOptimisticLockingFailureException">/errors/optimistic_locking_exception.jsp</prop>
+			</props>
+		</property>
+	</bean>
+	<!-- 支持spring mvc新的注解类型 详细spring3.0手册 15.12.1 mvc:annotation-driven -->
+	<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" >  
+        <property name="messageConverters">  
+             <list>  
+                 <bean class ="org.springframework.http.converter.StringHttpMessageConverter">  
+                    <property name ="supportedMediaTypes">  
+                         <list>  
+                             <value>text/plain;charset=UTF-8</value>  
+                         </list>  
+                    </property>  
+                 </bean>  
+             </list>  
+        </property>  
+    </bean>  
+	<mvc:annotation-driven />
+	<mvc:interceptors>
+		<bean class="com.fusioninfo.common.web.interceptor.I18nInterceptor" />
+		<bean class="org.springframework.orm.hibernate4.support.OpenSessionInViewInterceptor">
+			<property name="sessionFactory" ref="sessionFactory" />
+		</bean>
+		<!-- <bean class="com.chinasshp.sgmw.crm.web.interceptor.PermissionInterceptor">
+			<property name="excludes" value="menu-menu,role-role,announcement-announcement,user-user"/>
+		</bean> -->
+		<!-- <bean class="com.dynatecs.common.web.DBPermissionInterceptor">
+			<property name="permissionHandler">
+				<ref bean="permissionHandler" />
+			</property>
+		</bean> -->
+	</mvc:interceptors>
+</beans>

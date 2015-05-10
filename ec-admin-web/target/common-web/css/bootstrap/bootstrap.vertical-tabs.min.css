@@ -1,0 +1,74 @@
+/**
+ *  Bootstrap Vertical Tabs Component v1.0.0, © 2013, Ismail Demirbilek
+ *  http://github.com/dbtek/bootstrap-vertical-tabs
+ */
+.tabs-left,.tabs-right {
+	border-bottom: 0;
+	padding-top: 2px
+}
+
+.tabs-left {
+	border-right: 1px solid #ddd;
+}
+
+.tabs-right {
+	border-left: 1px solid #ddd;
+	
+}
+
+.tabs-left>li,.tabs-right>li {
+	float: none;
+	margin-bottom: 2px;
+	padding:10px 15px;
+	display: block;
+}
+
+.tabs-left>li {
+	
+	display: block;
+}
+
+.tabs-right>li {
+	margin-left: -4px;
+	border-radius: 0 4px 4px 0;
+	
+}
+
+.tabs-left>li.active,.tabs-left>li.active:focus,.tabs-left>li.active:hover
+	{
+	margin-right: -1px;
+	border-radius: 4px 0 0 4px;
+	border-top: 1px solid #ddd;
+	border-left: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	border-right: 1px solid #fff;
+}
+
+.tabs-right>li.active,.tabs-right>li.active:focus,.tabs-right>li.active:hover
+	{
+	margin-right: -1px;
+	border-radius: 0 4px 4px 0;
+	border-top: 1px solid #ddd;
+	border-left: 1px solid #fff;
+	border-bottom: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+}
+
+.tabs-left>li>a {
+	border:0 !important;
+	display: inline;
+}
+
+.tabs-right>li>a {
+	border:0 !important;
+	display: inline;
+}
+.tabs-left>li>a.active,.tabs-left>li>a.active:focus,.tabs-left>li>a.active:hover
+	{
+	border:0 !important;
+}
+.tabs-right>li>a.active,.tabs-right>li>a.active:focus,.tabs-right>li>a.active:hover
+	{
+	border:0 !important;
+}

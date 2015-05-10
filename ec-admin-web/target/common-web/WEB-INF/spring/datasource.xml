@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans default-autowire="byName"
+	xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="  
+         http://www.springframework.org/schema/beans   
+         http://www.springframework.org/schema/beans/spring-beans-4.0.xsd  
+         http://www.springframework.org/schema/context   
+         http://www.springframework.org/schema/context/spring-context-4.0.xsd  
+         http://www.springframework.org/schema/tx  
+         http://www.springframework.org/schema/tx/spring-tx-4.0.xsd  
+         http://www.springframework.org/schema/aop  
+         http://www.springframework.org/schema/aop/spring-aop-4.0.xsd">
+
+    <import resource="ftpd.xml"/>
+	<!-- 定义数据源 -->
+	<bean id="dataSource" class="org.logicalcobwebs.proxool.ProxoolDataSource" depends-on="propertyConfigurer">
+		<property name="driver">
+			<value>${jdbc.driverClassName}</value>
+		</property>
+		<property name="driverUrl">
+			<value>${jdbc.url}</value>     
+		</property>
+		<property name="user"> 
+			<value>${jdbc.username}</value>
+		</property>
+		<property name="password">    
+			<value>${jdbc.password}</value>
+		</property>
+	    <property name="maximumConnectionCount"> 
+	    	<value>60</value>
+	    </property>
+	    <property name="minimumConnectionCount"> 
+			<value>10</value>
+	    </property>
+	    <property name="simultaneousBuildThrottle"> 
+			<value>10000</value>
+	    </property>
+	    <property name="prototypeCount">
+	    	<value>5</value>
+	    </property>
+		<property name="testBeforeUse">
+		  <value>true</value> 
+		</property>
+		<property name="houseKeepingTestSql"> 
+		  <value>select getDate()</value> 
+		</property>       
+		<property name="maximumActiveTime">
+		  <value>7200000</value>
+		</property>
+	</bean>
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean" depends-on="propertyConfigurer">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+		<property name="mappingResources">
+			<list>
+				<value>com/fusioninfo/common/biz/user/User.hbm.xml</value>
+				<value>com/fusioninfo/common/biz/user/LoginAcount.hbm.xml</value>
+				<value>com/fusioninfo/common/biz/user/Dealer.hbm.xml</value>
+				<value>com/fusioninfo/common/biz/user/FtpUser.hbm.xml</value>
+				<value>com/fusioninfo/common/biz/veh/VehicleBrand.hbm.xml</value>
+				<value>com/fusioninfo/common/biz/role/Role.hbm.xml</value>
+				<value>com/fusioninfo/common/biz/resource/Resource.hbm.xml</value>
+				<value>com/fusioninfo/common/biz/log/OperateLog.hbm.xml</value>
+				<value>com/fusioninfo/common/biz/log/ServiceAccessLog.hbm.xml</value>
+				<value>com/fusioninfo/common/biz/config/SystemConfig.hbm.xml</value>
+				<value>com/fusioninfo/common/biz/ftpfile/File.hbm.xml</value>
+				<value>com/fusioninfo/common/biz/dealerarea/DealerArea.hbm.xml</value>
+				<value>com/fusioninfo/common/biz/dealerarea/rel/DealerAreaRel.hbm.xml</value>
+				<value>com/fusioninfo/common/biz/dictionary/Dictionary.hbm.xml</value>
+				<value>com/fusioninfo/common/biz/area/Area.hbm.xml</value>
+				
+				<value>com/fusioninfo/common/biz/announcement/Announcement.hbm.xml</value>
+				<value>com/fusioninfo/common/biz/announcement/AnnouncementAuthConf.hbm.xml</value>
+				<value>com/fusioninfo/common/biz/announcement/AnnouncementFeedback.hbm.xml</value>
+				<value>com/fusioninfo/common/biz/attachment/Attachment.hbm.xml</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<!-- Oracle -->
+				<!-- <prop key="hibernate.dialect">org.hibernate.dialect.OracleDialect</prop> -->
+				<!-- Sql Server -->
+				<prop key="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</prop>
+				<prop key="hibernate.cglib.use_reflection_optimizer">true</prop>
+				<prop key="hibernate.show_sql">${hibernate.show_sql}</prop>				
+				<prop key="hibernate.query.substitutions">true 1, false 0</prop>
+				<!-- 开启二级缓存  -->
+				<prop key="hibernate.cache.use_second_level_cache">true</prop>
+				<!-- 设置缓存类  -->
+				<prop key="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</prop>
+				<!-- 否使用结构化的方式缓存对象 -->
+				<prop key="hibernate.cache.use_structured_entries">true</prop>
+				<!-- 是否缓存查询结果 -->
+				<prop key="hibernate.cache.use_query_cache">true</prop>
+			</props>
+		</property>
+	</bean>
+
+     <bean name="openSessionInViewInterceptor" class="org.springframework.orm.hibernate4.support.OpenSessionInViewInterceptor">
+       <property name="sessionFactory"><ref bean="sessionFactory"/></property>
+  	</bean>
+	<bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+    
+	<bean id="propertyConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location">
+			<value>WEB-INF/config.properties</value>
+		</property>
+	</bean>
+
+	<bean id="dao" class="com.fusioninfo.dao.hibernate.HibernateDaoImpl">
+		<!-- <property name="cache" value="true"/> -->
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<bean id="ftpFileDao" class="com.fusioninfo.common.biz.ftpfile.FileDaoSupport">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="daoFactory" class="com.fusioninfo.dao.DaoFactory" lazy-init="false">
+		<property name="maintainDao" ref="dao" />
+		<property name="queryDao" ref="dao" />
+	</bean>
+</beans>

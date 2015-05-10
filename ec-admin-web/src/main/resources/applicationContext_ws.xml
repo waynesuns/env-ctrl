@@ -1,0 +1,51 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:jaxws="http://cxf.apache.org/jaxws"
+	xsi:schemaLocation="
+    http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd">
+
+	<bean id="propertyConf"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location">
+			<value>classpath:../config.properties</value>
+		</property>
+	</bean>
+	
+	<bean id="wss4jOutConfiguration" class="org.apache.cxf.ws.security.wss4j.WSS4JOutInterceptor">
+		<constructor-arg>
+			<map>
+				<entry key="action" value="Timestamp UsernameToken Encrypt Signature" />
+				<entry key="passwordType" value="PasswordDigest"/>
+				<entry key="user" value="fcs" />
+				<entry key="encryptionUser" value="mdmserver" />
+				<entry key="signaturePropFile" value="outsecurity_sign.properties" />
+				<entry key="signatureKeyIdentifier" value="IssuerSerial" />
+				<entry key="encryptionPropFile" value="outsecurity_enc.properties" />
+				<entry key="passwordCallbackRef">
+				    <ref bean="passwordCallback"/>
+				</entry>
+			</map>
+		</constructor-arg>
+	</bean>
+	
+
+	<bean id="wss4jInConfiguration" class="org.apache.cxf.ws.security.wss4j.WSS4JInInterceptor">
+		<constructor-arg>
+			<map>
+				<entry key="action" value="Timestamp Encrypt Signature" />
+				<entry key="user" value="mdmclient" />
+				<entry key="decryptionPropFile" value="insecurity_enc.properties" />
+				<entry key="enableSignatureConfirmation" value="true" />
+				<entry key="signaturePropFile" value="outsecurity_sign.properties" />
+				<entry key="signatureKeyIdentifier" value="IssuerSerial" />
+				<entry key="passwordCallbackRef">
+				    <ref bean="passwordCallback"/>
+				</entry>
+			</map>
+		</constructor-arg>
+	</bean>
+	
+	<bean id="passwordCallback" class="com.chinasshp.poms.biz.handler.PasswordHandler"/>
+
+</beans>

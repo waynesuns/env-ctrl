@@ -1,0 +1,266 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+.iconBox {width:16px;height:16px; background: url(../images/sprites.png) no-repeat top left ;float:left;}  
+*html .iconBox{width:16px;height:16px;background-color:transparent ; float:left;background-image:none ; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="images/sprites.png",sizingMethod="crop");}
+
+
+.socko_icon_address{background-position: 0 0;}
+.socko_icon_administrative{background-position: -32px 0;}
+.socko_icon_advertising{background-position: -64px 0;}
+.socko_icon_archives {background-position: -96px 0;}
+.socko_icon_attibutes{background-position: -128px 0;}
+
+.socko_icon_bank{background-position: -160px 0;}
+.socko_icon_basket{background-position:-192px 0;}
+.socko_icon_bestseller{background-position: -224px 0;}
+.socko_icon_billing{background-position: -256px 0;}
+.socko_icon_bookmark{background-position: -288px 0; }
+.socko_icon_brainstorming{background-position: -320px 0;}
+.socko_icon_business{background-position: -352px 0;}
+.socko_icon_busy{background-position: -384px 0;}
+
+.socko_icon_event{background-position:-416px 0;}
+.socko_icon_category{background-position: -448px 0;}
+.socko_icon_check{background-position: -480px 0;}
+.socko_icon_collaboration{background-position: -512px 0;}
+.socko_icon_comment{background-position: -544px 0;}
+.socko_icon_communication{background-position: -576px 0;}
+.socko_icon_config{background-position:-608px 0;}
+.socko_icon_consulting{background-position: -640px 0;}
+.socko_icon_contact{background-position: -672px 0;}
+.socko_icon_cost{background-position: -704px 0;}
+.socko_icon_credit_card{background-position: -736px 0;}
+.socko_icon_credit{background-position: -768px 0;}
+
+
+
+.socko_icon_current{background-position: 0 -32px;}
+.socko_icon_customers{background-position: -32px -32px;}
+.socko_icon_cv{background-position: -64px -32px;}
+
+.socko_icon_database{background-position: -96px -32px;}
+.socko_icon_date{background-position: -128px -32px;}
+.socko_icon_delicious{background-position: -160px -32px;}
+.socko_icon_document{background-position:-192px -32px;}
+.socko_icon_donate{background-position: -224px -32px;}
+.socko_icon_drawings{background-position: -256px -32px;}
+
+.socko_icon_edit{background-position: -288px -32px;}
+.socko_icon_email{background-position: -320px -32px;}
+
+.socko_icon_featured{background-position: -352px -32px;}
+.socko_icon_feed{background-position: -384px -32px;}
+.socko_icon_finished{background-position:-416px -32px;}
+.socko_icon_flag{background-position: -448px -32px;}
+.socko_icon_folder{background-position: -480px -32px;}
+.socko_icon_free{background-position: -512px -32px;}
+.socko_icon_freelance{background-position: -544px -32px;}
+.socko_icon_fulltime{background-position: -576px -32px;}
+.socko_icon_future{background-position:-608px -32px;}
+
+.socko_icon_graphicdesign{background-position: -640px -32px;}
+
+.socko_icon_heart{background-position: -672px -32px;}
+.socko_icon_hire{background-position: -704px -32px;}
+.socko_icon_home{background-position: -736px -32px;}
+
+
+.socko_icon_illustration{background-position: -768px -32px;}
+.socko_icon_invoice{background-position: 0 -64px;}
+.socko_icon_ipad{background-position: -32px -64px;}
+.socko_icon_issue{background-position: -64px -64px;}
+
+
+.socko_icon_library{background-position: -96px -64px;}
+.socko_icon_notification{background-position: -128px -64px;}
+.socko_icon_limited{background-position: -160px -64px;}
+.socko_icon_link{background-position:-192px -64px;}
+.socko_icon_lock{background-position: -224px -64px;}
+.socko_icon_login{background-position: -256px -64px;}
+.socko_icon_logout{background-position: -288px -64px;}
+
+.socko_icon_mentions{background-position: -320px -64px;}
+.socko_icon_message{background-position: -352px -64px;}
+.socko_icon_milestone{background-position: -384px -64px;}
+.socko_icon_myaccount{background-position:-416px -64px;}
+
+.socko_icon_networking{background-position: -448px -64px;}
+
+.socko_icon_oldversions{background-position: -480px -64px;}
+.socko_icon_older{background-position: -512px -64px;}
+.socko_icon_older192{background-position: -544px -64px;}
+.socko_icon_orgchart{background-position: -576px -64px;}
+
+
+.socko_icon_paymentcard{background-position:-608px -64px;}
+.socko_icon_paypal{background-position: -640px -64px;}
+.socko_icon_pen{background-position: -672px -64px;}
+.socko_icon_pencil{background-position: -704px -64px;}
+.socko_icon_phone{background-position: -736px -64px;}
+.socko_icon_photography{background-position: -768px -64px;}
+.socko_icon_plus{background-position: 0 -96px;}
+.socko_icon_poll{background-position: -32px -96px;}
+.socko_icon_premium{background-position: -64px -96px;}
+.socko_icon_print{background-position: -96px -96px;}
+.socko_icon_process{background-position: -128px -96px;}
+.socko_icon_product193{background-position: -160px -96px;}
+.socko_icon_productdesign{background-position:-192px -96px;}
+
+.socko_icon_task{background-position: -224px -96px;}
+.socko_icon_project{background-position: -256px -96px;}
+.socko_icon_publish{background-position: -288px -96px;}
+
+.socko_icon_question{background-position: -320px -96px;}
+
+.socko_icon_refresh{background-position: -352px -96px;}
+
+.socko_icon_search{background-position: -384px -96px;}
+.socko_icon_settings{background-position:-416px -96px;}
+.socko_icon_shipping{background-position: -448px -96px;}
+.socko_icon_showreel{background-position: -480px -96px;}
+.socko_icon_signin{background-position: -512px -96px;}
+.socko_icon_signout{background-position: -544px -96px;}
+.socko_icon_signup{background-position: -576px -96px;}
+.socko_icon_sitemap{background-position:-608px -96px;}
+.socko_icon_specialoffer{background-position: -640px -96px;}
+.socko_icon_star{background-position: -672px -96px;}
+.socko_icon_statistics{background-position: -704px -96px;}
+.socko_icon_suppliers{background-position: -736px -96px;}
+
+.socko_icon_tag{background-position: -768px -96px;}
+
+.socko_icon_talk{background-position: 0 -128px;}
+.socko_icon_ticket{background-position:-32px -128px;}
+.socko_icon_twitter{background-position:-64px -128px;}
+
+.socko_icon_upcomingwork{background-position:-96px -128px;}
+.socko_icon_user{background-position:-128px -128px;}
+.socko_icon_wiki{background-position:-160px -128px;}
+.socko_icon_world{background-position:-192px -128px;}
+
+.socko_icon_zoom{background-position:-224px -128px;}
+
+
+.socko_icon_task_accepted{background-position: 0 -160px;}
+.socko_icon_task_assigned{background-position:-32px -160px;}
+.socko_icon_task_canceled{background-position:-64px -160px;}
+.socko_icon_task_closed{background-position:-96px -160px;}
+.socko_icon_task_created{background-position:-128px -160px;}
+.socko_icon_task_rejected{background-position:-160px -160px;}
+.socko_icon_task_reopened{background-position:-192px -160px;}
+.socko_icon_task_suspended{background-position:-224px -160px;}
+.socko_icon_task_updated{background-position:-256px -160px;}
+.socko_icon_attachment{background-position: -288px -160px;}
+
+.socko_icon_time{background-position: -320px -160px;}
+.socko_icon_person{background-position: -352px -160px;}
+.socko_icon_person1{background-position: -368px -160px; }
+.socko_icon_doc{background-position: -384px -160px;}
+.socko_icon_like{background-position:-416px -160px;}
+.socko_icon_dropdown{background-position: -448px -160px;}
+.socko_icon_info{background-position: -480px -160px;}
+.socko_icon_reject{background-position: -512px -160px;}
+.socko_icon_maybe{background-position: -544px -160px;}
+.socko_icon_eedit{background-position: -576px -160px;}
+.socko_icon_join{background-position: -608px -160px;}
+.socko_icon_creat{background-position: -640px -160px;}
+
+
+.ui-icon-triangle-2-n-s  { background-position: 0 -192px; }
+.ui-icon-check{ background-position: -32px -192px; }
+.ui-icon-closethick { background-position: -64px -192px; }
+.ui-icon-circle-close { background-position: -96px -192px; }
+.ui-icon-circle-triangle-e { background-position: -160px -192px; }
+.ui-icon-circle-triangle-w { background-position: -192px -192px; }/*left*/
+.ui-icon-circle-triangle-s { background-position: -224px -192px; }
+
+.socko_icon_close{ background-position: -128px -192px; width:30px;height:30px;}
+.socko_icon_notification22{background-position:-256px -128px;width:22px;height:22px;}
+
+.socko_icon_gray_back{background-position: 0 -224px;}
+.socko_icon_gray_bubble{background-position: -32px -224px;}
+.socko_icon_gray_cal{background-position: -64px -224px;}
+.socko_icon_gray_clock{background-position: -96px -224px;}
+.socko_icon_gray_dis{background-position: -128px -224px;}
+.socko_icon_gray_doc{background-position: -160px -224px;}
+.socko_icon_gray_download{background-position:-192px -224px;}
+.socko_icon_gray_light{background-position: -224px -224px;}
+.socko_icon_gray_ok{background-position: -256px -224px;}
+.socko_icon_gray_tag{background-position: -288px -224px;}
+.socko_icon_gray_trash{background-position: -320px -224px;}
+.socko_icon_gray_tree{background-position: -352px -222px;height:18px;}
+.socko_icon_gray_user{background-position:-384px -224px;}
+.socko_icon_gray_wizard{background-position: -416px -224px;}
+.socko_icon_gray_write{background-position: -448px -224px;}
+.socko_icon_gray_write3{background-position: -480px -224px;}
+.socko_icon_gray_list{background-position: -512px -224px;}
+.socko_icon_view{background-position: -544px -224px;}
+.socko_icon_switch{background-position: -576px -224px;}
+.socko_icon_task_comment{background-position:-608px -256px;}
+.socko_icon_task_attach{background-position:-640px -256px;}
+
+.socko_icon_task_accepted1{background-position: 0 -256px;}
+.socko_icon_task_assigned1{background-position:-32px -256px;}
+.socko_icon_task_canceled1{background-position:-64px -256px;}
+.socko_icon_task_closed1{background-position:-96px -256px;}
+.socko_icon_task_created1{background-position:-128px -256px;}
+.socko_icon_task_rejected1{background-position:-160px -256px;}
+.socko_icon_task_reopened1{background-position:-192px -256px;}
+.socko_icon_task_suspended1{background-position:-224px -256px;}
+.socko_icon_task_updated1{background-position:-256px -256px;}
+.socko_icon_task_sub1{background-position:-576px -256px;}
+.socko_icon_event_view{background-position:-288px -256px;}
+.socko_icon_event_edit{background-position:-320px -256px;}
+.socko_icon_event_join{background-position:-480px -256px;}
+.socko_icon_event_reject{background-position:-512px -256px;}
+.socko_icon_event_maybe{background-position:-544px -256px;}
+.socko_icon_poll_poll{background-position:-352px -256px;}
+.socko_icon_poll_view{background-position:-384px -256px;}
+.socko_icon_poll_add{background-position:-416px -256px;}
+.socko_icon_poll_close{background-position:-448px -256px;}
+.socko_icon_ip_delete{background-position:-672px -256px;}
+.socko_icon_ip_edit{background-position:-704px -256px;}
+.socko_icon_ip_view{background-position:-736px -256px;}
+.socko_icon_ip_dl{background-position:-768px -256px;}
+.socko_icon_ip_pre{width:18px;height:21px; background-position: -384px -188px;}
+.socko_icon_ip_next{width:18px;height:21px; background-position: -416px -188px;}
+.socko_icon_ip_pre_dis{width:18px;height:21px; background-position: -448px -188px;}
+.socko_icon_ip_next_dis{width:18px;height:21px; background-position: -480px -188px;}
+.socko_icon_ip_pdfdl{width:21px;height:21px; background-position: -512px -187px;}
+.socko_icon_ip_left{width:18px;height:19px;background-position: -544px -189px;}
+.socko_icon_ip_right{width:18px;height:19px;background-position: -576px -189px;}
+
+
+
+.socko_icon_task_accepted1_r{background-position: 0 -288px;}
+.socko_icon_task_assigned1_r{background-position:-32px -288px;}
+.socko_icon_task_canceled1_r{background-position:-64px -288px;}
+.socko_icon_task_closed1_r{background-position:-96px -288px;}
+.socko_icon_task_created1_r{background-position:-128px -288px;}
+.socko_icon_task_rejected1_r{background-position:-160px -288px;}
+.socko_icon_task_reopened1_r{background-position:-192px -288px;}
+.socko_icon_task_suspended1_r{background-position:-224px -288px;}
+.socko_icon_task_updated1_r{background-position:-256px -288px;}
+.socko_icon_task_sub1_r{background-position:-576px -288px;}
+.socko_icon_event_view_r{background-position:-288px -288px;}
+.socko_icon_event_edit_r{background-position:-320px -288px;}
+.socko_icon_event_join_r{background-position:-480px -288px;}
+.socko_icon_event_reject_r{background-position:-512px -288px;}
+.socko_icon_event_maybe_r{background-position:-544px -288px;}
+.socko_icon_poll_poll_r{background-position:-352px -288px;}
+.socko_icon_poll_view_r{background-position:-384px -288px;}
+.socko_icon_poll_add_r{background-position:-416px -288px;}
+.socko_icon_poll_close_r{background-position:-448px -288px;}
+
+
+.socko_icon_ques_first{background-position: 0 -320px;}
+.socko_icon_ques_next{background-position:-32px -318px;}
+.socko_icon_ques_last{background-position:-64px -320px;}
+.socko_icon_ques_pre{background-position:-96px -318px;}
+.socko_icon_ques_edit{background-position:-128px -320px;}
+.socko_icon_ques_copy{background-position:-160px -320px;}
+
+
+

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<taglib>
+
+	<tlib-version>1.2</tlib-version>
+	<jsp-version>1.2</jsp-version>
+	<short-name>MyTaglib</short-name>
+  
+    <!-- 满意度调查左侧导航菜单自定义标签 -->
+    <tag>
+    	<name>surveyMenu</name>
+    	<tag-class>com.fusioninfo.common.web.tag.menu.MeunTag</tag-class>
+    </tag>
+    <!-- DataTable 国际化 -->
+    <tag>
+    	<name>dataTableLanguage</name>
+    	<tag-class>com.fusioninfo.common.web.tag.datatable.LanguageI18NTag</tag-class>
+    </tag>
+    <function>   
+        <name>escapeHtmlWithEnt</name><!-- 调用EL方法的名称 -->  
+        <function-class>com.fusioninfo.common.web.tag.TagFunction</function-class>  
+        <function-signature>  
+            java.lang.String escapeHtmlWithEnt(java.lang.String)  
+        </function-signature>  
+    </function>
+     <function>   
+        <name>subFileName</name><!-- 调用EL方法的名称 -->  
+        <function-class>com.fusioninfo.common.web.tag.TagFunction</function-class>  
+        <function-signature>  
+            java.lang.String subFileName(java.lang.String, java.lang.Integer)  
+        </function-signature>  
+    </function>
+    <function>   
+        <name>sizeChangeKbOrMb</name><!-- 调用EL方法的名称 -->  
+        <function-class>com.fusioninfo.common.web.tag.TagFunction</function-class>  
+        <function-signature>  
+            java.lang.String sizeChangeKbOrMb(java.lang.Integer, java.lang.String)  
+        </function-signature>  
+    </function>
+    <function>
+    	<name>expendOrShrink</name>
+    	<function-class>com.fusioninfo.common.web.tag.TagFunction</function-class>
+    	<function-signature>
+    		java.lang.String expandAndShrink(java.lang.String, java.lang.Integer)
+    	</function-signature>
+    </function>
+    <function>
+    	<name>substringAndEscapeHtml</name>
+    	<function-class>com.fusioninfo.common.web.tag.TagFunction</function-class>
+    	<function-signature>
+    		java.lang.String substringAndEscapeHtml(java.lang.String, java.lang.Integer)
+    	</function-signature>
+    </function>
+    <function>   
+        <name>numberFormat</name><!-- 调用EL方法的名称 -->  
+        <function-class>com.fusioninfo.common.web.tag.TagFunction</function-class>  
+        <function-signature>  
+            java.lang.String numberFormat(java.lang.String)  
+        </function-signature>  
+    </function>
+    
+    <function>
+    	<name>buttonPermission</name>
+    	<function-class>com.fusioninfo.common.web.tag.TagFunction</function-class>
+    	<function-signature>java.lang.Boolean buttonPermission(java.lang.String)</function-signature>
+    </function>
+</taglib>

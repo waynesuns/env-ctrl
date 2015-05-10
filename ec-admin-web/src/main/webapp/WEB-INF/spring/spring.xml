@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:dwr="http://www.directwebremoting.org/schema/spring-dwr"
+	xmlns:jaxws="http://cxf.apache.org/jaxws"
+ 	xmlns:http-conf = "http://cxf.apache.org/transports/http/configuration"  
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/aop 
+    http://www.springframework.org/schema/aop/spring-aop-4.0.xsd 
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd
+    http://cxf.apache.org/jaxws 
+ 	http://cxf.apache.org/schemas/jaxws.xsd
+    http://cxf.apache.org/transports/http/configuration    
+    http://cxf.apache.org/schemas/configuration/http-conf.xsd">
+
+	<import resource="aop.xml"/>
+	<import resource="classpath:META-INF/cxf/cxf.xml" />
+    <import resource="classpath:META-INF/cxf/cxf-extension-soap.xml" />
+    <import resource="classpath:META-INF/cxf/cxf-servlet.xml" />
+	<http-conf:conduit name="*.http-conduit">  
+        <http-conf:client ConnectionTimeout="45000"  ReceiveTimeout="600000"/>  
+    </http-conf:conduit>  
+<!--     <import resource="ws.xml"/> -->
+	<context:annotation-config />
+
+	<context:component-scan base-package="com.fusioninfo.common.web.control.**">  
+	  <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller" />  
+	</context:component-scan>
+<!-- 	<context:component-scan base-package="com.chinasshp.poms.biz.job.**" /> -->
+	<!-- 定义i18n配置文件 -->
+	<bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+		<property name="basename">
+			<value>/WEB-INF/messages/message</value>
+		</property>
+		<!-- 设置缓存的时间，生产环境下应当设置成 -1 -->
+		<property name="cacheSeconds">
+			<value>${messages.cacheSeconds}</value>
+		</property>
+	</bean>
+	<bean id="springContextUtil" class="com.fusioninfo.utils.SpringContextUtil">
+
+	</bean>
+	<!-- ====================================================-->
+	<!-- ================= 初始化并放入缓存 =================-->
+	<!-- ====================================================-->
+	
+	<bean id="cacheManager" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">
+		<property name="configLocation" value="classpath:ehcache.xml"/>
+	</bean>
+
+	<bean id="ehCacheFactory" class="org.springframework.cache.ehcache.EhCacheFactoryBean">
+		<property name="cacheManager">
+			<ref bean="cacheManager"/>
+		</property>
+		<property name="cacheName">
+			<value>objectCache</value>
+		</property>
+	</bean>
+	
+	<bean id="ehCache" class="com.fusioninfo.cache.EHCache">
+		<property name="cache" ref="ehCacheFactory"/>
+	</bean>
+	
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+    </bean>
+	
+	<!-- <bean id="mapCache" class="com.chinasshp.sgmw.cache.MapCache"/> -->
+	<!-- <bean id="osCache" class="com.chinasshp.sgmw.cache.OSCache"/> -->
+	<bean id="cacheSupport" class="com.fusioninfo.cache.CacheFactorySupport">
+		<!-- <property name="cache" ref="mapCache"/> -->
+		<!-- <property name="cache" ref="osCache"/> -->
+		<property name="cache" ref="ehCache"/>
+	</bean>
+	<bean id="appInit" class="com.fusioninfo.common.util.init.AppInit">
+		<property name="securityManager" ref="userDetailsService"/>
+	</bean>
+	<bean id="data" class="com.fusioninfo.common.util.init.data.impl.DataImpl">
+		<!-- <property name="sessionFactory" ref="sessionFactory"/> -->
+	</bean>
+	<bean id="dataInit" class="com.fusioninfo.common.util.init.data.DataInit">
+		<property name="data" ref="data"/>
+	</bean>
+	<!-- 设定默认的国际化为中文 -->
+	<!-- <bean id="localeResolver" class="org.springframework.web.servlet.i18n.CookieLocaleResolver">
+		<property name="defaultLocale" value="zh_CN" />
+	</bean> -->
+	 
+    <!-- <bean id="localeResolver" class="org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver"/>  --> 
+	
+	
+	
+	<import resource="security.xml" />
+	
+	<bean id="announcementFeedbackService" class="com.fusioninfo.common.biz.announcement.AnnouncementFeedbackService"></bean>
+	<!-- 
+	<import resource="classpath:applicationContext_ws.xml"/> -->
+
+	<!-- ====================================================-->
+	<!-- =====================定时任务 =====================-->
+	<!-- ====================================================-->
+	
+    <!-- 批量处理接口访问日志-->
+    
+</beans>

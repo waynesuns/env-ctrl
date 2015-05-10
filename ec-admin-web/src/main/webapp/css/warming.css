@@ -1,0 +1,53 @@
+@charset "UTF-8";
+.layout{position:relative;display:inline;right:0;width:300px;height:25px;float:right;}
+.layoutBtn{color:#666;width:90px;height:25px;text-align:center;background-image:url(../images/btn1.png);background-repeat:no-repeat;padding:0 0 0 0;margin-right: 10px;float:right; border:none}
+.layoutTex{width:180px;height:20px;float:right;margin-right:8px;}
+.user_info{margin-bottom:2px;font-family:'微软雅黑';}
+
+.ht{height:19px;}
+.dl_info{font-size:14px;color:#828282;padding:0}
+.dl_info dt{display:inline-block;width:108px;}
+.dl_info dd{display:inline-block;width:108px;margin-left:15px;}	
+.car_info{width:100%;height:100%;}
+
+.service1{font-size:14px;margin-right:5px;padding:6px 0; text-align:left;margin-top:14px}
+.service1 span{height:30px; line-height:28px}
+.red_w{float:left;width:750px;border-bottom:3px solid #ae0202;color:#ae0202;text-align:left;font-size:14px; font-weight:900;padding:4px 0 2px 0;}
+.title_g{height:28px;line-height:30px;font-weight:900}
+.green_w{float:left;width:750px;border-bottom:3px solid green;color:green;text-align:left;font-size:14px; font-weight:900;padding:4px 0 2px 0;}
+.yellow_w{float:left;width:750px;border-bottom:3px solid #ebee00;color:#d2d501;text-align:left;font-size:14px; font-weight:900;padding:4px 0 2px 0;}
+.service1 span img ,.red_w img , .green_w img, .yellow_w img , .title_g img{vertical-align:middle}
+.blue{float:left;width:750px;background-color:#0293e6;color:#fff; text-align:center}
+.content{width:100%;float:left;}
+.service_content{padding-top:5px;margin-top:10px;margin-bottom:15px;width:100%;}
+.element_content{margin-top:8px;width:750px;}
+.element_content1{margin-top:8px;width:750px;margin-left:20px;}
+.warming{padding-bottom:5px;}
+
+.service2{display:inline-block;font-size:14px;margin-left:5px;padding-top:2px;text-align:center;width:710px;}
+.service3{font-size:12px;left:0;}
+.chose{margin-top:0px;width:40%;float:left;margin:10px 10px 10px 20px;}
+.chose dl{position:relative;display:inline-block;width:50%;float:left;margin-top:10px;margin-bottom:0;}
+.chose dl dt{float:left;width:18%;}
+.chose dl input{margin:3px 0 0 0;}
+.chose dl dd{float:left;margin-top:0px;margin-left:2px;width:75%}
+.chose dl dd label{display:inline-block;}
+.clear{clear:both;}
+.dlfoot{margin-bottom:0;margin-top:15px;font-family:'微软雅黑';}
+.dlfoot dt{width:45%;}
+.dlfoot dd{margin-top:0px;margin-left:2px;height:0px;width:40%;	}
+.message{float:left;width:750px;font-size:24px;font-weight:bold;padding:15px 0 ;}
+.chose1{margin-top:0px;width:100%;height:80%;float:left;margin-bottom:10px;}
+.chose1 dl{position:relative;display:inline-block;float:left;margin-top:10px;margin-bottom:0;}
+.chose1 dl dt{float:left;}
+.chose1 dl input{margin:3px 0 0 0;}
+.chose1 dl dd{float:left;margin-top:0px;margin-left:5px;margin-right:25px;}
+.chose1 dl dd label{display:inline-block;}
+
+
+.chose2{float:left;margin-bottom:4px;margin-top:6px;margin-left:20px}
+.chose2 dl{	position:relative;display:inline-block;	width:33%;	float:left;margin-top:10px;margin-bottom:0;}
+.chose2 dl dt{float:left;width:16px;}
+.chose2 dl input{margin:3px 0 0 0;}
+.chose2 dl dd{	float:left;	margin-top:0px;margin-left:2px;width:75%;	}
+.chose2 dl dd label{display:inline-block;}
