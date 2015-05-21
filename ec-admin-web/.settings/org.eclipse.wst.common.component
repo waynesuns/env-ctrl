@@ -4,7 +4,13 @@
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <dependent-module archiveName="ec-admin-biz-1.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/ec-admin-biz/ec-admin-biz">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="utils-1.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/utils/utils">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="java-output-path" value="/common-web/target/classes"/>
-        <property name="context-root" value="common-web"/>
+        <property name="context-root" value="ec-admin-biz"/>
     </wb-module>
 </project-modules>
