@@ -7,7 +7,7 @@ body{margin:0 auto; }
 .login_logo{width:990px; margin:0 auto;}
 .login_logo span{line-height:85px;color:#666;font-size:28px; font-weight:600;}
 
-.login_con_w{width:990px;margin:0 auto;background-image: url(../images/login_bg.jpg);height:400px}
+.login_con_w{width:990px;margin:0 auto;height:400px}
 .login_con{margin:0 0 0 20px;width:280px;float:left;}
   .login_c{margin:0 auto;width:810px;height:380px;padding-top:120px;_padding-top:120px}
 .login_c div{margin:0 auto;width:200px;float:left;text-align:center; margin-bottom:40px; margin-right:0px}

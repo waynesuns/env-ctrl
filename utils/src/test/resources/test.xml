@@ -45,7 +45,7 @@
 		<property name="sessionFactory"><ref local="sessionFactory"/></property>
 	</bean>
 
-	<bean id="dao" class="com.fusioninfo.dao.hibernate.HibernateDaoImpl">
+	<bean id="dao" class="com.waynesun.dao.hibernate.HibernateDaoImpl">
 		<property name="hibernateTemplate"><ref local="hibernateTemplate"/></property>
 	</bean>
 </beans>

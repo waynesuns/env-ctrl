@@ -314,7 +314,7 @@ public class TechnologyController extends AbstractController {
 		
 					.addAnnon("注：</br>E：EXCELLENT，非常好/F：FAIR，一般/G：GOOD，好/P：POOR，差</br>如果显示的是F或P设计指示，请在使用前先咨询本公司。").setDoDelim(true)
 					//.setCssClassName("col-xxs-12 col-md-6")
-			     ).addValue(DataImportUtil.doExcelImport(0, new File("/Users/weisun/git/ec/web-site/WebContent/excel/technology/MM3000-7000-9000.xlsx"), "MM-3000/7000/9000气相净化媒体的过滤性能:",null)
+			     ).addValue(DataImportUtil.doExcelImport(0, new File("/Users/weisun/git/env-ctrl/web-site/WebContent/excel/technology/MM3000-7000-9000.xlsx"), "MM-3000/7000/9000气相净化媒体的过滤性能:",null)
 							.addAnnon("注：</br>E：EXCELLENT，非常好/F：FAIR，一般/G：GOOD，好/P：POOR，差</br>如果显示的是F或P设计指示，请在使用前先咨询本公司。"))
 			     
 //			     .addValue(new TableGroupParam(null)

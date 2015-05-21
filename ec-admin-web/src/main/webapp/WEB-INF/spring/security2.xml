@@ -73,7 +73,7 @@
     	</beans:constructor-arg> 
     	<beans:property name="filterProcessesUrl" value="/logout" /> 
     </beans:bean> 
-	<beans:bean id="userDetailsService" class="com.fusioninfo.common.biz.security.support.SecurityManagerSupport">
+	<beans:bean id="userDetailsService" class="com.waynesun.common.biz.security.support.SecurityManagerSupport">
 		<beans:property name="sessionFactory">
 			<beans:ref bean="sessionFactory"/>
 		</beans:property>
@@ -91,7 +91,7 @@
 		<beans:property name="observeOncePerRequest" value="false" />
 	</beans:bean>
 	<!-- 自定义资源拦截器 -->
-	<beans:bean id="secureResourceFilterInvocationDefinitionSource" class="com.fusioninfo.common.biz.security.interceptor.SecureResourceFilterInvocationDefinitionSource">
+	<beans:bean id="secureResourceFilterInvocationDefinitionSource" class="com.waynesun.common.biz.security.interceptor.SecureResourceFilterInvocationDefinitionSource">
 	</beans:bean>
 	<!-- 访问决策器，决定某个用户具有的角色，是否有足够的权限去访问某个资源 -->
 	<beans:bean id="accessDecisionManager" class="org.springframework.security.access.vote.AffirmativeBased">
@@ -106,7 +106,7 @@
 	    </beans:property>
 	</beans:bean>
 	<!-- 登出成功后续处理 -->
-	<beans:bean id="logoutSuccessHandler" class="com.fusioninfo.common.biz.security.support.CustomLogoutSuccessHandler">
+	<beans:bean id="logoutSuccessHandler" class="com.waynesun.common.biz.security.support.CustomLogoutSuccessHandler">
 		<beans:property name="targetUrl" value="login.do?state=1"/>
 	</beans:bean>
 	<!-- 登陆成功后续处理 -->
@@ -114,10 +114,10 @@
 		<beans:property name="redirectStrategy" ref="redirectStrategy"></beans:property>
 	</beans:bean>
 	
-	<beans:bean id="redirectStrategy" class="com.fusioninfo.common.biz.security.MyRedirectStrategy">
+	<beans:bean id="redirectStrategy" class="com.waynesun.common.biz.security.MyRedirectStrategy">
 		<beans:property name="redirectUrl" value="login/show.do"></beans:property>
 	</beans:bean>
-	<beans:bean id="authenticationFaileHandler" class="com.fusioninfo.common.biz.security.support.CustomAuthenticationFailureHandler" >
+	<beans:bean id="authenticationFaileHandler" class="com.waynesun.common.biz.security.support.CustomAuthenticationFailureHandler" >
 		<beans:property name="targetUrl" value="/login.do"/>
 	</beans:bean>
 	<!-- 国际化支持 -->  

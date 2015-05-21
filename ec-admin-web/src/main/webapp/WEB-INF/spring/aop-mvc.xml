@@ -17,7 +17,7 @@
 	<aop:aspectj-autoproxy  />
 	<!-- 配置默认的事务属性 -->
 	<aop:config proxy-target-class="false" >
-		<aop:advisor pointcut="execution(* com.fusioninfo.common.web.control..*.*(..))" advice-ref="txAdvice" order="1" />
+		<aop:advisor pointcut="execution(* com.waynesun.common.web.control..*.*(..))" advice-ref="txAdvice" order="1" />
 	</aop:config>
 	<tx:advice id="txAdvice" transaction-manager="transactionManager">
 		<tx:attributes>

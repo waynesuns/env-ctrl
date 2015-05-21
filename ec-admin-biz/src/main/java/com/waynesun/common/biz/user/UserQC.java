@@ -71,7 +71,7 @@ public class UserQC extends BaseQueryCondition
 		this.name = name;
 	}
 
-	@Like(matchMode = Like.START)
+	@Eq
 	public String getAccount_userName()
 	{
 		return account_userName;

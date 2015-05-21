@@ -19,6 +19,8 @@
 		<intercept-url pattern="/favicon.ico" filters="none" />
 		<intercept-url pattern="/welcome.jsp" filters="none" />
 		<intercept-url pattern="/ws/*" filters="none" />
+		<intercept-url pattern="/service_order/order_submit.do" filters="none" />
+		<intercept-url pattern="/sale_order/order_submit.do" filters="none" />
 		<!-- 指定登陆页面-authentication-failure-url：登陆失败跳转的RRL；default-target-url：成功后跳转URL -->
 		<form-login login-page="/invalidSsession.do" default-target-url="/home.do" authentication-failure-handler-ref="authenticationFaileHandler" authentication-success-handler-ref="authenticationSuccessHandler" />
 		<!-- 登出后要显示的页面 -->
@@ -38,12 +40,12 @@
 			<password-encoder hash="md5"/>
 		</authentication-provider>
 	</authentication-manager>
-	<beans:bean id="userDetailsService" class="com.fusioninfo.common.biz.security.support.SecurityManagerSupport">
+	<beans:bean id="userDetailsService" class="com.waynesun.common.biz.security.support.SecurityManagerSupport">
 		<!-- <beans:property name="sessionFactory">
 			<beans:ref bean="sessionFactory"/>
 		</beans:property> -->
 	</beans:bean>
-	<beans:bean id="requestHeaderProcessingFilter" class="com.fusioninfo.common.biz.security.interceptor.RequestHeaderProcessingFilter"/>
+	<beans:bean id="requestHeaderProcessingFilter" class="com.waynesun.common.biz.security.interceptor.RequestHeaderProcessingFilter"/>
 	
 	<beans:bean id="resourceSecurityInterceptor" class="org.springframework.security.web.access.intercept.FilterSecurityInterceptor">
 		<!-- 认证管理器，实现用户认证的入口 -->
@@ -57,7 +59,7 @@
 		<beans:property name="observeOncePerRequest" value="false" />
 	</beans:bean>
 	<!-- 自定义资源拦截器 -->
-	<beans:bean id="secureResourceFilterInvocationDefinitionSource" class="com.fusioninfo.common.biz.security.interceptor.SecureResourceFilterInvocationDefinitionSource">
+	<beans:bean id="secureResourceFilterInvocationDefinitionSource" class="com.waynesun.common.biz.security.interceptor.SecureResourceFilterInvocationDefinitionSource">
 	</beans:bean>
 	<!-- 访问决策器，决定某个用户具有的角色，是否有足够的权限去访问某个资源 -->
 	<beans:bean id="accessDecisionManager" class="org.springframework.security.access.vote.AffirmativeBased">
@@ -72,17 +74,17 @@
 	    </beans:property>
 	</beans:bean>
 	<!-- 登出成功后续处理 -->
-	<beans:bean id="logoutSuccessHandler" class="com.fusioninfo.common.biz.security.support.CustomLogoutSuccessHandler">
+	<beans:bean id="logoutSuccessHandler" class="com.waynesun.common.biz.security.support.CustomLogoutSuccessHandler">
 		<beans:property name="targetUrl" value="login.do?state=1"/>
 	</beans:bean>
 	<!-- 登陆成功后续处理 -->
-	<beans:bean id="authenticationSuccessHandler" class="com.fusioninfo.common.biz.security.support.CustomAuthenticationSuccessHandler" >
+	<beans:bean id="authenticationSuccessHandler" class="com.waynesun.common.biz.security.support.CustomAuthenticationSuccessHandler" >
 		<!-- <beans:property name="targetUrl" value="login/show.do"/>
 		<beans:property name="seatTargetUrl" value="task_remind/show/home.do?showState=1"/> -->
 		<beans:property name="targetUrl" value="login/show.do"/>
 <!-- 		<beans:property name="seatTargetUrl" value="login/show.do"/> -->
 	</beans:bean>
-	<beans:bean id="authenticationFaileHandler" class="com.fusioninfo.common.biz.security.support.CustomAuthenticationFailureHandler" >
+	<beans:bean id="authenticationFaileHandler" class="com.waynesun.common.biz.security.support.CustomAuthenticationFailureHandler" >
 		<beans:property name="targetUrl" value="/login.do"/>
 	</beans:bean>
 	<!-- 国际化支持 -->  

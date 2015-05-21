@@ -79,6 +79,7 @@ public class ResourceTreeBean implements Serializable{
 		List<ResourceTreeBean> rtbList=new ArrayList<ResourceTreeBean>();
 		Map<String,MenuCategory> categorys=new HashMap<String,MenuCategory>();
 		Map<String,List<Menu>> menus=new HashMap<String,List<Menu>>();
+		menus.put("no_parent", new ArrayList<Menu>());
 		Map<String,List<Button>> buttons=new HashMap<String,List<Button>>();
 		for (Resource resource : resources) {
 			if(resource instanceof MenuCategory)

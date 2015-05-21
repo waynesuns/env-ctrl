@@ -30,11 +30,11 @@ public class SolutionController extends AbstractController {
 		Map<String, MainGroupParam> details = new HashMap<String, MainGroupParam>();
 		details.put("overView",(new MainGroupParam(null,null))
 		.addValue(new DivGroupParam(null, "在石油化工、冶炼、造纸、印染等不同工业领域，特征污染物不尽相同。依据污染物的形态，可分为颗粒污染物和气态污染物：颗粒污染物包括粉尘、烟尘、雾尘、煤尘等，气态污染物包括含硫化合物、含氮化合物、碳氧化合物、碳氢化合物、卤氧化合物等。这些污染物大多具有刺激性或腐蚀性，直接损害人体健康，并能腐蚀设备表面甚至内部线路及部件。"))
-		.addValue(DataImportUtil.doExcelImport(0, new File("/Users/weisun/git/ec/web-site/WebContent/excel/solution/industry.xlsx"), "常见污染物列表",null))
+		.addValue(DataImportUtil.doExcelImport(0, new File("/Users/weisun/git/env-ctrl/web-site/WebContent/excel/solution/industry.xlsx"), "常见污染物列表",null))
 		.addValue(new DivGroupParam(null, "针对工业类主要污染物为有害气体这一特征，IIECC空气净化方案不仅能过滤常见颗粒物，还能利用专业的气相媒体过滤段，有效去除多种有害气体，为客户提供真正洁净的空气。"))
 		.addValue(new DivGroupParam(null, "Multi-Mix<sup>®</sup> Media家族拥有多种气相净化媒体，如专门针对酸性氧化物的MM-9000和具备强氧化性的MM-1000等单一媒体，以及适用于特定环境的复合媒体，如MM-1955、TM MM-1355等。IIECC提供的TECH-CHEK<sup>TM</sup>分析服务，可根据现场实际有害气体的成分和浓度，筛选出最匹配的媒体，以达到最佳净化效果。此外，IIECC在选取DAS、UASH系列等净化设备时，会充分考虑污染类别、处理气体的体积和浓度、现场安装条件等多种因素，为客户提供量身定做最佳净化方案。"))
 		.addValue(new DivGroupParam(null, "IIECC完备的空气净化方案，能保证设备机房内的空气质量达到G1标准，即设备可靠性不再被腐蚀影响的空气质量等级。"))
-		.addValue(DataImportUtil.doExcelImport(1, new File("/Users/weisun/git/ec/web-site/WebContent/excel/solution/industry.xlsx"), "",new String[]{"100px",""}).addAnnon("表：依据ISA-711.04-1985对污染物严重级别的解释，在工业用过程检测和控制设备中，污染物浓度和存在的反应性级别的分布范围很大。某些环境属于严重腐蚀性的，而另一些则很轻微。"))
+		.addValue(DataImportUtil.doExcelImport(1, new File("/Users/weisun/git/env-ctrl/web-site/WebContent/excel/solution/industry.xlsx"), "",new String[]{"100px",""}).addAnnon("表：依据ISA-711.04-1985对污染物严重级别的解释，在工业用过程检测和控制设备中，污染物浓度和存在的反应性级别的分布范围很大。某些环境属于严重腐蚀性的，而另一些则很轻微。"))
 		.addValue(new DivGroupParam("案例", ""))
 		.addValue(new ImageGroupParam("BASF-YPC Company Ltd., Co. —— DAS Series</br>扬子石化－巴斯夫").addValue(new ImageParam("/solution/industry_1.jpg","扬子石化－巴斯夫有限责任公司属于世界五百强企业，其主要生产线通过裂解生产乙烯。由于在蒸汽裂解过程中易产生苯系有机物、其他烃类化合物以及氮化物和硫化物，这些有害物质会随排风系统进入大气，严重影响办公区域及设备间的空气质量。IIECC工程师量身设计，为其控制室、设备间、马达室选用了DAS系列深床式气相净化机组。该机组投入使用后，极大降低了来自室外的新风中挥发性有机化合物和颗粒物的浓度，明显改善了室内空气品质。根据美国仪表学会标准ISA-711.04-1985进行的监测报告确认，受保护区域的环境始终维持在G1水平。此外，在进行预定周期的检测后发现，在不更换媒体的条件下，原先12个月的设计使用周期可继续延长使用3个月。")))
 		.addValue(new ImageGroupParam("Riau Andalan Pulp & Paper, Indonesia —— DAS Series</br>印度尼西亚安达兰纸浆造纸厂").addValue(new ImageParam("/solution/industry_3.jpg","安达兰纸浆造纸厂生产设备多，致使周边污染气体浓度居高不下，尤其是与生产车间相距不远的办公室区域。IIECC工程师在现场勘测后，采用了DAS系列净化方案，分别在每栋办公大楼的新风机房内加装一台风量可达30000m³/h的DAS系列深床式气相净化机组，对引入的新风进行气相媒体段净化，将其中污染气体的浓度降至最低，颗粒物浓度更是降低至个位数级别，从而有效保证了室内的空气质量以及相关机电设备的使用寿命。")))
@@ -56,7 +56,7 @@ public class SolutionController extends AbstractController {
 		Map<String, MainGroupParam> details = new HashMap<String, MainGroupParam>();
 		details.put("overView",(new MainGroupParam(null,null))
 		.addValue(new DivGroupParam(null, "市政工程是指与城市生活配套的各种公共基础设施建设，主要包括机场、污水泵站、垃圾填埋场、隧道、大型车站等。这些设施由于作业环境复杂，或人员相对密集，通常会产生一系列较为严重的环境污染问题，如异味气体（以H<sub>2</sub>S为例）、高浓度腐蚀性气体（以SO<sub>2</sub>为例）等。"))
-		.addValue(DataImportUtil.doExcelImport(0, new File("/Users/weisun/git/ec/web-site/WebContent/excel/solution/municipal_administration.xlsx"), "常见污染物列表",null))
+		.addValue(DataImportUtil.doExcelImport(0, new File("/Users/weisun/git/env-ctrl/web-site/WebContent/excel/solution/municipal_administration.xlsx"), "常见污染物列表",null))
 		.addValue(new DivGroupParam(null, "市政类的服务设施均呈现出占地面积广、容纳人口多或处理量大的特点，极易产生有气味性的气体或出现由于人员众多带来的通风不畅、室内空气质量较差等问题，而这是传统的湿式吸收或者单一加大空气循环量的方法一直无法解决的。"))
 		.addValue(new DivGroupParam(null, "IIECC提出了利用HDS系列高浓度气体干式洗涤器净化机组等系列产品去除有毒有害气体的解决方案。干式洗涤器净化机组可有效地消除污染物达到ppm（10<sup>-6</sup>）级别。"))
 		.addValue(new DivGroupParam(null, "在IIECC的Multi-Mix<sup>®</sup> Media家族里有专门针对硫化氢等臭味气体的强氧化性媒体MM-1000，有比表面积大的活性炭媒体MM-3000，更有特殊配比的CleanAire型媒体。在净化设备的选择上，考虑到市政工程的安装条件所限，IIECC旗下的HDS系列高浓度气体洗涤器净化机组能够在较小的占地面积的条件下有一个很好的净化效果。另外，部分大风量或者浓度较高的市政设施会选用DAS系列深床式气相净化机组，在某些特定的区域内部也会选用APS小型气相净化系统来提高室内空气质量。"))
@@ -80,7 +80,7 @@ public class SolutionController extends AbstractController {
 		Map<String, MainGroupParam> details = new HashMap<String, MainGroupParam>();
 		details.put("overView",(new MainGroupParam(null,null))
 		.addValue(new DivGroupParam(null, "以酒店、办公楼宇、住宅为代表的商业领域呈现出区域面积大、人数多、对空气质量要求高等三大特点；在早期的楼宇新风系统设计中，绝大部分新风系统只是加装了简单的初效过滤段，随着室外污染气体（以硫氧化物和氮氧化物为首）浓度的日益增长，更高级别的颗粒物过滤段以及去除新风中的有毒有害气体的需求显得更加迫切。"))
-		.addValue(DataImportUtil.doExcelImport(0, new File("/Users/weisun/git/ec/web-site/WebContent/excel/solution/business.xlsx"), "常见污染物列表",null).addAnnon("注：常见的甲醛\\甲苯\\二甲苯等均属于VOCs（挥发性有机化合物）。"))
+		.addValue(DataImportUtil.doExcelImport(0, new File("/Users/weisun/git/env-ctrl/web-site/WebContent/excel/solution/business.xlsx"), "常见污染物列表",null).addAnnon("注：常见的甲醛\\甲苯\\二甲苯等均属于VOCs（挥发性有机化合物）。"))
 		.addValue(new DivGroupParam(null, "IIECC提出了多重颗粒物过滤系统+气相净化的新风设计方案，不仅能够使室内PM2.5降低到极低值，还能利用化学吸附催化氧化的原理处理掉从室外引进的新风中的污染气体。"))
 		.addValue(new DivGroupParam(null, "商业类的场所由于其环境的特殊性造成了以香烟烟雾为代表的颗粒物浓度偏高，部分硫氧化物、氮氧化物由开窗换气通风或者由新风机组引入室内；在此类情况下IIECC除了选用强氧化性的媒体MM-1000来催化氧化以甲醛为首的有害气体以外，还会根据具体VOCs的不同选择不同比例的MM-3000来进行吸收。"))
 		.addValue(new DivGroupParam(null, "商业项目与工业和市政类项目最大的不同点是对颗粒物浓度的处理级别要求更高，鉴于此IIECC定制选用了AAF的HEPA13过滤级别的高效过滤段，确保对PM2.5的去除达到一个最佳的效果；在净化设备的选择上考虑到商业项目的处理循环风量、安装条件、污染物浓度；IIECC旗下的APS小型气相净化系统能够在较小的占地面积下有一个很好的净化效果。"))
@@ -105,7 +105,7 @@ public class SolutionController extends AbstractController {
 		Map<String, MainGroupParam> details = new HashMap<String, MainGroupParam>();
 		details.put("overView",(new MainGroupParam(null,null))
 		.addValue(new DivGroupParam(null, "医疗、军事、院校场馆、金融机构等特殊的场所，常需要有针对性地去除某种或某几种特殊的气相污染物：如医疗所用的福尔马林溶液（甲醛溶液）易挥发，对人体健康产生影响；图书馆的文献资料会因酸性气体腐蚀令保存时限缩短；军事设施内部需要保持对有毒有害气体的去除能力等。"))
-		.addValue(DataImportUtil.doExcelImport(0, new File("/Users/weisun/git/ec/web-site/WebContent/excel/solution/other.xlsx"), "常见污染物列表",null))
+		.addValue(DataImportUtil.doExcelImport(0, new File("/Users/weisun/git/env-ctrl/web-site/WebContent/excel/solution/other.xlsx"), "常见污染物列表",null))
 		.addValue(new DivGroupParam(null, "IIECC针对此类区域提出的专业气相净化方案，能有效去除空气中的有害气体及颗粒污染物。"))
 		.addValue(new DivGroupParam(null, "院校场馆、医疗军事等场所的空气污染呈现总体分布区域广、单体数量多等特点。综合考虑下，IIECC选用混合媒体MM-1355来催化氧化有害气体；针对这些场所的使用用途，IIECC还会根据实际情况选用AAF的HEPA13过滤级别的高效过滤段，以确保最有效去除PM2.5；在净化设备的选择上，根据现场情况通常会选用USAH、AG、APS等系列净化机组来实现对空气的过滤及净化。"))
 		.addValue(new DivGroupParam("案例", ""))

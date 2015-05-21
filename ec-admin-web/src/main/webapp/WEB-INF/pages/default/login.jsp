@@ -17,7 +17,6 @@
 <body>
 	<div class="login_t">
 		<div class="login_logo">
-			<img class="l" src="images/logo_l.png" /><span>上汽通用五菱服务商门户</span>
 		</div>
 		<div class="cl"></div>
 	</div>
@@ -44,9 +43,6 @@
 			</form>
 		</div>
 		<div class="cl"></div>
-	</div>
-	<div class="footer">
-		<div class="footer_c">上汽通用五菱汽车股份有限公司版权所有</div>
 	</div>
 </body>
 </html>

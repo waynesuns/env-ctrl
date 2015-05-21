@@ -5,16 +5,11 @@ import java.util.Map;
 
 import org.springframework.beans.factory.InitializingBean;
 
-import com.waynesun.utils.concurrent.BizConcurrentHashMap;
-import com.waynesun.common.biz.announcement.AnnouncementFeedback;
-import com.waynesun.common.biz.announcement.AnnouncementFeedbackCacheUtils;
 import com.waynesun.common.biz.area.AbstractArea;
 import com.waynesun.common.biz.area.AreaCacheUtils;
 import com.waynesun.common.biz.config.SystemConfig;
 import com.waynesun.common.biz.config.SystemConfigCacheUtils;
 import com.waynesun.common.biz.dealer.DealerCacheUtils;
-import com.waynesun.common.biz.dealerarea.AbstractDealerArea;
-import com.waynesun.common.biz.dealerarea.DealerAreaCacheUtils;
 import com.waynesun.common.biz.dictionary.DictionaryCacheUtils;
 import com.waynesun.common.biz.dictionary.DictionaryCategory;
 import com.waynesun.common.biz.dictionary.DictionaryItem;
@@ -23,8 +18,7 @@ import com.waynesun.common.biz.resource.ResourceCacheUtils;
 import com.waynesun.common.biz.role.Role;
 import com.waynesun.common.biz.role.RoleCacheUtils;
 import com.waynesun.common.biz.user.AbstractDealer;
-import com.waynesun.common.biz.veh.VehicleBrand;
-import com.waynesun.common.biz.veh.VehicleBrandCacheUtils;
+import com.waynesun.utils.concurrent.BizConcurrentHashMap;
 
 public class DataInit implements InitializingBean {
 	private Data data;
@@ -37,19 +31,8 @@ public class DataInit implements InitializingBean {
 		loadArea();
 		loadSystemConfigInfo();
 		loadResource();
-		loadDealerArea();
 		loadRole();
-		loadBrand();
 		loadDictionaryInfo();
-		doAnnouncementFeedback();
-	}
-
-	/**
-	 * 初始化品牌
-	 */
-	private void loadBrand(){
-		List<VehicleBrand> list =  data.findAllVehicleBrands();
-		VehicleBrandCacheUtils.initArea(list);
 	}
 	/**
 	 * 初始化省市区数据
@@ -65,15 +48,6 @@ public class DataInit implements InitializingBean {
 		List<AbstractDealer> list = data.findAllDealers();
 		DealerCacheUtils.initDealer(list);
 	}
-	/**
-	 * 初始化经销商区域抽象父类
-	 */
-	private void loadDealerArea()
-	{
-		List<AbstractDealerArea> list = data.findAllDealerAreas();
-		DealerAreaCacheUtils.init(list);
-	}
-	
 	/**
 	 * 系统配置初始化
 	 */
@@ -128,16 +102,6 @@ public class DataInit implements InitializingBean {
 		}
 		DictionaryCacheUtils.initDictionaryCache(items);
 	}
-	private void doAnnouncementFeedback() throws Exception{
-		List<AnnouncementFeedback> feedbackList = data.findAnnouncementFeedback();
-		try{
-			AnnouncementFeedbackCacheUtils.initAnnouncementFeedbackCache(feedbackList);
-		}catch(Exception e){
-			e.printStackTrace();
-			throw e;
-		}
-	}
-
 	
 	
 }

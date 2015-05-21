@@ -77,6 +77,6 @@ public class LoginController extends AbstractBindController
 	@RequestMapping(value = "/show.do")
 	public String loginShow()
 	{
-		return ".main~/bbs/newest.jsp";
+		return ".main~/welcome.jsp";
 	}
 }

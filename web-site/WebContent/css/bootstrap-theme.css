@@ -1184,4 +1184,22 @@
 		background-color: #666666;
 		color: white;
 	}
+	
+}
+.order > div {
+	margin-bottom: 5px;
+}
+.order > div > button{
+	margin-top:15px;
+	width: 100px;
+	background-color: #d3d3d3;
+	border-color: #000000;
+}
+.order_item > span > a{
+	color: #009BDF;
+	margin-left: 15px;
+}
+
+.order_item > span > input{
+	margin-right: 5px;
 }

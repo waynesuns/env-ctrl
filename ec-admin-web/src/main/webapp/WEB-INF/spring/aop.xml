@@ -17,16 +17,16 @@
 	<aop:aspectj-autoproxy  />
 	<!-- 配置默认的事务属性 -->
 	<aop:config proxy-target-class="true">
-		<aop:advisor pointcut="execution(* com.fusioninfo.common.biz..*.*(..))" advice-ref="txAdvice" order="1" />
-		<aop:advisor pointcut="execution(* com.fusioninfo.common.web.ws..*.*(..))" advice-ref="txAdvice" order="7" />
+		<aop:advisor pointcut="execution(* com.waynesun.common.biz..*.*(..))" advice-ref="txAdvice" order="1" />
+		<aop:advisor pointcut="execution(* com.waynesun.common.web.ws..*.*(..))" advice-ref="txAdvice" order="7" />
 	</aop:config>
 	<aop:config proxy-target-class="false">
-		<aop:advisor pointcut="execution(* com.fusioninfo.common.cache..*.*(..))" advice-ref="txAdvice" order="2" />
-		<aop:advisor pointcut="execution(* com.fusioninfo.common.util..*.*(..))" advice-ref="txAdvice" order="3" />
-		<aop:advisor pointcut="execution(* com.fusioninfo.common.biz..*.*(..))" advice-ref="txAdvice" order="4" />
-		<aop:advisor pointcut="execution(* com.fusioninfo.common.security..*.*(..))" advice-ref="txAdvice" order="5" />
-		<aop:advisor pointcut="execution(* com.fusioninfo.common.web.util..*.*(..))" advice-ref="txAdvice" order="6" />
-		<aop:advisor pointcut="execution(* com.fusioninfo.common.web.ws..*.*(..))" advice-ref="txAdvice" order="8" />
+		<aop:advisor pointcut="execution(* com.waynesun.common.cache..*.*(..))" advice-ref="txAdvice" order="2" />
+		<aop:advisor pointcut="execution(* com.waynesun.common.util..*.*(..))" advice-ref="txAdvice" order="3" />
+		<aop:advisor pointcut="execution(* com.waynesun.common.biz..*.*(..))" advice-ref="txAdvice" order="4" />
+		<aop:advisor pointcut="execution(* com.waynesun.common.security..*.*(..))" advice-ref="txAdvice" order="5" />
+		<aop:advisor pointcut="execution(* com.waynesun.common.web.util..*.*(..))" advice-ref="txAdvice" order="6" />
+		<aop:advisor pointcut="execution(* com.waynesun.common.web.ws..*.*(..))" advice-ref="txAdvice" order="8" />
 	</aop:config>
 	<tx:advice id="txAdvice" transaction-manager="transactionManager">
 		<tx:attributes>

@@ -43,13 +43,13 @@
 	-->
 	<ftplets>
 		<ftplet name="ftplet1">
-			<beans:bean class="com.fusioninfo.common.web.ftp.FtpServerCallback">
+			<beans:bean class="com.waynesun.common.web.ftp.FtpServerCallback">
 			<beans:property name="ftpFileDao" ref="ftpFileDao"></beans:property>
 			</beans:bean>
 		</ftplet>
 	</ftplets>
 	<user-manager>
-	<beans:bean id="MyUserManager" class="com.fusioninfo.common.web.ftp.FtpUserManager">
+	<beans:bean id="MyUserManager" class="com.waynesun.common.web.ftp.FtpUserManager">
 		
 	</beans:bean>
 </user-manager>
@@ -57,7 +57,7 @@
 	<native-filesystem case-insensitive="false" create-home="true" />
 	<commands use-default="true" >
 		<command name="STOR">
-			<beans:bean class="com.fusioninfo.common.web.ftp.command.StorCommand" />
+			<beans:bean class="com.waynesun.common.web.ftp.command.StorCommand" />
 		</command>
 	</commands>
 </server>

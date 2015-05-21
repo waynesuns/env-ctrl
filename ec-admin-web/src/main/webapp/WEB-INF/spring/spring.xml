@@ -27,7 +27,7 @@
 <!--     <import resource="ws.xml"/> -->
 	<context:annotation-config />
 
-	<context:component-scan base-package="com.fusioninfo.common.web.control.**">  
+	<context:component-scan base-package="com.waynesun.common.web.control.**">  
 	  <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller" />  
 	</context:component-scan>
 <!-- 	<context:component-scan base-package="com.chinasshp.poms.biz.job.**" /> -->
@@ -41,7 +41,7 @@
 			<value>${messages.cacheSeconds}</value>
 		</property>
 	</bean>
-	<bean id="springContextUtil" class="com.fusioninfo.utils.SpringContextUtil">
+	<bean id="springContextUtil" class="com.waynesun.utils.SpringContextUtil">
 
 	</bean>
 	<!-- ====================================================-->
@@ -61,7 +61,7 @@
 		</property>
 	</bean>
 	
-	<bean id="ehCache" class="com.fusioninfo.cache.EHCache">
+	<bean id="ehCache" class="com.waynesun.cache.EHCache">
 		<property name="cache" ref="ehCacheFactory"/>
 	</bean>
 	
@@ -70,18 +70,18 @@
 	
 	<!-- <bean id="mapCache" class="com.chinasshp.sgmw.cache.MapCache"/> -->
 	<!-- <bean id="osCache" class="com.chinasshp.sgmw.cache.OSCache"/> -->
-	<bean id="cacheSupport" class="com.fusioninfo.cache.CacheFactorySupport">
+	<bean id="cacheSupport" class="com.waynesun.cache.CacheFactorySupport">
 		<!-- <property name="cache" ref="mapCache"/> -->
 		<!-- <property name="cache" ref="osCache"/> -->
 		<property name="cache" ref="ehCache"/>
 	</bean>
-	<bean id="appInit" class="com.fusioninfo.common.util.init.AppInit">
+	<bean id="appInit" class="com.waynesun.common.util.init.AppInit">
 		<property name="securityManager" ref="userDetailsService"/>
 	</bean>
-	<bean id="data" class="com.fusioninfo.common.util.init.data.impl.DataImpl">
+	<bean id="data" class="com.waynesun.common.util.init.data.impl.DataImpl">
 		<!-- <property name="sessionFactory" ref="sessionFactory"/> -->
 	</bean>
-	<bean id="dataInit" class="com.fusioninfo.common.util.init.data.DataInit">
+	<bean id="dataInit" class="com.waynesun.common.util.init.data.DataInit">
 		<property name="data" ref="data"/>
 	</bean>
 	<!-- 设定默认的国际化为中文 -->
@@ -95,7 +95,7 @@
 	
 	<import resource="security.xml" />
 	
-	<bean id="announcementFeedbackService" class="com.fusioninfo.common.biz.announcement.AnnouncementFeedbackService"></bean>
+	<bean id="announcementFeedbackService" class="com.waynesun.common.biz.announcement.AnnouncementFeedbackService"></bean>
 	<!-- 
 	<import resource="classpath:applicationContext_ws.xml"/> -->
 

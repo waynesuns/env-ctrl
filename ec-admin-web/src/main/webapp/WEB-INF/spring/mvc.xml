@@ -21,14 +21,14 @@
  	<!-- 使用注解方式定义事务 -->
 	<import resource="aop-mvc.xml"/>
 
-	<context:component-scan base-package="com.fusioninfo.common.web.control.**">
+	<context:component-scan base-package="com.waynesun.common.web.control.**">
 	  <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller" />
 	  <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Service" />
 	  <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Repository" />
 	</context:component-scan>
 	<!-- 对模型视图名称的解析，即在模型视图名称添加前后缀 -->
-	<bean id="viewResolver"	class="com.fusioninfo.common.web.view.TilesAndJstlViewResolver" p:prefix="/WEB-INF/pages/">
-		<property name="viewClass" value="com.fusioninfo.common.web.view.TilesAndJstlView" />
+	<bean id="viewResolver"	class="com.waynesun.common.web.view.TilesAndJstlViewResolver" p:prefix="/WEB-INF/pages/">
+		<property name="viewClass" value="com.waynesun.common.web.view.TilesAndJstlView" />
 	</bean>
 
 	<bean id="tilesConfigurer"
@@ -56,7 +56,7 @@
 
 	<!-- 异常处理机制 -->
 	<bean id="exceptionResolver"
-		class="com.fusioninfo.common.web.resolver.MultiExceptionResolver">
+		class="com.waynesun.common.web.resolver.MultiExceptionResolver">
 		<property name="defaultErrorView">
 			<value>/errors/exception.jsp</value>
 		</property>
@@ -65,8 +65,8 @@
 		</property>
 		<property name="exceptionMappings">
 			<props>
-				<prop key="com.fusioninfo.exception.BizException">/errors/biz_exception.jsp</prop>
-				<prop key="com.fusioninfo.exception.NoUserException">/errors/no_user_exception.jsp</prop>
+				<prop key="com.waynesun.exception.BizException">/errors/biz_exception.jsp</prop>
+				<prop key="com.waynesun.exception.NoUserException">/errors/no_user_exception.jsp</prop>
 				<prop key="org.hibernate.StaleObjectStateException">/errors/optimistic_locking_exception.jsp</prop>
 				<prop key="org.springframework.orm.hibernate4.HibernateOptimisticLockingFailureException">/errors/optimistic_locking_exception.jsp</prop>
 			</props>
@@ -88,7 +88,7 @@
     </bean>  
 	<mvc:annotation-driven />
 	<mvc:interceptors>
-		<bean class="com.fusioninfo.common.web.interceptor.I18nInterceptor" />
+		<bean class="com.waynesun.common.web.interceptor.I18nInterceptor" />
 		<bean class="org.springframework.orm.hibernate4.support.OpenSessionInViewInterceptor">
 			<property name="sessionFactory" ref="sessionFactory" />
 		</bean>

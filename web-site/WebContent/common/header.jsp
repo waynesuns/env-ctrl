@@ -34,5 +34,4 @@
 
 
 	<script type="text/javascript" src="${path}js/bootstrap.js"></script>
-	<script type="text/javascript" src="${path}js/jquery.htmlClean.js"></script>
 </head>

@@ -29,10 +29,10 @@ public class HtmlGenerator {
 				
 				HttpEntity entity = response.getEntity();
 				if (entity != null) {
-					File file = new File("/Users/weisun/git/ec/web-site/WebContent/"+url);
+					File file = new File("/Users/weisun/git/env-ctrl/web-site/WebContent/"+url);
 					if(file.exists()){
 						file.delete();
-						file = new File("/Users/weisun/git/ec/web-site/WebContent/"+url);
+						file = new File("/Users/weisun/git/env-ctrl/web-site/WebContent/"+url);
 						file.createNewFile();
 					}
 					outstream = new FileOutputStream(file);
@@ -89,6 +89,7 @@ public class HtmlGenerator {
 		//urls.add("contact_us/tmall.html");
 		//urls.add("contact_us/dealer_list.html");
 		urls.add("contact_us/index.html");
+		urls.add("order/sale_order.html");
 		HtmlGenerator.generateHtml(urls);
 	}
 }
