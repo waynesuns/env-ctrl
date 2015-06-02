@@ -5,6 +5,7 @@ import javax.servlet.jsp.JspException;
 import org.apache.taglibs.standard.lang.support.ExpressionEvaluatorManager;
 
 import com.waynesun.common.biz.dictionary.DictionaryCacheUtils;
+import com.waynesun.common.biz.dictionary.DictionaryItem;
 
 /**
  * 模板类型显示标签
@@ -20,8 +21,8 @@ public class DictionaryShowTag extends ShowTag
 
 	public Object getResult()
 	{
-		
-		return DictionaryCacheUtils.getDictionaryItem(parentCode, value);
+		DictionaryItem di = DictionaryCacheUtils.getDictionaryItem(parentCode, value);
+		return di==null?"":di.getName();
 	}
 
 	public String getParentCode()

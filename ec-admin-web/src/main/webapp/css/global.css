@@ -100,3 +100,6 @@ box-shadow: 0 5px 10px rgba(0,0,0,.2);
 .mt10{margin-top: 10px}
 .ml20{margin-left: 20px}
 .g9{color:#999;}
+.width200{
+	width: 200px;
+}

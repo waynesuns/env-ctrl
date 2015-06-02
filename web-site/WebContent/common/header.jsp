@@ -34,4 +34,6 @@
 
 
 	<script type="text/javascript" src="${path}js/bootstrap.js"></script>
+
+	<script type="text/javascript" src="${path}js/global.js"></script>
 </head>

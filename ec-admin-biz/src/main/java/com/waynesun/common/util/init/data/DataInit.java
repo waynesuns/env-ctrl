@@ -7,6 +7,7 @@ import org.springframework.beans.factory.InitializingBean;
 
 import com.waynesun.common.biz.area.AbstractArea;
 import com.waynesun.common.biz.area.AreaCacheUtils;
+import com.waynesun.common.biz.area.OrderNoCacheUtils;
 import com.waynesun.common.biz.config.SystemConfig;
 import com.waynesun.common.biz.config.SystemConfigCacheUtils;
 import com.waynesun.common.biz.dealer.DealerCacheUtils;
@@ -33,12 +34,14 @@ public class DataInit implements InitializingBean {
 		loadResource();
 		loadRole();
 		loadDictionaryInfo();
+		this.initOrderNo();
 	}
 	/**
 	 * 初始化省市区数据
 	 */
 	private void loadArea(){
 		List<AbstractArea> list =  data.findAllAreas();
+		System.out.println("AbstractArea:"+list.size());
 		AreaCacheUtils.initArea(list);
 	}
 	/**
@@ -55,6 +58,11 @@ public class DataInit implements InitializingBean {
 	{
 		List<SystemConfig> list = data.findAllSystemConfigs();
 		SystemConfigCacheUtils.initSystemConfig(list);
+	}
+	
+	private void initOrderNo(){
+		
+		OrderNoCacheUtils.initCache(data.findOrderNoCacheBean());
 	}
 	
 

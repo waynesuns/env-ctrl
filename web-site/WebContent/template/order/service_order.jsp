@@ -1,132 +1,130 @@
 <%@ page language="java" pageEncoding="UTF-8" contentType="text/html;charset=utf-8"%>
 <%@include file="/common/taglib.jsp"%>
 <script type="text/javascript" src="${path}js/jquery.cityselect.js"></script>
-<div class="title">在线订购</div>
-<div id="orderDiv">
-	<div class="row order" style="padding-top: 0;margin-left:0px;margin-right: 15px;">
-		<div style="padding-top: 12px;margin-right: 15px;" class="img col-xxs-12 col-md-5"><img id="productImg" src="${path}img/order/APS550M.jpg" class="img-responsive"></div>
-		<div style="padding-top: 12px;padding-bottom: 0;margin-left: -15px;padding-right: 0;" class="info col-xxs-12 col-md-7 order">
-			<p>选择型号：</p>
-			<div class="order_item"><span><input type="radio" name="productCode" value="APS550M" checked="checked" onclick="changeProduct('APS550M');"/></span><span>APS-550M移动式气相净化仪</span></div>
-			<div class="order_item"><span><input type="radio" name="productCode" value="APS480M" onclick="changeProduct('APS480M');"/></span><span>APS-480M移动式气相净化仪</span></div>
-			
-			<div class="row" style="padding-top: 12px;margin-left:0px;margin-right: 0px;">
-				<span>颜色：<span>
-				<span style="margin-left:5px;"><input type="radio" name="color" value="GRAY" checked="checked">&nbsp;灰色</input></span>
-				<span style="margin-left:5px;"><input name="color" type="radio" value="WHITE">&nbsp;白色</input></span>
-			</div>
-			<div style="padding-top: 12px;"><span>单价：</span><span id="priceSpan2">¥19800.00</span></div>
-			<div><span>订购数量：</span><span><select name="quantity" id="quantity"><c:forEach begin="1" end="10" var="i"><option value="${i}">${i}</option></c:forEach></select></span></div>
-			<div><button style="margin-top:15px;width: 100px;" class="btn btn-danger" onclick="orderConfirm();">下一步</button></div>
-		</div>
-	</div>
-	<div class="row productIntrDiv" style="padding-top: 12px;margin-left:0px;margin-right: 15px;" id="productIntrDiv_APS550M">
-		<div class="sample-title">APS-550M移动式气相净化仪</div>
-		<div>适用于居室及办公环境的顶级空气净化系统。极致去除颗粒物能力，多种气相净化媒体任意组合，长效去除常见的数百种有毒害气体。<font color="#009BDF">建议新装修及有敏感体质人群的环境使用。</font></div>
-		<div style="padding-top: 12px;padding-bottom: 12px;">主要净化性能参数：</div>
-		<li>CADR 净化效能：530m<sup>3</sup>/h</li>
-		<li>PM0.3 去除率：99.99%</li>
-		<li>HCHO 甲醛净化效率：98%</li>
-		<li>SO<sub>2</sub> 二氧化硫净化效率：>99%</li>
-		<li>NO<sub>2</sub> 二氧化氮净化效率：>99%</li>
-		<li>C<sub>6</sub>H<sub>6</sub> 苯净化效率：>99%</li>
-		<li>C<sub>8</sub>H<sub>8</sub> 甲苯净化效率：>99%</li>
-		<li>C<sub>8</sub>H<sub>10</sub> 二甲苯净化效率：>99%</li>
-		<div style="padding-top: 12px;"><a href="${path}aps550m/index.html" style="color: #009BDF;">*更多信息请浏览APS-550M产品网站</a></div>
-	</div>
-	<div class="row productIntrDiv" style="padding-top: 12px;margin-left:0px;margin-right: 15px;display: none;" id="productIntrDiv_APS480M">
-		<div class="sample-title">APS-480M移动式气相净化仪</div>
-		<div>适用于居室及办公环境的专业级空气净化系统。超大净化效能，综合去除颗粒物及有毒害气体。<font color="#009BDF">建议有对大型空间快速空气净化需求的环境使用。</font></div>
-		<div style="padding-top: 12px;padding-bottom: 12px;">主要净化性能参数：</div>
-		<li>CADR 净化效能：800m<sup>3</sup>/h</li>
-		<li>PM0.3 去除率：99.97%</li>
-		<li>HCHO 甲醛净化效率：96%</li>
-		<div style="padding-top: 12px;"><a href="${path}aps480m/index.html" style="color: #009BDF;">*更多信息请浏览APS-480M产品网站</a></div>
-	</div>
-</div>
-<div class="order_confirm" style="display: none;" id="orderConfirmDiv">
-	<div class="row" style="padding-top: 0;margin-left:0;margin-right: －15px;"><p>已订购商品：</p><hr/></div>
+<div class="title">预约TECH-CHEK<sup>TM</sup>空气质量检测服务</div>
+<div id="orderInfoDiv">
+<div>
+	<div class="row" style="padding-top: 30px;margin-left:0px;margin-right: 0px;">客户信息：<hr/></div>
 	<div class="row" style="padding-top: 0;margin-left:0px;margin-right: 0px;">
-		<div class="img col-xxs-12 col-md-3" style="margin-right: 15px;"><img src="" class="img-responsive" id="productImg2"></div>
-		<div class="img col-xxs-12 col-md-6" style="margin-left: -15px;margin-right: 15px;">
-			<div id="nameSpan">APS-550M移动式气相净化仪</div>
-			<p></p>
-			<div id="descSpan">适用于居室及办公环境的顶级空气净化系统。极致去除颗粒物能力，多种气相净化媒体任意组合，长效去除常见的数百种有毒害气体。</div>
-		</div>
-		<div class="info col-xxs-12 col-md-3 order" style="margin-bottom: 0;margin-left: -15px;padding-right: 0;">
-			<div><span>颜&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;色：</span><span id="colorSpan">&nbsp;</span></div>
-			<div><span>产品单价：</span><span id="priceSpan">&nbsp;</span></div>
-			<div><span>订购数量：</span><span id="quantitySpan">&nbsp;</span></div>
-			<div><span>运&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;费：</span><span>¥0.00</span></div>
-			<p></p>
-			<div><span>应付总额：</span><span id="sumSpan">&nbsp;</span></div>
-		</div>
-		<div class="row">
-			<button onclick="updateOrder();" style="margin-top:15px;float: right;width: 100px;" class="btn btn-danger">修改商品</button>
-		</div>
-	</div>
-	<div class="row" style="padding-top: 30px;margin-left:0px;margin-right: 0px;"><p>收货人信息：</p><hr/></div>
-	<div class="row" style="padding-top: 0;margin-left:0px;margin-right: 0px;">
-		<div style="width: 120px;float: left;">收货人*</div>
-		<div style="overflow: hidden;" data-toggle="tooltip" data-placement="left" title="请填写收货人" id="nameDiv"><input type="text" name="name" id="name" class="form-control" style="width: 200px;" maxlength="20"></div>
+		<div style="width: 120px;float: left;">姓名*</div>
+		<div style="overflow: hidden;" data-toggle="tooltip" data-placement="left" title="请填写姓名" id="nameDiv" class="tooltipDiv"><input type="text" name="name" id="name" class="form-control" style="width: 200px;" maxlength="20"></div>
 	</div>
 	<div class="row" style="padding-top: 12px;margin-left:0px;margin-right: 0px;">
 		<div style="width: 120px;float: left;">手机号码*</div>
-		<div style="overflow: hidden;" data-toggle="tooltip" data-placement="left" title="请填写手机号码"id="mobileDiv"><input type="text" name="mobile" id="mobile"  class="form-control" style="width: 200px;" maxlength="11"></div>
+		<div style="overflow: hidden;" data-toggle="tooltip" data-placement="left" title="请填写手机号码"id="mobileDiv" class="tooltipDiv"><input type="text" name="mobile" id="mobile"  class="form-control" style="width: 200px;" maxlength="11"></div>
 	</div>
 	<div class="row" style="padding-top: 12px;margin-left:0px;margin-right: 0px;">
-		<div style="width: 120px;float: left;">收件及安装地址*</div>
-		<div style="overflow: hidden;" id="city">
-			<select class="prov" class="form-control"></select>
-			<select class="city" class="form-control"></select>
+		<div style="width: 120px;float: left;">地址*</div>
+		<div style="overflow: hidden;" id="cityDiv">
+			<select class="prov" class="form-control" id="province"></select>
+			<select class="city" class="form-control" id="city"></select>
 		</div>
 	</div>
 	<div class="row" style="padding-top: 12px;margin-left:0px;margin-right: 0px;">
 		<div style="width: 120px;float: left;">&nbsp;</div>
-		<div style="overflow: hidden;" data-toggle="tooltip" data-placement="left" title="请填写详细地址" id="addressDiv"><input type="text" name="address" id="address" class="form-control" style="width: 100%;margin-right: 0;padding-right: 0;" placeholder="详细地址" maxlength="100"></div>
+		<div style="overflow: hidden;" data-toggle="tooltip" data-placement="left" title="请填写详细地址" id="addressDiv" class="tooltipDiv"><input type="text" name="address" id="address" class="form-control" style="width: 100%;margin-right: 0;padding-right: 0;" placeholder="详细地址" maxlength="100"></div>
 	</div>
-	<div class="row" style="padding-top: 30px;margin-left:0px;margin-right: 0px;"><p>发票信息：</p><hr/></div>
+	<div class="row" style="padding-top: 30px;margin-left:0px;margin-right: 0px;">建筑物信息：<hr/></div>
 	<div class="row" style="padding-top: 12px;margin-left:0px;margin-right: 0px;">
-		<div style="width: 120px;float: left;"><span>发票抬头</span></div>
-		<div style="overflow: hidden;"><input type="text" style="width: 200px;" value="" class="form-control" maxlength="100"></div>
+		<div style="width: 160px;float: left;"><span style="vertical-align: middle;line-height: 34px;">建筑物面积</span></div>
+		<div style="overflow: hidden;float: left;margin-left: 5px;" data-toggle="tooltip" data-placement="left" title="请正确填写建筑物面积，最大为9999平方米" id="Q1Div" class="tooltipDiv"><input type="text" id="Q1" style="width: 100px;" value="" class="form-control" maxlength="100"></div>
+		<div style="float: left;padding-left: 20px;"><span style="vertical-align: middle;line-height: 34px;">平方米</span></div>
 	</div>
 	<div class="row" style="padding-top: 12px;margin-left:0px;margin-right: 0px;">
-		<div style="width: 120px;float: left;"><span>发票类型<span></div>
-		<div style="width:80px;float: left;margin-right: 30px;"><input type="radio" name="invoice" checked="checked">&nbsp;普通发票</div>
-		<div style="width:100px;float: left;"><input name="invoice" type="radio">&nbsp;增值税发票</div>
+		<div style="width: 160px;float: left;"><span style="vertical-align: middle;line-height: 34px;">层高</span></div>
+		<div style="overflow: hidden;float: left;margin-left: 5px;" data-toggle="tooltip" data-placement="left" title="请正确填写层高，最高为10米" id="Q2Div" class="tooltipDiv"><input type="text" id="Q2" style="width: 100px;" value="" class="form-control" maxlength="100"></div>
+		<div style="float: left;padding-left: 20px;"><span style="vertical-align: middle;line-height: 34px;">米</span></div>
 	</div>
-	
-	<div class="row" style="padding-top: 30px;margin-left:0px;margin-right: 0px;"><p>订单备注：</p><hr/></div>
-	<div class="row" style="margin-left:0px;margin-right: 0px;">
-		<textarea rows="6" cols="" style="width: 100%"  class="form-control" placeholder="如果您对空气净化有指定需求，如去除甲醛、宠物异味或您的环境周边有化工企业或大型市政设施（机场、立交、隧道、污水泵站、地下停车场……）等，请在这里说明。"></textarea>
+	<div class="row" style="padding-top: 12px;margin-left:0px;margin-right: 0px;">
+		<div style="width: 160px;float: left;"><span style="vertical-align: middle;line-height: 34px;">房间数</span></div>
+		<div style="overflow: hidden;float: left;margin-left: 5px;" data-toggle="tooltip" data-placement="left" title="请正确填写房间数，最大为99间" id="Q3Div" class="tooltipDiv"><input type="text"  id="Q3" style="width: 100px;" value="" class="form-control" maxlength="100"></div>
+		<div style="float: left;padding-left: 20px;"><span style="vertical-align: middle;line-height: 34px;">间</span></div>
 	</div>
-	<div class="row" style="margin-left:0px;margin-right: 0px;">
-		<button onclick="submitOrder();" style="margin-top:15px;float: right;width: 100px;" class="btn btn-danger">提交订单</button>
+	<div class="row" style="padding-top: 12px;margin-left:0px;margin-right: 0px;">
+		<div style="width: 160px;float: left;"><span>建筑物特征<span></div>
+		<div style="float: left;overflow: hidden;">
+			<input type="checkbox" name="Q4" style="margin-right: 5px;margin-left: 5px;" value="1">新装修
+			<input type="checkbox" name="Q4" style="margin-left: 10px;margin-right: 5px;" value="2">带车库
+			<input type="checkbox" name="Q4" style="margin-left: 10px;margin-right: 5px;" value="3">室内养宠物
+		</div>
+	</div>
+	<div class="row" style="padding-top: 12px;margin-left:0px;margin-right: 0px;">
+		<div style="width: 160px;float: left;"><span>居住人特征<span></div>
+		<div style="float: left;overflow: hidden;">
+			<input type="checkbox" name="Q5" style="margin-right: 5px;margin-left: 5px;" value="1">老人
+			<input type="checkbox" name="Q5" style="margin-left: 10px;margin-right: 5px;" value="2">婴幼儿
+			<input type="checkbox" name="Q5" style="margin-left: 10px;margin-right: 5px;" value="3">孕妇
+			<input type="checkbox" name="Q5" style="margin-left: 10px;margin-right: 5px;" value="4">过敏体质
+		</div>
+	</div>
+	<div class="row" style="padding-top: 12px;margin-left:0px;margin-right: 0px;">
+		<div style="width: 160px;float: left;"><span>最担心的空气质量问题?<span></div>
+		<div style="float: left;overflow: hidden;">
+			<input type="checkbox" name="Q6" style="margin-right: 5px;margin-left: 5px;" value="1">甲醛
+			<input type="checkbox" name="Q6" style="margin-left: 10px;margin-right: 5px;" value="2">TVOC
+			<input type="checkbox" name="Q6" style="margin-left: 10px;margin-right: 5px;" value="3">异味
+			<input type="checkbox" name="Q6" style="margin-left: 10px;margin-right: 5px;" value="4">PM2.5
+			<input type="checkbox" name="Q6" style="margin-left: 10px;margin-right: 5px;" value="5">其它
+		</div>
+	</div>
+	<div class="row" style="padding-top: 12px;margin-left:0px;margin-right: 0px;">
+		<div style="width: 160px;float: left;"><span>是否已有新风系统?<span></div>
+		<div style="float: left;overflow: hidden;">
+			<input type="radio" name="Q7" style="margin-right: 5px;margin-left: 5px;" checked="checked"  value="0">无
+			<input type="radio" name="Q7" style="margin-left: 40px;margin-right: 5px;" value="1">有
+		</div>
+	</div>
+	<div class="row" style="padding-top: 12px;margin-left:0px;margin-right: 0px;">
+		<div style="width: 160px;float: left;"><span>是否已有空气净化设备?<span></div>
+		<div style="float: left;overflow: hidden;">
+			<input type="radio" name="Q8" style="margin-right: 5px;margin-left: 5px;" checked="checked" value="0">无
+			<input type="radio" name="Q8" style="margin-left: 40px;margin-right: 5px;" value="1">有
+		</div>
+	</div>
+	<div class="row" style="padding-top: 12px;margin-left:0px;margin-right: 0px;">
+		<div style="width: 160px;float: left;"><span>是否需要提供试用机?<span></div>
+		<div style="float: left;overflow: hidden;">
+			<input type="radio" name="Q9" style="margin-right: 5px;margin-left: 5px;" value="1">是
+			<input type="radio" name="Q9" style="margin-left: 40px;margin-right: 5px;" value="0">否
+		</div>
+	</div>
+	<div class="row" style="padding-top: 12px;margin-left:0px;margin-right: 0px;">周边环境</div>
+	<div class="row" style="padding-top: 12px;margin-left:0px;margin-right: 0px;">
+		<textarea id="Q10" rows="6" cols="" style="width: 100%"  class="form-control" placeholder="如果您对空气净化有指定需求，如去除甲醛、宠物异味或您的环境周边有化工企业或大型市政设施（机场、立交、隧道、污水泵站、地下停车场……）等，请在这里说明。"></textarea>
 	</div>
 	
 </div>
-
-<div class="row" style="padding-top: 12px;margin-left:0px;margin-right: 15px;" id="orderDescDiv">
-	<div id="errorMsgDiv" class="alert alert-warning alert-dismissible fade in" role="alert" style="display: none;">
-	    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-	    <string>请填写以下内容：</string><font id="errorMsg"></font>
-	</div>
-	<p>订购说明：</p>
+<div class="row" style="padding-top: 48px;margin-left:0px;margin-right: 15px;" id="orderDescDiv">
+	<div class="info ">服务说明：</div>
 	<hr/>
-	<div>1、目前仅提供北京、上海以及沈阳地区的在线订购，其他区域敬请期待；</div>
-	<div>2、货到付款，由艾易西专业售后服务团队提供送货及安装服务；</div>
-	<div>3、提供正规机打发票；</div>
-	<div>4、凭产品三包凭证及发票，可享受5年质保服务；</div>
-	<div>5、免费提供TECH-CHEK<sup>TM</sup>空气质量检测服务；</div>
-	<div>6、如有其他疑问，请拨打艾易西服务热线：4008-725-000，我们将竭诚为您服务。</div>
+	<div>1、目前仅开放北京、上海以及沈阳地区的空气质量检测服务；</div>
+	<div>2、本检测服务为免费，不向客户收取任何费用；</div>
+	<div>3、在线预约后，本公司会根据排期提前和客户电话确认上门检测时间；</div>
+	<div>4、如有任何疑问，欢迎拨打艾易西服务热线4008-725-000，我们将竭诚为您服务。</div>
+</div>
+<div class="row" style="padding-top: 24px;margin-left:0px;margin-right: 15px;" id="orderDescDiv">
+	<div class="info ">免责声明：</div>
+	<hr/>
+	<div>声明：本检测服务之检测结果仅供参考用途，且仅适用于检测过程中所涉及的房间及空间，不得作为证明第三方造
+成本服务中客户损害之证据。本检测服务之信息不含有任何明确或暗示性形式的保证，不含有包括但不限于针对特
+定用途的适用性的暗示保证，用户应自行承担对检测结果的准确性和使用的全部风险。检测结果包含的信息以及
+IIECC公司针对相关问题的观点和评价的适用性仅在检测结果出具之日有效。</div>
+</div>
+<div class="row" style="padding-top: 24px;margin-left:0px;margin-right: 15px;" id="orderDescDiv">
+	<div class="info "><input type="checkbox" checked="checked" style="margin-right: 5px;" name="contractCofirm" >我已仔细阅读服务说明及免责说明<span data-toggle="tooltip" data-placement="right" title="请仔细阅读服务说明及免责说明" id="contractCofirmDiv" class="tooltipDiv"></span></div>
 </div>
 
+
+<div class="row" style="margin-left:0px;margin-right: 0px;">
+	<button onclick="submitOrder();" style="margin-top:15px;float: right;width: 100px;" class="btn btn-danger">提交预约</button>
+</div>
+</div>
 <div class="row" style="padding-top: 12px;display: none;" id="submitResultDiv">
-	<h4 style="text-align: center;">您的订单已成功提交！</h4>
-	<p style="text-align: center;">我们的客服人员会尽快通过电话和您确认订购信息并预约送货安装服务，感谢您的订购！</p>
+	<h4 style="text-align: center;">您的预约已成功提交！</h4>
+	<p style="text-align: center;">我们的客服人员会尽快通过电话和您确认并安排上门检测时间，感谢您的预约！</p>
 </div>
 <script type="text/javascript">
-$("#city").citySelect({
+$("#cityDiv").citySelect({
 	url:{"citylist":[
 		{"p":"北京","c":[{"n":"北京市"}]},
 		{"p":"上海","c":[{"n":"上海市"}]},
@@ -137,44 +135,22 @@ $("#city").citySelect({
 	dist:"",
 	nodata:"none"
 });
-var colorInfos = {"GRAY":"灰色","WHITE":"白色"};
-var productInfos = {"APS550M":{"price":19800,"model":"APS.550M-","name":"APS-550M移动式气相净化仪","desc":"适用于居室及办公环境的顶级空气净化系统。极致取出颗粒物能力，多种气相净化媒体任意组合，长效去除常见的数百种有毒害气体。"},
-			   	   "APS480M":{"price":17600,"model":"APS.480M-","name":"APS-480M移动式气相净化仪","desc":"适用于居室及办公环境的专业级空气净化系统。超大净化效能，综合去除颗粒物及有毒害气体。"}};
-function changeProduct(productCode){
-	var pi = productInfos[productCode];
-	var price = pi["price"];
-	$("#priceSpan2").text("¥"+price+".00");
-	$("#productImg").attr("src","${path}img/order/"+productCode+".jpg");
-	$(".productIntrDiv").hide();
-	$("#productIntrDiv_"+productCode).show();
-}
 
-function orderConfirm(){
-	var productCode = $("input[name='productCode']:checked").val(); 
-	var color = $("input[name='color']:checked").val(); 
-	var quantity = $("#quantity").val();
-	var pi = productInfos[productCode];
-	var price = pi["price"];
-	
-	$("#colorSpan").text(colorInfos[color]);
-	$("#priceSpan").text("¥"+price+".00");
-	$("#quantitySpan").text(quantity);
-	$("#sumSpan").text("¥"+(price*quantity)+".00");
-	$("#nameSpan").text(pi["name"]+"("+colorInfos[color]+")");
-	$("#descSpan").text(pi["desc"]);
-	$("#productImg2").attr("src","${path}img/order/"+productCode+".jpg");
-	$("#orderDiv").hide();
-	$("#orderConfirmDiv").show();
-}
 
 function submitOrder(){
 	var name = $("#name").val();
 	var mobile = $("#mobile").val();
 	var address = $("#address").val();
+	
+	var Q1 = $("#Q1").val();
+	var Q2 = $("#Q2").val();
+	var Q3 = $("#Q3").val();
+
+	
+	var contractCofirm = $("input[name='contractCofirm']:checked").val(); 
+	
 	var errorInfo = new Array();
-	$("#nameDiv").tooltip('hide');
-	$("#mobileDiv").tooltip('hide');
-	$("#addressDiv").tooltip('hide');
+	$(".tooltipDiv").tooltip('hide');
 	if(name==null || name.length==0){
 		errorInfo.push("#nameDiv");
 	}
@@ -184,7 +160,18 @@ function submitOrder(){
 	if(address==null || address.length==0){
 		errorInfo.push("#addressDiv");
 	}
-	
+	if(Q1!=null && Q1.length>0 && (isUnsignedInteger(Q1) || Q1==0 || Q1> 9999)){
+		errorInfo.push("#Q1Div");
+	}
+	if(Q2!=null && Q2.length>0 && (isUnsignedNumeric(Q2) || Q2==0 || Q2> 10)){
+		errorInfo.push("#Q2Div");
+	}
+	if(Q3!=null && Q3.length>0 && (isUnsignedInteger(Q3) || Q3==0 || Q3> 99)){
+		errorInfo.push("#Q3Div");
+	}
+	if(contractCofirm==null){
+		$("#contractCofirmDiv").tooltip('show');
+	}
 	if(errorInfo.length>0){
 		var t_a = $("#name").offset();      
 	    $("html,body").animate({scrollTop:t_a.top - "90" + "px"}, 500);
@@ -198,25 +185,61 @@ function submitOrder(){
 		//$("#errorMsgDiv").show();
 		return;
 	}
-	showSubmitResult();
+	
+
+	var province = $("#province").val();
+	var city = $("#city").val();
+	var Q4 = jQuery('input[type="checkbox"][name="Q4"]:checked').val();
+	var Q5 = jQuery('input[type="checkbox"][name="Q5"]:checked').val();
+	var Q6 = jQuery('input[type="checkbox"][name="Q6"]:checked').val();
+	var Q7 = jQuery('input[type="radio"][name="Q7"]:checked').val();
+	var Q8 = jQuery('input[type="radio"][name="Q8"]:checked').val();
+	var Q9 = jQuery('input[type="radio"][name="Q9"]:checked').val();
+	var Q10 = jQuery('#Q10').val();
+	$.ajax({
+	  method: "POST",
+	  dataType: 'json',
+	  url: "/admin/service_order/order_submit.do",
+	  data: { name: name, telNo: mobile, address:address,province:province,city:city,Q1:Q1,Q2:Q2,Q3:Q3,Q4:Q4,Q5:Q5,Q6:Q6,Q7:Q7,Q8:Q8,Q9:Q9,Q10:Q10}, 
+	  error: function(XMLHttpRequest, textStatus, errorThrown) {
+		  showSubmitResult();
+	  } ,
+	  success: function(){
+		  showSubmitResult();
+      }
+	});
 }
 
 function showSubmitResult(msg){
-	$("#orderDiv").hide();
-	$("#orderConfirmDiv").hide();
-	$("#orderDescDiv").hide();
+	$("#orderInfoDiv").hide();
 	$("#submitResultDiv").show();
 	
 }
-
-function updateOrder(){
-	$("#orderDiv").show();
-	$("#orderConfirmDiv").hide();
-}
 $(function () {
 	  $('[data-toggle="tooltip"]').tooltip({"trigger":"manual"});
-	});
+});
 
+//检查是否为整数
+function isInteger(a) {
+	var reg = /^(-|+)?d+$/;
+	return reg.test(a);
+}
+//检查是否为正整数
+function isUnsignedInteger(a) {
+	var reg = /^d+$/;
+	return reg.test(a);
+}
+function   isNumeric(a)
+{
+    var   reg=/^(-|+)?d+(.d+)?$/;
+   return reg.test(a);
+}
+//检查是否为正数
+function   isUnsignedNumeric(a)
+{
+    var   reg=/^d+(.d+)?$/;
+    return reg.test(a);
+}
 </script>
 
 

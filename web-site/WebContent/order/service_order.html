@@ -247,10 +247,10 @@
 <!-- content start -->
 <div class="jumbotron header_img">
 	<div class="container" style="position: relative;">
-		<img src="../img/kv_1170.png" class="img-responsive solution">
+		<img src="../img/kv_1170.png" class="img-responsive contact_us">
 		<div class="content">
-			<div class="title">应用领域</div>
-			<div class="info">多年来，IIECC有针对性地为多个行业的代表性公司量身定做了环境控制解决方案，取得了至优净化效果，有效提升了人们的生活品质和企业的生产效益。</div>
+			<div class="title">产品订购</div>
+			<div class="info">如需了解产品等方面的信息，您可以拨打我们服务热线或亲临IIECC授权经销商门店，我们将竭诚为您服务。 </div>
 		</div>
 	</div>
 </div>
@@ -261,36 +261,18 @@
 				<div>
 				<div class="list-group-item ">
 					<div style="width: 160px;" >
-						<a href="../solution/municipal_administration.html" class="">市政</a>
+						<a href="../order/sale_order.html" class="">产品订购</a>
 					</div>
-					<div style="float: right;position: absolute;top:25%;right:0;"><a href="../solution/municipal_administration.html" class="">></a></div>
+					<div style="float: right;position: absolute;top:25%;right:0;"><a href="../order/sale_order.html" class="">></a></div>
 				</div>
 				</div>
 			
 				<div>
 				<div class="list-group-item ">
 					<div style="width: 160px;" >
-						<a href="../solution/industry.html" class="">工业</a>
+						<a href="../order/service_intro.html" class="">检测服务</a>
 					</div>
-					<div style="float: right;position: absolute;top:25%;right:0;"><a href="../solution/industry.html" class="">></a></div>
-				</div>
-				</div>
-			
-				<div>
-				<div class="list-group-item ">
-					<div style="width: 160px;" >
-						<a href="../solution/business.html" class="">商业</a>
-					</div>
-					<div style="float: right;position: absolute;top:25%;right:0;"><a href="../solution/business.html" class="">></a></div>
-				</div>
-				</div>
-			
-				<div>
-				<div class="list-group-item ">
-					<div style="width: 160px;" >
-						<a href="../solution/other.html" class="">其他</a>
-					</div>
-					<div style="float: right;position: absolute;top:25%;right:0;"><a href="../solution/other.html" class="">></a></div>
+					<div style="float: right;position: absolute;top:25%;right:0;"><a href="../order/service_intro.html" class="">></a></div>
 				</div>
 				</div>
 			
@@ -298,340 +280,263 @@
 		<div class="content">
 			<ol class="breadcrumb">
 			  <li><a href="../index.html">首页</a></li>
-			  <li><a href="#">应用领域</a></li>
-			  <li style="padding-left: 1px;" class="active">市政</li>
+			  <li><a href="#">产品订购</a></li>
+			  <li style="padding-left: 1px;" class="active">产品订购</li>
 			</ol>
 			
 
 
-<div class="title">市政</div>
 
+
+
+
+<script type="text/javascript" src="../js/jquery.cityselect.js"></script>
+<div class="title">预约TECH-CHEK<sup>TM</sup>空气质量检测服务</div>
+<div id="orderInfoDiv">
+<div>
+	<div class="row" style="padding-top: 30px;margin-left:0px;margin-right: 0px;">客户信息：<hr/></div>
+	<div class="row" style="padding-top: 0;margin-left:0px;margin-right: 0px;">
+		<div style="width: 120px;float: left;">姓名*</div>
+		<div style="overflow: hidden;" data-toggle="tooltip" data-placement="left" title="请填写姓名" id="nameDiv" class="tooltipDiv"><input type="text" name="name" id="name" class="form-control" style="width: 200px;" maxlength="20"></div>
+	</div>
+	<div class="row" style="padding-top: 12px;margin-left:0px;margin-right: 0px;">
+		<div style="width: 120px;float: left;">手机号码*</div>
+		<div style="overflow: hidden;" data-toggle="tooltip" data-placement="left" title="请填写手机号码"id="mobileDiv" class="tooltipDiv"><input type="text" name="mobile" id="mobile"  class="form-control" style="width: 200px;" maxlength="11"></div>
+	</div>
+	<div class="row" style="padding-top: 12px;margin-left:0px;margin-right: 0px;">
+		<div style="width: 120px;float: left;">地址*</div>
+		<div style="overflow: hidden;" id="cityDiv">
+			<select class="prov" class="form-control" id="province"></select>
+			<select class="city" class="form-control" id="city"></select>
+		</div>
+	</div>
+	<div class="row" style="padding-top: 12px;margin-left:0px;margin-right: 0px;">
+		<div style="width: 120px;float: left;">&nbsp;</div>
+		<div style="overflow: hidden;" data-toggle="tooltip" data-placement="left" title="请填写详细地址" id="addressDiv" class="tooltipDiv"><input type="text" name="address" id="address" class="form-control" style="width: 100%;margin-right: 0;padding-right: 0;" placeholder="详细地址" maxlength="100"></div>
+	</div>
+	<div class="row" style="padding-top: 30px;margin-left:0px;margin-right: 0px;">建筑物信息：<hr/></div>
+	<div class="row" style="padding-top: 12px;margin-left:0px;margin-right: 0px;">
+		<div style="width: 160px;float: left;"><span style="vertical-align: middle;line-height: 34px;">建筑物面积</span></div>
+		<div style="overflow: hidden;float: left;margin-left: 5px;" data-toggle="tooltip" data-placement="left" title="请正确填写建筑物面积，最大为9999平方米" id="Q1Div" class="tooltipDiv"><input type="text" id="Q1" style="width: 100px;" value="" class="form-control" maxlength="100"></div>
+		<div style="float: left;padding-left: 20px;"><span style="vertical-align: middle;line-height: 34px;">平方米</span></div>
+	</div>
+	<div class="row" style="padding-top: 12px;margin-left:0px;margin-right: 0px;">
+		<div style="width: 160px;float: left;"><span style="vertical-align: middle;line-height: 34px;">层高</span></div>
+		<div style="overflow: hidden;float: left;margin-left: 5px;" data-toggle="tooltip" data-placement="left" title="请正确填写层高，最高为10米" id="Q2Div" class="tooltipDiv"><input type="text" id="Q2" style="width: 100px;" value="" class="form-control" maxlength="100"></div>
+		<div style="float: left;padding-left: 20px;"><span style="vertical-align: middle;line-height: 34px;">米</span></div>
+	</div>
+	<div class="row" style="padding-top: 12px;margin-left:0px;margin-right: 0px;">
+		<div style="width: 160px;float: left;"><span style="vertical-align: middle;line-height: 34px;">房间数</span></div>
+		<div style="overflow: hidden;float: left;margin-left: 5px;" data-toggle="tooltip" data-placement="left" title="请正确填写房间数，最大为99间" id="Q3Div" class="tooltipDiv"><input type="text"  id="Q3" style="width: 100px;" value="" class="form-control" maxlength="100"></div>
+		<div style="float: left;padding-left: 20px;"><span style="vertical-align: middle;line-height: 34px;">间</span></div>
+	</div>
+	<div class="row" style="padding-top: 12px;margin-left:0px;margin-right: 0px;">
+		<div style="width: 160px;float: left;"><span>建筑物特征<span></div>
+		<div style="float: left;overflow: hidden;">
+			<input type="checkbox" name="Q4" style="margin-right: 5px;margin-left: 5px;" value="1">新装修
+			<input type="checkbox" name="Q4" style="margin-left: 10px;margin-right: 5px;" value="2">带车库
+			<input type="checkbox" name="Q4" style="margin-left: 10px;margin-right: 5px;" value="3">室内养宠物
+		</div>
+	</div>
+	<div class="row" style="padding-top: 12px;margin-left:0px;margin-right: 0px;">
+		<div style="width: 160px;float: left;"><span>居住人特征<span></div>
+		<div style="float: left;overflow: hidden;">
+			<input type="checkbox" name="Q5" style="margin-right: 5px;margin-left: 5px;" value="1">老人
+			<input type="checkbox" name="Q5" style="margin-left: 10px;margin-right: 5px;" value="2">婴幼儿
+			<input type="checkbox" name="Q5" style="margin-left: 10px;margin-right: 5px;" value="3">孕妇
+			<input type="checkbox" name="Q5" style="margin-left: 10px;margin-right: 5px;" value="4">过敏体质
+		</div>
+	</div>
+	<div class="row" style="padding-top: 12px;margin-left:0px;margin-right: 0px;">
+		<div style="width: 160px;float: left;"><span>最担心的空气质量问题?<span></div>
+		<div style="float: left;overflow: hidden;">
+			<input type="checkbox" name="Q6" style="margin-right: 5px;margin-left: 5px;" value="1">甲醛
+			<input type="checkbox" name="Q6" style="margin-left: 10px;margin-right: 5px;" value="2">TVOC
+			<input type="checkbox" name="Q6" style="margin-left: 10px;margin-right: 5px;" value="3">异味
+			<input type="checkbox" name="Q6" style="margin-left: 10px;margin-right: 5px;" value="4">PM2.5
+			<input type="checkbox" name="Q6" style="margin-left: 10px;margin-right: 5px;" value="5">其它
+		</div>
+	</div>
+	<div class="row" style="padding-top: 12px;margin-left:0px;margin-right: 0px;">
+		<div style="width: 160px;float: left;"><span>是否已有新风系统?<span></div>
+		<div style="float: left;overflow: hidden;">
+			<input type="radio" name="Q7" style="margin-right: 5px;margin-left: 5px;" checked="checked"  value="0">无
+			<input type="radio" name="Q7" style="margin-left: 40px;margin-right: 5px;" value="1">有
+		</div>
+	</div>
+	<div class="row" style="padding-top: 12px;margin-left:0px;margin-right: 0px;">
+		<div style="width: 160px;float: left;"><span>是否已有空气净化设备?<span></div>
+		<div style="float: left;overflow: hidden;">
+			<input type="radio" name="Q8" style="margin-right: 5px;margin-left: 5px;" checked="checked" value="0">无
+			<input type="radio" name="Q8" style="margin-left: 40px;margin-right: 5px;" value="1">有
+		</div>
+	</div>
+	<div class="row" style="padding-top: 12px;margin-left:0px;margin-right: 0px;">
+		<div style="width: 160px;float: left;"><span>是否需要提供试用机?<span></div>
+		<div style="float: left;overflow: hidden;">
+			<input type="radio" name="Q9" style="margin-right: 5px;margin-left: 5px;" value="1">是
+			<input type="radio" name="Q9" style="margin-left: 40px;margin-right: 5px;" value="0">否
+		</div>
+	</div>
+	<div class="row" style="padding-top: 12px;margin-left:0px;margin-right: 0px;">周边环境</div>
+	<div class="row" style="padding-top: 12px;margin-left:0px;margin-right: 0px;">
+		<textarea id="Q10" rows="6" cols="" style="width: 100%"  class="form-control" placeholder="如果您对空气净化有指定需求，如去除甲醛、宠物异味或您的环境周边有化工企业或大型市政设施（机场、立交、隧道、污水泵站、地下停车场……）等，请在这里说明。"></textarea>
+	</div>
 	
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="info ">市政工程是指与城市生活配套的各种公共基础设施建设，主要包括机场、污水泵站、垃圾填埋场、隧道、大型车站等。这些设施由于作业环境复杂，或人员相对密集，通常会产生一系列较为严重的环境污染问题，如异味气体（以H<sub>2</sub>S为例）、高浓度腐蚀性气体（以SO<sub>2</sub>为例）等。</div>
-
-
-
-	
-	
-		<div style="padding-bottom: 12px;"></div>
-	
-
-
-
-
-
-
-
-<div class="info" style="margin-bottom: 12px;">常见污染物列表</div>
-
-<div class="table-responsive" style="margin-left: 0;margin-right: 0;padding-left: 0;padding-right: 0">
-	<table class="table table-hover table-bordered">
-		<thead class="">
-			
-				<th colspan="1" class="active" style="text-align: center;width: "></th>
-			
-				<th colspan="1" class="active" style="text-align: center;width: ">机场</th>
-			
-				<th colspan="1" class="active" style="text-align: center;width: ">隧道</th>
-			
-				<th colspan="1" class="active" style="text-align: center;width: ">污水处理</th>
-			
-				<th colspan="1" class="active" style="text-align: center;width: ">垃圾焚烧</th>
-			
-		</thead>
-		
-			<tr class="">
-				
-					<td rowspan="6">气态污染物</td>
-				
-					<td rowspan="1">氮氧化物</td>
-				
-					<td rowspan="1">二氧化氮</td>
-				
-					<td rowspan="1">氨</td>
-				
-					<td rowspan="1">卤化物</td>
-				
-			</tr>
-		
-			<tr class="">
-				
-					<td rowspan="1">硫氧化物</td>
-				
-					<td rowspan="1">一氧化碳</td>
-				
-					<td rowspan="1">硫化氢</td>
-				
-					<td rowspan="1">二噁英</td>
-				
-			</tr>
-		
-			<tr class="">
-				
-					<td rowspan="1">未燃烧的碳氢化合物</td>
-				
-					<td rowspan="1">碳氢化合物</td>
-				
-					<td rowspan="1">甲硫醇</td>
-				
-					<td rowspan="1">二苯醚</td>
-				
-			</tr>
-		
-			<tr class="">
-				
-					<td rowspan="1">臭氧</td>
-				
-					<td rowspan="1"></td>
-				
-					<td rowspan="1">甲硫醚</td>
-				
-					<td rowspan="1">氮化物</td>
-				
-			</tr>
-		
-			<tr class="">
-				
-					<td rowspan="1"></td>
-				
-					<td rowspan="1"></td>
-				
-					<td rowspan="1">二硫化碳</td>
-				
-					<td rowspan="1">挥发酚</td>
-				
-			</tr>
-		
-			<tr class="">
-				
-					<td rowspan="1"></td>
-				
-					<td rowspan="1"></td>
-				
-					<td rowspan="1"></td>
-				
-					<td rowspan="1">硫化物</td>
-				
-			</tr>
-		
-			<tr class="">
-				
-					<td rowspan="1">颗粒物</td>
-				
-					<td rowspan="1">香烟烟雾</td>
-				
-					<td rowspan="1">粉尘</td>
-				
-					<td rowspan="1">粉尘</td>
-				
-					<td rowspan="1"></td>
-				
-			</tr>
-		
-	</table>
+</div>
+<div class="row" style="padding-top: 48px;margin-left:0px;margin-right: 15px;" id="orderDescDiv">
+	<div class="info ">服务说明：</div>
+	<hr/>
+	<div>1、目前仅开放北京、上海以及沈阳地区的空气质量检测服务；</div>
+	<div>2、本检测服务为免费，不向客户收取任何费用；</div>
+	<div>3、在线预约后，本公司会根据排期提前和客户电话确认上门检测时间；</div>
+	<div>4、如有任何疑问，欢迎拨打艾易西服务热线4008-725-000，我们将竭诚为您服务。</div>
+</div>
+<div class="row" style="padding-top: 24px;margin-left:0px;margin-right: 15px;" id="orderDescDiv">
+	<div class="info ">免责声明：</div>
+	<hr/>
+	<div>声明：本检测服务之检测结果仅供参考用途，且仅适用于检测过程中所涉及的房间及空间，不得作为证明第三方造
+成本服务中客户损害之证据。本检测服务之信息不含有任何明确或暗示性形式的保证，不含有包括但不限于针对特
+定用途的适用性的暗示保证，用户应自行承担对检测结果的准确性和使用的全部风险。检测结果包含的信息以及
+IIECC公司针对相关问题的观点和评价的适用性仅在检测结果出具之日有效。</div>
+</div>
+<div class="row" style="padding-top: 24px;margin-left:0px;margin-right: 15px;" id="orderDescDiv">
+	<div class="info "><input type="checkbox" checked="checked" style="margin-right: 5px;" name="contractCofirm" >我已仔细阅读服务说明及免责说明<span data-toggle="tooltip" data-placement="right" title="请仔细阅读服务说明及免责说明" id="contractCofirmDiv" class="tooltipDiv"></span></div>
 </div>
 
 
+<div class="row" style="margin-left:0px;margin-right: 0px;">
+	<button onclick="submitOrder();" style="margin-top:15px;float: right;width: 100px;" class="btn btn-danger">提交预约</button>
+</div>
+</div>
+<div class="row" style="padding-top: 12px;display: none;" id="submitResultDiv">
+	<h4 style="text-align: center;">您的预约已成功提交！</h4>
+	<p style="text-align: center;">我们的客服人员会尽快通过电话和您确认并安排上门检测时间，感谢您的预约！</p>
+</div>
+<script type="text/javascript">
+$("#cityDiv").citySelect({
+	url:{"citylist":[
+		{"p":"北京","c":[{"n":"北京市"}]},
+		{"p":"上海","c":[{"n":"上海市"}]},
+		{"p":"辽宁","c":[{"n":"沈阳市"}]},
+	]},
+	prov:"北京",
+	city:"北京市",
+	dist:"",
+	nodata:"none"
+});
+
+
+function submitOrder(){
+	var name = $("#name").val();
+	var mobile = $("#mobile").val();
+	var address = $("#address").val();
+	
+	var Q1 = $("#Q1").val();
+	var Q2 = $("#Q2").val();
+	var Q3 = $("#Q3").val();
 
 	
+	var contractCofirm = $("input[name='contractCofirm']:checked").val(); 
 	
-		<div style="padding-bottom: 12px;"></div>
-	
-
-
-
-
-
-
-
-
-
-<div class="info ">市政类的服务设施均呈现出占地面积广、容纳人口多或处理量大的特点，极易产生有气味性的气体或出现由于人员众多带来的通风不畅、室内空气质量较差等问题，而这是传统的湿式吸收或者单一加大空气循环量的方法一直无法解决的。</div>
-
-
-
-	
-	
-		<div style="padding-bottom: 12px;"></div>
-	
-
-
-
-
-
-
-
-
-
-<div class="info ">IIECC提出了利用HDS系列高浓度气体干式洗涤器净化机组等系列产品去除有毒有害气体的解决方案。干式洗涤器净化机组可有效地消除污染物达到ppm（10<sup>-6</sup>）级别。</div>
-
-
-
-	
-	
-		<div style="padding-bottom: 12px;"></div>
-	
-
-
-
-
-
-
-
-
-
-<div class="info ">在IIECC的Multi-Mix<sup>®</sup> Media家族里有专门针对硫化氢等臭味气体的强氧化性媒体MM-1000，有比表面积大的活性炭媒体MM-3000，更有特殊配比的CleanAire型媒体。在净化设备的选择上，考虑到市政工程的安装条件所限，IIECC旗下的HDS系列高浓度气体洗涤器净化机组能够在较小的占地面积的条件下有一个很好的净化效果。另外，部分大风量或者浓度较高的市政设施会选用DAS系列深床式气相净化机组，在某些特定的区域内部也会选用APS小型气相净化系统来提高室内空气质量。</div>
-
-
-
-	
-	
-		<div style="padding-bottom: 12px;"></div>
+	var errorInfo = new Array();
+	$(".tooltipDiv").tooltip('hide');
+	if(name==null || name.length==0){
+		errorInfo.push("#nameDiv");
+	}
+	if(mobile==null || mobile.length!=11){
+		errorInfo.push("#mobileDiv");
+	}
+	if(address==null || address.length==0){
+		errorInfo.push("#addressDiv");
+	}
+	if(Q1!=null && Q1.length>0 && (isUnsignedInteger(Q1) || Q1==0 || Q1> 9999)){
+		errorInfo.push("#Q1Div");
+	}
+	if(Q2!=null && Q2.length>0 && (isUnsignedNumeric(Q2) || Q2==0 || Q2> 10)){
+		errorInfo.push("#Q2Div");
+	}
+	if(Q3!=null && Q3.length>0 && (isUnsignedInteger(Q3) || Q3==0 || Q3> 99)){
+		errorInfo.push("#Q3Div");
+	}
+	if(contractCofirm==null){
+		$("#contractCofirmDiv").tooltip('show');
+	}
+	if(errorInfo.length>0){
+		var t_a = $("#name").offset();      
+	    $("html,body").animate({scrollTop:t_a.top - "90" + "px"}, 500);
+    	setTimeout(function(){
+    	    for(ei in errorInfo){
+    			$(errorInfo[ei]).tooltip('show');
+    	    }
+        },1000);
+	    	 
+		//$("#errorMsg").text(errorInfo.join(","));
+		//$("#errorMsgDiv").show();
+		return;
+	}
 	
 
+	var province = $("#province").val();
+	var city = $("#city").val();
+	var Q4 = jQuery('input[type="checkbox"][name="Q4"]:checked').val();
+	var Q5 = jQuery('input[type="checkbox"][name="Q5"]:checked').val();
+	var Q6 = jQuery('input[type="checkbox"][name="Q6"]:checked').val();
+	var Q7 = jQuery('input[type="radio"][name="Q7"]:checked').val();
+	var Q8 = jQuery('input[type="radio"][name="Q8"]:checked').val();
+	var Q9 = jQuery('input[type="radio"][name="Q9"]:checked').val();
+	var Q10 = jQuery('#Q10').val();
+	$.ajax({
+	  method: "POST",
+	  dataType: 'json',
+	  url: "/admin/service_order/order_submit.do",
+	  data: { name: name, telNo: mobile, address:address,province:province,city:city,Q1:Q1,Q2:Q2,Q3:Q3,Q4:Q4,Q5:Q5,Q6:Q6,Q7:Q7,Q8:Q8,Q9:Q9,Q10:Q10}, 
+	  error: function(XMLHttpRequest, textStatus, errorThrown) {
+		  showSubmitResult();
+	  } ,
+	  success: function(){
+		  showSubmitResult();
+      }
+	});
+}
 
-
-
-
-
-
-<div class="sample-title">案例</div>
-
-
-
-<div class="info "></div>
-
-
-
+function showSubmitResult(msg){
+	$("#orderInfoDiv").hide();
+	$("#submitResultDiv").show();
 	
-	
-		<div style="padding-bottom: 12px;"></div>
-	
+}
+$(function () {
+	  $('[data-toggle="tooltip"]').tooltip({"trigger":"manual"});
+});
+
+//检查是否为整数
+function isInteger(a) {
+	var reg = /^(-|+)?d+$/;
+	return reg.test(a);
+}
+//检查是否为正整数
+function isUnsignedInteger(a) {
+	var reg = /^d+$/;
+	return reg.test(a);
+}
+function   isNumeric(a)
+{
+    var   reg=/^(-|+)?d+(.d+)?$/;
+   return reg.test(a);
+}
+//检查是否为正数
+function   isUnsignedNumeric(a)
+{
+    var   reg=/^d+(.d+)?$/;
+    return reg.test(a);
+}
+</script>
 
 
+<!--
 
-
-
-
-
-<h5>Washington Dulles International Airport —— USAH Series</br>华盛顿杜勒斯国际机场</h5>
-
-
-	<div class="img ">
-		
-			<img src="../img/solution/municipal_1.jpg" class="img-responsive">
-		
-		
-		
-			<div class="info" style="margin-top: 12px;">华盛顿杜勒斯国际机场有1800名员工，机场办公大楼的设计原已包含新风系统，但因距机场跑道只有数十米，不断有员工反映办公区域内部空气质量差，现场勘测后发现NO<sub>X</sub>，SO<sub>2</sub>，O<sub>3</sub>等有害气体浓度均高于标准数倍。为此，IIECC工程师采用USAH通用侧开系列气相净化机组，使大楼总流量为324000CFM（立方英尺每分钟）的气流经过USAH机组的两个并联媒体过滤段，分别为建筑供应180000CFM和144000CFM的清洁空气，同时，系统内置总重为80000磅的Multi-Mix<sup>®</sup> Media以保证空气品质等级。经USAH机组净化后，室内颗粒物浓度和有害污染气体浓度均有效降低。</div>
-		
-	</div>
-	
-
-
-
-	
-	
-		<div style="padding-bottom: 12px;"></div>
-	
-
-
-
-
-
-
-
-<h5>Al Shindagha Tunnel, Dubai —— Modular Unit</br>迪拜隧道</h5>
-
-
-	<div class="img ">
-		
-			<img src="../img/solution/municipal_2.jpg" class="img-responsive">
-		
-		
-		
-			<div class="info" style="margin-top: 12px;">由于过往车辆较多，海底隧道内部的尾气浓度偏高，而原有的内部通风设计并不能有效解决这一问题。汽车尾气的主要成分是氮氧化合物和硫氧化合物，因此IIECC工程师选用了气相净化模块单元进行内循环过滤净化，有害气体经过媒体的吸附催化氧化后，浓度显著降低，且有效减少了隧道内部挥发性有机化合物的浓度。</div>
-		
-	</div>
-	
-
-
-
-	
-	
-		<div style="padding-bottom: 12px;"></div>
-	
-
-
-
-
-
-
-
-<h5>Sewage Pump Station in Shanghai Pudong District —— HDS Series</br>上海市浦东污水泵站</h5>
-
-
-	<div class="img ">
-		
-			<img src="../img/solution/municipal_3.jpg" class="img-responsive">
-		
-		
-		
-			<div class="info" style="margin-top: 12px;">上海浦东污水泵站位于上海外环线处，近期规模为8000立方/天，远景设计规模可达10000立方/天。由于泵站紧邻居民楼（相距仅数十米），运行中产生的大量硫化氢等恶臭气体对周边环境带来了极大的影响。该泵站曾经采用雾化除臭工艺，但因处理工艺不完善，总体处理效果远低于预期。后停用该除臭工艺，选用HDS系列高浓度气体洗涤器净化机组，恶臭气体浓度明显降低，净化效果显著。</div>
-		
-	</div>
-	
-
-
-
-	
-	
-		<div style="padding-bottom: 12px;"></div>
-	
-
-
-
-
-
-
-
-<h5>Smithville Incineration Plant, Ontario —— HDS Series</br>安大略史密斯维拉焚化厂</h5>
-
-
-	<div class="img ">
-		
-			<img src="../img/solution/municipal_4.jpg" class="img-responsive">
-		
-		
-		
-			<div class="info" style="margin-top: 12px;">史密斯维拉焚化厂在垃圾焚烧过程中会产生一系列臭味气体，严重影响周边居民的生活。考虑到臭味气体的危害性，IIECC的工程师选用了HDS系列高浓度气体洗涤器净化机组。设备投入使用后，气味得到了有效控制，焚烧厂对周边的污染程度也降低至可控范围内。</div>
-		
-	</div>
-	
-
-
-
-	
-	
-		<div style="padding-bottom: 12px;"></div>
-	
-
+//-->
+</script>
 
 
 			<div style="margin-bottom: 120px;"></div>

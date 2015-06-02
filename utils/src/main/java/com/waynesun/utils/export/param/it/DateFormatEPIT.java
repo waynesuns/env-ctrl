@@ -13,6 +13,9 @@ import com.waynesun.utils.export.param.ExportParamInterType;
  */
 public class DateFormatEPIT implements ExportParamInterType{
 	private String pattern;
+	public DateFormatEPIT(){
+		this("yyyy-MM-dd");
+	}
 	public DateFormatEPIT(String pattern){
 		this.pattern = pattern;
 	}
@@ -20,6 +23,7 @@ public class DateFormatEPIT implements ExportParamInterType{
 	public Object getValue(Object value) {
 		if(value==null)
 			return "";
+		System.out.println(DateFormatUtils.format((Date) value, pattern));
 		return DateFormatUtils.format((Date) value, pattern);
 	}
 

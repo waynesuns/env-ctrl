@@ -17,10 +17,8 @@ public class AreaCacheUtils {
 		Map<String,AbstractArea> cityMap = new HashMap<String, AbstractArea>();
 		for (AbstractArea area : list) {
 			map.put(area.getCode(), area);
-			if(area instanceof CityArea){
-				// 以城市名称为key， 服务站主数据导入所用
-				cityMap.put(area.getName(), area);
-			}
+			// 以城市名称为key， 服务站主数据导入所用
+			cityMap.put(area.getName(), area);
 		}
 		Cache cache = CacheFactory.getInstance().getCache();
 		cache.put(CacheConst.AREA_CACHE_LIST_KEY, map);
@@ -57,6 +55,7 @@ public class AreaCacheUtils {
 	 */
 	public static AbstractArea getAreaByName(String name){
 		Map<String, AbstractArea> map = getAllAreaNameKeyMap();
+		System.err.println(name+":"+map+":"+map.get(name));
 		return map == null ? null : map.get(name);
 	}
 	

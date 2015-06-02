@@ -23,7 +23,7 @@ public class HtmlGenerator {
 			try{
 				HttpClient httpclient = new DefaultHttpClient();
 	
-				HttpGet httpget = new HttpGet("http://127.0.0.1:8080/web-site/"+url);
+				HttpGet httpget = new HttpGet("http://127.0.0.1:9080/web-site/"+url);
 	
 				HttpResponse response = httpclient.execute(httpget);
 				
@@ -90,6 +90,8 @@ public class HtmlGenerator {
 		//urls.add("contact_us/dealer_list.html");
 		urls.add("contact_us/index.html");
 		urls.add("order/sale_order.html");
+		urls.add("order/service_intro.html");
+		urls.add("order/service_order.html");
 		HtmlGenerator.generateHtml(urls);
 	}
 }

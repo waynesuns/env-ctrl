@@ -21,6 +21,7 @@ public class CacheConst
 	public static final String AREA_CACHE_LIST_KEY = "area_cache";
 	/** 省市区Key */
 	public static final String AREA_CACHE_NAME_KEY = "area_cache_name";
+	public static final String ORDER_NO_NAME_KEY = "order_no_name_key";
 	
 	/** 车型缓存Key */
 	public static final String CACHE_KEY_VEHICLE_MODEL = "vehicle_model_cache";

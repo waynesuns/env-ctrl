@@ -5,8 +5,8 @@
  <!-- Core CSS - Include with every page -->
  <!-- 全局CSS -->
 <link type="text/css" href="<c:url value="/css/global.css"/>" rel="Stylesheet"/>
-    <link href="<c:url value="/css/bootstrap/bootstrap.min.css"/>" rel="stylesheet">
-    <link rel="stylesheet" href="<c:url value="/css/bootstrap/bootstrap-theme.min.css"/>" >
+    <link href="<c:url value="/css/bootstrap/bootstrap.css"/>" rel="stylesheet">
+    <link rel="stylesheet" href="<c:url value="/css/bootstrap/bootstrap-theme.css"/>" >
     <link href="<c:url value="/css/bootstrap/bootstrap.vertical-tabs.min.css"/>" rel="stylesheet">
     <link href="<c:url value="/css/font-awesome/font-awesome.min.css" />" rel="stylesheet">
     <!-- Page-Level Plugin CSS - Dashboard -->
@@ -45,7 +45,7 @@
 <%-- <script type="text/javascript" src="<c:url value="/js/jquery/plugin/dataTables1.9.4/ColReorder.min.js"/>"></script> --%>
 <%-- <script type="text/javascript" src="<c:url value="/js/jquery/plugin/dataTables1.9.4/dataTables.scroller.min.js"/>"></script> --%>
 <script type="text/javascript" src="<c:url value="/js/jquery/plugin/dataTables1.9.4/FixedColumns.min.js"/>"></script>
-<%-- <script type="text/javascript" src="<c:url value="/js/jquery/plugin/dataTables1.9.4/FixedHeader.min.js"/>"></script> --%>
+<script type="text/javascript" src="<c:url value="/js/jquery/plugin/dataTables1.9.4/FixedHeader.min.js"/>"></script>
 <script type="text/javascript" src="<c:url value="/js/jquery/plugin/dataTables1.9.4/jquery.dataTables.columnFilter.js"/>"></script>
 <script type="text/javascript" src="<c:url value="/js/jquery/plugin/dataTables1.9.4/jquery.dataTables.reload.js"/>"></script>
 <%-- <script type="text/javascript" src="<c:url value="/js/jquery/plugin/dataTables1.9.4/KeyTable.min.js"/>"></script> --%>

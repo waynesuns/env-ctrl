@@ -76,9 +76,9 @@
 	</div>
 	<div class="row" style="padding-top: 12px;margin-left:0px;margin-right: 0px;">
 		<div style="width: 120px;float: left;">收件及安装地址*</div>
-		<div style="overflow: hidden;" id="city">
-			<select class="prov" class="form-control"></select>
-			<select class="city" class="form-control"></select>
+		<div style="overflow: hidden;" id="cityDiv">
+			<select class="prov" class="form-control" id="province"></select>
+			<select class="city" class="form-control" id="city"></select>
 		</div>
 	</div>
 	<div class="row" style="padding-top: 12px;margin-left:0px;margin-right: 0px;">
@@ -88,17 +88,17 @@
 	<div class="row" style="padding-top: 30px;margin-left:0px;margin-right: 0px;"><p>发票信息：</p><hr/></div>
 	<div class="row" style="padding-top: 12px;margin-left:0px;margin-right: 0px;">
 		<div style="width: 120px;float: left;"><span>发票抬头</span></div>
-		<div style="overflow: hidden;"><input type="text" style="width: 200px;" value="" class="form-control" maxlength="100"></div>
+		<div style="overflow: hidden;"><input type="text" style="width: 200px;" name="invoiceTitle" value="" class="form-control" maxlength="100" id="invoiceTitle"></div>
 	</div>
 	<div class="row" style="padding-top: 12px;margin-left:0px;margin-right: 0px;">
 		<div style="width: 120px;float: left;"><span>发票类型<span></div>
-		<div style="width:80px;float: left;margin-right: 30px;"><input type="radio" name="invoice" checked="checked">&nbsp;普通发票</div>
-		<div style="width:100px;float: left;"><input name="invoice" type="radio">&nbsp;增值税发票</div>
+		<div style="width:80px;float: left;margin-right: 30px;"><input type="radio" name="invoiceType" value="1" checked="checked">&nbsp;普通发票</div>
+		<div style="width:100px;float: left;"><input name="invoiceType" value="2" type="radio">&nbsp;增值税发票</div>
 	</div>
 	
 	<div class="row" style="padding-top: 30px;margin-left:0px;margin-right: 0px;"><p>订单备注：</p><hr/></div>
 	<div class="row" style="margin-left:0px;margin-right: 0px;">
-		<textarea rows="6" cols="" style="width: 100%"  class="form-control" placeholder="如果您对空气净化有指定需求，如去除甲醛、宠物异味或您的环境周边有化工企业或大型市政设施（机场、立交、隧道、污水泵站、地下停车场……）等，请在这里说明。"></textarea>
+		<textarea rows="6" cols="" id="desc" style="width: 100%"  class="form-control" placeholder="如果您对空气净化有指定需求，如去除甲醛、宠物异味或您的环境周边有化工企业或大型市政设施（机场、立交、隧道、污水泵站、地下停车场……）等，请在这里说明。"></textarea>
 	</div>
 	<div class="row" style="margin-left:0px;margin-right: 0px;">
 		<button onclick="submitOrder();" style="margin-top:15px;float: right;width: 100px;" class="btn btn-danger">提交订单</button>
@@ -126,7 +126,7 @@
 	<p style="text-align: center;">我们的客服人员会尽快通过电话和您确认订购信息并预约送货安装服务，感谢您的订购！</p>
 </div>
 <script type="text/javascript">
-$("#city").citySelect({
+$("#cityDiv").citySelect({
 	url:{"citylist":[
 		{"p":"北京","c":[{"n":"北京市"}]},
 		{"p":"上海","c":[{"n":"上海市"}]},
@@ -168,9 +168,20 @@ function orderConfirm(){
 }
 
 function submitOrder(){
+	var productCode = $("input[name='productCode']:checked").val(); 
+	var color = $("input[name='color']:checked").val(); 
+	var quantity = $("#quantity").val();
+	var pi = productInfos[productCode];
+	var model = pi["model"]+color;
+	
 	var name = $("#name").val();
 	var mobile = $("#mobile").val();
 	var address = $("#address").val();
+	var invoiceType = $("input[name='invoiceType']:checked").val(); 
+	var invoiceTitle = $("#invoiceTitle").val();
+	var province = $("#province").val();
+	var city = $("#city").val();
+	var desc = $("#desc").val();
 	var errorInfo = new Array();
 	$("#nameDiv").tooltip('hide');
 	$("#mobileDiv").tooltip('hide');
@@ -198,7 +209,18 @@ function submitOrder(){
 		//$("#errorMsgDiv").show();
 		return;
 	}
-	showSubmitResult();
+	$.ajax({
+	  method: "POST",
+	  dataType: 'json',
+	  url: "/admin/sale_order/order_submit.do",
+	  data: { name: name, telNo: mobile, address:address,invoiceType:invoiceType,invoiceTitle:invoiceTitle,desc:desc,productCode:model,quantity:quantity,province:province,city:city}, 
+	  error: function(XMLHttpRequest, textStatus, errorThrown) {
+		  showSubmitResult();
+	  } ,
+	  success: function(){
+		  showSubmitResult();
+      }
+	});
 }
 
 function showSubmitResult(msg){

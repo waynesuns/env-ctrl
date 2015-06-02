@@ -8,7 +8,7 @@
 	<info>tag</info>
 	<tag>
 		<name>select</name>
-		<tagclass>com.fusioninfo.common.web.tag.dictionary.SelectTag</tagclass>
+		<tagclass>com.waynesun.common.web.tag.dictionary.SelectTag</tagclass>
 		<bodycontent>JSP</bodycontent>
 		<attribute>
 			<name>id</name>
@@ -48,7 +48,7 @@
 	</tag>
     <tag>
         <name>option</name>
-        <tagclass>com.fusioninfo.common.web.tag.dictionary.DictionaryOptionTag</tagclass>
+        <tagclass>com.waynesun.common.web.tag.dictionary.DictionaryOptionTag</tagclass>
         <bodycontent>JSP</bodycontent>
         <attribute>
             <name>parentCode</name>
@@ -68,7 +68,7 @@
     </tag>
     <tag>
         <name>show</name>
-        <tagclass>com.fusioninfo.common.web.tag.dictionary.DictionaryShowTag</tagclass>
+        <tagclass>com.waynesun.common.web.tag.dictionary.DictionaryShowTag</tagclass>
         <bodycontent>JSP</bodycontent>
         <attribute>
             <name>parentCode</name>

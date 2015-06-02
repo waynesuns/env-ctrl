@@ -9,6 +9,7 @@ import com.waynesun.common.biz.dictionary.DictionaryItem;
 import com.waynesun.common.biz.resource.Resource;
 import com.waynesun.common.biz.role.Role;
 import com.waynesun.common.biz.user.AbstractDealer;
+import com.waynesun.ec.biz.order.OrderNoCacheBean;
 
 public interface Data {
 
@@ -60,4 +61,5 @@ public interface Data {
 	 * @return
 	 */
 	List<DictionaryCategory> findAllDictionaryCategories();
+	OrderNoCacheBean findOrderNoCacheBean();
 }

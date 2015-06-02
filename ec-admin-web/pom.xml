@@ -72,17 +72,6 @@
 	</build>
 	<repositories>
 		<repository>
-			<id>nexus</id>
-			<name>local private nexus</name>
-			<url>http://mirrors.ibiblio.org/pub/mirrors/maven2/</url>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</repository>
-		<repository>
 			<id>apache</id>
 			<name>local private nexus</name>
 			<url>https://repo.maven.apache.org/maven2/</url>
@@ -106,18 +95,5 @@
 		</repository>
 
 	</repositories>
-	<pluginRepositories>
-		<pluginRepository>
-			<id>nexus</id>
-			<name>local private nexus</name>
-			<url>http://mirrors.ibiblio.org/pub/mirrors/maven2/</url>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</pluginRepository>
-	</pluginRepositories>
 
 </project>

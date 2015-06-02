@@ -66,6 +66,8 @@
 				<value>com/waynesun/common/biz/product/Product.hbm.xml</value>
 				<value>com/waynesun/common/biz/order/Order.hbm.xml</value>
 				<value>com/waynesun/common/biz/order/OrderItem.hbm.xml</value>
+				<value>com/waynesun/common/biz/order/OrderEvent.hbm.xml</value>
+				<value>com/waynesun/common/biz/survey/UserProfileSurvey.hbm.xml</value>
 			</list>
 		</property>
 		<property name="hibernateProperties">
