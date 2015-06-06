@@ -20,7 +20,6 @@ import com.ec.website.param.group.DivGroupParam;
 import com.ec.website.param.group.ImageGroupParam;
 import com.ec.website.param.group.MainGroupParam;
 import com.ec.website.param.group.OlGroupParam;
-import com.ec.website.param.group.RowGroupParam;
 
 @Controller
 @RequestMapping(value = "/about_us")
@@ -87,6 +86,13 @@ public class AboutUsController extends AbstractController{
 		param.addSample(new SolutionSampleParam("CE认证","about_us/certification/logo_6.jpg", "CONFORMITE EUROPEENNE “Ce”标志是一种安全认证标志。</br>凡是贴有“CE”标志的产品就可在欧盟各成员国内销售，无须符合每个成员国的要求，从而实现了商品在欧盟成员国范围内的自由流通。"));
 		param.addSample(new SolutionSampleParam("The Canadian Environmental Certification Mark","about_us/certification/logo_7.jpg", "加拿大环保认证标志"));
 		param.addSample(new SolutionSampleParam("ebmpapst GREENTECH认证","about_us/certification/logo_9.png", "满足欧盟为能源动力制定的最严格的能源要求。"));
+		
+		param.addSample(new SolutionSampleParam("中国质量认证中心","about_us/certification/logo_12.png", "安全与电磁兼容认证"));
+		param.addSample(new SolutionSampleParam("中国质量认证中心","about_us/certification/logo_13.png", "除菌认证"));
+		param.addSample(new SolutionSampleParam("中国质量认证中心","about_us/certification/logo_14.png", "节能产品认证"));
+		param.addSample(new SolutionSampleParam("中国质量认证中心","about_us/certification/logo_15.png", "环保产品认证"));
+		param.addSample(new SolutionSampleParam("ISO9001认证","about_us/certification/logo_16.png", ""));
+		
 		
 		SolutionParam guild = this.generateParam(2);
 		guild.setTitle("行业协会");

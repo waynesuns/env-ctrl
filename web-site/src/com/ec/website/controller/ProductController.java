@@ -34,14 +34,14 @@ public class ProductController extends AbstractController {
 		param.setTitle("APS系列小型气相净化系统");
 
 		List<MainGroupParam> details = new 	ArrayList<MainGroupParam>();
-		this.initAPS1(details);
-		this.initAPS2(details);
 		this.initAPS3(details);
+		this.initAPS2(details);
+		this.initAPS1(details);
 		
 		Map<Integer,String> keys = new HashMap<Integer, String>();
-		keys.put(0, "立式系列");
+		keys.put(0, "移动式系列");
 		keys.put(1, "暗藏式系列");
-		keys.put(2, "移动式系列");
+		keys.put(2, "立式系列");
 		request.setAttribute("solutionParam", param);
 		request.setAttribute("detailPage", "productDetail3");
 		request.setAttribute("productDetailPage", "productDetailPage5");
@@ -71,7 +71,7 @@ public class ProductController extends AbstractController {
 					.addValue("减少新风能量负荷")
 					.addValue("双层绝缘PU面板结构")
 					.addValue("30%初效过滤器")
-					.addValue("一至三级气相分子筛")
+					.addValue("一至三级气相净化媒体模块")
 					.addValue("过滤臭味和有毒气体")
 					.addValue("快速门锁扣")
 					.addValue("检修门")
@@ -119,25 +119,46 @@ public class ProductController extends AbstractController {
 	public void initAPS3(List<MainGroupParam> details){
 //		details.add((new MainGroupParam(null,null))
 //				.addValue(new DivGroupParam(null,"APS移动式系列气相净化仪拥有行业领先的净化能力，可完全去除PM2.5，并将气体污染物的危害降至最低。"))
-//				.addValue(new DivGroupParam(null,"独有的Multi-Mix<sup>®</sup> Media气相分子筛，能在0.05秒内彻底去除有毒有害气体，技术源自加拿大Circul-Aire公司。"))
+//				.addValue(new DivGroupParam(null,"独有的Multi-Mix<sup>®</sup> Media气相净化媒体，能在0.05秒内彻底去除有毒有害气体，技术源自加拿大Circul-Aire公司。"))
 //				.addValue(new DivGroupParam(null,"作为顶级的净化过滤媒体，Multi-Mix<sup>®</sup> Media不仅能对环境里的腐蚀、气味和有毒污染物质提供不间断的快速净化，还能有效消除普通空气过滤器无法消除的有毒有害气体，如：二氧化硫、二氧化氮、有机污染物，甚至在特殊地区可有效净化二噁英等。"))
 //				.addValue(new DivGroupParam(null,"气相和尘埃污染控制技术是当前最先进、最高效的解决方案，现有案例多应用于较为复杂的污染环境。APS移动式气相净化仪这一高性能系统，集成了精密的元件材料与工程实践，利用多级过滤和气相过滤媒体相结合的方式，能非常有效地去除室内空气污染物，可用于恶劣的工业和商业环境。").setDoDelim(true))
 
 		details.add((new MainGroupParam(null,null))
 				.addValue(new RowGroupParam(null, null)
-					.addValue(new DivGroupParam(null, "APS移动式系列气相净化仪拥有行业领先的净化能力，可完全去除PM2.5，并将气体污染物的危害降至最低。"+"</br></br>"+"独有的Multi-Mix<sup>®</sup> Media气相分子筛，能在0.05秒内彻底去除有毒有害气体，技术源自加拿大Circul-Aire公司。").setCssClassName("col-xxs-12 col-md-6"))
-					.addValue(new ImageGroupParam(null).addValue(new ImageParam("/product/aps_550m.png")).setCssClassName("col-xxs-12 col-md-6"))
+					.addValue(new DivGroupParam(null, "APS移动式系列气相净化仪拥有行业领先的净化能力，可完全去除PM2.5，并将气体污染物的危害降至最低。"+"</br></br>"+"独有的Multi-Mix<sup>®</sup> Media气相净化媒体，能在0.05秒内彻底去除有毒有害气体，技术源自加拿大Circul-Aire公司。").setCssClassName("col-xxs-12 col-md-6"))
+					.addValue(new ImageGroupParam(null).addValue(new ImageParam("/product/aps_480m.png")).setCssClassName("col-xxs-12 col-md-6"))
 						)
-				.addValue(new ImageGroupParam(null).addValue(new ImageParam("/product/aps550m_link.png","")))
 				.addValue(new DivGroupParam(null,"作为顶级的净化过滤媒体，Multi-Mix<sup>®</sup> Media不仅能对环境里的腐蚀、气味和有毒污染物质提供不间断的快速净化，还能有效消除普通空气过滤器无法消除的有毒有害气体，如：二氧化硫、二氧化氮、有机污染物，甚至在特殊地区可有效净化二噁英等。"))
 				.addValue(new DivGroupParam(null,"气相和尘埃污染控制技术是当前最先进、最高效的解决方案，现有案例多应用于较为复杂的污染环境。APS移动式气相净化仪这一高性能系统，集成了精密的元件材料与工程实践，利用多级过滤和气相过滤媒体相结合的方式，能非常有效地去除室内空气污染物，可用于恶劣的工业和商业环境。").setDoDelim(true))
 				
 				.addValue(new DivGroupParam("特点",null))
 				.addValue(new DivGroupParam(null,"等离子发生器采用韩国 spe H•ion cluster 技术，通过 IST 专业评测机构认证，可高效灭菌、降解部分有害气体。","第一层 等离子段（可选配置）"))
-				.addValue(new DivGroupParam(null,"采用AAF AmMet可清洗铝网过滤器可滤除所有直径 5μm以上的大颗粒粉尘，容尘量大并可清洗后重复使用。","第二层 初效过滤段"))
-				.addValue(new DivGroupParam(null,"其独特“V”型工业级设计保证了高接触面积和低阻力，双分子筛结构可装填最大重达10000 克的Multi-Mix<sup>®</sup> Media气相净化媒体，能在 0.05 秒内去除数百种室内污染气体，即使室内环境有数十人吸烟， APS移动式气相净化仪也能表现出色。","第三层 气相分子筛"))
+				.addValue(new DivGroupParam(null,"采用AAF AmMet可清洗铝网过滤器可滤除所有直径 10μm以上的大颗粒粉尘，容尘量大并可清洗后重复使用。","第二层 初效过滤段"))
+				.addValue(new DivGroupParam(null,"其独特“V”型工业级设计保证了高接触面积和低阻力，双气相净化媒体模块结构可装填最大重达10000 克的Multi-Mix<sup>®</sup> Media气相净化媒体，能在 0.05 秒内去除数百种室内污染气体，即使室内环境有数十人吸烟， APS移动式气相净化仪也能表现出色。","第三层 气相分子筛"))
 				.addValue(new DivGroupParam(null,"PTFE材质的HEPA13高效过滤器，专门针对PM2.5颗粒设计，甚至是0.1微米的颗粒也能达到99.99%的处理效率。","第四层 高效过滤段"))
+				.addValue(new TableGroupParam("产品家族")
+				.addHeader(new TableHeaderParam("", "20%")).addHeader(new TableHeaderParam("APS-550M","50%")).addHeader(new TableHeaderParam("APS-480M","30%"))
+				.addValue(new String[]{"产品介绍","适用于居室及办公环境的顶级空气净化系统。极致去除颗粒物能力，多种气相净化媒体任意组合，长效去除常见的数百种有毒害气体。","适用于居室及办公环境的专业级空气净化系统。超大净化效能，综合去除颗粒物及有毒害气体。"})
+				.addValue(new String[]{"","<a href='../aps550m/index.html'><b><font color='#009bdf'>浏览产品网站</font></b></a>","<a href='../aps480m/index.html'><b><font color='#009bdf'>浏览产品网站</font></b></a>"})
+				.addValue(new String[]{"风机风量","1300 m<sup>3</sup>/h","1300 m<sup>3</sup>/h"})
+				.addValue(new String[]{"CADR","530 m<sup>3</sup>/h",">800 m<sup>3</sup>/h"})
+				.addValue(new String[]{"净化效能","3.33（符合A级）","4.76（符合A级）"})
+				.addValue(new String[]{"风档","无级变速","无级变速"})
+				.addValue(new String[]{"工作电压","220V 50Hz","220V 50Hz"})
+				.addValue(new String[]{"最大功耗","160 w","160 w"})
+				.addValue(new String[]{"尺寸","842×305×508 mm","842×305×508 mm"})
+				.addValue(new String[]{"重量</br>（不含净化媒体）","24 kg","24 kg"})
+				.addValue(new String[]{"最大噪音","64 db","64 db"})
+				.addValue(new String[]{"整机材料","镀锌钢板","镀锌钢板"})
+				.addValue(new String[]{"初效过滤器","AAF AmMet铝制初效过滤器","AAF AmMet铝制初效过滤器"})
+				.addValue(new String[]{"气相净化媒体","MM-1000 / MM-1355 / CleanAire 任意两种气相净化媒体组合","CleanAire"})
+				.addValue(new String[]{"高效过滤器","AAF HEPA13 PTFE材质高效过滤器","3M HEPA13 高效过滤器"})
+				.addValue(new String[]{"风机","ebmpapst Radical 德国原产风机","ebmpapst Radical 德国原产风机"})
+				.addValue(new String[]{"滚轮","4个滚轮，方便移动","4个滚轮，方便移动"})
+				.addValue(new String[]{"","<a href='../aps550m/index.html'><b><font color='#009bdf'>浏览产品网站</font></b></a>","<a href='../aps480m/index.html'><b><font color='#009bdf'>浏览产品网站</font></b></a>"})
 				
+				)
+
 					
 						);
 	}

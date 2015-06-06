@@ -50,6 +50,16 @@
 			</tr>
 
 			<tr class="active">
+				<td style="border-left: 0;border-right: 0;">APS-480M检测报告 —— 固态污染物洁净空气量 净化效能</td>
+				<td style="border-left: 0;border-right: 0;"><a href="../download/2015I20-35-883170.pdf"><img src="../img/kv_1170.png" style="width: 13px;height: 17px;" class="icon_download" /></a></td>
+			</tr>
+
+			<tr class="">
+				<td style="border-left: 0;border-right: 0;">APS-480M检测报告 —— 甲醛净化效率</td>
+				<td style="border-left: 0;border-right: 0;"><a href="../download/2015I20-35-883171.pdf"><img src="../img/kv_1170.png" style="width: 13px;height: 17px;" class="icon_download" /></a></td>
+			</tr>
+
+			<tr class="active">
 				<td style="border-left: 0;border-right: 0;">M.S.D.S材料安全数据表：MM-1000</td>
 				<td style="border-left: 0;border-right: 0;"><a href="../download/msds_mm1000.pdf"><img src="../img/kv_1170.png" style="width: 13px;height: 17px;" class="icon_download" /></a></td>
 			</tr>

@@ -10,21 +10,22 @@ import com.ec.website.param.SolutionParam;
 
 @Controller
 @RequestMapping(value = "/order")
-public class OrderController {
+public class OrderController extends AbstractController {
 	@RequestMapping(value = "/sale_order")
-	public String saleOrder(HttpServletRequest request, HttpServletResponse response){
-		
+	public String saleOrder(HttpServletRequest request,
+			HttpServletResponse response) {
 
-		SolutionParam param = this.generateParam(0);
+		SolutionParam param = this.generateParam(1);
 		request.setAttribute("solutionParam", param);
 		request.setAttribute("detailPage", "contactUs");
 		request.setAttribute("productDetailPage", "order/sale_order");
 
 		return "/template/orderTemplate.jsp";
 	}
+
 	@RequestMapping(value = "/service_intro")
-	public String serviceIntro(HttpServletRequest request, HttpServletResponse response){
-		
+	public String serviceIntro(HttpServletRequest request,
+			HttpServletResponse response) {
 
 		SolutionParam param = this.generateParam(0);
 		request.setAttribute("solutionParam", param);
@@ -33,9 +34,10 @@ public class OrderController {
 
 		return "/template/orderTemplate.jsp";
 	}
+
 	@RequestMapping(value = "/service_order")
-	public String serviceOrder(HttpServletRequest request, HttpServletResponse response){
-		
+	public String serviceOrder(HttpServletRequest request,
+			HttpServletResponse response) {
 
 		SolutionParam param = this.generateParam(0);
 		request.setAttribute("solutionParam", param);
@@ -44,6 +46,7 @@ public class OrderController {
 
 		return "/template/orderTemplate.jsp";
 	}
+
 	public SolutionParam generateParam(int subItemIndex) {
 		SolutionParam param = OrderController.generateParam();
 		param.setActiveSubItem(param.getSubItems().get(subItemIndex).getName());
@@ -53,13 +56,13 @@ public class OrderController {
 
 	public static SolutionParam generateParam() {
 		SolutionParam param = new SolutionParam();
-		param.setHeaderPicName("contact_us");
-		param.setSubItemTitle("产品订购");
-		param.setSubItemHeaderImgInfo("如需了解产品等方面的信息，您可以拨打我们服务热线或亲临IIECC授权经销商门店，我们将竭诚为您服务。 ");
-		param.addSubItem("产品订购", "order/sale_order.html");
-		param.addSubItem("检测服务", "order/service_intro.html");
-//		param.addSubItem("天猫旗舰店", "contact_us/tmall.html");
-//		param.addSubItem("授权经销商", "contact_us/dealer_list.html");
+		param.setHeaderPicName("order");
+		param.setSubItemTitle("服务及订购");
+		param.setSubItemHeaderImgInfo("IIECC提供的空气质量检测服务以及产品网络订购服务，让您足不出户就可以安心尽享“零污染”洁净空气。 ");
+		param.addSubItem("Tech-CHEK空气质量检测服务", "order/service_intro.html");
+		param.addSubItem("产品在线订购", "order/sale_order.html");
+		// param.addSubItem("天猫旗舰店", "contact_us/tmall.html");
+		// param.addSubItem("授权经销商", "contact_us/dealer_list.html");
 		return param;
 	}
 

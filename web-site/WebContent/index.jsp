@@ -22,7 +22,7 @@
 	      	<div class="carousel-caption-kv col-sm-6 col-xs-10 hidden-xxs">
 	      		<div class="title">APS-550M</div>
 				<div class="content">
-					<p>双分子筛结构可装填最大重达<font class="red">10000</font>克的气相净化媒体</p>
+					<p>双气相净化媒体模块结构可装填最大重达<font class="red">10000</font>克的气相净化媒体</p>
 					<p>总表面积约为<font class="red">6500000</font>平方米，相当于<font class="red">900</font>个足球场的面积</p>
 				</div>
 				<button class="btn btn-danger" onclick="window.location.href='aps550m/index.html'">了解详情</button>
@@ -42,7 +42,7 @@
 	        <img src="img/kv_1170.png" class="kv kv3">
 	      	<div class="carousel-caption-kv col-sm-6 col-xs-10 hidden-xxs"><div class="title">0.05秒彻底净化</div>
 				<div class="content">
-					<p><font class="red">Multi-Mix</font><sup class="red">®</sup><font class="red" style="padding-left: 3px;">Media</font>气相分子筛</p>
+					<p><font class="red">Multi-Mix</font><sup class="red">®</sup><font class="red" style="padding-left: 3px;">Media</font>气相净化媒体</p>
 					<p><font class="red">0.05</font>秒彻底去除有毒有害气体</p>
 				</div>
 				<button class="btn btn-danger" onclick="window.location.href='technology/gas_filter.html'">了解详情</button>

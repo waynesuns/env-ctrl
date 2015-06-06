@@ -85,7 +85,7 @@
 		<div style="width: 160px;float: left;"><span>是否需要提供试用机?<span></div>
 		<div style="float: left;overflow: hidden;">
 			<input type="radio" name="Q9" style="margin-right: 5px;margin-left: 5px;" value="1">是
-			<input type="radio" name="Q9" style="margin-left: 40px;margin-right: 5px;" value="0">否
+			<input type="radio" name="Q9" style="margin-left: 40px;margin-right: 5px;" checked="checked" value="0">否
 		</div>
 	</div>
 	<div class="row" style="padding-top: 12px;margin-left:0px;margin-right: 0px;">周边环境</div>
@@ -111,7 +111,7 @@
 IIECC公司针对相关问题的观点和评价的适用性仅在检测结果出具之日有效。</div>
 </div>
 <div class="row" style="padding-top: 24px;margin-left:0px;margin-right: 15px;" id="orderDescDiv">
-	<div class="info "><input type="checkbox" checked="checked" style="margin-right: 5px;" name="contractCofirm" >我已仔细阅读服务说明及免责说明<span data-toggle="tooltip" data-placement="right" title="请仔细阅读服务说明及免责说明" id="contractCofirmDiv" class="tooltipDiv"></span></div>
+	<div class="info "><input type="checkbox" checked="checked" style="margin-right: 5px;" name="contractCofirm" id="contractCofirm" value="1">我已仔细阅读服务说明及免责说明<span data-toggle="tooltip" data-placement="right" title="请仔细阅读服务说明及免责说明" id="contractCofirmDiv" class="tooltipDiv"></span></div>
 </div>
 
 
@@ -146,7 +146,6 @@ function submitOrder(){
 	var Q2 = $("#Q2").val();
 	var Q3 = $("#Q3").val();
 
-	
 	var contractCofirm = $("input[name='contractCofirm']:checked").val(); 
 	
 	var errorInfo = new Array();
@@ -160,17 +159,14 @@ function submitOrder(){
 	if(address==null || address.length==0){
 		errorInfo.push("#addressDiv");
 	}
-	if(Q1!=null && Q1.length>0 && (isUnsignedInteger(Q1) || Q1==0 || Q1> 9999)){
+	if(Q1!=null && Q1.length>0 && (!isUnsignedNumeric(Q1) || Q1==0 || Q1> 9999)){
 		errorInfo.push("#Q1Div");
 	}
-	if(Q2!=null && Q2.length>0 && (isUnsignedNumeric(Q2) || Q2==0 || Q2> 10)){
+	if(Q2!=null && Q2.length>0 && (!isUnsignedNumeric(Q2) || Q2==0 || Q2> 10)){
 		errorInfo.push("#Q2Div");
 	}
-	if(Q3!=null && Q3.length>0 && (isUnsignedInteger(Q3) || Q3==0 || Q3> 99)){
+	if(Q3!=null && Q3.length>0 && (!isUnsignedInteger(Q3) || Q3==0 || Q3> 99)){
 		errorInfo.push("#Q3Div");
-	}
-	if(contractCofirm==null){
-		$("#contractCofirmDiv").tooltip('show');
 	}
 	if(errorInfo.length>0){
 		var t_a = $("#name").offset();      
@@ -180,18 +176,32 @@ function submitOrder(){
     			$(errorInfo[ei]).tooltip('show');
     	    }
         },1000);
-	    	 
-		//$("#errorMsg").text(errorInfo.join(","));
-		//$("#errorMsgDiv").show();
+		return;
+	}
+
+	if(contractCofirm==null){
+		$("#contractCofirmDiv").tooltip('show');
 		return;
 	}
 	
-
 	var province = $("#province").val();
 	var city = $("#city").val();
-	var Q4 = jQuery('input[type="checkbox"][name="Q4"]:checked').val();
-	var Q5 = jQuery('input[type="checkbox"][name="Q5"]:checked').val();
-	var Q6 = jQuery('input[type="checkbox"][name="Q6"]:checked').val();
+
+	var Q4 = new Array();
+	$('input[type="checkbox"][name="Q4"]:checked').each(function() { 
+		Q4.push($(this).val());
+	});
+	Q4 = Q4.join(',');
+	var Q5 = new Array();
+	$('input[type="checkbox"][name="Q5"]:checked').each(function() { 
+		Q5.push($(this).val());
+	});
+	Q5 = Q5.join(',');
+	var Q6 = new Array();
+	$('input[type="checkbox"][name="Q6"]:checked').each(function() { 
+		Q6.push($(this).val());
+	});
+	Q6 = Q6.join(',');
 	var Q7 = jQuery('input[type="radio"][name="Q7"]:checked').val();
 	var Q8 = jQuery('input[type="radio"][name="Q8"]:checked').val();
 	var Q9 = jQuery('input[type="radio"][name="Q9"]:checked').val();
@@ -200,7 +210,7 @@ function submitOrder(){
 	  method: "POST",
 	  dataType: 'json',
 	  url: "/admin/service_order/order_submit.do",
-	  data: { name: name, telNo: mobile, address:address,province:province,city:city,Q1:Q1,Q2:Q2,Q3:Q3,Q4:Q4,Q5:Q5,Q6:Q6,Q7:Q7,Q8:Q8,Q9:Q9,Q10:Q10}, 
+	  data: { quantity:1,name: name, telNo: mobile, address:address,province:province,city:city,Q1:Q1,Q2:Q2,Q3:Q3,Q4:Q4,Q5:Q5,Q6:Q6,Q7:Q7,Q8:Q8,Q9:Q9,Q10:Q10}, 
 	  error: function(XMLHttpRequest, textStatus, errorThrown) {
 		  showSubmitResult();
 	  } ,
@@ -226,18 +236,18 @@ function isInteger(a) {
 }
 //检查是否为正整数
 function isUnsignedInteger(a) {
-	var reg = /^d+$/;
+	var reg = /^\d+$/;
 	return reg.test(a);
 }
 function   isNumeric(a)
 {
-    var   reg=/^(-|+)?d+(.d+)?$/;
+    var   reg=/^(-|+)?\d+(.\d+)?$/;
    return reg.test(a);
 }
 //检查是否为正数
 function   isUnsignedNumeric(a)
 {
-    var   reg=/^d+(.d+)?$/;
+    var   reg=/^\d+(.\d+)?$/;
     return reg.test(a);
 }
 </script>

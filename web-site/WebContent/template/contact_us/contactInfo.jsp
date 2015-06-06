@@ -1,7 +1,7 @@
 <%@ page language="java" pageEncoding="UTF-8" contentType="text/html;charset=utf-8"%>
 <%@include file="/common/taglib.jsp"%>
 
-<div class="title">上海东敏实业有限公司</div>
+<div class="title">艾易西环境工程（上海）有限公司</div>
 <p>地址：上海市闵行区莘福路396号1号楼7楼 </p>
 <p>电话：+86-21-5488 0205</p>
 <p>传真：+86-21-5488 0069</p>

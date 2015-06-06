@@ -1,26 +1,608 @@
-<html><head><title>Apache Tomcat/7.0.54 - Error report</title><style><!--H1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;} H2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;} H3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;} BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;} B {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;} P {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;}A {color : black;}A.name {color : black;}HR {color : #525D76;}--></style> </head><body><h1>HTTP Status 500 - Request processing failed; nested exception is java.lang.IndexOutOfBoundsException: Index: 1, Size: 1</h1><HR size="1" noshade="noshade"><p><b>type</b> Exception report</p><p><b>message</b> <u>Request processing failed; nested exception is java.lang.IndexOutOfBoundsException: Index: 1, Size: 1</u></p><p><b>description</b> <u>The server encountered an internal error that prevented it from fulfilling this request.</u></p><p><b>exception</b> <pre>org.springframework.web.util.NestedServletException: Request processing failed; nested exception is java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
-	org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:681)
-	org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:574)
-	javax.servlet.http.HttpServlet.service(HttpServlet.java:620)
-	javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
-	org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
-</pre></p><p><b>root cause</b> <pre>java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
-	java.util.ArrayList.rangeCheck(ArrayList.java:635)
-	java.util.ArrayList.get(ArrayList.java:411)
-	com.ec.website.controller.ContactUs.generateParam(ContactUs.java:78)
-	com.ec.website.controller.ContactUs.dealeList(ContactUs.java:48)
-	sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	java.lang.reflect.Method.invoke(Method.java:606)
-	org.springframework.web.bind.annotation.support.HandlerMethodInvoker.invokeHandlerMethod(HandlerMethodInvoker.java:176)
-	org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter.invokeHandlerMethod(AnnotationMethodHandlerAdapter.java:436)
-	org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter.handle(AnnotationMethodHandlerAdapter.java:424)
-	org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:790)
-	org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:719)
-	org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:669)
-	org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:574)
-	javax.servlet.http.HttpServlet.service(HttpServlet.java:620)
-	javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
-	org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
-</pre></p><p><b>note</b> <u>The full stack trace of the root cause is available in the Apache Tomcat/7.0.54 logs.</u></p><HR size="1" noshade="noshade"><h3>Apache Tomcat/7.0.54</h3></body></html>
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+
+
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="../img/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=edge; chrome=1">
+<meta name="keywords" content="艾易西,IIECC,公司官方网站,公司介绍,产品介绍,APS-550M,APG-40M,Circul-Aire,Multi-Mix,空气净化器,气相净化仪,气相净化媒体"/>
+<meta name="description" content="IIECC致力于为客户提供完善的环境控制解决方案以及节能、低碳的环保产品。凭借专业实力与严谨坚持，我们不断研发高效空气净化设施，守护人体健康、提升生活质量。"/>
+<title>IIECC - “芯”科技，“核”动力，艾易西中央空气净化系统</title>
+<!-- Le styles -->
+<link href="../css/bootstrap.css" rel="stylesheet">
+<link href="../css/bootstrap-theme.css" rel="stylesheet">
+
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+		<script src="js/html5shiv.js"></script>
+	<![endif]-->
+
+	<!-- Fav and touch icons -->
+	<link rel="shortcut glyphicon" href="../img/logo_32x32.jpg">
+	<script type="text/javascript" src="../js/jquery-1.10.2.js"></script>
+	
+	<!--[if lt IE 9]>
+	<script src="../js/html5shiv.js"></script>
+	<script src="../js/respond.min.js"></script>
+	<script src="../js/respond.matchmedia.addListener.min.js"></script>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<![endif]-->
+
+
+
+	<script type="text/javascript" src="../js/bootstrap.js"></script>
+	<script type="text/javascript" src="../js/jquery.htmlClean.js"></script>
+</head>
+
+
+
+<body> <div class="container">
+	<div class="row" style="margin-top: 10px;margin-bottom: 8px;">
+		<div class="col-md-2 col-sm-2 col-xs-0 hidden-xs hidden-xxs">
+			<a href="../index.html"><img src="../img/logo.png" style="margin-top: 25px;"/></a>
+		</div>
+		<div class="col-md-10 col-sm-10 col-xs-12" style="margin-top: 7px">
+			<div class="row hidden-xs hidden-xxs" >
+				<div class="hot-line col-md-offset-9 col-md-3 col-sm-offset-7 col-sm-5">
+					<div style="float: left;text-align: left;"><img src="../img/icon/phone.png" style="height: 14px;width: 14px;margin-top: -2px;margin-right: 5px;"/>4008-725-000</div>
+					<div style="float: right;">EN｜中文</div>
+				</div>
+			</div>
+			<div class="row" style="margin-top: 8px;" >
+				<div class="col-md-9 col-sm-12 col-xs-12" style="padding-right: 0;">
+					<nav class="navbar navbar-default" role="navigation">
+					  <div class="container-fluid">
+					    <!-- Brand and toggle get grouped for better mobile display -->
+					    
+					    <div class="navbar-header" style="width: 100%;">
+					      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-xs-main" style="border:none;height: 64px;width: 64px;">
+					        <img src="../img/nav.png" >
+					      </button>
+					    	<!-- a href="#" class="btn btn-lg navbar-toggle" role="button" data-toggle="collapse" data-target="#navbar-collapse-main" style="height: 100px;width: 100px;">三</a-->
+					      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-xs-search" style="border:none;height: 64px;width: 64px;">
+					      	<img src="../img/search.png" >
+					      </button>
+					      <div class="visible-xs-block visible-xxs-block logo" >
+								<a href="../index.html"><img src="../img/logo.png" /></a>
+							</div>
+						<div class="collapse navbar-collapse" id="navbar-xs-search">
+								<!-- form class="navbar-left visible-xs-block" role="search" style="position: relative;">
+									<input class="form-control" id="inputIcon" type="text" />
+									<span class="glyphicon glyphicon-search" style="position:absolute;right: 18px;top:9px;"></span>
+								</form -->
+						      
+						</div>
+						<div class="collapse navbar-collapse" id="navbar-xs-main" style="margin-top: 10px;margin-left: 15px;">
+					      <ul class="nav navbar-nav visible-xs-block visible-xxs-block">
+					        <li class="gray">
+								<a id="drop0" role="button" href="../solution/index.html">应用领域</a>
+							</li>
+							<li class="">
+							  <a id="drop2" role="button" href="../technology/index.html">优势技术</a>
+							</li>
+							<li class="gray">
+							  <a id="drop3" role="button" href="../product/index.html">产品系列</a>
+							</li>
+							<li class="">
+							  <a id="drop4" role="button" href="../about_us/index.html">关于IIECC</a>
+							</li>
+							<li class="gray">
+							  <a id="drop5" role="button" href="../contact_us/index.html">联系我们</a>
+							</li>
+							<li class="gray">
+							  <a id="drop5" role="button" href="../order/index.html">服务及订购</a>
+							</li>
+					      </ul>
+					     
+					    </div>
+					    
+					    <!-- Collect the nav links, forms, and other content for toggling -->
+					    <div class="collapse navbar-collapse" id="navbar-main" style="width: 100%;padding-right: 0;">
+					      <ul class="nav navbar-nav" style="width: 100%;">
+					        <li class="dropdown">
+								<a id="drop0" role="button" data-toggle="dropdown" href="#" onmouseover="$(this).click()">应用领域</a>
+							    <ul id="drop1" class="dropdown-menu row" style="width: 280px;">
+									
+										<li>
+											<div style="min-height: 20px;"><a tabindex="-1" href="../solution/municipal_administration.html" style="padding-left: 35px;padding-right: 35px;">市政</a></div>
+										</li>
+									
+										<li>
+											<div style="min-height: 20px;"><a tabindex="-1" href="../solution/industry.html" style="padding-left: 35px;padding-right: 35px;">工业</a></div>
+										</li>
+									
+										<li>
+											<div style="min-height: 20px;"><a tabindex="-1" href="../solution/business.html" style="padding-left: 35px;padding-right: 35px;">商业</a></div>
+										</li>
+									
+										<li>
+											<div style="min-height: 20px;"><a tabindex="-1" href="../solution/other.html" style="padding-left: 35px;padding-right: 35px;">其他</a></div>
+										</li>
+									
+								</ul>
+							</li>
+							<li class="nav-delim"><col-md->|</col-md-></li>
+							<li class="dropdown">
+							  	<a role="button" data-toggle="dropdown" href="#" onmouseover="$(this).click()">优势技术</a>
+								<ul class="dropdown-menu" style="width: 280px;">
+									
+										<li>
+											<div style="min-height: 20px;"><a tabindex="-1" href="../technology/gas_filter.html" style="padding-left: 35px;padding-right: 35px;">气相过滤技术</a></div>
+										</li>
+									
+										<li>
+											<div style="min-height: 20px;"><a tabindex="-1" href="../technology/particles_filter.html" style="padding-left: 35px;padding-right: 35px;">颗粒物过滤技术</a></div>
+										</li>
+									
+										<li>
+											<div style="min-height: 20px;"><a tabindex="-1" href="../technology/degerming.html" style="padding-left: 35px;padding-right: 35px;">杀菌除菌技术</a></div>
+										</li>
+									
+										<li>
+											<div style="min-height: 20px;"><a tabindex="-1" href="../technology/power_refund.html" style="padding-left: 35px;padding-right: 35px;">能量回收技术</a></div>
+										</li>
+									
+										<li>
+											<div style="min-height: 20px;"><a tabindex="-1" href="../technology/energy_conservation.html" style="padding-left: 35px;padding-right: 35px;">高效节能技术</a></div>
+										</li>
+									
+								</ul>
+							</li>
+							<li class="nav-delim"><col-md->|</col-md-></li>
+							<li class="dropdown">
+							  	<a id="drop3" role="button" data-toggle="dropdown" href="#" onmouseover="$(this).click()">产品系列</a>
+								<ul class="dropdown-menu" style="width: 300px;">
+									
+										<li>
+											<div style="min-height: 20px;"><a tabindex="-1" href="../product/aps.html" style="padding-left: 35px;padding-right: 35px;">APS系列小型气相净化系统</a></div>
+										</li>
+									
+										<li>
+											<div style="min-height: 20px;"><a tabindex="-1" href="../product/ag.html" style="padding-left: 35px;padding-right: 35px;">AG系列气相净化系统</a></div>
+										</li>
+									
+										<li>
+											<div style="min-height: 20px;"><a tabindex="-1" href="../product/hds.html" style="padding-left: 35px;padding-right: 35px;">HDS系列高浓度气体洗涤器净化机组</a></div>
+										</li>
+									
+										<li>
+											<div style="min-height: 20px;"><a tabindex="-1" href="../product/das.html" style="padding-left: 35px;padding-right: 35px;">DAS系列深床式气相净化机组</a></div>
+										</li>
+									
+										<li>
+											<div style="min-height: 20px;"><a tabindex="-1" href="../product/usah.html" style="padding-left: 35px;padding-right: 35px;">USAH通用侧开门系列气相净化机组</a></div>
+										</li>
+									
+										<li>
+											<div style="min-height: 20px;"><a tabindex="-1" href="../product/multi_mix.html" style="padding-left: 35px;padding-right: 35px;">Multi-Mix<sup>®</sup> Media气相净化媒体</a></div>
+										</li>
+									
+								</ul>
+							</li>
+							<li class="nav-delim"><col-md->|</col-md-></li>
+							<li class="dropdown">
+							  	<a id="drop4" role="button" data-toggle="dropdown" href="#" onmouseover="$(this).click()">关于IIECC</a>
+								<ul class="dropdown-menu" style="width: 150px;">
+									
+										<li>
+											<div style="min-height: 20px;"><a tabindex="-1" href="../about_us/summary.html" style="padding-left: 35px;padding-right: 35px;">公司简介</a></div>
+										</li>
+									
+										<li>
+											<div style="min-height: 20px;"><a tabindex="-1" href="../about_us/download.html" style="padding-left: 35px;padding-right: 35px;">资料下载</a></div>
+										</li>
+									
+										<li>
+											<div style="min-height: 20px;"><a tabindex="-1" href="../about_us/certification.html" style="padding-left: 35px;padding-right: 35px;">认证及资质</a></div>
+										</li>
+									
+										<li>
+											<div style="min-height: 20px;"><a tabindex="-1" href="../about_us/global_map.html" style="padding-left: 35px;padding-right: 35px;">国际合作</a></div>
+										</li>
+									
+										<li>
+											<div style="min-height: 20px;"><a tabindex="-1" href="../about_us/case_list.html" style="padding-left: 35px;padding-right: 35px;">我们的客户</a></div>
+										</li>
+									
+								</ul>
+							</li>
+							<li class="nav-delim"><col-md->|</col-md-></li>
+							<li class="dropdown">
+							  	<a id="drop5" role="button" data-toggle="dropdown" href="#" onmouseover="$(this).click()">联系我们</a>
+								<ul class="dropdown-menu" style="width: 150px;">
+									
+										<li>
+											<div style="min-height: 20px;"><a tabindex="-1" href="../contact_us/contact_info.html" style="padding-left: 35px;padding-right: 35px;">联系方式</a></div>
+										</li>
+									
+										<li>
+											<div style="min-height: 20px;"><a tabindex="-1" href="../contact_us/dealer_list.html" style="padding-left: 35px;padding-right: 35px;">授权经销商</a></div>
+										</li>
+									
+								</ul>
+							</li>
+							<li class="nav-delim"><col-md->|</col-md-></li>
+							<li class="dropdown">
+							  	<a id="drop5" role="button" data-toggle="dropdown" href="#" onmouseover="$(this).click()">服务及订购</a>
+								<ul class="dropdown-menu" style="width: 260px;left: -160px;">
+									
+										<li>
+											<div style="min-height: 20px;"><a tabindex="-1" href="../order/service_intro.html" style="padding-left: 35px;padding-right: 35px;">Tech-CHEK空气质量检测服务</a></div>
+										</li>
+									
+										<li>
+											<div style="min-height: 20px;"><a tabindex="-1" href="../order/sale_order.html" style="padding-left: 35px;padding-right: 35px;">产品在线订购</a></div>
+										</li>
+									
+								</ul>
+							</li>
+							
+							<li class="" style="float: right;padding-top: 10px;">
+								<img src="../img/search.jpg"  class="visible-sm-block text-right" style=""></div>
+					   	 	</li>
+					      </ul>
+					     
+					    </div><!-- /.navbar-collapse -->
+					  </div><!-- /.container-fluid -->
+					</nav>
+				</div>
+				<div class="col-md-3 col-sm-1 col-xs-0 hidden-sm search" style="margin-top: 7px;">
+					<div class=" visible-lg-block visible-md-block" style="position: relative;">
+						<input class="col-md-12 search" id="inputIcon" type="text" />
+						<img src="../img/search.jpg" style="position:absolute;right: 8px;top:7px;"></span>
+				  	</div> 
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+	
+<!-- content start -->
+<div class="jumbotron header_img">
+	<div class="container" style="position: relative;">
+		<img src="../img/kv_1170.png" class="img-responsive contact_us">
+		<div class="content">
+			<div class="title">联系我们</div>
+			<div class="info">如需了解产品等方面的信息，您可以拨打我们服务热线或亲临IIECC授权经销商门店，我们将竭诚为您服务。 </div>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="col-lg-10 col-sm-12 col-xxs-12 subitem" style="position: relative;">
+		<div class="list-group menu hidden-xxs hidden-xs">
+			
+				<div>
+				<div class="list-group-item ">
+					<div style="width: 160px;" >
+						<a href="../contact_us/contact_info.html" class="">联系方式</a>
+					</div>
+					<div style="float: right;position: absolute;top:25%;right:0;"><a href="../contact_us/contact_info.html" class="">></a></div>
+				</div>
+				</div>
+			
+				<div>
+				<div class="list-group-item ">
+					<div style="width: 160px;" >
+						<a href="../contact_us/dealer_list.html" class="">授权经销商</a>
+					</div>
+					<div style="float: right;position: absolute;top:25%;right:0;"><a href="../contact_us/dealer_list.html" class="">></a></div>
+				</div>
+				</div>
+			
+		</div>
+		<div class="content">
+			<ol class="breadcrumb">
+			  <li><a href="../index.html">首页</a></li>
+			  <li><a href="#">联系我们</a></li>
+			  <li style="padding-left: 1px;" class="active">授权经销商</li>
+			</ol>
+			
+
+
+
+
+
+
+<div class="title">授权经销商</div>
+<div class="info">前往您附近的IIECC授权经销商垂询和购买我们的产品。我们将解答您的全部问题，并帮您选择一款适合您的产品。</div>
+<hr/>
+
+<div class="panel-group" id="accordion">
+	
+		<div class="panel panel-default">
+			<div class="panel-heading active">
+				<h4 class="panel-title">
+					<a id="a" data-toggle="collapse" data-parent="#accordion" href="#case_0">上海<div class="panel-button"></div></a>
+				</h4>
+			</div>
+			<div id="case_0" class="panel-collapse collapse in">
+				<div class="panel-body">
+					<div class="table-responsive">
+						<table class="table table-hover table-bordered">
+							<thead class="">
+								<th class="active" style="text-align: center;">地址</th>
+								<th class="active" style="text-align: center;">联系人</th>
+								<th class="active" style="text-align: center;">电话</th>
+							</thead>
+							
+								<tr class="">
+									<td>上海市闵行区莘福路396号1号楼7楼</td>
+									<td>季洲</td>
+									<td>18901639333</td>
+								</tr>
+							
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+		<div class="panel panel-default">
+			<div class="panel-heading ">
+				<h4 class="panel-title">
+					<a id="a" data-toggle="collapse" data-parent="#accordion" href="#case_1">北京<div class="panel-button"></div></a>
+				</h4>
+			</div>
+			<div id="case_1" class="panel-collapse collapse ">
+				<div class="panel-body">
+					<div class="table-responsive">
+						<table class="table table-hover table-bordered">
+							<thead class="">
+								<th class="active" style="text-align: center;">地址</th>
+								<th class="active" style="text-align: center;">联系人</th>
+								<th class="active" style="text-align: center;">电话</th>
+							</thead>
+							
+								<tr class="">
+									<td>北京市朝阳区光华路9号光华路SOHO2 A6-5</td>
+									<td>杨乐</td>
+									<td>13910381897</td>
+								</tr>
+							
+								<tr class="active">
+									<td>北京市顺义区天竺镇花园四街温榆广场L1-12</td>
+									<td>杨乐</td>
+									<td>13910381897</td>
+								</tr>
+							
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+		<div class="panel panel-default">
+			<div class="panel-heading ">
+				<h4 class="panel-title">
+					<a id="a" data-toggle="collapse" data-parent="#accordion" href="#case_2">吉林<div class="panel-button"></div></a>
+				</h4>
+			</div>
+			<div id="case_2" class="panel-collapse collapse ">
+				<div class="panel-body">
+					<div class="table-responsive">
+						<table class="table table-hover table-bordered">
+							<thead class="">
+								<th class="active" style="text-align: center;">地址</th>
+								<th class="active" style="text-align: center;">联系人</th>
+								<th class="active" style="text-align: center;">电话</th>
+							</thead>
+							
+								<tr class="">
+									<td>吉林省长春市亚太大街4906号南岭商务中心a座7楼</td>
+									<td>刘以平</td>
+									<td>13304301843</td>
+								</tr>
+							
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+		<div class="panel panel-default">
+			<div class="panel-heading ">
+				<h4 class="panel-title">
+					<a id="a" data-toggle="collapse" data-parent="#accordion" href="#case_3">辽宁<div class="panel-button"></div></a>
+				</h4>
+			</div>
+			<div id="case_3" class="panel-collapse collapse ">
+				<div class="panel-body">
+					<div class="table-responsive">
+						<table class="table table-hover table-bordered">
+							<thead class="">
+								<th class="active" style="text-align: center;">地址</th>
+								<th class="active" style="text-align: center;">联系人</th>
+								<th class="active" style="text-align: center;">电话</th>
+							</thead>
+							
+								<tr class="">
+									<td>辽宁省大连市中山区人民路时代广场B座3003室</td>
+									<td>谷宏芳</td>
+									<td>18641142239</td>
+								</tr>
+							
+								<tr class="active">
+									<td>辽宁省沈阳市和平区和平南大街24号</td>
+									<td>杨志刚</td>
+									<td>024-88809999</td>
+								</tr>
+							
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+		<div class="panel panel-default">
+			<div class="panel-heading ">
+				<h4 class="panel-title">
+					<a id="a" data-toggle="collapse" data-parent="#accordion" href="#case_4">山西<div class="panel-button"></div></a>
+				</h4>
+			</div>
+			<div id="case_4" class="panel-collapse collapse ">
+				<div class="panel-body">
+					<div class="table-responsive">
+						<table class="table table-hover table-bordered">
+							<thead class="">
+								<th class="active" style="text-align: center;">地址</th>
+								<th class="active" style="text-align: center;">联系人</th>
+								<th class="active" style="text-align: center;">电话</th>
+							</thead>
+							
+								<tr class="">
+									<td>山西省太原市万柏林区新明珠装饰广场3-9</td>
+									<td>李沛峰</td>
+									<td>0351-2868648/13403454853</td>
+								</tr>
+							
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+</div>
+
+			<div style="margin-bottom: 120px;"></div>
+		</div>
+	</div>
+</div>
+<!-- content end -->
+	
+
+
+
+	<!-- footer start -->
+<div class="jumbotron main-info">
+  <div class="container">
+	<div class="row">
+		<div class="col-md-6 col-sm-8 col-xs-8 col-xxs-12 product">
+			<span class="title">产品系列</span>
+			<hr />
+			<ul class="list-unstyled visible-xs-block item">
+				
+					<li><a tabindex="-1" href="../product/aps.html" style="padding-right: 35px;">APS系列小型气相净化系统</a></li>
+				
+					<li><a tabindex="-1" href="../product/ag.html" style="padding-right: 35px;">AG系列气相净化系统</a></li>
+				
+					<li><a tabindex="-1" href="../product/hds.html" style="padding-right: 35px;">HDS系列高浓度气体洗涤器净化机组</a></li>
+				
+					<li><a tabindex="-1" href="../product/das.html" style="padding-right: 35px;">DAS系列深床式气相净化机组</a></li>
+				
+					<li><a tabindex="-1" href="../product/usah.html" style="padding-right: 35px;">USAH通用侧开门系列气相净化机组</a></li>
+				
+					<li><a tabindex="-1" href="../product/multi_mix.html" style="padding-right: 35px;">Multi-Mix<sup>®</sup> Media气相净化媒体</a></li>
+				
+			</ul>
+			<div class="row hidden-xs " style="color: #666666;">
+				<div class="col-sm-6 ">
+					<ul class="list-unstyled item">
+						
+							<li><a tabindex="-1" href="../product/aps.html">APS系列小型气相净化系统</a></li>
+						
+							<li><a tabindex="-1" href="../product/ag.html">AG系列气相净化系统</a></li>
+						
+							<li><a tabindex="-1" href="../product/hds.html">HDS系列高浓度气体洗涤器净化机组</a></li>
+						
+					</ul>
+				</div>
+				<div class="col-sm-6">
+					<ul class="list-unstyled item">
+						
+							<li><a tabindex="-1" href="../product/das.html">DAS系列深床式气相净化机组</a></li>
+						
+							<li><a tabindex="-1" href="../product/usah.html">USAH通用侧开门系列气相净化机组</a></li>
+						
+							<li><a tabindex="-1" href="../product/multi_mix.html">Multi-Mix<sup>®</sup> Media气相净化媒体</a></li>
+						
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3 col-sm-4 col-xs-4 col-xxs-12 contact-us">
+			<span class="title">联系我们</span>
+			<hr/>
+			<ul class="list-unstyled item">
+				
+					<li><a tabindex="-1" href="../contact_us/contact_info.html">联系方式</a></li>
+				
+					<li><a tabindex="-1" href="../contact_us/dealer_list.html">授权经销商</a></li>
+				
+			</ul>
+		</div>
+	</div>
+	<div class="footer row hidden-xs hidden-xxs" >
+		<div class="col-sm-12" style="padding-left: 0;padding-right: 0;">
+			<hr/>
+			<div>
+				<!-- <a class="footer-link" href="../area/china.html">中国大陆</a>-->
+				<a class="footer-link" href="../policy/privacy_policy.html">隐私政策</a>
+				<a class="footer-link" href="../policy/use_policy.html">使用条款</a>
+				<img class="footer-icon" src="../img/sns_1.jpg"/>
+				<img class="footer-icon" src="../img/sns_2.jpg"/>
+				<div class="copyright" style="float: right;"><span class="">沪ICP备14044424号</span><span class="hidden-xs hidden-sm" style="padding-left: 15px;">©2014 IIECC, ALL RIGHTS RESERVED</span></div>
+			</div>
+		</div>
+		<div class="copyright visible-sm-block">
+			<span style="float: right;padding-right: 15px;"  >©2014 IIECC, ALL RIGHTS RESERVED</span>
+		</div>
+	</div>
+	<div class="footer row visible-xs-block">
+		<div class="col-xs-12" style="padding-left: 0;padding-right: 0;">
+			<hr/>
+			<div class="">
+				<!-- <a class="footer-link" href="../area/china.html">中国大陆</a> -->
+				<a class="footer-link" href="../policy/privacy_policy.html">隐私政策</a>
+				<img class="footer-icon" src="../img/sns_1.jpg"></img>
+				<img class="footer-icon" src="../img/sns_2.jpg"></img>
+				<span class="copyright">沪ICP备14044424号</span>
+			</div>
+			<div>
+				<a class="footer-link" href="../policy/use_policy.html">使用条款</a>
+				<span class="copyright" >©2014 IIECC, ALL RIGHTS RESERVED</span>
+			</div>
+		</div>
+	</div>
+	<div class="footer row visible-xxs-block">
+		<div class="col-xs-12" style="padding-left: 0;padding-right: 0;">
+			<hr/>
+			<div class="row">
+				<!-- <a class="footer-link col-xs-3"  href="../area/china.html">中国大陆</a> -->
+				<a class="footer-link col-xs-3"  href="../policy/privacy_policy.html">隐私政策</a>
+				<a class="footer-link col-xs-3"  href="../policy/use_policy.html">使用条款</a>
+			</div>
+			<div>
+				<img class="footer-icon" src="../img/sns_1.jpg"></img>
+				<img class="footer-icon" src="../img/sns_2.jpg"></img>
+			</div>
+		</div>
+	</div>
+	<div class="copyright visible-xxs-block">
+		<div class="text-center">沪ICP备14044424号</div>
+		<div class="text-center">©2014 IIECC, ALL RIGHTS RESERVED</div>
+	</div>
+</div>
+</div>
+</div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-55625311-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>

@@ -10,7 +10,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=edge; chrome=1">
 <meta name="keywords" content="艾易西,IIECC,公司官方网站,公司介绍,产品介绍,APS-550M,APG-40M,Circul-Aire,Multi-Mix,空气净化器,气相净化仪,气相净化媒体"/>
 <meta name="description" content="IIECC致力于为客户提供完善的环境控制解决方案以及节能、低碳的环保产品。凭借专业实力与严谨坚持，我们不断研发高效空气净化设施，守护人体健康、提升生活质量。"/>
-<title>IIECC，为现在，更为将来！</title>
+<title>IIECC - “芯”科技，“核”动力，艾易西中央空气净化系统</title>
 <!-- Le styles -->
 <link href="${path}css/bootstrap.css" rel="stylesheet">
 <link href="${path}css/bootstrap-theme.css" rel="stylesheet">
@@ -34,6 +34,5 @@
 
 
 	<script type="text/javascript" src="${path}js/bootstrap.js"></script>
-
-	<script type="text/javascript" src="${path}js/global.js"></script>
+	<script type="text/javascript" src="${path}js/jquery.htmlClean.js"></script>
 </head>

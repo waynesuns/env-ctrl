@@ -53,6 +53,9 @@
 							<li class="gray">
 							  <a id="drop5" role="button" href="${path}contact_us/index.html">联系我们</a>
 							</li>
+							<li class="gray">
+							  <a id="drop5" role="button" href="${path}order/index.html">服务及订购</a>
+							</li>
 					      </ul>
 					     
 					    </div>
@@ -110,6 +113,17 @@
 									<c:forEach var="contactUsMenu" items="${contactUsMenus.subItems}">
 										<li>
 											<div style="min-height: 20px;"><a tabindex="-1" href="${path}${contactUsMenu.url}" style="padding-left: 35px;padding-right: 35px;">${contactUsMenu.name}</a></div>
+										</li>
+									</c:forEach>
+								</ul>
+							</li>
+							<li class="nav-delim"><col-md->|</col-md-></li>
+							<li class="dropdown">
+							  	<a id="drop5" role="button" data-toggle="dropdown" href="#" onmouseover="$(this).click()">服务及订购</a>
+								<ul class="dropdown-menu" style="width: 260px;left: -160px;">
+									<c:forEach var="orderMenu" items="${orderMenus.subItems}">
+										<li>
+											<div style="min-height: 20px;"><a tabindex="-1" href="${path}${orderMenu.url}" style="padding-left: 35px;padding-right: 35px;">${orderMenu.name}</a></div>
 										</li>
 									</c:forEach>
 								</ul>
