@@ -58,7 +58,7 @@ public class SimpleJsonView extends AbstractView {
 	@Override
 	protected void prepareResponse(HttpServletRequest request, HttpServletResponse response) {
 		response.setContentType(getContentType());
-		response.setCharacterEncoding(encoding.getJavaName());
+		//response.setCharacterEncoding(encoding.getJavaName());
 		if (disableCaching) {
 			response.addHeader("Pragma", "no-cache");
 			response.addHeader("Cache-Control", "no-cache, no-store, max-age=0");
